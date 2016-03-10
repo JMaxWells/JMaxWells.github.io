@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-03T09:15:13.000Z</updated>
+  <updated>2016-03-10T06:45:57.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,26 +16,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2016/03/03/hello-world/"/>
-    <id>http://yoursite.com/2016/03/03/hello-world/</id>
-    <published>2016-03-03T09:15:13.000Z</published>
-    <updated>2016-03-03T09:15:13.000Z</updated>
+    <title></title>
+    <link href="http://yoursite.com/2016/03/10/AppStore%E4%B8%8A%E7%BA%BF%E7%B4%A0%E6%9D%90%E5%87%86%E5%A4%87%E7%AF%87/"/>
+    <id>http://yoursite.com/2016/03/10/AppStore上线素材准备篇/</id>
+    <published>2016-03-10T06:45:57.000Z</published>
+    <updated>2016-03-10T06:45:57.000Z</updated>
     
-    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;#AppStore上线素材准备篇&lt;/p&gt;
+&lt;p&gt;###1.app名称与版本号&lt;br&gt;您要填入的 App 版本号。编号应遵循软件版本规范。&lt;/p&gt;
+&lt;p&gt;###2.公司网址&lt;br&gt;技术支持网址(URL)；营销网址(URL) ,可以共用一个网址。&lt;/p&gt;
+&lt;p&gt;###3.app所属类别&lt;br&gt;最能准确描述此 App 的类别。有关更多信息，请参阅 App Store 类别定义。[链接] (&lt;a href=&quot;https://itunesconnect.apple.com/itc/static/category_definitions&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://itunesconnect.apple.com/itc/static/category_definitions&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;###4.演示帐户&lt;br&gt;正式环境的测试账号与密码。&lt;/p&gt;
+&lt;p&gt;###5.联系信息包括：电话，邮箱，公司地址&lt;br&gt;当 App 审核团队有任何问题或需要额外信息时, 您所在机构的联系人信息。&lt;/p&gt;
+&lt;p&gt;###6.版权-公司名称&lt;br&gt;拥有您的 App 专有权的人员或实体的名称，前面是获得权利的年份（例如“2008 Acme Inc”）。请勿提供网址(URL)。&lt;/p&gt;
+&lt;p&gt;###7.app描述&lt;br&gt;对您 App 的描述，用以详细说明特性和功能。&lt;/p&gt;
+&lt;p&gt;###8.app截图*4（共20张）&lt;br&gt;屏幕快照必须为 JPG 或 PNG 格式，且必须采用 RGB 颜色空间。 App 视频预览必须为 M4V、MP4 或 MOV 格式，且不能超过 500 MB。 [iPhone 4&amp;amp;4s(640X960), iPhone 5&amp;amp;5c&amp;amp;5s(640X1136), iPhone 6&amp;amp;6s(750X1334), iPhone 6P&amp;amp;6sP(1242X2208)]  [参考链接] (&lt;a href=&quot;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW2&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;###9.关键词&lt;br&gt;一个或多个关键词，用以描述您的 App。关键词将使 App Store 搜索结果更加准确。关键词之间用英文逗点分隔。&lt;/p&gt;
+&lt;p&gt;###10.app图标（1024X1024）&lt;br&gt;此图标将用于 App Store，其格式必须为 JPG 或 PNG，最低分辨率至少为 72 DPI，并采用 RGB 色彩空间。它不能包含图层或圆角。&lt;/p&gt;
+&lt;p&gt;###11.用户服务协议、隐私政策。&lt;br&gt;必不可少的协议，没有就会被拒。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;p&gt;#AppStore上线素材准备篇&lt;/p&gt;
+&lt;p&gt;###1.app名称与版本号&lt;br&gt;您要填入的 App 版本号。编号应遵循软件版本规范。&lt;/p&gt;
+&lt;p&gt;###2.公司网址&lt;br&gt;技术支持网址(URL)；营销网址(URL) ,可以共用一个网址。&lt;/p&gt;
+&lt;p&gt;###3.app
     
     </summary>
     
