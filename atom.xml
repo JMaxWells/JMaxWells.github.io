@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title></title>
-  <subtitle>一个喜爱外设的90后iOS软件攻城狮</subtitle>
+  <title>这是一个利用Hexo搭建的博客</title>
+  <subtitle>分享一些技术文章和自己所整理的知识。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
