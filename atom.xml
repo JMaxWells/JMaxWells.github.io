@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-10T06:45:57.000Z</updated>
+  <updated>2016-03-10T06:51:22.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,29 +19,25 @@
     <title></title>
     <link href="http://yoursite.com/2016/03/10/AppStore%E4%B8%8A%E7%BA%BF%E7%B4%A0%E6%9D%90%E5%87%86%E5%A4%87%E7%AF%87/"/>
     <id>http://yoursite.com/2016/03/10/AppStore上线素材准备篇/</id>
-    <published>2016-03-10T06:45:57.000Z</published>
-    <updated>2016-03-10T06:45:57.000Z</updated>
+    <published>2016-03-10T06:50:50.000Z</published>
+    <updated>2016-03-10T06:51:22.000Z</updated>
     
-    <content type="html">&lt;p&gt;#AppStore上线素材准备篇&lt;/p&gt;
-&lt;p&gt;###1.app名称与版本号&lt;br&gt;您要填入的 App 版本号。编号应遵循软件版本规范。&lt;/p&gt;
-&lt;p&gt;###2.公司网址&lt;br&gt;技术支持网址(URL)；营销网址(URL) ,可以共用一个网址。&lt;/p&gt;
-&lt;p&gt;###3.app所属类别&lt;br&gt;最能准确描述此 App 的类别。有关更多信息，请参阅 App Store 类别定义。[链接] (&lt;a href=&quot;https://itunesconnect.apple.com/itc/static/category_definitions&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://itunesconnect.apple.com/itc/static/category_definitions&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;###4.演示帐户&lt;br&gt;正式环境的测试账号与密码。&lt;/p&gt;
-&lt;p&gt;###5.联系信息包括：电话，邮箱，公司地址&lt;br&gt;当 App 审核团队有任何问题或需要额外信息时, 您所在机构的联系人信息。&lt;/p&gt;
-&lt;p&gt;###6.版权-公司名称&lt;br&gt;拥有您的 App 专有权的人员或实体的名称，前面是获得权利的年份（例如“2008 Acme Inc”）。请勿提供网址(URL)。&lt;/p&gt;
-&lt;p&gt;###7.app描述&lt;br&gt;对您 App 的描述，用以详细说明特性和功能。&lt;/p&gt;
-&lt;p&gt;###8.app截图*4（共20张）&lt;br&gt;屏幕快照必须为 JPG 或 PNG 格式，且必须采用 RGB 颜色空间。 App 视频预览必须为 M4V、MP4 或 MOV 格式，且不能超过 500 MB。 [iPhone 4&amp;amp;4s(640X960), iPhone 5&amp;amp;5c&amp;amp;5s(640X1136), iPhone 6&amp;amp;6s(750X1334), iPhone 6P&amp;amp;6sP(1242X2208)]  [参考链接] (&lt;a href=&quot;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW2&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;###9.关键词&lt;br&gt;一个或多个关键词，用以描述您的 App。关键词将使 App Store 搜索结果更加准确。关键词之间用英文逗点分隔。&lt;/p&gt;
-&lt;p&gt;###10.app图标（1024X1024）&lt;br&gt;此图标将用于 App Store，其格式必须为 JPG 或 PNG，最低分辨率至少为 72 DPI，并采用 RGB 色彩空间。它不能包含图层或圆角。&lt;/p&gt;
-&lt;p&gt;###11.用户服务协议、隐私政策。&lt;br&gt;必不可少的协议，没有就会被拒。&lt;/p&gt;
+    <content type="html">&lt;h1 id=&quot;AppStore上线素材准备篇&quot;&gt;&lt;a href=&quot;#AppStore上线素材准备篇&quot; class=&quot;headerlink&quot; title=&quot;AppStore上线素材准备篇&quot;&gt;&lt;/a&gt;AppStore上线素材准备篇&lt;/h1&gt;&lt;h3 id=&quot;1-app名称与版本号&quot;&gt;&lt;a href=&quot;#1-app名称与版本号&quot; class=&quot;headerlink&quot; title=&quot;1.app名称与版本号&quot;&gt;&lt;/a&gt;1.app名称与版本号&lt;/h3&gt;&lt;p&gt;您要填入的 App 版本号。编号应遵循软件版本规范。&lt;/p&gt;
+&lt;h3 id=&quot;2-公司网址&quot;&gt;&lt;a href=&quot;#2-公司网址&quot; class=&quot;headerlink&quot; title=&quot;2.公司网址&quot;&gt;&lt;/a&gt;2.公司网址&lt;/h3&gt;&lt;p&gt;技术支持网址(URL)；营销网址(URL) ,可以共用一个网址。&lt;/p&gt;
+&lt;h3 id=&quot;3-app所属类别&quot;&gt;&lt;a href=&quot;#3-app所属类别&quot; class=&quot;headerlink&quot; title=&quot;3.app所属类别&quot;&gt;&lt;/a&gt;3.app所属类别&lt;/h3&gt;&lt;p&gt;最能准确描述此 App 的类别。有关更多信息，请参阅 App Store 类别定义。[链接] (&lt;a href=&quot;https://itunesconnect.apple.com/itc/static/category_definitions&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://itunesconnect.apple.com/itc/static/category_definitions&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&quot;4-演示帐户&quot;&gt;&lt;a href=&quot;#4-演示帐户&quot; class=&quot;headerlink&quot; title=&quot;4.演示帐户&quot;&gt;&lt;/a&gt;4.演示帐户&lt;/h3&gt;&lt;p&gt;正式环境的测试账号与密码。&lt;/p&gt;
+&lt;h3 id=&quot;5-联系信息包括：电话，邮箱，公司地址&quot;&gt;&lt;a href=&quot;#5-联系信息包括：电话，邮箱，公司地址&quot; class=&quot;headerlink&quot; title=&quot;5.联系信息包括：电话，邮箱，公司地址&quot;&gt;&lt;/a&gt;5.联系信息包括：电话，邮箱，公司地址&lt;/h3&gt;&lt;p&gt;当 App 审核团队有任何问题或需要额外信息时, 您所在机构的联系人信息。&lt;/p&gt;
+&lt;h3 id=&quot;6-版权-公司名称&quot;&gt;&lt;a href=&quot;#6-版权-公司名称&quot; class=&quot;headerlink&quot; title=&quot;6.版权-公司名称&quot;&gt;&lt;/a&gt;6.版权-公司名称&lt;/h3&gt;&lt;p&gt;拥有您的 App 专有权的人员或实体的名称，前面是获得权利的年份（例如“2008 Acme Inc”）。请勿提供网址(URL)。&lt;/p&gt;
+&lt;h3 id=&quot;7-app描述&quot;&gt;&lt;a href=&quot;#7-app描述&quot; class=&quot;headerlink&quot; title=&quot;7.app描述&quot;&gt;&lt;/a&gt;7.app描述&lt;/h3&gt;&lt;p&gt;对您 App 的描述，用以详细说明特性和功能。&lt;/p&gt;
+&lt;h3 id=&quot;8-app截图-4（共20张）&quot;&gt;&lt;a href=&quot;#8-app截图-4（共20张）&quot; class=&quot;headerlink&quot; title=&quot;8.app截图*4（共20张）&quot;&gt;&lt;/a&gt;8.app截图*4（共20张）&lt;/h3&gt;&lt;p&gt;屏幕快照必须为 JPG 或 PNG 格式，且必须采用 RGB 颜色空间。 App 视频预览必须为 M4V、MP4 或 MOV 格式，且不能超过 500 MB。 [iPhone 4&amp;amp;4s(640X960), iPhone 5&amp;amp;5c&amp;amp;5s(640X1136), iPhone 6&amp;amp;6s(750X1334), iPhone 6P&amp;amp;6sP(1242X2208)]  [参考链接] (&lt;a href=&quot;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW2&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&quot;9-关键词&quot;&gt;&lt;a href=&quot;#9-关键词&quot; class=&quot;headerlink&quot; title=&quot;9.关键词&quot;&gt;&lt;/a&gt;9.关键词&lt;/h3&gt;&lt;p&gt;一个或多个关键词，用以描述您的 App。关键词将使 App Store 搜索结果更加准确。关键词之间用英文逗点分隔。&lt;/p&gt;
+&lt;h3 id=&quot;10-app图标（1024X1024）&quot;&gt;&lt;a href=&quot;#10-app图标（1024X1024）&quot; class=&quot;headerlink&quot; title=&quot;10.app图标（1024X1024）&quot;&gt;&lt;/a&gt;10.app图标（1024X1024）&lt;/h3&gt;&lt;p&gt;此图标将用于 App Store，其格式必须为 JPG 或 PNG，最低分辨率至少为 72 DPI，并采用 RGB 色彩空间。它不能包含图层或圆角。&lt;/p&gt;
+&lt;h3 id=&quot;11-用户服务协议、隐私政策。&quot;&gt;&lt;a href=&quot;#11-用户服务协议、隐私政策。&quot; class=&quot;headerlink&quot; title=&quot;11.用户服务协议、隐私政策。&quot;&gt;&lt;/a&gt;11.用户服务协议、隐私政策。&lt;/h3&gt;&lt;p&gt;必不可少的协议，没有就会被拒。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;#AppStore上线素材准备篇&lt;/p&gt;
-&lt;p&gt;###1.app名称与版本号&lt;br&gt;您要填入的 App 版本号。编号应遵循软件版本规范。&lt;/p&gt;
-&lt;p&gt;###2.公司网址&lt;br&gt;技术支持网址(URL)；营销网址(URL) ,可以共用一个网址。&lt;/p&gt;
-&lt;p&gt;###3.app
+      &lt;h1 id=&quot;AppStore上线素材准备篇&quot;&gt;&lt;a href=&quot;#AppStore上线素材准备篇&quot; class=&quot;headerlink&quot; title=&quot;AppStore上线素材准备篇&quot;&gt;&lt;/a&gt;AppStore上线素材准备篇&lt;/h1&gt;&lt;h3 id=&quot;1-app名称与版本号&quot;&gt;
     
     </summary>
     
