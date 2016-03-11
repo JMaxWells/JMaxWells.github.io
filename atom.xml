@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-11T07:15:27.000Z</updated>
+  <updated>2016-03-11T07:27:52.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/03/11/%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%BA%9B%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E6%88%96%E8%80%85%E5%A5%BD%E7%8E%A9%E7%9A%84iOS%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
     <id>http://yoursite.com/2016/03/11/介绍一些正在使用或者好玩的iOS越狱插件/</id>
     <published>2016-03-11T07:07:58.000Z</published>
-    <updated>2016-03-11T07:15:27.000Z</updated>
+    <updated>2016-03-11T07:27:52.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;a href=&quot;#介绍一些正在使用或者好玩的iOS越狱插件&quot; class=&quot;headerlink&quot; title=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;/a&gt;介绍一些正在使用或者好玩的iOS越狱插件&lt;/h1&gt;&lt;h2 id=&quot;什么是越狱&quot;&gt;&lt;a href=&quot;#什么是越狱&quot; class=&quot;headerlink&quot; title=&quot;什么是越狱&quot;&gt;&lt;/a&gt;什么是越狱&lt;/h2&gt;&lt;p&gt;“越狱”指的是绕过苹果在其设备上对操作系统施加的很多限制，从而可以“Root访问”基础的操作系统。简单来说，“越狱”可以让iPhone用户从苹果应用商店外下载其他非官方的应用程序，或者对用户界面进行定制。&lt;/p&gt;
 &lt;h2 id=&quot;插件&quot;&gt;&lt;a href=&quot;#插件&quot; class=&quot;headerlink&quot; title=&quot;插件&quot;&gt;&lt;/a&gt;插件&lt;/h2&gt;&lt;h3 id=&quot;DataMember&quot;&gt;&lt;a href=&quot;#DataMember&quot; class=&quot;headerlink&quot; title=&quot;DataMember&quot;&gt;&lt;/a&gt;DataMember&lt;/h3&gt;&lt;p&gt;一款可以实时显示网络数据的悬浮窗控件。&lt;/p&gt;
@@ -53,6 +53,8 @@
     </summary>
     
     
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
       <category term="越狱插件" scheme="http://yoursite.com/tags/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
     
       <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
@@ -64,7 +66,7 @@
     <link href="http://yoursite.com/2016/03/11/iOS9%203DTouch%E3%80%81ShortcutItem%E3%80%81Peek%20And%20Pop%E6%8A%80%E6%9C%AF%E4%B8%80%E8%A7%88/"/>
     <id>http://yoursite.com/2016/03/11/iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览/</id>
     <published>2016-03-11T03:15:48.000Z</published>
-    <updated>2016-03-11T07:24:16.000Z</updated>
+    <updated>2016-03-11T07:27:16.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot;&gt;&lt;a href=&quot;#iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot; class=&quot;headerlink&quot; title=&quot;iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览&quot;&gt;&lt;/a&gt;iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览&lt;/h1&gt;&lt;h2 id=&quot;3DTouch&quot;&gt;&lt;a href=&quot;#3DTouch&quot; class=&quot;headerlink&quot; title=&quot;3DTouch&quot;&gt;&lt;/a&gt;3DTouch&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://developer.apple.com/ios/3d-touch/images/pressure-sensitivity_2x.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;UITouch类里API的变化&quot;&gt;&lt;a href=&quot;#UITouch类里API的变化&quot; class=&quot;headerlink&quot; title=&quot;UITouch类里API的变化&quot;&gt;&lt;/a&gt;UITouch类里API的变化&lt;/h2&gt;&lt;h3 id=&quot;iOS9中添加的属性&quot;&gt;&lt;a href=&quot;#iOS9中添加的属性&quot; class=&quot;headerlink&quot; title=&quot;iOS9中添加的属性&quot;&gt;&lt;/a&gt;iOS9中添加的属性&lt;/h3&gt;&lt;h6 id=&quot;altitudeAngle&quot;&gt;&lt;a href=&quot;#altitudeAngle&quot; class=&quot;headerlink&quot; title=&quot;altitudeAngle&quot;&gt;&lt;/a&gt;altitudeAngle&lt;/h6&gt;&lt;ul&gt;
@@ -224,9 +226,11 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="3DTouch" scheme="http://yoursite.com/tags/3DTouch/"/>
-    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="3DTouch" scheme="http://yoursite.com/tags/3DTouch/"/>
     
   </entry>
   
@@ -235,7 +239,7 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     <link href="http://yoursite.com/2016/03/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96iOS%E8%AE%BE%E5%A4%87%E7%9A%84UDID/"/>
     <id>http://yoursite.com/2016/03/11/如何获取iOS设备的UDID/</id>
     <published>2016-03-11T02:20:06.000Z</published>
-    <updated>2016-03-11T07:23:37.000Z</updated>
+    <updated>2016-03-11T07:27:49.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;如何获取iOS设备的UDID&quot;&gt;&lt;a href=&quot;#如何获取iOS设备的UDID&quot; class=&quot;headerlink&quot; title=&quot;如何获取iOS设备的UDID&quot;&gt;&lt;/a&gt;如何获取iOS设备的UDID&lt;/h1&gt;&lt;h2 id=&quot;什么是-UDID？&quot;&gt;&lt;a href=&quot;#什么是-UDID？&quot; class=&quot;headerlink&quot; title=&quot;什么是 UDID？&quot;&gt;&lt;/a&gt;什么是 UDID？&lt;/h2&gt;&lt;p&gt; UDID 是由子母和数字组成的 40 个字符串的序号，用来区别每一个唯一的 iOS 设备，包括 iPhones, iPads, 以及 iPod Touches，这些编码看起来是随机的，实际上是跟硬件设备特点相联系的。&lt;/p&gt;
 &lt;p&gt;例如，一个典型的 UDID 类似这样：&lt;/p&gt;
@@ -270,6 +274,8 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
   </entry>
   
   <entry>
@@ -277,7 +283,7 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     <link href="http://yoursite.com/2016/03/11/AppStore%E6%9C%80%E6%96%B0%E5%AE%A1%E6%A0%B8%E6%8C%87%E5%8D%97%EF%BC%882015%E5%B9%B43%E6%9C%88%E6%9B%B4%E6%96%B0%E7%89%88%EF%BC%89/"/>
     <id>http://yoursite.com/2016/03/11/AppStore最新审核指南（2015年3月更新版）/</id>
     <published>2016-03-11T01:55:06.000Z</published>
-    <updated>2016-03-11T07:24:29.000Z</updated>
+    <updated>2016-03-11T07:27:41.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;AppStore最新审核指南（2015年3月更新版）&quot;&gt;&lt;a href=&quot;#AppStore最新审核指南（2015年3月更新版）&quot; class=&quot;headerlink&quot; title=&quot;AppStore最新审核指南（2015年3月更新版）&quot;&gt;&lt;/a&gt;AppStore最新审核指南（2015年3月更新版）&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;http://image.woshipm.com/wp-files/2015/03/4ffce04d92a4d6cb21c1494cdfcd6dc1328.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h6 id=&quot;苹果近日更新了App-Store审核指南的相关章节，对此前版本进行了修改和完善。除了增加应用截图、预览等限制外，使用Apple-Pay进行定期付款的应用程序必须展示每个阶段所需款额，费用归属以及如何取消。而从修改的政策部分可以看出，苹果对App-store应用的审核更加严格，鉴于近来国内游戏踩雷屡见不鲜，审核标准请各位业内同学耐心阅读。&quot;&gt;&lt;a href=&quot;#苹果近日更新了App-Store审核指南的相关章节，对此前版本进行了修改和完善。除了增加应用截图、预览等限制外，使用Apple-Pay进行定期付款的应用程序必须展示每个阶段所需款额，费用归属以及如何取消。而从修改的政策部分可以看出，苹果对App-store应用的审核更加严格，鉴于近来国内游戏踩雷屡见不鲜，审核标准请各位业内同学耐心阅读。&quot; class=&quot;headerlink&quot; title=&quot;苹果近日更新了App Store审核指南的相关章节，对此前版本进行了修改和完善。除了增加应用截图、预览等限制外，使用Apple Pay进行定期付款的应用程序必须展示每个阶段所需款额，费用归属以及如何取消。而从修改的政策部分可以看出，苹果对App store应用的审核更加严格，鉴于近来国内游戏踩雷屡见不鲜，审核标准请各位业内同学耐心阅读。&quot;&gt;&lt;/a&gt;苹果近日更新了App Store审核指南的相关章节，对此前版本进行了修改和完善。除了增加应用截图、预览等限制外，使用Apple Pay进行定期付款的应用程序必须展示每个阶段所需款额，费用归属以及如何取消。而从修改的政策部分可以看出，苹果对App store应用的审核更加严格，鉴于近来国内游戏踩雷屡见不鲜，审核标准请各位业内同学耐心阅读。&lt;/h6&gt;&lt;h2 id=&quot;1、条款和条件&quot;&gt;&lt;a href=&quot;#1、条款和条件&quot; class=&quot;headerlink&quot; title=&quot;1、条款和条件&quot;&gt;&lt;/a&gt;1、条款和条件&lt;/h2&gt;&lt;ul&gt;
@@ -711,9 +717,11 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
+      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
+    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
-      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -722,7 +730,7 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     <link href="http://yoursite.com/2016/03/10/%E4%BD%BF%E7%94%A8CocoaPods%E5%81%9A%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/"/>
     <id>http://yoursite.com/2016/03/10/使用CocoaPods做依赖管理/</id>
     <published>2016-03-10T06:57:04.000Z</published>
-    <updated>2016-03-11T07:23:51.000Z</updated>
+    <updated>2016-03-11T07:27:35.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;使用CocoaPods做依赖管理&quot;&gt;&lt;a href=&quot;#使用CocoaPods做依赖管理&quot; class=&quot;headerlink&quot; title=&quot;使用CocoaPods做依赖管理&quot;&gt;&lt;/a&gt;使用CocoaPods做依赖管理&lt;/h2&gt;&lt;p&gt;每种语言发展到一个阶段，就会出现相应的依赖管理工具。本章讲解iOS项目的依赖管理工具CocoaPods。&lt;/p&gt;
 &lt;h2 id=&quot;CocoaPods简介&quot;&gt;&lt;a href=&quot;#CocoaPods简介&quot; class=&quot;headerlink&quot; title=&quot;CocoaPods简介&quot;&gt;&lt;/a&gt;CocoaPods简介&lt;/h2&gt;&lt;p&gt;每种语言发展到一个阶段，就会出现相应的依赖管理工具，例如Java语言的Maven，nodejs的npm。随着iOS开发者的增多，业界也出现了为iOS程序提供依赖管理的工具，它的名字叫做：CocoaPods。&lt;/p&gt;
@@ -824,6 +832,8 @@ pod update --no-repo-update
     </summary>
     
     
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
       <category term="CocoaPods" scheme="http://yoursite.com/tags/CocoaPods/"/>
     
   </entry>
@@ -833,7 +843,7 @@ pod update --no-repo-update
     <link href="http://yoursite.com/2016/03/10/AppStore%E4%B8%8A%E7%BA%BF%E7%B4%A0%E6%9D%90%E5%87%86%E5%A4%87%E7%AF%87/"/>
     <id>http://yoursite.com/2016/03/10/AppStore上线素材准备篇/</id>
     <published>2016-03-10T06:20:55.000Z</published>
-    <updated>2016-03-11T07:24:49.000Z</updated>
+    <updated>2016-03-11T07:27:46.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;AppStore上线素材准备篇&quot;&gt;&lt;a href=&quot;#AppStore上线素材准备篇&quot; class=&quot;headerlink&quot; title=&quot;AppStore上线素材准备篇&quot;&gt;&lt;/a&gt;AppStore上线素材准备篇&lt;/h1&gt;&lt;h3 id=&quot;1-app名称与版本号&quot;&gt;&lt;a href=&quot;#1-app名称与版本号&quot; class=&quot;headerlink&quot; title=&quot;1.app名称与版本号&quot;&gt;&lt;/a&gt;1.app名称与版本号&lt;/h3&gt;&lt;p&gt;您要填入的 App 版本号。编号应遵循软件版本规范。&lt;/p&gt;
 &lt;h3 id=&quot;2-公司网址&quot;&gt;&lt;a href=&quot;#2-公司网址&quot; class=&quot;headerlink&quot; title=&quot;2.公司网址&quot;&gt;&lt;/a&gt;2.公司网址&lt;/h3&gt;&lt;p&gt;技术支持网址(URL)；营销网址(URL) ,可以共用一个网址。&lt;/p&gt;
@@ -855,9 +865,11 @@ pod update --no-repo-update
     </summary>
     
     
+      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
+    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
-      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -866,7 +878,7 @@ pod update --no-repo-update
     <link href="http://yoursite.com/2016/03/02/%E4%BD%BF%E7%94%A8GithubPages-Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89/"/>
     <id>http://yoursite.com/2016/03/02/使用GithubPages-Hexo搭建免费博客（三）/</id>
     <published>2016-03-02T15:52:40.000Z</published>
-    <updated>2016-03-11T07:13:55.000Z</updated>
+    <updated>2016-03-11T07:27:25.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;域名绑定&quot;&gt;&lt;a href=&quot;#域名绑定&quot; class=&quot;headerlink&quot; title=&quot;域名绑定&quot;&gt;&lt;/a&gt;域名绑定&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;域名解析&lt;br&gt;域名购买成功后，在解析设置中添加以下解析&lt;/li&gt;
@@ -893,6 +905,8 @@ pod update --no-repo-update
     </summary>
     
     
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
       <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
@@ -904,7 +918,7 @@ pod update --no-repo-update
     <link href="http://yoursite.com/2016/02/26/%E4%BD%BF%E7%94%A8GithubPages-Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <id>http://yoursite.com/2016/02/26/使用GithubPages-Hexo搭建免费博客（二）/</id>
     <published>2016-02-26T08:37:14.000Z</published>
-    <updated>2016-03-11T07:13:56.000Z</updated>
+    <updated>2016-03-11T07:27:32.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/hexoThemes.png&quot; alt=&quot;Hexo主题&quot;&gt;&lt;/p&gt;
 &lt;p&gt;上篇讲到Hexo的安装，本篇继续，先来说说Hexo安装后的文件结构与功能。&lt;/p&gt;
@@ -1018,6 +1032,8 @@ pod update --no-repo-update
     </summary>
     
     
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
       <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
@@ -1029,7 +1045,7 @@ pod update --no-repo-update
     <link href="http://yoursite.com/2016/02/25/%E4%BD%BF%E7%94%A8GithubPages-Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://yoursite.com/2016/02/25/使用GithubPages-Hexo搭建免费博客（一）/</id>
     <published>2016-02-25T07:53:51.000Z</published>
-    <updated>2016-03-11T07:13:57.000Z</updated>
+    <updated>2016-03-11T07:27:21.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/A5FBB7EA-1FC0-45DD-ACC5-FB49737D9237.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;关于MarkDown&quot;&gt;&lt;a href=&quot;#关于MarkDown&quot; class=&quot;headerlink&quot; title=&quot;关于MarkDown&quot;&gt;&lt;/a&gt;关于MarkDown&lt;/h3&gt;&lt;p&gt;Markdown 是一种用来写作的轻量级「标记语言」，它用简洁的语法代替排版，而不像一般我们用的字处理软件 Word 或 Pages 有大量的排版、字体设置。它使我们专心于码字，用「标记」语法，来代替常见的排版格式。&lt;/p&gt;
@@ -1124,6 +1140,8 @@ pod update --no-repo-update
     
     </summary>
     
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
       <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
