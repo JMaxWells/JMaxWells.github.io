@@ -64,7 +64,7 @@
     <link href="http://yoursite.com/2016/03/11/iOS9%203DTouch%E3%80%81ShortcutItem%E3%80%81Peek%20And%20Pop%E6%8A%80%E6%9C%AF%E4%B8%80%E8%A7%88/"/>
     <id>http://yoursite.com/2016/03/11/iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览/</id>
     <published>2016-03-11T03:15:48.000Z</published>
-    <updated>2016-03-11T03:40:46.000Z</updated>
+    <updated>2016-03-11T07:24:16.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot;&gt;&lt;a href=&quot;#iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot; class=&quot;headerlink&quot; title=&quot;iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览&quot;&gt;&lt;/a&gt;iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览&lt;/h1&gt;&lt;h2 id=&quot;3DTouch&quot;&gt;&lt;a href=&quot;#3DTouch&quot; class=&quot;headerlink&quot; title=&quot;3DTouch&quot;&gt;&lt;/a&gt;3DTouch&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://developer.apple.com/ios/3d-touch/images/pressure-sensitivity_2x.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;UITouch类里API的变化&quot;&gt;&lt;a href=&quot;#UITouch类里API的变化&quot; class=&quot;headerlink&quot; title=&quot;UITouch类里API的变化&quot;&gt;&lt;/a&gt;UITouch类里API的变化&lt;/h2&gt;&lt;h3 id=&quot;iOS9中添加的属性&quot;&gt;&lt;a href=&quot;#iOS9中添加的属性&quot; class=&quot;headerlink&quot; title=&quot;iOS9中添加的属性&quot;&gt;&lt;/a&gt;iOS9中添加的属性&lt;/h3&gt;&lt;h6 id=&quot;altitudeAngle&quot;&gt;&lt;a href=&quot;#altitudeAngle&quot; class=&quot;headerlink&quot; title=&quot;altitudeAngle&quot;&gt;&lt;/a&gt;altitudeAngle&lt;/h6&gt;&lt;ul&gt;
@@ -224,7 +224,9 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="3DTouch iOS开发" scheme="http://yoursite.com/tags/3DTouch-iOS%E5%BC%80%E5%8F%91/"/>
+      <category term="3DTouch" scheme="http://yoursite.com/tags/3DTouch/"/>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -233,7 +235,7 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     <link href="http://yoursite.com/2016/03/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96iOS%E8%AE%BE%E5%A4%87%E7%9A%84UDID/"/>
     <id>http://yoursite.com/2016/03/11/如何获取iOS设备的UDID/</id>
     <published>2016-03-11T02:20:06.000Z</published>
-    <updated>2016-03-11T03:05:42.000Z</updated>
+    <updated>2016-03-11T07:23:37.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;如何获取iOS设备的UDID&quot;&gt;&lt;a href=&quot;#如何获取iOS设备的UDID&quot; class=&quot;headerlink&quot; title=&quot;如何获取iOS设备的UDID&quot;&gt;&lt;/a&gt;如何获取iOS设备的UDID&lt;/h1&gt;&lt;h2 id=&quot;什么是-UDID？&quot;&gt;&lt;a href=&quot;#什么是-UDID？&quot; class=&quot;headerlink&quot; title=&quot;什么是 UDID？&quot;&gt;&lt;/a&gt;什么是 UDID？&lt;/h2&gt;&lt;p&gt; UDID 是由子母和数字组成的 40 个字符串的序号，用来区别每一个唯一的 iOS 设备，包括 iPhones, iPads, 以及 iPod Touches，这些编码看起来是随机的，实际上是跟硬件设备特点相联系的。&lt;/p&gt;
 &lt;p&gt;例如，一个典型的 UDID 类似这样：&lt;/p&gt;
@@ -275,7 +277,7 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     <link href="http://yoursite.com/2016/03/11/AppStore%E6%9C%80%E6%96%B0%E5%AE%A1%E6%A0%B8%E6%8C%87%E5%8D%97%EF%BC%882015%E5%B9%B43%E6%9C%88%E6%9B%B4%E6%96%B0%E7%89%88%EF%BC%89/"/>
     <id>http://yoursite.com/2016/03/11/AppStore最新审核指南（2015年3月更新版）/</id>
     <published>2016-03-11T01:55:06.000Z</published>
-    <updated>2016-03-11T02:14:40.000Z</updated>
+    <updated>2016-03-11T07:24:29.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;AppStore最新审核指南（2015年3月更新版）&quot;&gt;&lt;a href=&quot;#AppStore最新审核指南（2015年3月更新版）&quot; class=&quot;headerlink&quot; title=&quot;AppStore最新审核指南（2015年3月更新版）&quot;&gt;&lt;/a&gt;AppStore最新审核指南（2015年3月更新版）&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;http://image.woshipm.com/wp-files/2015/03/4ffce04d92a4d6cb21c1494cdfcd6dc1328.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h6 id=&quot;苹果近日更新了App-Store审核指南的相关章节，对此前版本进行了修改和完善。除了增加应用截图、预览等限制外，使用Apple-Pay进行定期付款的应用程序必须展示每个阶段所需款额，费用归属以及如何取消。而从修改的政策部分可以看出，苹果对App-store应用的审核更加严格，鉴于近来国内游戏踩雷屡见不鲜，审核标准请各位业内同学耐心阅读。&quot;&gt;&lt;a href=&quot;#苹果近日更新了App-Store审核指南的相关章节，对此前版本进行了修改和完善。除了增加应用截图、预览等限制外，使用Apple-Pay进行定期付款的应用程序必须展示每个阶段所需款额，费用归属以及如何取消。而从修改的政策部分可以看出，苹果对App-store应用的审核更加严格，鉴于近来国内游戏踩雷屡见不鲜，审核标准请各位业内同学耐心阅读。&quot; class=&quot;headerlink&quot; title=&quot;苹果近日更新了App Store审核指南的相关章节，对此前版本进行了修改和完善。除了增加应用截图、预览等限制外，使用Apple Pay进行定期付款的应用程序必须展示每个阶段所需款额，费用归属以及如何取消。而从修改的政策部分可以看出，苹果对App store应用的审核更加严格，鉴于近来国内游戏踩雷屡见不鲜，审核标准请各位业内同学耐心阅读。&quot;&gt;&lt;/a&gt;苹果近日更新了App Store审核指南的相关章节，对此前版本进行了修改和完善。除了增加应用截图、预览等限制外，使用Apple Pay进行定期付款的应用程序必须展示每个阶段所需款额，费用归属以及如何取消。而从修改的政策部分可以看出，苹果对App store应用的审核更加严格，鉴于近来国内游戏踩雷屡见不鲜，审核标准请各位业内同学耐心阅读。&lt;/h6&gt;&lt;h2 id=&quot;1、条款和条件&quot;&gt;&lt;a href=&quot;#1、条款和条件&quot; class=&quot;headerlink&quot; title=&quot;1、条款和条件&quot;&gt;&lt;/a&gt;1、条款和条件&lt;/h2&gt;&lt;ul&gt;
@@ -709,6 +711,8 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
   </entry>
@@ -718,7 +722,7 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     <link href="http://yoursite.com/2016/03/10/%E4%BD%BF%E7%94%A8CocoaPods%E5%81%9A%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/"/>
     <id>http://yoursite.com/2016/03/10/使用CocoaPods做依赖管理/</id>
     <published>2016-03-10T06:57:04.000Z</published>
-    <updated>2016-03-10T09:42:44.000Z</updated>
+    <updated>2016-03-11T07:23:51.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;使用CocoaPods做依赖管理&quot;&gt;&lt;a href=&quot;#使用CocoaPods做依赖管理&quot; class=&quot;headerlink&quot; title=&quot;使用CocoaPods做依赖管理&quot;&gt;&lt;/a&gt;使用CocoaPods做依赖管理&lt;/h2&gt;&lt;p&gt;每种语言发展到一个阶段，就会出现相应的依赖管理工具。本章讲解iOS项目的依赖管理工具CocoaPods。&lt;/p&gt;
 &lt;h2 id=&quot;CocoaPods简介&quot;&gt;&lt;a href=&quot;#CocoaPods简介&quot; class=&quot;headerlink&quot; title=&quot;CocoaPods简介&quot;&gt;&lt;/a&gt;CocoaPods简介&lt;/h2&gt;&lt;p&gt;每种语言发展到一个阶段，就会出现相应的依赖管理工具，例如Java语言的Maven，nodejs的npm。随着iOS开发者的增多，业界也出现了为iOS程序提供依赖管理的工具，它的名字叫做：CocoaPods。&lt;/p&gt;
@@ -829,7 +833,7 @@ pod update --no-repo-update
     <link href="http://yoursite.com/2016/03/10/AppStore%E4%B8%8A%E7%BA%BF%E7%B4%A0%E6%9D%90%E5%87%86%E5%A4%87%E7%AF%87/"/>
     <id>http://yoursite.com/2016/03/10/AppStore上线素材准备篇/</id>
     <published>2016-03-10T06:20:55.000Z</published>
-    <updated>2016-03-10T09:43:12.000Z</updated>
+    <updated>2016-03-11T07:24:49.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;AppStore上线素材准备篇&quot;&gt;&lt;a href=&quot;#AppStore上线素材准备篇&quot; class=&quot;headerlink&quot; title=&quot;AppStore上线素材准备篇&quot;&gt;&lt;/a&gt;AppStore上线素材准备篇&lt;/h1&gt;&lt;h3 id=&quot;1-app名称与版本号&quot;&gt;&lt;a href=&quot;#1-app名称与版本号&quot; class=&quot;headerlink&quot; title=&quot;1.app名称与版本号&quot;&gt;&lt;/a&gt;1.app名称与版本号&lt;/h3&gt;&lt;p&gt;您要填入的 App 版本号。编号应遵循软件版本规范。&lt;/p&gt;
 &lt;h3 id=&quot;2-公司网址&quot;&gt;&lt;a href=&quot;#2-公司网址&quot; class=&quot;headerlink&quot; title=&quot;2.公司网址&quot;&gt;&lt;/a&gt;2.公司网址&lt;/h3&gt;&lt;p&gt;技术支持网址(URL)；营销网址(URL) ,可以共用一个网址。&lt;/p&gt;
@@ -850,6 +854,8 @@ pod update --no-repo-update
     
     </summary>
     
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
