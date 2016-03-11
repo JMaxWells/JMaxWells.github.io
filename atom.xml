@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-11T03:40:46.000Z</updated>
+  <updated>2016-03-11T07:15:27.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>介绍一些正在使用或者好玩的iOS越狱插件</title>
+    <link href="http://yoursite.com/2016/03/11/%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%BA%9B%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E6%88%96%E8%80%85%E5%A5%BD%E7%8E%A9%E7%9A%84iOS%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
+    <id>http://yoursite.com/2016/03/11/介绍一些正在使用或者好玩的iOS越狱插件/</id>
+    <published>2016-03-11T07:07:58.000Z</published>
+    <updated>2016-03-11T07:15:27.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;a href=&quot;#介绍一些正在使用或者好玩的iOS越狱插件&quot; class=&quot;headerlink&quot; title=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;/a&gt;介绍一些正在使用或者好玩的iOS越狱插件&lt;/h1&gt;&lt;h2 id=&quot;什么是越狱&quot;&gt;&lt;a href=&quot;#什么是越狱&quot; class=&quot;headerlink&quot; title=&quot;什么是越狱&quot;&gt;&lt;/a&gt;什么是越狱&lt;/h2&gt;&lt;p&gt;“越狱”指的是绕过苹果在其设备上对操作系统施加的很多限制，从而可以“Root访问”基础的操作系统。简单来说，“越狱”可以让iPhone用户从苹果应用商店外下载其他非官方的应用程序，或者对用户界面进行定制。&lt;/p&gt;
+&lt;h2 id=&quot;插件&quot;&gt;&lt;a href=&quot;#插件&quot; class=&quot;headerlink&quot; title=&quot;插件&quot;&gt;&lt;/a&gt;插件&lt;/h2&gt;&lt;h3 id=&quot;DataMember&quot;&gt;&lt;a href=&quot;#DataMember&quot; class=&quot;headerlink&quot; title=&quot;DataMember&quot;&gt;&lt;/a&gt;DataMember&lt;/h3&gt;&lt;p&gt;一款可以实时显示网络数据的悬浮窗控件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;通知中心显示wifi和数据流量信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;状态显示数据传转速率&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;按天,周,月显示数据使用情况&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;可通过设置选项自定义显示&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;EnableLivePhotos&quot;&gt;&lt;a href=&quot;#EnableLivePhotos&quot; class=&quot;headerlink&quot; title=&quot;EnableLivePhotos&quot;&gt;&lt;/a&gt;EnableLivePhotos&lt;/h3&gt;&lt;p&gt;使用EnableLivePhotos后不仅仅是可以在拍照界面中开启LivePhotos模式，还能在图库中像iPhone6s系列那样浏览拍下来的动态图，长按即可查看整个动态效果;并且可以通过“分享”按钮将 LivePhotos设置成动态的桌面或者锁屏壁纸，同样通过长按即可让图片动起来。&lt;/p&gt;
+&lt;h3 id=&quot;Kuaidial&quot;&gt;&lt;a href=&quot;#Kuaidial&quot; class=&quot;headerlink&quot; title=&quot;Kuaidial&quot;&gt;&lt;/a&gt;Kuaidial&lt;/h3&gt;&lt;p&gt;Kuaidial是一款知名的iOS越狱来电归属地插件。众所周知，苹果在iOS8中首次加入了来电归属地功能，但是该功能仅限于陌生来电，对于已加入通讯录中的号码则不具备归属地显示功能，并且也不支持短信归属地及T9拨号等功能。而Kuaidial之所以深受越狱用户的喜爱，正是因为其能满足用户在这些方面的需求，更全面的电话/短信归属地显示功能、更方便快捷的T9拨号，还能支持自定义拦截黑名单等，多少用户越狱正是为Kuaidial而来。&lt;/p&gt;
+&lt;h3 id=&quot;Flex2&quot;&gt;&lt;a href=&quot;#Flex2&quot; class=&quot;headerlink&quot; title=&quot;Flex2&quot;&gt;&lt;/a&gt;Flex2&lt;/h3&gt;&lt;p&gt;这款插件想必很多熟悉越狱的用户都不会陌生，它就是大名鼎鼎的Flex。最新版的Flex2拥有“反越狱检查”功能，可以让越狱后的设备避开App本身的检查机制，从而继续使用方便快捷的指纹支付功能。此外，该插件还能支持去掉部分App中的广告，功能甚是强大。&lt;/p&gt;
+&lt;h3 id=&quot;revealMenu&quot;&gt;&lt;a href=&quot;#revealMenu&quot; class=&quot;headerlink&quot; title=&quot;revealMenu&quot;&gt;&lt;/a&gt;revealMenu&lt;/h3&gt;&lt;p&gt;一款名为Forcy的iOS9越狱插件可以让旧iPhone玩上3D Touch功能，事实上这并不是唯一一款类iPhone6s 3D Touch功能插件，下面小编为你推荐另外一款3D Touch插件——revealMenu，据已经体验过的小伙伴反馈，这款插件的功能还强过Forcy。&lt;br&gt;在操作方式上，Forcy通过上滑触发，而revealMenu通过长按触发，并且配合另一个插件Hapticle提供的振动反馈，做到跟iPhone6s几乎一模一样。(Hapticle同样适用于Forcy，如果你更喜欢Forcy，也可以装Hapticle添加振动反馈)&lt;/p&gt;
+&lt;h3 id=&quot;Springtomize-3&quot;&gt;&lt;a href=&quot;#Springtomize-3&quot; class=&quot;headerlink&quot; title=&quot;Springtomize 3&quot;&gt;&lt;/a&gt;Springtomize 3&lt;/h3&gt;&lt;p&gt;大家对于Springtomize系列插件应该是非常熟悉了，它可以对iOS中的大部分元素进行自定义，堪称插件中的“瑞士军刀”，它提供了许多功能，包括：动画效果、图标美化、锁屏界面自定义、隐藏Dock栏、控制中心增强等。&lt;/p&gt;
+&lt;h3 id=&quot;Auxo-3&quot;&gt;&lt;a href=&quot;#Auxo-3&quot; class=&quot;headerlink&quot; title=&quot;Auxo 3&quot;&gt;&lt;/a&gt;Auxo 3&lt;/h3&gt;&lt;p&gt;大部分越狱用户对Auxo 3应该不会感到陌生。而对于新用户来说，如果你希望寻找新的应用切换体验的话，Auxo 3一定不可错过。Auxo 3将控制中心和应用切换界面进行了整合，用户只需从屏幕底部向上滑动即可呼出新的界面。&lt;/p&gt;
+&lt;h3 id=&quot;Activator&quot;&gt;&lt;a href=&quot;#Activator&quot; class=&quot;headerlink&quot; title=&quot;Activator&quot;&gt;&lt;/a&gt;Activator&lt;/h3&gt;&lt;p&gt;一直以来，Activator都是iOS平台上最受欢迎的插件之一，因为它可以带来各种各样的手势操作，最大限度地解放手机上的Home键。在手机的主界面上，用户可以选择在多种情况下使用手势：任何地方、主屏幕上、应用内和锁屏界面。一般情况下，任何地方就是指用户设置的快捷键会在主屏幕和应用内触发，但不包括锁屏状态。&lt;/p&gt;
+&lt;h3 id=&quot;WinterBoard&quot;&gt;&lt;a href=&quot;#WinterBoard&quot; class=&quot;headerlink&quot; title=&quot;WinterBoard&quot;&gt;&lt;/a&gt;WinterBoard&lt;/h3&gt;&lt;p&gt;目前适配iOS9的WinterBoard已经上架Cydia，iOS设备美化控不能错过。作为越狱的一个主要原因，让iOS设备更个性化一直是不少用户的愿望，而WinterBoard则提供了这样一个平台。如果说iOS发展到今天已经没有其它必要越狱的话，美化或许会是最后的一个越狱理由。  &lt;/p&gt;
+&lt;h3 id=&quot;BioProtect&quot;&gt;&lt;a href=&quot;#BioProtect&quot; class=&quot;headerlink&quot; title=&quot;BioProtect&quot;&gt;&lt;/a&gt;BioProtect&lt;/h3&gt;&lt;p&gt;手机越来越成为人们生活的私密物品，大多数人的手机中多多少少都会储存着一些私密信息如私照、视频或是短信等等，而在日常使用中又难免有时会碰到别人借手机的情景，这个时候对私密信息进行加密就显得非常重要了。下面25PP小编为你推荐一款越狱指纹加密插件——BioProtect，支持iOS9越狱。&lt;/p&gt;
+&lt;h3 id=&quot;Forcy&quot;&gt;&lt;a href=&quot;#Forcy&quot; class=&quot;headerlink&quot; title=&quot;Forcy&quot;&gt;&lt;/a&gt;Forcy&lt;/h3&gt;&lt;p&gt;这款插件名为Forcy，与iPhone6s上通过按压呼出二级菜单不同，Forcy只需用户对桌面上的应用图标执行上滑操作便可呼出类似3D Touch的快捷菜单。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;a href=&quot;#介绍一些正在使用或者好玩的iOS越狱插件&quot; class=&quot;headerlink&quot; title=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;/a&gt;介绍一些正在使用或者好玩的iOS越狱插件&lt;/h1&gt;&lt;
+    
+    </summary>
+    
+    
+      <category term="越狱插件" scheme="http://yoursite.com/tags/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览</title>
@@ -808,6 +852,276 @@ pod update --no-repo-update
     
     
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用GithubPages-Hexo搭建免费博客（三）</title>
+    <link href="http://yoursite.com/2016/03/02/%E4%BD%BF%E7%94%A8GithubPages-Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/03/02/使用GithubPages-Hexo搭建免费博客（三）/</id>
+    <published>2016-03-02T15:52:40.000Z</published>
+    <updated>2016-03-11T07:13:55.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;域名绑定&quot;&gt;&lt;a href=&quot;#域名绑定&quot; class=&quot;headerlink&quot; title=&quot;域名绑定&quot;&gt;&lt;/a&gt;域名绑定&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;域名解析&lt;br&gt;域名购买成功后，在解析设置中添加以下解析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-03-03%20%E4%B8%8A%E5%8D%8812.02.04.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;记录类型为：A&lt;br&gt;主机记录分别为“@”，“wwww”。其中设置@，可以用xxx.com进行访问。设置www，可以使用www.xxx.com进行访问。&lt;br&gt;记录值都为 “192.30.252.153”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加CNAME文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;打开自己本地的博客目录，在source文件夹下创建名为CNAME的文本文件。打开，输入自己的域名，格式为“xxx.com”，保存后使用&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;部署到github。&lt;/p&gt;
+&lt;p&gt;至此，便可使用我们自己的域名进行访问了！&lt;/p&gt;
+&lt;h2 id=&quot;图片存储&quot;&gt;&lt;a href=&quot;#图片存储&quot; class=&quot;headerlink&quot; title=&quot;图片存储&quot;&gt;&lt;/a&gt;图片存储&lt;/h2&gt;&lt;p&gt;可以使用&lt;a href=&quot;https://portal.qiniu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;七牛云存储&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Mac上好用的GIF图截屏工具&quot;&gt;&lt;a href=&quot;#Mac上好用的GIF图截屏工具&quot; class=&quot;headerlink&quot; title=&quot;Mac上好用的GIF图截屏工具&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cockos.com/licecap/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mac上好用的GIF图截屏工具&lt;/a&gt;&lt;/h2&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;域名绑定&quot;&gt;&lt;a href=&quot;#域名绑定&quot; class=&quot;headerlink&quot; title=&quot;域名绑定&quot;&gt;&lt;/a&gt;域名绑定&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;域名解析&lt;br&gt;域名购买成功后，在解析设置中添加以下解析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;htt
+    
+    </summary>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用GithubPages-Hexo搭建免费博客（二）</title>
+    <link href="http://yoursite.com/2016/02/26/%E4%BD%BF%E7%94%A8GithubPages-Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/02/26/使用GithubPages-Hexo搭建免费博客（二）/</id>
+    <published>2016-02-26T08:37:14.000Z</published>
+    <updated>2016-03-11T07:13:56.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/hexoThemes.png&quot; alt=&quot;Hexo主题&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上篇讲到Hexo的安装，本篇继续，先来说说Hexo安装后的文件结构与功能。&lt;/p&gt;
+&lt;h2 id=&quot;HEXO博客配置&quot;&gt;&lt;a href=&quot;#HEXO博客配置&quot; class=&quot;headerlink&quot; title=&quot;HEXO博客配置&quot;&gt;&lt;/a&gt;HEXO博客配置&lt;/h2&gt;&lt;h4 id=&quot;1-Hexo设置&quot;&gt;&lt;a href=&quot;#1-Hexo设置&quot; class=&quot;headerlink&quot; title=&quot;1. Hexo设置&quot;&gt;&lt;/a&gt;1. Hexo设置&lt;/h4&gt;&lt;p&gt;打开根目录下的_config.yml文件&lt;/p&gt;
+&lt;h5 id=&quot;1-1-站点配置&quot;&gt;&lt;a href=&quot;#1-1-站点配置&quot; class=&quot;headerlink&quot; title=&quot;1.1 站点配置&quot;&gt;&lt;/a&gt;1.1 站点配置&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 # Site&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 title: myblog   # 网站标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3 subtitle:      # 网站子标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4 description: 这是一个利用Hexo搭建的博客    # 网站描述&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5 author:  author   # 网站作者，也就是您的名字&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6 language: zh-cn   # 网站使用的语言        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7 timezone:         # 网站时区。Hexo 预设使用您电脑的时区。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&quot;1-2-网址配置&quot;&gt;&lt;a href=&quot;#1-2-网址配置&quot; class=&quot;headerlink&quot; title=&quot;1.2 网址配置&quot;&gt;&lt;/a&gt;1.2 网址配置&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 # URL&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 url: http://xiaoxuetu.github.io         # 博客网址&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3 root: /                                 # 网站根目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4 permalink: :year/:month/:day/:title/    # 文章的永久链接格式   :year/:month/:day/:title/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5 permalink_defaults:                     # 永久链接中各部分的默认值&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;注意！ 如果你的网站存放在子目录中，例如 &lt;a href=&quot;http://xiaoxuetu.github.io/blog&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://xiaoxuetu.github.io/blog&lt;/a&gt;, 则将url设为&lt;a href=&quot;http://xiaoxuetu.github.io/blog，&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://xiaoxuetu.github.io/blog，&lt;/a&gt; 并且把 root 设为/blog/。&lt;/em&gt;&lt;/p&gt;
+&lt;h5 id=&quot;1-3-目录配置&quot;&gt;&lt;a href=&quot;#1-3-目录配置&quot; class=&quot;headerlink&quot; title=&quot;1.3 目录配置&quot;&gt;&lt;/a&gt;1.3 目录配置&lt;/h5&gt;&lt;p&gt;一般直接取默认值不用修改。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 # Directory&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 source_dir: source         # 资源文件夹，这个文件夹用来存放内容，例如我们用markdown编写的博文&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3 public_dir: public         # 公共文件夹，这个文件夹用于存放生成的静态博客文件。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4 tag_dir: tags              # 标签文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5 archive_dir: archives      # 归档文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6 category_dir: categories   # 分类文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7 code_dir: downloads/code   # Include code 文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8 i18n_dir: :lang            # 国际化（i18n）文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9 skip_render:               # 跳过指定文件的渲染，您可使用 glob 来配置路径。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&quot;1-4-文章配置&quot;&gt;&lt;a href=&quot;#1-4-文章配置&quot; class=&quot;headerlink&quot; title=&quot;1.4 文章配置&quot;&gt;&lt;/a&gt;1.4 文章配置&lt;/h5&gt;&lt;p&gt;一般直接取默认值不用修改。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 # Writing&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 2 new_post_name: :title.md    # 新文章的文件名称&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 3 default_layout: post        # 预设布局&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 4 titlecase: false            # 把标题转换为 titlecase（titlecase指的是将每个单词首字母转换成大写）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 5 external_link: true         # 在新标签中打开链接&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 6 filename_case: 0            # 把文件名称转换为 (1) 小写或 (2) 大写, 0表示不变&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 7 render_drafts: false        # 显示草稿&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 8 post_asset_folder: false    # 启动 Asset 文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 9 relative_link: false        # 把链接改为与根目录的相对位址&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10 future: true                # 显示未来的文章&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11 highlight:                  # 代码块的设置&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12   enable: true              &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13   line_number: true         # 是否显示行号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14   auto_detect: true         # 是否自动监测&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15   tab_replace:              # 将 tab 替换成其他字符串&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&quot;1-5-分类和标签配置&quot;&gt;&lt;a href=&quot;#1-5-分类和标签配置&quot; class=&quot;headerlink&quot; title=&quot;1.5 分类和标签配置&quot;&gt;&lt;/a&gt;1.5 分类和标签配置&lt;/h5&gt;&lt;p&gt;一般直接取默认值不用修改。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 # Category &amp;amp; Tag&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 default_category: uncategorized    # 默认分类, uncategorized表示未分类&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3 category_map:                      # 分类别名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4 tag_map:                           # 标签别名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&quot;1-6-日期-以及-时间格式-配置&quot;&gt;&lt;a href=&quot;#1-6-日期-以及-时间格式-配置&quot; class=&quot;headerlink&quot; title=&quot;1.6 日期 以及 时间格式 配置&quot;&gt;&lt;/a&gt;1.6 日期 以及 时间格式 配置&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 date_format: YYYY-MM-DD           # 日期格式&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 time_format: HH:mm:ss             # 时间格式&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&quot;1-7-分页配置&quot;&gt;&lt;a href=&quot;#1-7-分页配置&quot; class=&quot;headerlink&quot; title=&quot;1.7 分页配置&quot;&gt;&lt;/a&gt;1.7 分页配置&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 # Pagination&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 per_page: 10                      # 每页显示的文章量，如果设置值为0，则表示禁止分野&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3 pagination_dir: page              # 分页目录&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&quot;1-8-主题配置&quot;&gt;&lt;a href=&quot;#1-8-主题配置&quot; class=&quot;headerlink&quot; title=&quot;1.8 主题配置&quot;&gt;&lt;/a&gt;1.8 主题配置&lt;/h5&gt;&lt;p&gt;从这里开始，都是属于Hexo拓展插件的配置了。以下代码，主要是主题配置。更详细的主题替换，看第二节&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 # Extensions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 theme: landscape    # 主题设置，默认是 landscape&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&quot;1-9-部署配置&quot;&gt;&lt;a href=&quot;#1-9-部署配置&quot; class=&quot;headerlink&quot; title=&quot;1.9 部署配置&quot;&gt;&lt;/a&gt;1.9 部署配置&lt;/h5&gt;&lt;p&gt;这里主要用于将博客部署到github上，详细教程在后面。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 # Deployment&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 deploy:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3   type:     # 设置发布类型，如git，rsync&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h4 id=&quot;主题设置&quot;&gt;&lt;a href=&quot;#主题设置&quot; class=&quot;headerlink&quot; title=&quot;主题设置&quot;&gt;&lt;/a&gt;主题设置&lt;/h4&gt;&lt;p&gt;Hexo为我们提供了很多的主题供我们选择，网页在&lt;a href=&quot;http://hexo.io/themes/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt; 我们可以自由选择自己喜欢的主题来进行设置。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/hexojs/hexo/wiki/Themes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github主题列表地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;修改方法，就是将相应的主题clone到博客文件夹下的themes文件夹下，然后将上面1.8中的主题名字设置为相应的修改的名字。&lt;br&gt;我用的是这个：&lt;a href=&quot;https://github.com/ppoffice/hexo-theme-hueman&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-theme-hueman&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Extensions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Themes: https://hexo.io/themes/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;theme: hexo-theme-hueman&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;想要看到修改后的效果，可以在终端中继续执行以下命令。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo clean    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;以上命令完成后，可以执行&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;hexo s 等同于 hexo server , s 其实就是 server的缩写&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;执行成功后，控制台将会输出&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;用浏览器打开此站点，就可以看到我们用Hexo生成的网页。&lt;/p&gt;
+&lt;h5 id=&quot;新建博文&quot;&gt;&lt;a href=&quot;#新建博文&quot; class=&quot;headerlink&quot; title=&quot;新建博文&quot;&gt;&lt;/a&gt;新建博文&lt;/h5&gt;&lt;p&gt;cd到博客文件的根目录下，使用以下命令，新建博客&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo new &amp;quot;title&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;格式是： hexo new ｛文章名｝&lt;br&gt;命令执行成功后，你就会发现在 source/_posts 目录下多了一个文件 title.md 。&lt;/p&gt;
+&lt;p&gt;在文件夹下使用之前我们下载的markdown编辑器，打开这个文件，会看到以下内容&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;title: title&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;date: &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tags:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;含义是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;title : 文章的标题&lt;/li&gt;
+&lt;li&gt;date : 该文章的创建时间&lt;/li&gt;
+&lt;li&gt;tags : 该文章的标记tag&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;依据不同的主题，多标签的语法格式为&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;tags: &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - 标签1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - 标签2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;或者&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;tags: [标签1,标签2]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;你可以添加你所需要的变量，如果觉得每次生成后更改很麻烦，可以在模板文件夹scaffolds下找到post.md文件，编辑它的Front-matter为你想要的变量参数，默认新建博文使用的post模板。&lt;/p&gt;
+&lt;h5 id=&quot;创建自己制定模板&quot;&gt;&lt;a href=&quot;#创建自己制定模板&quot; class=&quot;headerlink&quot; title=&quot;创建自己制定模板&quot;&gt;&lt;/a&gt;创建自己制定模板&lt;/h5&gt;&lt;p&gt;如果你想使用其他模板，你可以使用下列命令来创建指定模板的博文：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo new scaffold &amp;quot;title&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;请确保使用的模板scaffold在scaffolds存在。&lt;/p&gt;
+&lt;h5 id=&quot;文章摘要&quot;&gt;&lt;a href=&quot;#文章摘要&quot; class=&quot;headerlink&quot; title=&quot;文章摘要&quot;&gt;&lt;/a&gt;文章摘要&lt;/h5&gt;&lt;p&gt;这个功能很实用，可以让你在首页文章目录不必显示全部的文章内容，只显示指定摘要。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;以上是摘要&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;以下是全文&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;p&gt;使用markdown编辑好博文后，就可以执行&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;此命令主要用于部署网页的静态文件，每次修改后都应该首先执行此命令，来重新部署&lt;/p&gt;
+&lt;p&gt;然后继续执行“hexo s”启动服务。&lt;/p&gt;
+&lt;p&gt;至此，Hexo的网页部署全部完成，之后就是部署到github上了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;部署到github&quot;&gt;&lt;a href=&quot;#部署到github&quot; class=&quot;headerlink&quot; title=&quot;部署到github&quot;&gt;&lt;/a&gt;部署到github&lt;/h2&gt;&lt;h5 id=&quot;1-注册账号&quot;&gt;&lt;a href=&quot;#1-注册账号&quot; class=&quot;headerlink&quot; title=&quot;1.注册账号&quot;&gt;&lt;/a&gt;1.注册账号&lt;/h5&gt;&lt;p&gt;如果有github账号的，可以忽略，没有请移步&lt;a href=&quot;www.github.com&quot;&gt;github&lt;/a&gt;注册账号&lt;/p&gt;
+&lt;h5 id=&quot;2-创建与你的github用户名对应的仓库&quot;&gt;&lt;a href=&quot;#2-创建与你的github用户名对应的仓库&quot; class=&quot;headerlink&quot; title=&quot;2.创建与你的github用户名对应的仓库&quot;&gt;&lt;/a&gt;2.创建与你的github用户名对应的仓库&lt;/h5&gt;&lt;p&gt;仓库名字必须为“username.github.io”， 其中“username”为你的用户名&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-03-02%20%E4%B8%8B%E5%8D%8810.38.37.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;点击右上角的加号，创建new repository，然后输入“username.github.io”，点击创建。&lt;/p&gt;
+&lt;h5 id=&quot;3-创建Github-Pages&quot;&gt;&lt;a href=&quot;#3-创建Github-Pages&quot; class=&quot;headerlink&quot; title=&quot;3.创建Github Pages&quot;&gt;&lt;/a&gt;3.创建Github Pages&lt;/h5&gt;&lt;p&gt;repository创建完成后进入以下界面&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-03-02%20%E4%B8%8B%E5%8D%8810.43.20.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;点击最右边的Settings&lt;/p&gt;
+&lt;p&gt;进入后找到创建Github Pages的地方&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-03-02%20%E4%B8%8B%E5%8D%8810.45.28.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;点击 Launch automatic page generator&lt;br&gt;最后生成主页：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/github_pages_themes.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;之后我们就可以直接访问“username.github.io”，去访问我们的博客了。&lt;/p&gt;
+&lt;h5 id=&quot;4-配置git&quot;&gt;&lt;a href=&quot;#4-配置git&quot; class=&quot;headerlink&quot; title=&quot;4.配置git&quot;&gt;&lt;/a&gt;4.配置git&lt;/h5&gt;&lt;p&gt;由于mac自带git，所以直接打开终端进行设置&lt;/p&gt;
+&lt;p&gt;设置用户名密码&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git config --global user.email &amp;quot;你的github邮箱&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config --global user.name &amp;quot;你的github用户名&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;生成密钥&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh-keygen -t rsa -C &amp;quot;你的邮箱&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;回车之后，打开Finder,前往文件夹[~/.ssh]中会看到生成的两个文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;id_rsa    id_rsa.pub&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中id_rsa是私钥，id_rsa.pub是龚玥&lt;/p&gt;
+&lt;p&gt;然后执行以下命令，添加生成的key&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh-add id_rsa&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后将id_rsa.pub中的内容复制下来，在我们github的主页中，点击个人的账户，找到settings–&amp;gt;SSH keys，将我们复制的内容，添加在这里。title随便取个名字就好。&lt;/p&gt;
+&lt;p&gt;添加成功之后，可以在终端测试&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh -T git@github.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;点击回车后输出内容中，最后一句话为&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;You&amp;apos;ve successfully authenticated, but github does not provide shell access.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;至此，验证成功。&lt;/p&gt;
+&lt;h5 id=&quot;5-最后一步，将我们用Hexo生成的网页部署到github&quot;&gt;&lt;a href=&quot;#5-最后一步，将我们用Hexo生成的网页部署到github&quot; class=&quot;headerlink&quot; title=&quot;5.最后一步，将我们用Hexo生成的网页部署到github&quot;&gt;&lt;/a&gt;5.最后一步，将我们用Hexo生成的网页部署到github&lt;/h5&gt;&lt;p&gt;在我们的博客根目录下，打开站点配置文件&lt;strong&gt;_config.yml&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Deployment&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Docs: https://hexo.io/docs/deployment.html&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deploy: &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  type: git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  repository: https://github.com/username/username.github.io.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  branch: master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;其中“username”为你github的用户名。&lt;/p&gt;
+&lt;p&gt;修改完保存后，就可以打开终端，cd到博客根目录，执行&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo generate #生成静态网页&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo deploy #部署到github&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;之后输出以下信息&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;INFO Deploy done: git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;说明我们的博客已经部署成功，github pages可能会存在延时，过几分钟后，就可以通过username.github.io去访问我们的博客了！&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本篇主要讲述了使用Hexo进行博客的搭建与配置，以及如何部署到github上，至此我们所有创建博客的工作已经完成。之后便是自己博客的编写与经营了，一些更深入的配置移步&lt;a href=&quot;http://icehulu.com/2016/03/02/使用GithubPages-Hexo搭建免费博客（三）/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第三篇&lt;/a&gt;吧&lt;/em&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/hexoThemes.png&quot; alt=&quot;Hexo主题&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上篇讲到Hexo的安装，本篇继续，先来说说Hexo安装后的文件结构与功能。&lt;/p&gt;
+&lt;h2 id=&quot;HE
+    
+    </summary>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用GithubPages-Hexo搭建免费博客_Mac（一）</title>
+    <link href="http://yoursite.com/2016/02/25/%E4%BD%BF%E7%94%A8GithubPages-Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/02/25/使用GithubPages-Hexo搭建免费博客（一）/</id>
+    <published>2016-02-25T07:53:51.000Z</published>
+    <updated>2016-03-11T07:13:57.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/A5FBB7EA-1FC0-45DD-ACC5-FB49737D9237.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;关于MarkDown&quot;&gt;&lt;a href=&quot;#关于MarkDown&quot; class=&quot;headerlink&quot; title=&quot;关于MarkDown&quot;&gt;&lt;/a&gt;关于MarkDown&lt;/h3&gt;&lt;p&gt;Markdown 是一种用来写作的轻量级「标记语言」，它用简洁的语法代替排版，而不像一般我们用的字处理软件 Word 或 Pages 有大量的排版、字体设置。它使我们专心于码字，用「标记」语法，来代替常见的排版格式。&lt;/p&gt;
+&lt;p&gt;其详细的介绍，可以看下&lt;a href=&quot;http://wowubuntu.com/markdown/#list&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown 语法说明 (简体中文版)&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;专注你的文字内容，排版样式也只是需要键盘即可搞定&lt;/li&gt;
+&lt;li&gt;纯文本，兼容所有的文本编辑器与文字处理软件&lt;/li&gt;
+&lt;li&gt;可读，直观，简介，学习成本低&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;#####&lt;a href=&quot;https://www.zybuluo.com/mdeditor&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown使用示例&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&quot;书写工具&quot;&gt;&lt;a href=&quot;#书写工具&quot; class=&quot;headerlink&quot; title=&quot;书写工具&quot;&gt;&lt;/a&gt;书写工具&lt;/h5&gt;&lt;p&gt;Mac下有两款优秀的 Markdown 编辑器，&lt;a href=&quot;http://25.io/mou/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mou&lt;/a&gt;和&lt;a href=&quot;http://macdown.uranusjr.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MacDown&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://25.io/mou/Mou_128.png&quot; alt=&quot;Mou icon&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://macdown.uranusjr.com/static/base/img/logo-160.png&quot; alt=&quot;MacDown logo&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;关于其优缺点，可以移步这里-至于选择哪款，看个人喜好。&quot;&gt;&lt;a href=&quot;#关于其优缺点，可以移步这里-至于选择哪款，看个人喜好。&quot; class=&quot;headerlink&quot; title=&quot;关于其优缺点，可以移步这里,至于选择哪款，看个人喜好。&quot;&gt;&lt;/a&gt;关于其优缺点，可以移步&lt;a href=&quot;http://www.jianshu.com/p/6c157af09e84&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;,至于选择哪款，看个人喜好。&lt;/h2&gt;&lt;h3 id=&quot;关于Hexo&quot;&gt;&lt;a href=&quot;#关于Hexo&quot; class=&quot;headerlink&quot; title=&quot;关于Hexo&quot;&gt;&lt;/a&gt;关于Hexo&lt;/h3&gt;&lt;p&gt;Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;br&gt;&lt;a href=&quot;https://hexo.io/zh-cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo官网&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;关于GithubPages&quot;&gt;&lt;a href=&quot;#关于GithubPages&quot; class=&quot;headerlink&quot; title=&quot;关于GithubPages&quot;&gt;&lt;/a&gt;关于GithubPages&lt;/h3&gt;&lt;p&gt;在Github里面，每一个项目都拥有它的一个主页，列出项目的源文件，但是对于新手来说，看到那么多的源代码，只会让人感到头晕脑胀，无从下手，他更希望的是，该项目有一个简明易懂的页面，告诉他每一步要怎么去做。&lt;/p&gt;
+&lt;p&gt;因此，Github就设计了Github Pages这个功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，Github Pages可以被认为是用户编写的、托管在github上的静态网页。&lt;/p&gt;
+&lt;p&gt;通过上面的介绍，大家对Hexo和Github已经有了大概的了解。&lt;br&gt;我们的方式就是，利用Markdown进行博客的编写，通过Hexo这个框架解析生成靓丽的静态页面，然后部署到Github上供大家浏览。&lt;/p&gt;
+&lt;h2 id=&quot;环境搭建&quot;&gt;&lt;a href=&quot;#环境搭建&quot; class=&quot;headerlink&quot; title=&quot;环境搭建&quot;&gt;&lt;/a&gt;环境搭建&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;硬件&lt;br&gt;此版本为Mac版👽&lt;/li&gt;
+&lt;li&gt;软件&lt;ol&gt;
+&lt;li&gt;node.js&lt;/li&gt;
+&lt;li&gt;npm&lt;/li&gt;
+&lt;li&gt;hexo&lt;/li&gt;
+&lt;li&gt;github账号&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;安装node-js与npm&quot;&gt;&lt;a href=&quot;#安装node-js与npm&quot; class=&quot;headerlink&quot; title=&quot;安装node.js与npm&quot;&gt;&lt;/a&gt;安装node.js与npm&lt;/h3&gt;&lt;p&gt;下载node.js 有多种方法：使用 &lt;a href=&quot;http://brew.sh/index_zh-cn.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Homebrew&lt;/a&gt; 下载 或者直接下载安装包。 建议 node.js 直接下载 安装包，因为使用 brew 有可能失败，会被墙掉。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/download/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;node.js下载地址&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-02-26%20%E4%B8%8B%E5%8D%883.37.18.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;node.js 下载完成后 安装到电脑上就可以了。安装成功后显示出来安装路径，可以看到 安装node.js 的时候 npm 也安装了。&lt;/p&gt;
+&lt;p&gt;检测安装是否成功 终端输入 -v , 成功则显示版本号&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ node -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;v4.3.1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.14.12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;文档里给出了详细的安装方法，只需要按其一步步来就好&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;-v表示全局安装，所以需要使用管理员身份&lt;/p&gt;
+&lt;p&gt;安装成功，使用hexo 命令的时候，可能会出现以下错误&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; [Error: Cannot find module &amp;apos;./build/Release/DTraceProviderBindings&amp;apos;] code: &amp;apos;MODULE_NOT_FOUND&amp;apos; &amp;#125;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; [Error: Cannot find module &amp;apos;./build/default/DTraceProviderBindings&amp;apos;] code: &amp;apos;MODULE_NOT_FOUND&amp;apos; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; [Error: Cannot find module &amp;apos;./build/Debug/DTraceProviderBindings&amp;apos;] code: &amp;apos;MODULE_NOT_FOUND&amp;apos; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;据说是由于GFW的问题，导致安装Hexo的时候少装了几个库。&lt;/p&gt;
+&lt;p&gt;查询出的解决方法为，使用以下命令行重新安装&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo –no-optional&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然而于我而言，并没有什么卵用。这个错误也没有造成任何影响，所以忽略，Go on。&lt;br&gt;完成后，验证下是否安装成功&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo -v&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Hexo的使用&quot;&gt;&lt;a href=&quot;#Hexo的使用&quot; class=&quot;headerlink&quot; title=&quot;Hexo的使用&quot;&gt;&lt;/a&gt;Hexo的使用&lt;/h4&gt;&lt;h5 id=&quot;1-创建存放博客的文件夹&quot;&gt;&lt;a href=&quot;#1-创建存放博客的文件夹&quot; class=&quot;headerlink&quot; title=&quot;1. 创建存放博客的文件夹&quot;&gt;&lt;/a&gt;1. 创建存放博客的文件夹&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir myblog&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&quot;2-执行以下命令，Hexo会在目标文件夹建立博客所需要的文件&quot;&gt;&lt;a href=&quot;#2-执行以下命令，Hexo会在目标文件夹建立博客所需要的文件&quot; class=&quot;headerlink&quot; title=&quot;2. 执行以下命令，Hexo会在目标文件夹建立博客所需要的文件&quot;&gt;&lt;/a&gt;2. 执行以下命令，Hexo会在目标文件夹建立博客所需要的文件&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 输出以下信息&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;INFO  Cloning hexo-starter to ~/Documents/mytest&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Cloning into &amp;apos;/Users/Quncao/Documents/mytest&amp;apos;...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;成功之后文件夹的样子&lt;br&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-02-26%20%E4%B8%8B%E5%8D%884.13.00.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;_config.yml : Hexo和站点的配置文件，里面可以设置博客的名字、标题、作者、链接格式等相关项&lt;/li&gt;
+&lt;li&gt;scaffolds : 脚手架，用于存放我们创建文章时的模版&lt;/li&gt;
+&lt;li&gt;source : 用于存放我们用markdown编写的博文原文件、其他静态资源文件&lt;/li&gt;
+&lt;li&gt;themes : 用于存放主题，里面有我们博客的默认主题landscape&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;3-执行以下命令，进行依赖包的安装&quot;&gt;&lt;a href=&quot;#3-执行以下命令，进行依赖包的安装&quot; class=&quot;headerlink&quot; title=&quot;3. 执行以下命令，进行依赖包的安装&quot;&gt;&lt;/a&gt;3. 执行以下命令，进行依赖包的安装&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;node_modules: 关联保存了将会使用到的hexo依赖包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;4-安装相关插件&quot;&gt;&lt;a href=&quot;#4-安装相关插件&quot; class=&quot;headerlink&quot; title=&quot;4. 安装相关插件&quot;&gt;&lt;/a&gt;4. 安装相关插件&lt;/h5&gt;&lt;p&gt;插件会安装至node_modules文件夹下，如果已经安装好的可以直接忽略&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;安装便于自动部署到Github上的插件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-deployer-git --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装atom生成插件，便于感兴趣的小伙伴们订阅&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-feed --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装博客首页生成插件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-index --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装归档生成插件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-archive --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装tag生成插件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-tag --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装category生成插件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-category --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装Sitemap文件生成插件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-sitemap --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装百度Sitemap文件生成插件，因为普通的Sitemap格式不符合百度的要求&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-baidu-sitemap --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;未完待续，继续请移步&lt;a href=&quot;http://icehulu.com/2016/02/26/%E4%BD%BF%E7%94%A8GithubPages-Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/A5FBB7EA-1FC0-45DD-ACC5-FB49737D9237.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;关于MarkDown&quot;&gt;&lt;a href=&quot;#关于Mar
+    
+    </summary>
+    
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   
