@@ -1,0 +1,896 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="3DTouch iOS开发," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="这是一个利用Hexo搭建的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览3DTouch
+UITouch类里API的变化iOS9中添加的属性altitudeAngle
+当笔平行于平面时,该值为0
+
+当笔垂直于平面时,该值为Pi / 2
+
+
+estimatedProperties
+当前触摸对象估计的触摸特性
+
+返回值是UITouchPropertyies
+
+
+updatedProperti">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览">
+<meta property="og:url" content="http://yoursite.com/2016/03/11/iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览/index.html">
+<meta property="og:site_name" content="这是一个利用Hexo搭建的博客">
+<meta property="og:description" content="iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览3DTouch
+UITouch类里API的变化iOS9中添加的属性altitudeAngle
+当笔平行于平面时,该值为0
+
+当笔垂直于平面时,该值为Pi / 2
+
+
+estimatedProperties
+当前触摸对象估计的触摸特性
+
+返回值是UITouchPropertyies
+
+
+updatedProperti">
+<meta property="og:image" content="https://developer.apple.com/ios/3d-touch/images/pressure-sensitivity_2x.jpg">
+<meta property="og:image" content="https://developer.apple.com/ios/3d-touch/images/quick-actions_2x.jpg">
+<meta property="og:image" content="https://developer.apple.com/ios/3d-touch/images/peek-and-pop_2x.jpg">
+<meta property="og:updated_time" content="2016-03-11T03:40:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览">
+<meta name="twitter:description" content="iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览3DTouch
+UITouch类里API的变化iOS9中添加的属性altitudeAngle
+当笔平行于平面时,该值为0
+
+当笔垂直于平面时,该值为Pi / 2
+
+
+estimatedProperties
+当前触摸对象估计的触摸特性
+
+返回值是UITouchPropertyies
+
+
+updatedProperti">
+<meta name="twitter:image" content="https://developer.apple.com/ios/3d-touch/images/pressure-sensitivity_2x.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6260345940964541000,
+      author: 'MaxWellPro'
+    }
+  };
+</script>
+
+  <title> iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览 | 这是一个利用Hexo搭建的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">这是一个利用Hexo搭建的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">分享一些技术文章和自己所整理的知识。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-03-11T11:15:48+08:00" content="2016-03-11">
+              2016-03-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/11/iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/11/iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览"><a href="#iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览" class="headerlink" title="iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览"></a>iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览</h1><h2 id="3DTouch"><a href="#3DTouch" class="headerlink" title="3DTouch"></a>3DTouch</h2><p><img src="https://developer.apple.com/ios/3d-touch/images/pressure-sensitivity_2x.jpg" alt=""></p>
+<h2 id="UITouch类里API的变化"><a href="#UITouch类里API的变化" class="headerlink" title="UITouch类里API的变化"></a>UITouch类里API的变化</h2><h3 id="iOS9中添加的属性"><a href="#iOS9中添加的属性" class="headerlink" title="iOS9中添加的属性"></a>iOS9中添加的属性</h3><h6 id="altitudeAngle"><a href="#altitudeAngle" class="headerlink" title="altitudeAngle"></a>altitudeAngle</h6><ul>
+<li><p>当笔平行于平面时,该值为0</p>
+</li>
+<li><p>当笔垂直于平面时,该值为Pi / 2</p>
+</li>
+</ul>
+<h6 id="estimatedProperties"><a href="#estimatedProperties" class="headerlink" title="estimatedProperties"></a>estimatedProperties</h6><ul>
+<li><p>当前触摸对象估计的触摸特性</p>
+</li>
+<li><p>返回值是UITouchPropertyies</p>
+</li>
+</ul>
+<h6 id="updatedProperties"><a href="#updatedProperties" class="headerlink" title="updatedProperties"></a>updatedProperties</h6><ul>
+<li><p>当前触摸对象已经更新的触摸特性</p>
+</li>
+<li><p>返回值是UITouchPropertyies</p>
+</li>
+</ul>
+<h6 id="estimationUpdateIndex"><a href="#estimationUpdateIndex" class="headerlink" title="estimationUpdateIndex"></a>estimationUpdateIndex</h6><ul>
+<li><p>当每个触摸对象的触摸特性发生变化时，该值将会单独增加</p>
+</li>
+<li><p>返回值是NSNumber</p>
+</li>
+</ul>
+<h3 id="iOS9中添加的方法"><a href="#iOS9中添加的方法" class="headerlink" title="iOS9中添加的方法"></a>iOS9中添加的方法</h3><h6 id="PreciseLocationInView"><a href="#PreciseLocationInView" class="headerlink" title="- PreciseLocationInView:"></a>- PreciseLocationInView:</h6><ul>
+<li>当前触摸对象的坐标</li>
+</ul>
+<h6 id="PrecisePreviousLocationInView"><a href="#PrecisePreviousLocationInView" class="headerlink" title="- PrecisePreviousLocationInView:"></a>- PrecisePreviousLocationInView:</h6><ul>
+<li>当前触摸对象的前置坐标</li>
+</ul>
+<h6 id="azimuthAngleInview"><a href="#azimuthAngleInview" class="headerlink" title="- azimuthAngleInview:"></a>- azimuthAngleInview:</h6><ul>
+<li><p>沿着x轴正向的方位角</p>
+</li>
+<li><p>当与x轴正向方向相同时,该值为0</p>
+</li>
+<li><p>当view参数为nil时，默认为keyWindow</p>
+</li>
+</ul>
+<h6 id="azimuthUnitVectorInView"><a href="#azimuthUnitVectorInView" class="headerlink" title="- azimuthUnitVectorInView:"></a>- azimuthUnitVectorInView:</h6><ul>
+<li><p>当前触摸对象的方向上的单位向量</p>
+</li>
+<li><p>当view参数为nil时，默认为keyWindow</p>
+</li>
+</ul>
+<h3 id="UIForceTouchCapability"><a href="#UIForceTouchCapability" class="headerlink" title="UIForceTouchCapability"></a>UIForceTouchCapability</h3><h6 id="UIForceTouchCapabilityUnknown"><a href="#UIForceTouchCapabilityUnknown" class="headerlink" title="UIForceTouchCapabilityUnknown"></a>UIForceTouchCapabilityUnknown</h6><ul>
+<li>不能确定是否支持压力感应</li>
+</ul>
+<h6 id="UIForceTouchCapabilityUnavailable"><a href="#UIForceTouchCapabilityUnavailable" class="headerlink" title="UIForceTouchCapabilityUnavailable"></a>UIForceTouchCapabilityUnavailable</h6><ul>
+<li>不能支持压力感应</li>
+</ul>
+<h6 id="UIForceTouchCapabilityAvailable"><a href="#UIForceTouchCapabilityAvailable" class="headerlink" title="UIForceTouchCapabilityAvailable"></a>UIForceTouchCapabilityAvailable</h6><ul>
+<li>可以支持压力感应</li>
+</ul>
+<h3 id="UITouchType"><a href="#UITouchType" class="headerlink" title="UITouchType"></a>UITouchType</h3><h6 id="UITouchTypeDirect"><a href="#UITouchTypeDirect" class="headerlink" title="UITouchTypeDirect"></a>UITouchTypeDirect</h6><ul>
+<li>垂直的触摸类型</li>
+</ul>
+<h6 id="UITouchTypeIndirect"><a href="#UITouchTypeIndirect" class="headerlink" title="UITouchTypeIndirect"></a>UITouchTypeIndirect</h6><ul>
+<li>非初值的触摸类型</li>
+</ul>
+<h6 id="UITouchTypeStylus"><a href="#UITouchTypeStylus" class="headerlink" title="UITouchTypeStylus"></a>UITouchTypeStylus</h6><ul>
+<li>水平的触摸类型</li>
+</ul>
+<h3 id="UITouchProperties"><a href="#UITouchProperties" class="headerlink" title="UITouchProperties"></a>UITouchProperties</h3><h6 id="UITouchPropertyForce"><a href="#UITouchPropertyForce" class="headerlink" title="UITouchPropertyForce"></a>UITouchPropertyForce</h6><h2 id="ShortcutItem"><a href="#ShortcutItem" class="headerlink" title="ShortcutItem"></a>ShortcutItem</h2><p><img src="https://developer.apple.com/ios/3d-touch/images/quick-actions_2x.jpg" alt=""></p>
+<h3 id="静态方式"><a href="#静态方式" class="headerlink" title="静态方式"></a>静态方式</h3><ul>
+<li>打开Info.plist文件</li>
+<li>在对应UIApplicationShortcutItems关键字下添加item</li>
+</ul>
+<h3 id="动态方式"><a href="#动态方式" class="headerlink" title="动态方式"></a>动态方式</h3><h4 id="修改当前应用程序的某个shortcutItem"><a href="#修改当前应用程序的某个shortcutItem" class="headerlink" title="修改当前应用程序的某个shortcutItem"></a>修改当前应用程序的某个shortcutItem</h4><pre><code>//获取第0个shortcutItem  
+id oldItem = [existingShortcutItems objectAtIndex: 0];  
+//将旧的shortcutItem改变为可修改类型shortcutItem  
+id mutableItem = [oldItem mutableCopy];  
+//修改shortcutItem的显示标题  
+[mutableItem setLocalizedTitle: @“Click Lewis”];
+</code></pre><h4 id="获取当前应用程序的shortcutItems"><a href="#获取当前应用程序的shortcutItems" class="headerlink" title="获取当前应用程序的shortcutItems"></a>获取当前应用程序的shortcutItems</h4><pre><code>//获取当前应用程序对象  
+UIApplication *app = [UIApplication sharedApplication];  
+//获取一个应用程序对象的shortcutItem列表  
+id existingShortcutItems = [app shortcutItems];
+</code></pre><h4 id="重置当前应用程序的shortcutItems"><a href="#重置当前应用程序的shortcutItems" class="headerlink" title="重置当前应用程序的shortcutItems"></a>重置当前应用程序的shortcutItems</h4><pre><code>//根据旧的shortcutItems生成可变shortcutItems数组  
+id updatedShortcutItems = [existingShortcutItems mutableCopy];  
+//修改可变shortcutItems数组中对应index下的元素为新的shortcutItem  
+[updatedShortcutItems replaceObjectAtIndex: 0 withObject: mutableItem];  
+//修改应用程序对象的shortcutItems为新的数组  
+[app setShortcutItems: updatedShortcutItems];
+</code></pre><h3 id="创建一个新的UIApplicationShortcutItem"><a href="#创建一个新的UIApplicationShortcutItem" class="headerlink" title="创建一个新的UIApplicationShortcutItem"></a>创建一个新的UIApplicationShortcutItem</h3><ul>
+<li><p>初始化函数</p>
+<ul>
+<li><p>-initWithType:localizedTitle:localizedSubtitle:icon:userInfo:</p>
+</li>
+<li><p>-initWithType:localizedTitle:</p>
+</li>
+</ul>
+</li>
+<li><p>属性</p>
+<ul>
+<li><p>-localizedTitle:NSString</p>
+</li>
+<li><p>-localizedSubtitle:NSString</p>
+</li>
+<li><p>-type:NSString</p>
+</li>
+<li><p>-icon:UIApplicationShortcutIcon</p>
+</li>
+<li><p>-userInfo:NSDictionary</p>
+</li>
+<li><p>只有只读特性，想要进行修改时，需要通过mutableCopy方法转变为NSMutableApplicationShortcutItem</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="创建一个新的Item图标"><a href="#创建一个新的Item图标" class="headerlink" title="创建一个新的Item图标"></a>创建一个新的Item图标</h3><ul>
+<li><p>初始化函数</p>
+<ul>
+<li><p>+iconWithType:</p>
+</li>
+<li><p>+iconWithTemplateImageName:</p>
+</li>
+<li><p>+iconWithContact:</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="当程序启动时"><a href="#当程序启动时" class="headerlink" title="当程序启动时"></a>当程序启动时</h3><ul>
+<li>判断launchOptions字典内的UIApplicationLaunchOptionsShortcutItemKey是否为空</li>
+<li>当不为空时,application:didFinishLaunchWithOptions方法返回false，否则返回true</li>
+<li>在application:performActionForShortcutItem:completionHandler方法内处理点击事件</li>
+</ul>
+<h2 id="Peek-and-Pop"><a href="#Peek-and-Pop" class="headerlink" title="Peek and Pop"></a>Peek and Pop</h2><p><img src="https://developer.apple.com/ios/3d-touch/images/peek-and-pop_2x.jpg" alt=""></p>
+<h3 id="注册预览功能的代理对象和源视图"><a href="#注册预览功能的代理对象和源视图" class="headerlink" title="注册预览功能的代理对象和源视图"></a>注册预览功能的代理对象和源视图</h3><h4 id="代理对象需要接受UIViewControllerPreviewingDelegate协议"><a href="#代理对象需要接受UIViewControllerPreviewingDelegate协议" class="headerlink" title="代理对象需要接受UIViewControllerPreviewingDelegate协议"></a>代理对象需要接受UIViewControllerPreviewingDelegate协议</h4><pre><code>@interface RootVC&lt;UIViewControllerPreviewingDelegate&gt;  
+{}  
+@end
+</code></pre><h4 id="代理对象实现协议内的Peek和Pop方法"><a href="#代理对象实现协议内的Peek和Pop方法" class="headerlink" title="代理对象实现协议内的Peek和Pop方法"></a>代理对象实现协议内的Peek和Pop方法</h4><pre><code> @implementation RootVC  
+    - (UIViewController *)previewingContext:(id&lt;UIViewControllerPreviewing&gt;)context viewControllerForLocation:(CGPoint) point  
+{  
+    UIViewController *childVC = [[UIViewController alloc] init];  
+    childVC.preferredContentSize = CGSizeMake(0.0f,300f);  
+
+    CGRect rect = CGRectMake(10, point.y - 10, self.view.frame.size.width - 20,20);  
+    context.sourceRect = rect;  
+    return childVC;  
+}  
+
+- (void)previewContext:(id&lt;UIViewControllerPreviewing&gt;)context commitViewController:(UIViewController*)vc  
+{  
+    [self showViewController:vc sender:self];  
+}  
+@end
+</code></pre><h4 id="注册方法声明在UIViewController类内"><a href="#注册方法声明在UIViewController类内" class="headerlink" title="注册方法声明在UIViewController类内"></a>注册方法声明在UIViewController类内</h4><pre><code>[self registerForPreviewingWithDelegate:self sourceView:self.view];
+</code></pre><p> 著作权归作者所有，原文链接:<a href="http://www.jianshu.com/p/74fe6cbc542b" target="_blank" rel="external">http://www.jianshu.com/p/74fe6cbc542b</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/3DTouch-iOS开发/" rel="tag">#3DTouch iOS开发</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/11/如何获取iOS设备的UDID/" rel="next" title="如何获取iOS设备的UDID">
+                <i class="fa fa-chevron-left"></i> 如何获取iOS设备的UDID
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/11/iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览/"
+           data-title="iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览" data-url="http://yoursite.com/2016/03/11/iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7xojj3.com5.z0.glb.qiniucdn.com/image%2Favatar%2F7ead8c33da3d43552445740501595d76.jpg"
+               alt="MaxWellPro" />
+          <p class="site-author-name" itemprop="name">MaxWellPro</p>
+          <p class="site-description motion-element" itemprop="description">一个90后iOS软件攻城狮，热爱coding，并且喜欢数码、外设、键盘等等。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+          
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览"><span class="nav-number">1.</span> <span class="nav-text">iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3DTouch"><span class="nav-number">1.1.</span> <span class="nav-text">3DTouch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UITouch类里API的变化"><span class="nav-number">1.2.</span> <span class="nav-text">UITouch类里API的变化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS9中添加的属性"><span class="nav-number">1.2.1.</span> <span class="nav-text">iOS9中添加的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#altitudeAngle"><span class="nav-number">1.2.1.0.0.1.</span> <span class="nav-text">altitudeAngle</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#estimatedProperties"><span class="nav-number">1.2.1.0.0.2.</span> <span class="nav-text">estimatedProperties</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#updatedProperties"><span class="nav-number">1.2.1.0.0.3.</span> <span class="nav-text">updatedProperties</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#estimationUpdateIndex"><span class="nav-number">1.2.1.0.0.4.</span> <span class="nav-text">estimationUpdateIndex</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS9中添加的方法"><span class="nav-number">1.2.2.</span> <span class="nav-text">iOS9中添加的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#PreciseLocationInView"><span class="nav-number">1.2.2.0.0.1.</span> <span class="nav-text">- PreciseLocationInView:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#PrecisePreviousLocationInView"><span class="nav-number">1.2.2.0.0.2.</span> <span class="nav-text">- PrecisePreviousLocationInView:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#azimuthAngleInview"><span class="nav-number">1.2.2.0.0.3.</span> <span class="nav-text">- azimuthAngleInview:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#azimuthUnitVectorInView"><span class="nav-number">1.2.2.0.0.4.</span> <span class="nav-text">- azimuthUnitVectorInView:</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIForceTouchCapability"><span class="nav-number">1.2.3.</span> <span class="nav-text">UIForceTouchCapability</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#UIForceTouchCapabilityUnknown"><span class="nav-number">1.2.3.0.0.1.</span> <span class="nav-text">UIForceTouchCapabilityUnknown</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#UIForceTouchCapabilityUnavailable"><span class="nav-number">1.2.3.0.0.2.</span> <span class="nav-text">UIForceTouchCapabilityUnavailable</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#UIForceTouchCapabilityAvailable"><span class="nav-number">1.2.3.0.0.3.</span> <span class="nav-text">UIForceTouchCapabilityAvailable</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UITouchType"><span class="nav-number">1.2.4.</span> <span class="nav-text">UITouchType</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#UITouchTypeDirect"><span class="nav-number">1.2.4.0.0.1.</span> <span class="nav-text">UITouchTypeDirect</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#UITouchTypeIndirect"><span class="nav-number">1.2.4.0.0.2.</span> <span class="nav-text">UITouchTypeIndirect</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#UITouchTypeStylus"><span class="nav-number">1.2.4.0.0.3.</span> <span class="nav-text">UITouchTypeStylus</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UITouchProperties"><span class="nav-number">1.2.5.</span> <span class="nav-text">UITouchProperties</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#UITouchPropertyForce"><span class="nav-number">1.2.5.0.0.1.</span> <span class="nav-text">UITouchPropertyForce</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ShortcutItem"><span class="nav-number">1.3.</span> <span class="nav-text">ShortcutItem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态方式"><span class="nav-number">1.3.1.</span> <span class="nav-text">静态方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态方式"><span class="nav-number">1.3.2.</span> <span class="nav-text">动态方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改当前应用程序的某个shortcutItem"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">修改当前应用程序的某个shortcutItem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取当前应用程序的shortcutItems"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">获取当前应用程序的shortcutItems</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重置当前应用程序的shortcutItems"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">重置当前应用程序的shortcutItems</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个新的UIApplicationShortcutItem"><span class="nav-number">1.3.3.</span> <span class="nav-text">创建一个新的UIApplicationShortcutItem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个新的Item图标"><span class="nav-number">1.3.4.</span> <span class="nav-text">创建一个新的Item图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#当程序启动时"><span class="nav-number">1.3.5.</span> <span class="nav-text">当程序启动时</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Peek-and-Pop"><span class="nav-number">1.4.</span> <span class="nav-text">Peek and Pop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册预览功能的代理对象和源视图"><span class="nav-number">1.4.1.</span> <span class="nav-text">注册预览功能的代理对象和源视图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代理对象需要接受UIViewControllerPreviewingDelegate协议"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">代理对象需要接受UIViewControllerPreviewingDelegate协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代理对象实现协议内的Peek和Pop方法"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">代理对象实现协议内的Peek和Pop方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注册方法声明在UIViewController类内"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">注册方法声明在UIViewController类内</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MaxWellPro</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"maxwellpro"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+
+</body>
+</html>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-11T03:05:42.000Z</updated>
+  <updated>2016-03-11T03:40:46.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,175 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览</title>
+    <link href="http://yoursite.com/2016/03/11/iOS9%203DTouch%E3%80%81ShortcutItem%E3%80%81Peek%20And%20Pop%E6%8A%80%E6%9C%AF%E4%B8%80%E8%A7%88/"/>
+    <id>http://yoursite.com/2016/03/11/iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览/</id>
+    <published>2016-03-11T03:15:48.000Z</published>
+    <updated>2016-03-11T03:40:46.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot;&gt;&lt;a href=&quot;#iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot; class=&quot;headerlink&quot; title=&quot;iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览&quot;&gt;&lt;/a&gt;iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览&lt;/h1&gt;&lt;h2 id=&quot;3DTouch&quot;&gt;&lt;a href=&quot;#3DTouch&quot; class=&quot;headerlink&quot; title=&quot;3DTouch&quot;&gt;&lt;/a&gt;3DTouch&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://developer.apple.com/ios/3d-touch/images/pressure-sensitivity_2x.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;UITouch类里API的变化&quot;&gt;&lt;a href=&quot;#UITouch类里API的变化&quot; class=&quot;headerlink&quot; title=&quot;UITouch类里API的变化&quot;&gt;&lt;/a&gt;UITouch类里API的变化&lt;/h2&gt;&lt;h3 id=&quot;iOS9中添加的属性&quot;&gt;&lt;a href=&quot;#iOS9中添加的属性&quot; class=&quot;headerlink&quot; title=&quot;iOS9中添加的属性&quot;&gt;&lt;/a&gt;iOS9中添加的属性&lt;/h3&gt;&lt;h6 id=&quot;altitudeAngle&quot;&gt;&lt;a href=&quot;#altitudeAngle&quot; class=&quot;headerlink&quot; title=&quot;altitudeAngle&quot;&gt;&lt;/a&gt;altitudeAngle&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;当笔平行于平面时,该值为0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当笔垂直于平面时,该值为Pi / 2&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&quot;estimatedProperties&quot;&gt;&lt;a href=&quot;#estimatedProperties&quot; class=&quot;headerlink&quot; title=&quot;estimatedProperties&quot;&gt;&lt;/a&gt;estimatedProperties&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;当前触摸对象估计的触摸特性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;返回值是UITouchPropertyies&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&quot;updatedProperties&quot;&gt;&lt;a href=&quot;#updatedProperties&quot; class=&quot;headerlink&quot; title=&quot;updatedProperties&quot;&gt;&lt;/a&gt;updatedProperties&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;当前触摸对象已经更新的触摸特性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;返回值是UITouchPropertyies&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&quot;estimationUpdateIndex&quot;&gt;&lt;a href=&quot;#estimationUpdateIndex&quot; class=&quot;headerlink&quot; title=&quot;estimationUpdateIndex&quot;&gt;&lt;/a&gt;estimationUpdateIndex&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;当每个触摸对象的触摸特性发生变化时，该值将会单独增加&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;返回值是NSNumber&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;iOS9中添加的方法&quot;&gt;&lt;a href=&quot;#iOS9中添加的方法&quot; class=&quot;headerlink&quot; title=&quot;iOS9中添加的方法&quot;&gt;&lt;/a&gt;iOS9中添加的方法&lt;/h3&gt;&lt;h6 id=&quot;PreciseLocationInView&quot;&gt;&lt;a href=&quot;#PreciseLocationInView&quot; class=&quot;headerlink&quot; title=&quot;- PreciseLocationInView:&quot;&gt;&lt;/a&gt;- PreciseLocationInView:&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;当前触摸对象的坐标&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&quot;PrecisePreviousLocationInView&quot;&gt;&lt;a href=&quot;#PrecisePreviousLocationInView&quot; class=&quot;headerlink&quot; title=&quot;- PrecisePreviousLocationInView:&quot;&gt;&lt;/a&gt;- PrecisePreviousLocationInView:&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;当前触摸对象的前置坐标&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&quot;azimuthAngleInview&quot;&gt;&lt;a href=&quot;#azimuthAngleInview&quot; class=&quot;headerlink&quot; title=&quot;- azimuthAngleInview:&quot;&gt;&lt;/a&gt;- azimuthAngleInview:&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;沿着x轴正向的方位角&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当与x轴正向方向相同时,该值为0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当view参数为nil时，默认为keyWindow&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&quot;azimuthUnitVectorInView&quot;&gt;&lt;a href=&quot;#azimuthUnitVectorInView&quot; class=&quot;headerlink&quot; title=&quot;- azimuthUnitVectorInView:&quot;&gt;&lt;/a&gt;- azimuthUnitVectorInView:&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;当前触摸对象的方向上的单位向量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当view参数为nil时，默认为keyWindow&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;UIForceTouchCapability&quot;&gt;&lt;a href=&quot;#UIForceTouchCapability&quot; class=&quot;headerlink&quot; title=&quot;UIForceTouchCapability&quot;&gt;&lt;/a&gt;UIForceTouchCapability&lt;/h3&gt;&lt;h6 id=&quot;UIForceTouchCapabilityUnknown&quot;&gt;&lt;a href=&quot;#UIForceTouchCapabilityUnknown&quot; class=&quot;headerlink&quot; title=&quot;UIForceTouchCapabilityUnknown&quot;&gt;&lt;/a&gt;UIForceTouchCapabilityUnknown&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;不能确定是否支持压力感应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&quot;UIForceTouchCapabilityUnavailable&quot;&gt;&lt;a href=&quot;#UIForceTouchCapabilityUnavailable&quot; class=&quot;headerlink&quot; title=&quot;UIForceTouchCapabilityUnavailable&quot;&gt;&lt;/a&gt;UIForceTouchCapabilityUnavailable&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;不能支持压力感应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&quot;UIForceTouchCapabilityAvailable&quot;&gt;&lt;a href=&quot;#UIForceTouchCapabilityAvailable&quot; class=&quot;headerlink&quot; title=&quot;UIForceTouchCapabilityAvailable&quot;&gt;&lt;/a&gt;UIForceTouchCapabilityAvailable&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;可以支持压力感应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;UITouchType&quot;&gt;&lt;a href=&quot;#UITouchType&quot; class=&quot;headerlink&quot; title=&quot;UITouchType&quot;&gt;&lt;/a&gt;UITouchType&lt;/h3&gt;&lt;h6 id=&quot;UITouchTypeDirect&quot;&gt;&lt;a href=&quot;#UITouchTypeDirect&quot; class=&quot;headerlink&quot; title=&quot;UITouchTypeDirect&quot;&gt;&lt;/a&gt;UITouchTypeDirect&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;垂直的触摸类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&quot;UITouchTypeIndirect&quot;&gt;&lt;a href=&quot;#UITouchTypeIndirect&quot; class=&quot;headerlink&quot; title=&quot;UITouchTypeIndirect&quot;&gt;&lt;/a&gt;UITouchTypeIndirect&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;非初值的触摸类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&quot;UITouchTypeStylus&quot;&gt;&lt;a href=&quot;#UITouchTypeStylus&quot; class=&quot;headerlink&quot; title=&quot;UITouchTypeStylus&quot;&gt;&lt;/a&gt;UITouchTypeStylus&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;水平的触摸类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;UITouchProperties&quot;&gt;&lt;a href=&quot;#UITouchProperties&quot; class=&quot;headerlink&quot; title=&quot;UITouchProperties&quot;&gt;&lt;/a&gt;UITouchProperties&lt;/h3&gt;&lt;h6 id=&quot;UITouchPropertyForce&quot;&gt;&lt;a href=&quot;#UITouchPropertyForce&quot; class=&quot;headerlink&quot; title=&quot;UITouchPropertyForce&quot;&gt;&lt;/a&gt;UITouchPropertyForce&lt;/h6&gt;&lt;h2 id=&quot;ShortcutItem&quot;&gt;&lt;a href=&quot;#ShortcutItem&quot; class=&quot;headerlink&quot; title=&quot;ShortcutItem&quot;&gt;&lt;/a&gt;ShortcutItem&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://developer.apple.com/ios/3d-touch/images/quick-actions_2x.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;静态方式&quot;&gt;&lt;a href=&quot;#静态方式&quot; class=&quot;headerlink&quot; title=&quot;静态方式&quot;&gt;&lt;/a&gt;静态方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;打开Info.plist文件&lt;/li&gt;
+&lt;li&gt;在对应UIApplicationShortcutItems关键字下添加item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;动态方式&quot;&gt;&lt;a href=&quot;#动态方式&quot; class=&quot;headerlink&quot; title=&quot;动态方式&quot;&gt;&lt;/a&gt;动态方式&lt;/h3&gt;&lt;h4 id=&quot;修改当前应用程序的某个shortcutItem&quot;&gt;&lt;a href=&quot;#修改当前应用程序的某个shortcutItem&quot; class=&quot;headerlink&quot; title=&quot;修改当前应用程序的某个shortcutItem&quot;&gt;&lt;/a&gt;修改当前应用程序的某个shortcutItem&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;//获取第0个shortcutItem  
+id oldItem = [existingShortcutItems objectAtIndex: 0];  
+//将旧的shortcutItem改变为可修改类型shortcutItem  
+id mutableItem = [oldItem mutableCopy];  
+//修改shortcutItem的显示标题  
+[mutableItem setLocalizedTitle: @“Click Lewis”];
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;获取当前应用程序的shortcutItems&quot;&gt;&lt;a href=&quot;#获取当前应用程序的shortcutItems&quot; class=&quot;headerlink&quot; title=&quot;获取当前应用程序的shortcutItems&quot;&gt;&lt;/a&gt;获取当前应用程序的shortcutItems&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;//获取当前应用程序对象  
+UIApplication *app = [UIApplication sharedApplication];  
+//获取一个应用程序对象的shortcutItem列表  
+id existingShortcutItems = [app shortcutItems];
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;重置当前应用程序的shortcutItems&quot;&gt;&lt;a href=&quot;#重置当前应用程序的shortcutItems&quot; class=&quot;headerlink&quot; title=&quot;重置当前应用程序的shortcutItems&quot;&gt;&lt;/a&gt;重置当前应用程序的shortcutItems&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;//根据旧的shortcutItems生成可变shortcutItems数组  
+id updatedShortcutItems = [existingShortcutItems mutableCopy];  
+//修改可变shortcutItems数组中对应index下的元素为新的shortcutItem  
+[updatedShortcutItems replaceObjectAtIndex: 0 withObject: mutableItem];  
+//修改应用程序对象的shortcutItems为新的数组  
+[app setShortcutItems: updatedShortcutItems];
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;创建一个新的UIApplicationShortcutItem&quot;&gt;&lt;a href=&quot;#创建一个新的UIApplicationShortcutItem&quot; class=&quot;headerlink&quot; title=&quot;创建一个新的UIApplicationShortcutItem&quot;&gt;&lt;/a&gt;创建一个新的UIApplicationShortcutItem&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;初始化函数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;-initWithType:localizedTitle:localizedSubtitle:icon:userInfo:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;-initWithType:localizedTitle:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;-localizedTitle:NSString&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;-localizedSubtitle:NSString&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;-type:NSString&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;-icon:UIApplicationShortcutIcon&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;-userInfo:NSDictionary&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;只有只读特性，想要进行修改时，需要通过mutableCopy方法转变为NSMutableApplicationShortcutItem&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;创建一个新的Item图标&quot;&gt;&lt;a href=&quot;#创建一个新的Item图标&quot; class=&quot;headerlink&quot; title=&quot;创建一个新的Item图标&quot;&gt;&lt;/a&gt;创建一个新的Item图标&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;初始化函数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;+iconWithType:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;+iconWithTemplateImageName:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;+iconWithContact:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;当程序启动时&quot;&gt;&lt;a href=&quot;#当程序启动时&quot; class=&quot;headerlink&quot; title=&quot;当程序启动时&quot;&gt;&lt;/a&gt;当程序启动时&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;判断launchOptions字典内的UIApplicationLaunchOptionsShortcutItemKey是否为空&lt;/li&gt;
+&lt;li&gt;当不为空时,application:didFinishLaunchWithOptions方法返回false，否则返回true&lt;/li&gt;
+&lt;li&gt;在application:performActionForShortcutItem:completionHandler方法内处理点击事件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Peek-and-Pop&quot;&gt;&lt;a href=&quot;#Peek-and-Pop&quot; class=&quot;headerlink&quot; title=&quot;Peek and Pop&quot;&gt;&lt;/a&gt;Peek and Pop&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://developer.apple.com/ios/3d-touch/images/peek-and-pop_2x.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;注册预览功能的代理对象和源视图&quot;&gt;&lt;a href=&quot;#注册预览功能的代理对象和源视图&quot; class=&quot;headerlink&quot; title=&quot;注册预览功能的代理对象和源视图&quot;&gt;&lt;/a&gt;注册预览功能的代理对象和源视图&lt;/h3&gt;&lt;h4 id=&quot;代理对象需要接受UIViewControllerPreviewingDelegate协议&quot;&gt;&lt;a href=&quot;#代理对象需要接受UIViewControllerPreviewingDelegate协议&quot; class=&quot;headerlink&quot; title=&quot;代理对象需要接受UIViewControllerPreviewingDelegate协议&quot;&gt;&lt;/a&gt;代理对象需要接受UIViewControllerPreviewingDelegate协议&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;@interface RootVC&amp;lt;UIViewControllerPreviewingDelegate&amp;gt;  
+{}  
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;代理对象实现协议内的Peek和Pop方法&quot;&gt;&lt;a href=&quot;#代理对象实现协议内的Peek和Pop方法&quot; class=&quot;headerlink&quot; title=&quot;代理对象实现协议内的Peek和Pop方法&quot;&gt;&lt;/a&gt;代理对象实现协议内的Peek和Pop方法&lt;/h4&gt;&lt;pre&gt;&lt;code&gt; @implementation RootVC  
+    - (UIViewController *)previewingContext:(id&amp;lt;UIViewControllerPreviewing&amp;gt;)context viewControllerForLocation:(CGPoint) point  
+{  
+    UIViewController *childVC = [[UIViewController alloc] init];  
+    childVC.preferredContentSize = CGSizeMake(0.0f,300f);  
+
+    CGRect rect = CGRectMake(10, point.y - 10, self.view.frame.size.width - 20,20);  
+    context.sourceRect = rect;  
+    return childVC;  
+}  
+
+- (void)previewContext:(id&amp;lt;UIViewControllerPreviewing&amp;gt;)context commitViewController:(UIViewController*)vc  
+{  
+    [self showViewController:vc sender:self];  
+}  
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;注册方法声明在UIViewController类内&quot;&gt;&lt;a href=&quot;#注册方法声明在UIViewController类内&quot; class=&quot;headerlink&quot; title=&quot;注册方法声明在UIViewController类内&quot;&gt;&lt;/a&gt;注册方法声明在UIViewController类内&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;[self registerForPreviewingWithDelegate:self sourceView:self.view];
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; 著作权归作者所有，原文链接:&lt;a href=&quot;http://www.jianshu.com/p/74fe6cbc542b&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/74fe6cbc542b&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot;&gt;&lt;a href=&quot;#iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot; class=&quot;headerlink&quot; title=&quot;iOS9 3DT
+    
+    </summary>
+    
+    
+      <category term="3DTouch iOS开发" scheme="http://yoursite.com/tags/3DTouch-iOS%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>如何获取iOS设备的UDID</title>
