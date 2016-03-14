@@ -208,6 +208,220 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/14/iOS 四种保存数据的方式/" itemprop="url">
+                  iOS 四种保存数据的方式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-03-14T17:28:47+08:00" content="2016-03-14">
+              2016-03-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/14/iOS 四种保存数据的方式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/14/iOS 四种保存数据的方式/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="iOS-四种保存数据的方式"><a href="#iOS-四种保存数据的方式" class="headerlink" title="iOS 四种保存数据的方式"></a>iOS 四种保存数据的方式</h1><p>在iOS开发过程中，不管是做什么应用，都会碰到数据保存的问题。将数据保存到本地，能够让程序的运行更加流畅，不会出现让人厌恶的菊花形状，使得用户体验更好。下面介绍一下数据保存的方式：</p>
+<h2 id="1-NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder-和initWithCoder-方法。前一个方法告诉系统怎么对对象进行编码，而后一个方法则是告诉系统怎么对对象进行解码。例如对Possession对象归档保存。"><a href="#1-NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder-和initWithCoder-方法。前一个方法告诉系统怎么对对象进行编码，而后一个方法则是告诉系统怎么对对象进行解码。例如对Possession对象归档保存。" class="headerlink" title="1.NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder:和initWithCoder:方法。前一个方法告诉系统怎么对对象进行编码，而后一个方法则是告诉系统怎么对对象进行解码。例如对Possession对象归档保存。"></a>1.NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder:和initWithCoder:方法。前一个方法告诉系统怎么对对象进行编码，而后一个方法则是告诉系统怎么对对象进行解码。例如对Possession对象归档保存。</h2><h3 id="定义Possession："><a href="#定义Possession：" class="headerlink" title="定义Possession："></a>定义Possession：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@interface  Possession：NSObject&lt;NSCoding&gt;&#123;//遵守NSCoding协议</span><br><span class="line"></span><br><span class="line">       NSString *name;//待归档类型</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@implementation Possession</span><br><span class="line"></span><br><span class="line">-(void)encodeWithCoder:(NSCoder *)aCoder&#123;</span><br><span class="line"></span><br><span class="line">            [aCoder encodeObject:name forKey:@&quot;name&quot;];</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-(void)initWithCoder:(NSCoder *)aDecoder&#123;</span><br><span class="line"></span><br><span class="line">            name=[[aDeCoder decodeObjectforKey:@&quot;name&quot;] retain];</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="归档操作："><a href="#归档操作：" class="headerlink" title="归档操作："></a>归档操作：</h3><p>如果对Possession对象allPossession归档保存，只需要NSCoder子类NSKeyedArchiver的方法archiveRootObject:toFile: 即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSString *path = [self possessionArchivePath];</span><br><span class="line"></span><br><span class="line">[NSKeyedArchiver archiveRootObject:allPossessions toFile:path];</span><br></pre></td></tr></table></figure>
+<h3 id="解压操作："><a href="#解压操作：" class="headerlink" title="解压操作："></a>解压操作：</h3><p>同样调用NSCoder子类NSKeyedArchiver的方法unarchiveRootObject:toFile: 即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">allPossessions = [[NSKeyedUnarchiver unarchiveObjectWithFile:path] retain];</span><br></pre></td></tr></table></figure>
+<p>缺点：归档的形式来保存数据，只能一次性归档保存以及一次性解压。所以只能针对小量数据，而且对数据操作比较笨拙，即如果想改动数据的某一小部分，还是需要解压整个数据或者归档整个数据。</p>
+<h2 id="2-NSUserDefaults：用来保存应用程序设置和属性、用户保存的数据。用户再次打开程序或开机后这些数据仍然存在。NSUserDefaults可以存储的数据类型包括：NSData、NSString、NSNumber、NSDate、NSArray、NSDictionary。如果要存储其他类型，则需要转换为前面的类型，才能用NSUserDefaults存储。具体实现为："><a href="#2-NSUserDefaults：用来保存应用程序设置和属性、用户保存的数据。用户再次打开程序或开机后这些数据仍然存在。NSUserDefaults可以存储的数据类型包括：NSData、NSString、NSNumber、NSDate、NSArray、NSDictionary。如果要存储其他类型，则需要转换为前面的类型，才能用NSUserDefaults存储。具体实现为：" class="headerlink" title="2.NSUserDefaults：用来保存应用程序设置和属性、用户保存的数据。用户再次打开程序或开机后这些数据仍然存在。NSUserDefaults可以存储的数据类型包括：NSData、NSString、NSNumber、NSDate、NSArray、NSDictionary。如果要存储其他类型，则需要转换为前面的类型，才能用NSUserDefaults存储。具体实现为："></a>2.NSUserDefaults：用来保存应用程序设置和属性、用户保存的数据。用户再次打开程序或开机后这些数据仍然存在。NSUserDefaults可以存储的数据类型包括：NSData、NSString、NSNumber、NSDate、NSArray、NSDictionary。如果要存储其他类型，则需要转换为前面的类型，才能用NSUserDefaults存储。具体实现为：</h2><h3 id="保存数据："><a href="#保存数据：" class="headerlink" title="保存数据："></a>保存数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];</span><br><span class="line"></span><br><span class="line">NSString *name =@”default string“;</span><br><span class="line"></span><br><span class="line">[defaults setObject:firstName forKey:@&quot;name&quot;];</span><br><span class="line"></span><br><span class="line">//获得UIImage实例</span><br><span class="line">UIImage *image=[[UIImage alloc]initWithContentsOfFile:@&quot;photo.jpg&quot;];</span><br><span class="line"></span><br><span class="line">//UIImage对象转换成NSData</span><br><span class="line">NSData *imageData = UIImageJPEGRepresentation(image, 100);</span><br><span class="line"></span><br><span class="line">//用synchronize方法把数据持久化到standardUserDefaults数据库</span><br><span class="line">[defaults synchronize];</span><br></pre></td></tr></table></figure>
+<h3 id="读取数据："><a href="#读取数据：" class="headerlink" title="读取数据："></a>读取数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];</span><br><span class="line"></span><br><span class="line">//根据键值取出name</span><br><span class="line">NSString *name = [defaults objectForKey:@&quot;name&quot;];</span><br><span class="line"></span><br><span class="line">NSData *imageData = [defaults dataForKey:@&quot;image&quot;];</span><br><span class="line"></span><br><span class="line">//NSData转换为UIImage</span><br><span class="line">UIImage *Image = [UIImage imageWithData:imageData];</span><br></pre></td></tr></table></figure>
+<h3 id="3-Write写入方式：永久保存在磁盘中。具体方法为："><a href="#3-Write写入方式：永久保存在磁盘中。具体方法为：" class="headerlink" title="3. Write写入方式：永久保存在磁盘中。具体方法为："></a>3. Write写入方式：永久保存在磁盘中。具体方法为：</h3><p>##第一步：获得文件即将保存的路径：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,  NSUserDomainMask,YES);//使用C函数NSSearchPathForDirectoriesInDomains来获得沙盒中目录的全路径。该函数有三个参数，目录类型、he domain mask、布尔值。其中布尔值表示是否需要通过～扩展路径。而且第一个参数是不变的，即为NSSearchPathDirectory 。在IOS中后两个参数也是不变的，即为：NSUserDomainMask 和 YES。</span><br><span class="line"> NSString *ourDocumentPath =[documentPaths objectAtIndex:0];</span><br></pre></td></tr></table></figure>
+<p>还有一种方法是使用NSHomeDirectory函数获得sandbox的路径。具体的用法为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// Once you have the full sandbox path, you can create a path from it，但是不能在sandbox的本文件层上写文件也不能创建目录，而应该是此基础上创建一个新的可写的目录，例如Documents,Library或者temp。</span><br><span class="line">NSString *sandboxPath = NSHomeDirectory();</span><br><span class="line"></span><br><span class="line">//将Documents添加到sandbox路径上，具体原因前面分析了！</span><br><span class="line">NSString *documentPath = [sandboxPath</span><br><span class="line">            stringByAppendingPathComponent:@&quot;Documents&quot;];</span><br></pre></td></tr></table></figure>
+<p>这两者的区别就是：使用NSSearchPathForDirectoriesInDomains比在NSHomeDirectory后面添加Document更加安全。因为该文件目录可能在未来发送的系统上发生改变。</p>
+<h3 id="第二步：生成在该路径下的文件："><a href="#第二步：生成在该路径下的文件：" class="headerlink" title="第二步：生成在该路径下的文件："></a>第二步：生成在该路径下的文件：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//fileName就是保存文件的文件名</span><br><span class="line">NSString *FileName=[documentDirectory stringByAppendingPathComponent:fileName];</span><br></pre></td></tr></table></figure>
+<h3 id="第三步：往文件中写入数据："><a href="#第三步：往文件中写入数据：" class="headerlink" title="第三步：往文件中写入数据："></a>第三步：往文件中写入数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//将NSData类型对象data写入文件，文件名为FileName</span><br><span class="line">[data writeToFile:FileName atomically:YES];</span><br></pre></td></tr></table></figure>
+<h3 id="最后：从文件中读出数据："><a href="#最后：从文件中读出数据：" class="headerlink" title="最后：从文件中读出数据："></a>最后：从文件中读出数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//从FileName中读取出数据</span><br><span class="line">NSData data=[NSData dataWithContentsOfFile:FileName options:0 error:NULL];</span><br></pre></td></tr></table></figure>
+<h2 id="4-SQLite：采用SQLite数据库来存储数据。SQLite作为一中小型数据库，应用ios中，跟前三种保存方式相比，相对比较复杂一些。还是一步步来吧！"><a href="#4-SQLite：采用SQLite数据库来存储数据。SQLite作为一中小型数据库，应用ios中，跟前三种保存方式相比，相对比较复杂一些。还是一步步来吧！" class="headerlink" title="4. SQLite：采用SQLite数据库来存储数据。SQLite作为一中小型数据库，应用ios中，跟前三种保存方式相比，相对比较复杂一些。还是一步步来吧！"></a>4. SQLite：采用SQLite数据库来存储数据。SQLite作为一中小型数据库，应用ios中，跟前三种保存方式相比，相对比较复杂一些。还是一步步来吧！</h2><h3 id="第一步：需要添加SQLite相关的库以及头文件：在项目文件的Build-Phases下，找到Link-Binary-Library-ies-，添加libsqlite3-0-dylib（libsqlite3-dylib与前者的区别暂时不知，两者应该差不多）；在项目文件中头文件或者源文件中添加头文件-import-“-usr-include-sqlite3-h”"><a href="#第一步：需要添加SQLite相关的库以及头文件：在项目文件的Build-Phases下，找到Link-Binary-Library-ies-，添加libsqlite3-0-dylib（libsqlite3-dylib与前者的区别暂时不知，两者应该差不多）；在项目文件中头文件或者源文件中添加头文件-import-“-usr-include-sqlite3-h”" class="headerlink" title="第一步：需要添加SQLite相关的库以及头文件：在项目文件的Build Phases下，找到Link Binary Library(ies)，添加libsqlite3.0.dylib（libsqlite3.dylib与前者的区别暂时不知，两者应该差不多）；在项目文件中头文件或者源文件中添加头文件#import “/usr/include/sqlite3.h”"></a>第一步：需要添加SQLite相关的库以及头文件：在项目文件的Build Phases下，找到Link Binary Library(ies)，添加libsqlite3.0.dylib（libsqlite3.dylib与前者的区别暂时不知，两者应该差不多）；在项目文件中头文件或者源文件中添加头文件#import “/usr/include/sqlite3.h”</h3><h3 id="第二步：开始使用SQLite："><a href="#第二步：开始使用SQLite：" class="headerlink" title="第二步：开始使用SQLite："></a>第二步：开始使用SQLite：</h3><p>使用前注意：如果不往数据库里面添加任何的表，这个数据库等于没有建立，不会在硬盘上产生任何文件，如果数据库已经存在，则会打开这个数据库。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NSArray *documentsPaths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES);</span><br><span class="line">NSString *databaseFilePath=[[documentsPaths objectAtIndex:0] stringByAppendingPathComponent:@&quot;mydb&quot;];</span><br><span class="line">//上面两句已经比较熟悉了吧！</span><br><span class="line">//打开数据库</span><br><span class="line">if (sqlite3_open([databaseFilePath UTF8String], &amp;database)==SQLITE_OK) &#123;</span><br><span class="line">        NSLog(@&quot;sqlite dadabase is opened.&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else&#123; return;&#125;//打开不成功就返回</span><br></pre></td></tr></table></figure>
+<h3 id="在打开了数据库的前提下，如果数据库没有表，那就开始建表了哦！"><a href="#在打开了数据库的前提下，如果数据库没有表，那就开始建表了哦！" class="headerlink" title="在打开了数据库的前提下，如果数据库没有表，那就开始建表了哦！"></a>在打开了数据库的前提下，如果数据库没有表，那就开始建表了哦！</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">char *error;</span><br><span class="line">const char *createSql=&quot;create table(id integer primary key autoincrement, name text)&quot;;</span><br><span class="line">if (sqlite3_exec(database, createSql, NULL, NULL, &amp;error)==SQLITE_OK) &#123;</span><br><span class="line">        NSLog(@&quot;create table is ok.&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">       NSLog(@&quot;error: %s&quot;,error);</span><br><span class="line">       sqlite3_free(error);//每次使用完毕清空error字符串，提供给下一次使用</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="建表完成之后，就开始插入记录："><a href="#建表完成之后，就开始插入记录：" class="headerlink" title="建表完成之后，就开始插入记录："></a>建表完成之后，就开始插入记录：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const char *insertSql=&quot;insert into a person (name) values(‘gg’)&quot;;</span><br><span class="line">if (sqlite3_exec(database, insertSql, NULL, NULL, &amp;error)==SQLITE_OK) &#123;</span><br><span class="line">        NSLog(@&quot;insert operation is ok.&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">       NSLog(@&quot;error: %s&quot;,error);</span><br><span class="line">       sqlite3_free(error);//每次使用完毕清空error字符串，提供给下一次使用</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="下一步，查询记录："><a href="#下一步，查询记录：" class="headerlink" title="下一步，查询记录："></a>下一步，查询记录：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const char *selectSql=&quot;select id,name from a person&quot;;</span><br><span class="line">sqlite3_stmt *statement;</span><br><span class="line">if (sqlite3_prepare_v2(database,selectSql, -1, &amp;statement, nil)==SQLITE_OK) &#123;</span><br><span class="line">        NSLog(@&quot;select operation is ok.&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">       NSLog(@&quot;error: %s&quot;,error);</span><br><span class="line">       sqlite3_free(error);</span><br><span class="line">&#125;</span><br><span class="line">while(sqlite3_step(statement)==SQLITE_ROW) &#123;</span><br><span class="line">int _id=sqlite3_column_int(statement, 0);</span><br><span class="line">NSString *name=(char*)sqlite3_column_text(statement, 1);</span><br><span class="line">NSLog(@&quot;row&gt;&gt;id %i, name %s&quot;,_id,name);</span><br><span class="line">&#125;</span><br><span class="line">sqlite3_finalize(statement);</span><br></pre></td></tr></table></figure>
+<h3 id="最后，关闭数据库："><a href="#最后，关闭数据库：" class="headerlink" title="最后，关闭数据库："></a>最后，关闭数据库：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlite3_close(database);</span><br></pre></td></tr></table></figure>
+<p>注意：写入数据库，字符串可以采用char方式，而从数据库中取出char类型，当char类型有表示中文字符时，会出现乱码。这是因为数据库默认使用ascII编码方式。所以要想正确从数据库中取出中文，需要用NSString来接收从数据库取出的字符串。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/14/iOS-四种保存数据的方式/" itemprop="url">
+                  iOS 四种保存数据的方式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-03-14T17:28:47+08:00" content="2016-03-14">
+              2016-03-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/14/iOS-四种保存数据的方式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/14/iOS-四种保存数据的方式/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/11/介绍一些正在使用或者好玩的iOS越狱插件/" itemprop="url">
                   介绍一些正在使用或者好玩的iOS越狱插件
                 </a>
@@ -1779,188 +1993,13 @@ pod update --no-repo-update
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/25/使用GithubPages-Hexo搭建免费博客（一）/" itemprop="url">
-                  使用GithubPages-Hexo搭建免费博客_Mac（一）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-02-25T15:53:51+08:00" content="2016-02-25">
-              2016-02-25
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/25/使用GithubPages-Hexo搭建免费博客（一）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/25/使用GithubPages-Hexo搭建免费博客（一）/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://7xr7f9.com1.z0.glb.clouddn.com/A5FBB7EA-1FC0-45DD-ACC5-FB49737D9237.png" alt=""></p>
-<h3 id="关于MarkDown"><a href="#关于MarkDown" class="headerlink" title="关于MarkDown"></a>关于MarkDown</h3><p>Markdown 是一种用来写作的轻量级「标记语言」，它用简洁的语法代替排版，而不像一般我们用的字处理软件 Word 或 Pages 有大量的排版、字体设置。它使我们专心于码字，用「标记」语法，来代替常见的排版格式。</p>
-<p>其详细的介绍，可以看下<a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="external">Markdown 语法说明 (简体中文版)</a></p>
-<h5 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h5><ul>
-<li>专注你的文字内容，排版样式也只是需要键盘即可搞定</li>
-<li>纯文本，兼容所有的文本编辑器与文字处理软件</li>
-<li>可读，直观，简介，学习成本低</li>
-</ul>
-<p>#####<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Markdown使用示例</a></p>
-<h5 id="书写工具"><a href="#书写工具" class="headerlink" title="书写工具"></a>书写工具</h5><p>Mac下有两款优秀的 Markdown 编辑器，<a href="http://25.io/mou/" target="_blank" rel="external">Mou</a>和<a href="http://macdown.uranusjr.com/" target="_blank" rel="external">MacDown</a></p>
-<p><img src="http://25.io/mou/Mou_128.png" alt="Mou icon"><br><img src="http://macdown.uranusjr.com/static/base/img/logo-160.png" alt="MacDown logo"></p>
-<h2 id="关于其优缺点，可以移步这里-至于选择哪款，看个人喜好。"><a href="#关于其优缺点，可以移步这里-至于选择哪款，看个人喜好。" class="headerlink" title="关于其优缺点，可以移步这里,至于选择哪款，看个人喜好。"></a>关于其优缺点，可以移步<a href="http://www.jianshu.com/p/6c157af09e84" target="_blank" rel="external">这里</a>,至于选择哪款，看个人喜好。</h2><h3 id="关于Hexo"><a href="#关于Hexo" class="headerlink" title="关于Hexo"></a>关于Hexo</h3><p>Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo官网</a></p>
-<h3 id="关于GithubPages"><a href="#关于GithubPages" class="headerlink" title="关于GithubPages"></a>关于GithubPages</h3><p>在Github里面，每一个项目都拥有它的一个主页，列出项目的源文件，但是对于新手来说，看到那么多的源代码，只会让人感到头晕脑胀，无从下手，他更希望的是，该项目有一个简明易懂的页面，告诉他每一步要怎么去做。</p>
-<p>因此，Github就设计了Github Pages这个功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，Github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
-<p>通过上面的介绍，大家对Hexo和Github已经有了大概的了解。<br>我们的方式就是，利用Markdown进行博客的编写，通过Hexo这个框架解析生成靓丽的静态页面，然后部署到Github上供大家浏览。</p>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul>
-<li>硬件<br>此版本为Mac版👽</li>
-<li>软件<ol>
-<li>node.js</li>
-<li>npm</li>
-<li>hexo</li>
-<li>github账号</li>
-</ol>
-</li>
-</ul>
-<h3 id="安装node-js与npm"><a href="#安装node-js与npm" class="headerlink" title="安装node.js与npm"></a>安装node.js与npm</h3><p>下载node.js 有多种方法：使用 <a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">Homebrew</a> 下载 或者直接下载安装包。 建议 node.js 直接下载 安装包，因为使用 brew 有可能失败，会被墙掉。</p>
-<p><a href="https://nodejs.org/en/download/" target="_blank" rel="external">node.js下载地址</a> </p>
-<p><img src="http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-02-26%20%E4%B8%8B%E5%8D%883.37.18.png" alt=""></p>
-<p>node.js 下载完成后 安装到电脑上就可以了。安装成功后显示出来安装路径，可以看到 安装node.js 的时候 npm 也安装了。</p>
-<p>检测安装是否成功 终端输入 -v , 成功则显示版本号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">v4.3.1</span><br><span class="line">$ npm -v</span><br><span class="line">2.14.12</span><br></pre></td></tr></table></figure>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo</a></h3><p>文档里给出了详细的安装方法，只需要按其一步步来就好</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>-v表示全局安装，所以需要使用管理员身份</p>
-<p>安装成功，使用hexo 命令的时候，可能会出现以下错误</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; [Error: Cannot find module &apos;./build/Release/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; &#125;    </span><br><span class="line">&#123; [Error: Cannot find module &apos;./build/default/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; &#125;</span><br><span class="line">&#123; [Error: Cannot find module &apos;./build/Debug/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; &#125;</span><br></pre></td></tr></table></figure>
-<p>据说是由于GFW的问题，导致安装Hexo的时候少装了几个库。</p>
-<p>查询出的解决方法为，使用以下命令行重新安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo –no-optional</span><br></pre></td></tr></table></figure>
-<p>然而于我而言，并没有什么卵用。这个错误也没有造成任何影响，所以忽略，Go on。<br>完成后，验证下是否安装成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-<h4 id="Hexo的使用"><a href="#Hexo的使用" class="headerlink" title="Hexo的使用"></a>Hexo的使用</h4><h5 id="1-创建存放博客的文件夹"><a href="#1-创建存放博客的文件夹" class="headerlink" title="1. 创建存放博客的文件夹"></a>1. 创建存放博客的文件夹</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir myblog</span><br></pre></td></tr></table></figure>
-<h5 id="2-执行以下命令，Hexo会在目标文件夹建立博客所需要的文件"><a href="#2-执行以下命令，Hexo会在目标文件夹建立博客所需要的文件" class="headerlink" title="2. 执行以下命令，Hexo会在目标文件夹建立博客所需要的文件"></a>2. 执行以下命令，Hexo会在目标文件夹建立博客所需要的文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p> 输出以下信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INFO  Cloning hexo-starter to ~/Documents/mytest</span><br><span class="line">Cloning into &apos;/Users/Quncao/Documents/mytest&apos;...</span><br></pre></td></tr></table></figure>
-<p>成功之后文件夹的样子<br><img src="http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-02-26%20%E4%B8%8B%E5%8D%884.13.00.png" alt=""></p>
-<ul>
-<li>_config.yml : Hexo和站点的配置文件，里面可以设置博客的名字、标题、作者、链接格式等相关项</li>
-<li>scaffolds : 脚手架，用于存放我们创建文章时的模版</li>
-<li>source : 用于存放我们用markdown编写的博文原文件、其他静态资源文件</li>
-<li>themes : 用于存放主题，里面有我们博客的默认主题landscape</li>
-</ul>
-<h5 id="3-执行以下命令，进行依赖包的安装"><a href="#3-执行以下命令，进行依赖包的安装" class="headerlink" title="3. 执行以下命令，进行依赖包的安装"></a>3. 执行以下命令，进行依赖包的安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install</span><br></pre></td></tr></table></figure>
-<ul>
-<li>node_modules: 关联保存了将会使用到的hexo依赖包</li>
-</ul>
-<h5 id="4-安装相关插件"><a href="#4-安装相关插件" class="headerlink" title="4. 安装相关插件"></a>4. 安装相关插件</h5><p>插件会安装至node_modules文件夹下，如果已经安装好的可以直接忽略</p>
-<ul>
-<li><p>安装便于自动部署到Github上的插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装atom生成插件，便于感兴趣的小伙伴们订阅</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装博客首页生成插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-index --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装归档生成插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-archive --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装tag生成插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-tag --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装category生成插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-category --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装Sitemap文件生成插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装百度Sitemap文件生成插件，因为普通的Sitemap格式不符合百度的要求</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>未完待续，继续请移步<a href="http://icehulu.com/2016/02/26/%E4%BD%BF%E7%94%A8GithubPages-Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89/" target="_blank" rel="external">这里</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1999,7 +2038,7 @@ pod update --no-repo-update
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>

@@ -1,0 +1,751 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="iOS开发,tags," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="这是一个利用Hexo搭建的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="iOS 四种保存数据的方式在iOS开发过程中，不管是做什么应用，都会碰到数据保存的问题。将数据保存到本地，能够让程序的运行更加流畅，不会出现让人厌恶的菊花形状，使得用户体验更好。下面介绍一下数据保存的方式：
+1.NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder:和initWithCoder:方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 四种保存数据的方式">
+<meta property="og:url" content="http://yoursite.com/2016/03/14/iOS 四种保存数据的方式/index.html">
+<meta property="og:site_name" content="这是一个利用Hexo搭建的博客">
+<meta property="og:description" content="iOS 四种保存数据的方式在iOS开发过程中，不管是做什么应用，都会碰到数据保存的问题。将数据保存到本地，能够让程序的运行更加流畅，不会出现让人厌恶的菊花形状，使得用户体验更好。下面介绍一下数据保存的方式：
+1.NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder:和initWithCoder:方">
+<meta property="og:updated_time" content="2016-03-14T09:40:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS 四种保存数据的方式">
+<meta name="twitter:description" content="iOS 四种保存数据的方式在iOS开发过程中，不管是做什么应用，都会碰到数据保存的问题。将数据保存到本地，能够让程序的运行更加流畅，不会出现让人厌恶的菊花形状，使得用户体验更好。下面介绍一下数据保存的方式：
+1.NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder:和initWithCoder:方">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6260345940964541000,
+      author: 'MaxWellPro'
+    }
+  };
+</script>
+
+  <title> iOS 四种保存数据的方式 | 这是一个利用Hexo搭建的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">这是一个利用Hexo搭建的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">分享一些技术文章和自己所整理的知识。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS 四种保存数据的方式
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-03-14T17:28:47+08:00" content="2016-03-14">
+              2016-03-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/14/iOS 四种保存数据的方式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/14/iOS 四种保存数据的方式/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="iOS-四种保存数据的方式"><a href="#iOS-四种保存数据的方式" class="headerlink" title="iOS 四种保存数据的方式"></a>iOS 四种保存数据的方式</h1><p>在iOS开发过程中，不管是做什么应用，都会碰到数据保存的问题。将数据保存到本地，能够让程序的运行更加流畅，不会出现让人厌恶的菊花形状，使得用户体验更好。下面介绍一下数据保存的方式：</p>
+<h2 id="1-NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder-和initWithCoder-方法。前一个方法告诉系统怎么对对象进行编码，而后一个方法则是告诉系统怎么对对象进行解码。例如对Possession对象归档保存。"><a href="#1-NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder-和initWithCoder-方法。前一个方法告诉系统怎么对对象进行编码，而后一个方法则是告诉系统怎么对对象进行解码。例如对Possession对象归档保存。" class="headerlink" title="1.NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder:和initWithCoder:方法。前一个方法告诉系统怎么对对象进行编码，而后一个方法则是告诉系统怎么对对象进行解码。例如对Possession对象归档保存。"></a>1.NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder:和initWithCoder:方法。前一个方法告诉系统怎么对对象进行编码，而后一个方法则是告诉系统怎么对对象进行解码。例如对Possession对象归档保存。</h2><h3 id="定义Possession："><a href="#定义Possession：" class="headerlink" title="定义Possession："></a>定义Possession：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@interface  Possession：NSObject&lt;NSCoding&gt;&#123;//遵守NSCoding协议</span><br><span class="line"></span><br><span class="line">       NSString *name;//待归档类型</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@implementation Possession</span><br><span class="line"></span><br><span class="line">-(void)encodeWithCoder:(NSCoder *)aCoder&#123;</span><br><span class="line"></span><br><span class="line">            [aCoder encodeObject:name forKey:@&quot;name&quot;];</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-(void)initWithCoder:(NSCoder *)aDecoder&#123;</span><br><span class="line"></span><br><span class="line">            name=[[aDeCoder decodeObjectforKey:@&quot;name&quot;] retain];</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="归档操作："><a href="#归档操作：" class="headerlink" title="归档操作："></a>归档操作：</h3><p>如果对Possession对象allPossession归档保存，只需要NSCoder子类NSKeyedArchiver的方法archiveRootObject:toFile: 即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSString *path = [self possessionArchivePath];</span><br><span class="line"></span><br><span class="line">[NSKeyedArchiver archiveRootObject:allPossessions toFile:path];</span><br></pre></td></tr></table></figure>
+<h3 id="解压操作："><a href="#解压操作：" class="headerlink" title="解压操作："></a>解压操作：</h3><p>同样调用NSCoder子类NSKeyedArchiver的方法unarchiveRootObject:toFile: 即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">allPossessions = [[NSKeyedUnarchiver unarchiveObjectWithFile:path] retain];</span><br></pre></td></tr></table></figure>
+<p>缺点：归档的形式来保存数据，只能一次性归档保存以及一次性解压。所以只能针对小量数据，而且对数据操作比较笨拙，即如果想改动数据的某一小部分，还是需要解压整个数据或者归档整个数据。</p>
+<h2 id="2-NSUserDefaults：用来保存应用程序设置和属性、用户保存的数据。用户再次打开程序或开机后这些数据仍然存在。NSUserDefaults可以存储的数据类型包括：NSData、NSString、NSNumber、NSDate、NSArray、NSDictionary。如果要存储其他类型，则需要转换为前面的类型，才能用NSUserDefaults存储。具体实现为："><a href="#2-NSUserDefaults：用来保存应用程序设置和属性、用户保存的数据。用户再次打开程序或开机后这些数据仍然存在。NSUserDefaults可以存储的数据类型包括：NSData、NSString、NSNumber、NSDate、NSArray、NSDictionary。如果要存储其他类型，则需要转换为前面的类型，才能用NSUserDefaults存储。具体实现为：" class="headerlink" title="2.NSUserDefaults：用来保存应用程序设置和属性、用户保存的数据。用户再次打开程序或开机后这些数据仍然存在。NSUserDefaults可以存储的数据类型包括：NSData、NSString、NSNumber、NSDate、NSArray、NSDictionary。如果要存储其他类型，则需要转换为前面的类型，才能用NSUserDefaults存储。具体实现为："></a>2.NSUserDefaults：用来保存应用程序设置和属性、用户保存的数据。用户再次打开程序或开机后这些数据仍然存在。NSUserDefaults可以存储的数据类型包括：NSData、NSString、NSNumber、NSDate、NSArray、NSDictionary。如果要存储其他类型，则需要转换为前面的类型，才能用NSUserDefaults存储。具体实现为：</h2><h3 id="保存数据："><a href="#保存数据：" class="headerlink" title="保存数据："></a>保存数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];</span><br><span class="line"></span><br><span class="line">NSString *name =@”default string“;</span><br><span class="line"></span><br><span class="line">[defaults setObject:firstName forKey:@&quot;name&quot;];</span><br><span class="line"></span><br><span class="line">//获得UIImage实例</span><br><span class="line">UIImage *image=[[UIImage alloc]initWithContentsOfFile:@&quot;photo.jpg&quot;];</span><br><span class="line"></span><br><span class="line">//UIImage对象转换成NSData</span><br><span class="line">NSData *imageData = UIImageJPEGRepresentation(image, 100);</span><br><span class="line"></span><br><span class="line">//用synchronize方法把数据持久化到standardUserDefaults数据库</span><br><span class="line">[defaults synchronize];</span><br></pre></td></tr></table></figure>
+<h3 id="读取数据："><a href="#读取数据：" class="headerlink" title="读取数据："></a>读取数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];</span><br><span class="line"></span><br><span class="line">//根据键值取出name</span><br><span class="line">NSString *name = [defaults objectForKey:@&quot;name&quot;];</span><br><span class="line"></span><br><span class="line">NSData *imageData = [defaults dataForKey:@&quot;image&quot;];</span><br><span class="line"></span><br><span class="line">//NSData转换为UIImage</span><br><span class="line">UIImage *Image = [UIImage imageWithData:imageData];</span><br></pre></td></tr></table></figure>
+<h3 id="3-Write写入方式：永久保存在磁盘中。具体方法为："><a href="#3-Write写入方式：永久保存在磁盘中。具体方法为：" class="headerlink" title="3. Write写入方式：永久保存在磁盘中。具体方法为："></a>3. Write写入方式：永久保存在磁盘中。具体方法为：</h3><p>##第一步：获得文件即将保存的路径：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,  NSUserDomainMask,YES);//使用C函数NSSearchPathForDirectoriesInDomains来获得沙盒中目录的全路径。该函数有三个参数，目录类型、he domain mask、布尔值。其中布尔值表示是否需要通过～扩展路径。而且第一个参数是不变的，即为NSSearchPathDirectory 。在IOS中后两个参数也是不变的，即为：NSUserDomainMask 和 YES。</span><br><span class="line"> NSString *ourDocumentPath =[documentPaths objectAtIndex:0];</span><br></pre></td></tr></table></figure>
+<p>还有一种方法是使用NSHomeDirectory函数获得sandbox的路径。具体的用法为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// Once you have the full sandbox path, you can create a path from it，但是不能在sandbox的本文件层上写文件也不能创建目录，而应该是此基础上创建一个新的可写的目录，例如Documents,Library或者temp。</span><br><span class="line">NSString *sandboxPath = NSHomeDirectory();</span><br><span class="line"></span><br><span class="line">//将Documents添加到sandbox路径上，具体原因前面分析了！</span><br><span class="line">NSString *documentPath = [sandboxPath</span><br><span class="line">            stringByAppendingPathComponent:@&quot;Documents&quot;];</span><br></pre></td></tr></table></figure>
+<p>这两者的区别就是：使用NSSearchPathForDirectoriesInDomains比在NSHomeDirectory后面添加Document更加安全。因为该文件目录可能在未来发送的系统上发生改变。</p>
+<h3 id="第二步：生成在该路径下的文件："><a href="#第二步：生成在该路径下的文件：" class="headerlink" title="第二步：生成在该路径下的文件："></a>第二步：生成在该路径下的文件：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//fileName就是保存文件的文件名</span><br><span class="line">NSString *FileName=[documentDirectory stringByAppendingPathComponent:fileName];</span><br></pre></td></tr></table></figure>
+<h3 id="第三步：往文件中写入数据："><a href="#第三步：往文件中写入数据：" class="headerlink" title="第三步：往文件中写入数据："></a>第三步：往文件中写入数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//将NSData类型对象data写入文件，文件名为FileName</span><br><span class="line">[data writeToFile:FileName atomically:YES];</span><br></pre></td></tr></table></figure>
+<h3 id="最后：从文件中读出数据："><a href="#最后：从文件中读出数据：" class="headerlink" title="最后：从文件中读出数据："></a>最后：从文件中读出数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//从FileName中读取出数据</span><br><span class="line">NSData data=[NSData dataWithContentsOfFile:FileName options:0 error:NULL];</span><br></pre></td></tr></table></figure>
+<h2 id="4-SQLite：采用SQLite数据库来存储数据。SQLite作为一中小型数据库，应用ios中，跟前三种保存方式相比，相对比较复杂一些。还是一步步来吧！"><a href="#4-SQLite：采用SQLite数据库来存储数据。SQLite作为一中小型数据库，应用ios中，跟前三种保存方式相比，相对比较复杂一些。还是一步步来吧！" class="headerlink" title="4. SQLite：采用SQLite数据库来存储数据。SQLite作为一中小型数据库，应用ios中，跟前三种保存方式相比，相对比较复杂一些。还是一步步来吧！"></a>4. SQLite：采用SQLite数据库来存储数据。SQLite作为一中小型数据库，应用ios中，跟前三种保存方式相比，相对比较复杂一些。还是一步步来吧！</h2><h3 id="第一步：需要添加SQLite相关的库以及头文件：在项目文件的Build-Phases下，找到Link-Binary-Library-ies-，添加libsqlite3-0-dylib（libsqlite3-dylib与前者的区别暂时不知，两者应该差不多）；在项目文件中头文件或者源文件中添加头文件-import-“-usr-include-sqlite3-h”"><a href="#第一步：需要添加SQLite相关的库以及头文件：在项目文件的Build-Phases下，找到Link-Binary-Library-ies-，添加libsqlite3-0-dylib（libsqlite3-dylib与前者的区别暂时不知，两者应该差不多）；在项目文件中头文件或者源文件中添加头文件-import-“-usr-include-sqlite3-h”" class="headerlink" title="第一步：需要添加SQLite相关的库以及头文件：在项目文件的Build Phases下，找到Link Binary Library(ies)，添加libsqlite3.0.dylib（libsqlite3.dylib与前者的区别暂时不知，两者应该差不多）；在项目文件中头文件或者源文件中添加头文件#import “/usr/include/sqlite3.h”"></a>第一步：需要添加SQLite相关的库以及头文件：在项目文件的Build Phases下，找到Link Binary Library(ies)，添加libsqlite3.0.dylib（libsqlite3.dylib与前者的区别暂时不知，两者应该差不多）；在项目文件中头文件或者源文件中添加头文件#import “/usr/include/sqlite3.h”</h3><h3 id="第二步：开始使用SQLite："><a href="#第二步：开始使用SQLite：" class="headerlink" title="第二步：开始使用SQLite："></a>第二步：开始使用SQLite：</h3><p>使用前注意：如果不往数据库里面添加任何的表，这个数据库等于没有建立，不会在硬盘上产生任何文件，如果数据库已经存在，则会打开这个数据库。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NSArray *documentsPaths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES);</span><br><span class="line">NSString *databaseFilePath=[[documentsPaths objectAtIndex:0] stringByAppendingPathComponent:@&quot;mydb&quot;];</span><br><span class="line">//上面两句已经比较熟悉了吧！</span><br><span class="line">//打开数据库</span><br><span class="line">if (sqlite3_open([databaseFilePath UTF8String], &amp;database)==SQLITE_OK) &#123;</span><br><span class="line">        NSLog(@&quot;sqlite dadabase is opened.&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else&#123; return;&#125;//打开不成功就返回</span><br></pre></td></tr></table></figure>
+<h3 id="在打开了数据库的前提下，如果数据库没有表，那就开始建表了哦！"><a href="#在打开了数据库的前提下，如果数据库没有表，那就开始建表了哦！" class="headerlink" title="在打开了数据库的前提下，如果数据库没有表，那就开始建表了哦！"></a>在打开了数据库的前提下，如果数据库没有表，那就开始建表了哦！</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">char *error;</span><br><span class="line">const char *createSql=&quot;create table(id integer primary key autoincrement, name text)&quot;;</span><br><span class="line">if (sqlite3_exec(database, createSql, NULL, NULL, &amp;error)==SQLITE_OK) &#123;</span><br><span class="line">        NSLog(@&quot;create table is ok.&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">       NSLog(@&quot;error: %s&quot;,error);</span><br><span class="line">       sqlite3_free(error);//每次使用完毕清空error字符串，提供给下一次使用</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="建表完成之后，就开始插入记录："><a href="#建表完成之后，就开始插入记录：" class="headerlink" title="建表完成之后，就开始插入记录："></a>建表完成之后，就开始插入记录：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const char *insertSql=&quot;insert into a person (name) values(‘gg’)&quot;;</span><br><span class="line">if (sqlite3_exec(database, insertSql, NULL, NULL, &amp;error)==SQLITE_OK) &#123;</span><br><span class="line">        NSLog(@&quot;insert operation is ok.&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">       NSLog(@&quot;error: %s&quot;,error);</span><br><span class="line">       sqlite3_free(error);//每次使用完毕清空error字符串，提供给下一次使用</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="下一步，查询记录："><a href="#下一步，查询记录：" class="headerlink" title="下一步，查询记录："></a>下一步，查询记录：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const char *selectSql=&quot;select id,name from a person&quot;;</span><br><span class="line">sqlite3_stmt *statement;</span><br><span class="line">if (sqlite3_prepare_v2(database,selectSql, -1, &amp;statement, nil)==SQLITE_OK) &#123;</span><br><span class="line">        NSLog(@&quot;select operation is ok.&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">       NSLog(@&quot;error: %s&quot;,error);</span><br><span class="line">       sqlite3_free(error);</span><br><span class="line">&#125;</span><br><span class="line">while(sqlite3_step(statement)==SQLITE_ROW) &#123;</span><br><span class="line">int _id=sqlite3_column_int(statement, 0);</span><br><span class="line">NSString *name=(char*)sqlite3_column_text(statement, 1);</span><br><span class="line">NSLog(@&quot;row&gt;&gt;id %i, name %s&quot;,_id,name);</span><br><span class="line">&#125;</span><br><span class="line">sqlite3_finalize(statement);</span><br></pre></td></tr></table></figure>
+<h3 id="最后，关闭数据库："><a href="#最后，关闭数据库：" class="headerlink" title="最后，关闭数据库："></a>最后，关闭数据库：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlite3_close(database);</span><br></pre></td></tr></table></figure>
+<p>注意：写入数据库，字符串可以采用char方式，而从数据库中取出char类型，当char类型有表示中文字符时，会出现乱码。这是因为数据库默认使用ascII编码方式。所以要想正确从数据库中取出中文，需要用NSString来接收从数据库取出的字符串。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS开发/" rel="tag">#iOS开发</a>
+          
+            <a href="/tags/tags/" rel="tag">#tags</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/14/iOS-四种保存数据的方式/" rel="next" title="iOS 四种保存数据的方式">
+                <i class="fa fa-chevron-left"></i> iOS 四种保存数据的方式
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/14/iOS 四种保存数据的方式/"
+           data-title="iOS 四种保存数据的方式" data-url="http://yoursite.com/2016/03/14/iOS 四种保存数据的方式/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7xojj3.com5.z0.glb.qiniucdn.com/image%2Favatar%2F7ead8c33da3d43552445740501595d76.jpg"
+               alt="MaxWellPro" />
+          <p class="site-author-name" itemprop="name">MaxWellPro</p>
+          <p class="site-description motion-element" itemprop="description">一个90后iOS软件攻城狮，热爱coding，并且喜欢数码、外设、键盘等等。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+          
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/JMaxWells/JMaxWells.github.io" target="_blank">
+                  
+                    <i class="fa fa-gitHub"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2379733281" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS-四种保存数据的方式"><span class="nav-number">1.</span> <span class="nav-text">iOS 四种保存数据的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder-和initWithCoder-方法。前一个方法告诉系统怎么对对象进行编码，而后一个方法则是告诉系统怎么对对象进行解码。例如对Possession对象归档保存。"><span class="nav-number">1.1.</span> <span class="nav-text">1.NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder:和initWithCoder:方法。前一个方法告诉系统怎么对对象进行编码，而后一个方法则是告诉系统怎么对对象进行解码。例如对Possession对象归档保存。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义Possession："><span class="nav-number">1.1.1.</span> <span class="nav-text">定义Possession：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归档操作："><span class="nav-number">1.1.2.</span> <span class="nav-text">归档操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压操作："><span class="nav-number">1.1.3.</span> <span class="nav-text">解压操作：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-NSUserDefaults：用来保存应用程序设置和属性、用户保存的数据。用户再次打开程序或开机后这些数据仍然存在。NSUserDefaults可以存储的数据类型包括：NSData、NSString、NSNumber、NSDate、NSArray、NSDictionary。如果要存储其他类型，则需要转换为前面的类型，才能用NSUserDefaults存储。具体实现为："><span class="nav-number">1.2.</span> <span class="nav-text">2.NSUserDefaults：用来保存应用程序设置和属性、用户保存的数据。用户再次打开程序或开机后这些数据仍然存在。NSUserDefaults可以存储的数据类型包括：NSData、NSString、NSNumber、NSDate、NSArray、NSDictionary。如果要存储其他类型，则需要转换为前面的类型，才能用NSUserDefaults存储。具体实现为：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#保存数据："><span class="nav-number">1.2.1.</span> <span class="nav-text">保存数据：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#读取数据："><span class="nav-number">1.2.2.</span> <span class="nav-text">读取数据：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Write写入方式：永久保存在磁盘中。具体方法为："><span class="nav-number">1.2.3.</span> <span class="nav-text">3. Write写入方式：永久保存在磁盘中。具体方法为：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步：生成在该路径下的文件："><span class="nav-number">1.2.4.</span> <span class="nav-text">第二步：生成在该路径下的文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步：往文件中写入数据："><span class="nav-number">1.2.5.</span> <span class="nav-text">第三步：往文件中写入数据：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后：从文件中读出数据："><span class="nav-number">1.2.6.</span> <span class="nav-text">最后：从文件中读出数据：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-SQLite：采用SQLite数据库来存储数据。SQLite作为一中小型数据库，应用ios中，跟前三种保存方式相比，相对比较复杂一些。还是一步步来吧！"><span class="nav-number">1.3.</span> <span class="nav-text">4. SQLite：采用SQLite数据库来存储数据。SQLite作为一中小型数据库，应用ios中，跟前三种保存方式相比，相对比较复杂一些。还是一步步来吧！</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步：需要添加SQLite相关的库以及头文件：在项目文件的Build-Phases下，找到Link-Binary-Library-ies-，添加libsqlite3-0-dylib（libsqlite3-dylib与前者的区别暂时不知，两者应该差不多）；在项目文件中头文件或者源文件中添加头文件-import-“-usr-include-sqlite3-h”"><span class="nav-number">1.3.1.</span> <span class="nav-text">第一步：需要添加SQLite相关的库以及头文件：在项目文件的Build Phases下，找到Link Binary Library(ies)，添加libsqlite3.0.dylib（libsqlite3.dylib与前者的区别暂时不知，两者应该差不多）；在项目文件中头文件或者源文件中添加头文件#import “/usr/include/sqlite3.h”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步：开始使用SQLite："><span class="nav-number">1.3.2.</span> <span class="nav-text">第二步：开始使用SQLite：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在打开了数据库的前提下，如果数据库没有表，那就开始建表了哦！"><span class="nav-number">1.3.3.</span> <span class="nav-text">在打开了数据库的前提下，如果数据库没有表，那就开始建表了哦！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建表完成之后，就开始插入记录："><span class="nav-number">1.3.4.</span> <span class="nav-text">建表完成之后，就开始插入记录：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下一步，查询记录："><span class="nav-number">1.3.5.</span> <span class="nav-text">下一步，查询记录：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后，关闭数据库："><span class="nav-number">1.3.6.</span> <span class="nav-text">最后，关闭数据库：</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MaxWellPro</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"maxwellpro"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+
+</body>
+</html>
