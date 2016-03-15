@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-15T06:14:54.000Z</updated>
+  <updated>2016-03-15T07:10:44.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My Github stars</title>
+    <link href="http://yoursite.com/2016/03/15/My-Github-stars/"/>
+    <id>http://yoursite.com/2016/03/15/My-Github-stars/</id>
+    <published>2016-03-15T07:10:44.000Z</published>
+    <updated>2016-03-15T07:10:44.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Git操作指南</title>
@@ -211,9 +227,9 @@
     </summary>
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
-    
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   
@@ -257,9 +273,9 @@
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -474,9 +490,9 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
       <category term="3DTouch" scheme="http://yoursite.com/tags/3DTouch/"/>
     
@@ -520,9 +536,9 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -965,11 +981,11 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -1113,11 +1129,11 @@ pod update --no-repo-update
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
