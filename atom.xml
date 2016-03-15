@@ -85,9 +85,9 @@
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -333,9 +333,9 @@
     </summary>
     
     
-      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -550,9 +550,9 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
       <category term="3DTouch" scheme="http://yoursite.com/tags/3DTouch/"/>
     
@@ -596,9 +596,9 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -1041,11 +1041,11 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -1189,11 +1189,11 @@ pod update --no-repo-update
     </summary>
     
     
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   

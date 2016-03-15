@@ -266,7 +266,20 @@ HySideScrollingImagePicker
 CTAssetsPickerController
 awesome-ios-ui
 RescueXcodePlug-ins
-Reac
+ReactiveCocoa
+TSMessages
+FlatUIKit
+JSQMessagesViewController
+AsyncDisplayKit
+PNChart
+JVFloatLabeledTextField
+appirater
+ECSlidingViewController
+iOS8-Sampler
+GMStepper
+PAStepper
+SBShortcutMenuSimulator
+hexo
           ...
 
           <div class="post-more-link text-center">
@@ -371,7 +384,15 @@ Reac
 
 1） 工作目录：用户本地的目录；
 
-2） Index
+2） Index（索引）：将工作目录下所有文件（包含子目录）生成快照，存放到一个临时的存储区域，Git 称该区域为索引。
+
+3） 仓库：将索引通过commit命令提交至仓库中，每一次提交都意味着版本在进行一次更新。
+
+
+1.2. 使用Git时的初始化事项1.2.1. Git初始化配置
+1） 配置使用git仓库的人员姓名
+
+1git config --global user.name &quot;Your Name
           ...
 
           <div class="post-more-link text-center">
@@ -473,7 +494,7 @@ Reac
         
           
           iOS 四种保存数据的方式在iOS开发过程中，不管是做什么应用，都会碰到数据保存的问题。将数据保存到本地，能够让程序的运行更加流畅，不会出现让人厌恶的菊花形状，使得用户体验更好。下面介绍一下数据保存的方式：
-1.NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCodi
+1.NSKeyedArchiver：采用归档的形式来保存数据，该数据对象需要遵守NSCoding协议，并且该对象对应的类必须提供encodeWithCoder:和initWithCoder:方法。前一个方法告诉系统怎么对对象进行编码，而后一个方法则是告诉系统怎么对对象进行解码。例如对Possession对象归档保存。定义Possession：12345678910111213141516171819@interface  Possession：NSObject&lt;NSCoding&g
           ...
 
           <div class="post-more-link text-center">
@@ -575,7 +596,18 @@ Reac
         
           
           介绍一些正在使用或者好玩的iOS越狱插件什么是越狱“越狱”指的是绕过苹果在其设备上对操作系统施加的很多限制，从而可以“Root访问”基础的操作系统。简单来说，“越狱”可以让iPhone用户从苹果应用商店外下载其他非官方的应用程序，或者对用户界面进行定制。
-插件DataMember一款可以实时显示网络
+插件DataMember一款可以实时显示网络数据的悬浮窗控件。
+
+通知中心显示wifi和数据流量信息
+
+状态显示数据传转速率
+
+按天,周,月显示数据使用情况
+
+可通过设置选项自定义显示
+
+
+EnableLivePhotos使用EnableLivePhotos后不仅仅是可以在拍照界面中开启LivePhotos模式，还能在图库中像iPhone6s系列那样浏览拍下来的动态图，长按即可查看整个动态效果;并且可以通过“分享”按钮将 LivePhoto
           ...
 
           <div class="post-more-link text-center">
@@ -684,6 +716,24 @@ UITouch类里API的变化iOS9中添加的属性altitudeAngle
 
 
 estimatedProperties
+当前触摸对象估计的触摸特性
+
+返回值是UITouchPropertyies
+
+
+updatedProperties
+当前触摸对象已经更新的触摸特性
+
+返回值是UITouchPropertyies
+
+
+estimationUpdateIndex
+当每个触摸对象的触摸特性发生变化时，该值将会单独增加
+
+返回值是NSNumber
+
+
+iOS9中添加的方法- PreciseLocationInView:
 当前触摸对
           ...
 
@@ -786,7 +836,10 @@ estimatedProperties
         
           
           如何获取iOS设备的UDID什么是 UDID？ UDID 是由子母和数字组成的 40 个字符串的序号，用来区别每一个唯一的 iOS 设备，包括 iPhones, iPads, 以及 iPod Touches，这些编码看起来是随机的，实际上是跟硬件设备特点相联系的。
-例如，一个典型的 UDID 类似这
+例如，一个典型的 UDID 类似这样：
+37f2f993bae681636e30e74b04d6b8955ba36f29
+UDID 和 Ad Hoc如果 iOS 设备要安装以 Ad Hoc 方式打包的 iOS 应用时，必须将该设备的 UDID 加入打包应用时的证书文件（.mobileprovision文件），才可以在该设备上正常安装。
+如何获取 iOS 设备 UDID？UDID 的获得可以由 iTunes 工具来获得，也可以通过 
           ...
 
           <div class="post-more-link text-center">
@@ -888,7 +941,10 @@ estimatedProperties
         
           
           AppStore最新审核指南（2015年3月更新版）
-苹果近日更新了App Store审核指南的相关章节，对此前版本进行了修改和完善。除了增加应用截图、预览等限制外，使用Apple Pay进行定期付款的应用程序必须展示每个阶段所需款额，费用归属以及如何取消。而从修改的政策部分可以看出，苹果对App 
+苹果近日更新了App Store审核指南的相关章节，对此前版本进行了修改和完善。除了增加应用截图、预览等限制外，使用Apple Pay进行定期付款的应用程序必须展示每个阶段所需款额，费用归属以及如何取消。而从修改的政策部分可以看出，苹果对App store应用的审核更加严格，鉴于近来国内游戏踩雷屡见不鲜，审核标准请各位业内同学耐心阅读。1、条款和条件
+1.1为App Store开发程序，开发者必须遵守Program License Agreement(PLA)、人机交互指南(HIG)以及开发者和苹果签订的任何其他协议和合同。以下规则和例证旨在帮助开发者的程序能获得App Store的认可，而不是修改或删除任何其他协议中的条款。
+
+2.功能
           ...
 
           <div class="post-more-link text-center">
@@ -990,7 +1046,9 @@ estimatedProperties
         
           
           使用CocoaPods做依赖管理每种语言发展到一个阶段，就会出现相应的依赖管理工具。本章讲解iOS项目的依赖管理工具CocoaPods。
-CocoaPods简介每种语言发展到一个阶段，就会出现相应的依赖管理工具，例如Java语言的Maven，nodejs的npm。随着iOS开发者的增多，业界也出现了
+CocoaPods简介每种语言发展到一个阶段，就会出现相应的依赖管理工具，例如Java语言的Maven，nodejs的npm。随着iOS开发者的增多，业界也出现了为iOS程序提供依赖管理的工具，它的名字叫做：CocoaPods。
+CocoaPods项目的源码在Github上管理。该项目开始于2011年8月，经过多年发展，现在已经成为iOS开发事实上的依赖管理标准工具。开发iOS项目不可避免地要使用第三方开源库，CocoaPods的出现使得我们可以节省设置和更新第三方开源库的时间。
+在我开发猿题库客户端时，使用了24个第三方开源库。在没有使用CocoaPod
           ...
 
           <div class="post-more-link text-center">
@@ -1094,7 +1152,11 @@ CocoaPods简介每种语言发展到一个阶段，就会出现相应的依赖�
           AppStore上线素材准备篇1.app名称与版本号您要填入的 App 版本号。编号应遵循软件版本规范。
 2.公司网址技术支持网址(URL)；营销网址(URL) ,可以共用一个网址。
 3.app所属类别最能准确描述此 App 的类别。有关更多信息，请参阅 App Store 类别定义。参考链接
-4.
+4.演示帐户正式环境的测试账号与密码。
+5.联系信息包括：电话，邮箱，公司地址当 App 审核团队有任何问题或需要额外信息时, 您所在机构的联系人信息。
+6.版权-公司名称拥有您的 App 专有权的人员或实体的名称，前面是获得权利的年份（例如“2008 Acme Inc”）。请勿提供网址(URL)。
+7.app描述对您 App 的描述，用以详细说明特性和功能。
+8.app截图*4（共20张）屏幕快照必
           ...
 
           <div class="post-more-link text-center">
@@ -1203,8 +1265,13 @@ CocoaPods简介每种语言发展到一个阶段，就会出现相应的依赖�
 
 添加CNAME文件
 
-打开自己本地的博客目录
-          ...
+打开自己本地的博客目录，在source文件夹下创建名为CNAME的文本文件。打开，输入自己的域名，格式为“xxx.com”，保存后使用
+12hexo ghexo d
+部署到github。
+至此，便可使用我们自己的域名进行访问了！
+图片存储可以使用七牛云存储
+Mac上好用的GIF图截屏工具
+          
 
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/03/02/使用GithubPages-Hexo搭建免费博客（三）/#more" rel="contents">
