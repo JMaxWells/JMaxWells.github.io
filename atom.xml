@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-15T07:50:08.000Z</updated>
+  <updated>2016-03-15T08:59:34.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>My Github stars</title>
-    <link href="http://yoursite.com/2016/03/15/My%20Github%20stars/"/>
-    <id>http://yoursite.com/2016/03/15/My Github stars/</id>
+    <title>My Github Stars（备份）</title>
+    <link href="http://yoursite.com/2016/03/15/My%20Github%20Stars/"/>
+    <id>http://yoursite.com/2016/03/15/My Github Stars/</id>
     <published>2016-03-15T07:10:44.000Z</published>
-    <updated>2016-03-15T07:50:08.000Z</updated>
+    <updated>2016-03-15T08:59:34.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;My-Github-stars&quot;&gt;&lt;a href=&quot;#My-Github-stars&quot; class=&quot;headerlink&quot; title=&quot;My Github stars&quot;&gt;&lt;/a&gt;My Github stars&lt;/h1&gt;&lt;ul&gt;
+    <content type="html">&lt;h1 id=&quot;My-Github-Stars&quot;&gt;&lt;a href=&quot;#My-Github-Stars&quot; class=&quot;headerlink&quot; title=&quot;My Github Stars&quot;&gt;&lt;/a&gt;My Github Stars&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/hackiftekhar/IQKeyboardManager&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;IQKeyboardManager&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/mwaterfall/MWPhotoBrowser&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MWPhotoBrowser&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/CoderMJLee/MJRefresh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MJRefresh&lt;/a&gt;&lt;/li&gt;
@@ -79,7 +79,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;My-Github-stars&quot;&gt;&lt;a href=&quot;#My-Github-stars&quot; class=&quot;headerlink&quot; title=&quot;My Github stars&quot;&gt;&lt;/a&gt;My Github stars&lt;/h1&gt;&lt;ul&gt;
+      &lt;h1 id=&quot;My-Github-Stars&quot;&gt;&lt;a href=&quot;#My-Github-Stars&quot; class=&quot;headerlink&quot; title=&quot;My Github Stars&quot;&gt;&lt;/a&gt;My Github Stars&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;htt
     
     </summary>
@@ -96,7 +96,7 @@
     <link href="http://yoursite.com/2016/03/15/Git%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/"/>
     <id>http://yoursite.com/2016/03/15/Git操作指南/</id>
     <published>2016-03-15T05:54:53.000Z</published>
-    <updated>2016-03-15T06:14:54.000Z</updated>
+    <updated>2016-03-15T09:00:42.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;Git操作指南&quot;&gt;&lt;a href=&quot;#Git操作指南&quot; class=&quot;headerlink&quot; title=&quot;Git操作指南&quot;&gt;&lt;/a&gt;Git操作指南&lt;/h1&gt;&lt;h2 id=&quot;1-Git概念&quot;&gt;&lt;a href=&quot;#1-Git概念&quot; class=&quot;headerlink&quot; title=&quot;1. Git概念&quot;&gt;&lt;/a&gt;1. Git概念&lt;/h2&gt;&lt;h3 id=&quot;1-1-Git库中由三部分组成&quot;&gt;&lt;a href=&quot;#1-1-Git库中由三部分组成&quot; class=&quot;headerlink&quot; title=&quot;1.1. Git库中由三部分组成&quot;&gt;&lt;/a&gt;1.1. Git库中由三部分组成&lt;/h3&gt;&lt;p&gt;Git 仓库就是那个.git 目录，其中存放的是我们所提交的文档索引内容，Git 可基于文档索引内容对其所管理的文档进行内容追踪，从而实现文档的版本控制。.git目录位于工作目录内。&lt;/p&gt;
 &lt;ul&gt;
@@ -117,7 +117,7 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git config --global user.email you@yourdomain.example.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h4 id=&quot;1-2-2-Git文档忽略机制&quot;&gt;&lt;a href=&quot;#1-2-2-Git文档忽略机制&quot; class=&quot;headerlink&quot; title=&quot;1.2.2. Git文档忽略机制&quot;&gt;&lt;/a&gt;1.2.2. Git文档忽略机制&lt;/h4&gt;&lt;p&gt;工作目录中有一些文件是不希望接受Git 管理的，譬如程序编译时生成的中间文件等等。Git 提供了文档忽略机制，可以将工作目录中不希望接受Git 管理的文档信息写到同一目录下的.gitignore 文件中。&lt;/p&gt;
 &lt;p&gt;例如：工作目录下有个zh目录，如果不想把它加入到Git管理中，则执行：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;echo “zh” &amp;amp;gt; .gitignore&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;echo “zh” &amp;amp;gt; .gitignore&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;有关gitignore 文件的诸多细节知识可阅读其使用手册：man gitignore&lt;/p&gt;
 &lt;h3 id=&quot;1-3-Git与Repo的比较&quot;&gt;&lt;a href=&quot;#1-3-Git与Repo的比较&quot; class=&quot;headerlink&quot; title=&quot;1.3. Git与Repo的比较&quot;&gt;&lt;/a&gt;1.3. Git与Repo的比较&lt;/h3&gt;&lt;p&gt;Git操作一般对应一个仓库，而Repo操作一般对应一个项目，即一个项目会由若干仓库组成。&lt;/p&gt;
 &lt;p&gt;例如，在操作整个Recket项目时使用Repo，而操作其中的某个仓库时使用Git。在包含隐藏目录.git的目录下执行git操作。&lt;/p&gt;
@@ -287,9 +287,9 @@
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -333,9 +333,9 @@
     </summary>
     
     
-      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -550,9 +550,9 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
       <category term="3DTouch" scheme="http://yoursite.com/tags/3DTouch/"/>
     
@@ -596,9 +596,9 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -1041,11 +1041,11 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -1189,11 +1189,11 @@ pod update --no-repo-update
     </summary>
     
     
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
