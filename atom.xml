@@ -62,68 +62,6 @@
   </entry>
   
   <entry>
-    <title>iOS 四种保存数据的方式</title>
-    <link href="http://yoursite.com/2016/03/14/iOS-%E5%9B%9B%E7%A7%8D%E4%BF%9D%E5%AD%98%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E5%BC%8F/"/>
-    <id>http://yoursite.com/2016/03/14/iOS-四种保存数据的方式/</id>
-    <published>2016-03-14T09:28:47.000Z</published>
-    <updated>2016-03-14T09:28:47.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>介绍一些正在使用或者好玩的iOS越狱插件</title>
-    <link href="http://yoursite.com/2016/03/11/%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%BA%9B%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E6%88%96%E8%80%85%E5%A5%BD%E7%8E%A9%E7%9A%84iOS%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
-    <id>http://yoursite.com/2016/03/11/介绍一些正在使用或者好玩的iOS越狱插件/</id>
-    <published>2016-03-11T07:07:58.000Z</published>
-    <updated>2016-03-11T07:27:52.000Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;a href=&quot;#介绍一些正在使用或者好玩的iOS越狱插件&quot; class=&quot;headerlink&quot; title=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;/a&gt;介绍一些正在使用或者好玩的iOS越狱插件&lt;/h1&gt;&lt;h2 id=&quot;什么是越狱&quot;&gt;&lt;a href=&quot;#什么是越狱&quot; class=&quot;headerlink&quot; title=&quot;什么是越狱&quot;&gt;&lt;/a&gt;什么是越狱&lt;/h2&gt;&lt;p&gt;“越狱”指的是绕过苹果在其设备上对操作系统施加的很多限制，从而可以“Root访问”基础的操作系统。简单来说，“越狱”可以让iPhone用户从苹果应用商店外下载其他非官方的应用程序，或者对用户界面进行定制。&lt;/p&gt;
-&lt;h2 id=&quot;插件&quot;&gt;&lt;a href=&quot;#插件&quot; class=&quot;headerlink&quot; title=&quot;插件&quot;&gt;&lt;/a&gt;插件&lt;/h2&gt;&lt;h3 id=&quot;DataMember&quot;&gt;&lt;a href=&quot;#DataMember&quot; class=&quot;headerlink&quot; title=&quot;DataMember&quot;&gt;&lt;/a&gt;DataMember&lt;/h3&gt;&lt;p&gt;一款可以实时显示网络数据的悬浮窗控件。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;通知中心显示wifi和数据流量信息&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;状态显示数据传转速率&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;按天,周,月显示数据使用情况&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;可通过设置选项自定义显示&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;EnableLivePhotos&quot;&gt;&lt;a href=&quot;#EnableLivePhotos&quot; class=&quot;headerlink&quot; title=&quot;EnableLivePhotos&quot;&gt;&lt;/a&gt;EnableLivePhotos&lt;/h3&gt;&lt;p&gt;使用EnableLivePhotos后不仅仅是可以在拍照界面中开启LivePhotos模式，还能在图库中像iPhone6s系列那样浏览拍下来的动态图，长按即可查看整个动态效果;并且可以通过“分享”按钮将 LivePhotos设置成动态的桌面或者锁屏壁纸，同样通过长按即可让图片动起来。&lt;/p&gt;
-&lt;h3 id=&quot;Kuaidial&quot;&gt;&lt;a href=&quot;#Kuaidial&quot; class=&quot;headerlink&quot; title=&quot;Kuaidial&quot;&gt;&lt;/a&gt;Kuaidial&lt;/h3&gt;&lt;p&gt;Kuaidial是一款知名的iOS越狱来电归属地插件。众所周知，苹果在iOS8中首次加入了来电归属地功能，但是该功能仅限于陌生来电，对于已加入通讯录中的号码则不具备归属地显示功能，并且也不支持短信归属地及T9拨号等功能。而Kuaidial之所以深受越狱用户的喜爱，正是因为其能满足用户在这些方面的需求，更全面的电话/短信归属地显示功能、更方便快捷的T9拨号，还能支持自定义拦截黑名单等，多少用户越狱正是为Kuaidial而来。&lt;/p&gt;
-&lt;h3 id=&quot;Flex2&quot;&gt;&lt;a href=&quot;#Flex2&quot; class=&quot;headerlink&quot; title=&quot;Flex2&quot;&gt;&lt;/a&gt;Flex2&lt;/h3&gt;&lt;p&gt;这款插件想必很多熟悉越狱的用户都不会陌生，它就是大名鼎鼎的Flex。最新版的Flex2拥有“反越狱检查”功能，可以让越狱后的设备避开App本身的检查机制，从而继续使用方便快捷的指纹支付功能。此外，该插件还能支持去掉部分App中的广告，功能甚是强大。&lt;/p&gt;
-&lt;h3 id=&quot;revealMenu&quot;&gt;&lt;a href=&quot;#revealMenu&quot; class=&quot;headerlink&quot; title=&quot;revealMenu&quot;&gt;&lt;/a&gt;revealMenu&lt;/h3&gt;&lt;p&gt;一款名为Forcy的iOS9越狱插件可以让旧iPhone玩上3D Touch功能，事实上这并不是唯一一款类iPhone6s 3D Touch功能插件，下面小编为你推荐另外一款3D Touch插件——revealMenu，据已经体验过的小伙伴反馈，这款插件的功能还强过Forcy。&lt;br&gt;在操作方式上，Forcy通过上滑触发，而revealMenu通过长按触发，并且配合另一个插件Hapticle提供的振动反馈，做到跟iPhone6s几乎一模一样。(Hapticle同样适用于Forcy，如果你更喜欢Forcy，也可以装Hapticle添加振动反馈)&lt;/p&gt;
-&lt;h3 id=&quot;Springtomize-3&quot;&gt;&lt;a href=&quot;#Springtomize-3&quot; class=&quot;headerlink&quot; title=&quot;Springtomize 3&quot;&gt;&lt;/a&gt;Springtomize 3&lt;/h3&gt;&lt;p&gt;大家对于Springtomize系列插件应该是非常熟悉了，它可以对iOS中的大部分元素进行自定义，堪称插件中的“瑞士军刀”，它提供了许多功能，包括：动画效果、图标美化、锁屏界面自定义、隐藏Dock栏、控制中心增强等。&lt;/p&gt;
-&lt;h3 id=&quot;Auxo-3&quot;&gt;&lt;a href=&quot;#Auxo-3&quot; class=&quot;headerlink&quot; title=&quot;Auxo 3&quot;&gt;&lt;/a&gt;Auxo 3&lt;/h3&gt;&lt;p&gt;大部分越狱用户对Auxo 3应该不会感到陌生。而对于新用户来说，如果你希望寻找新的应用切换体验的话，Auxo 3一定不可错过。Auxo 3将控制中心和应用切换界面进行了整合，用户只需从屏幕底部向上滑动即可呼出新的界面。&lt;/p&gt;
-&lt;h3 id=&quot;Activator&quot;&gt;&lt;a href=&quot;#Activator&quot; class=&quot;headerlink&quot; title=&quot;Activator&quot;&gt;&lt;/a&gt;Activator&lt;/h3&gt;&lt;p&gt;一直以来，Activator都是iOS平台上最受欢迎的插件之一，因为它可以带来各种各样的手势操作，最大限度地解放手机上的Home键。在手机的主界面上，用户可以选择在多种情况下使用手势：任何地方、主屏幕上、应用内和锁屏界面。一般情况下，任何地方就是指用户设置的快捷键会在主屏幕和应用内触发，但不包括锁屏状态。&lt;/p&gt;
-&lt;h3 id=&quot;WinterBoard&quot;&gt;&lt;a href=&quot;#WinterBoard&quot; class=&quot;headerlink&quot; title=&quot;WinterBoard&quot;&gt;&lt;/a&gt;WinterBoard&lt;/h3&gt;&lt;p&gt;目前适配iOS9的WinterBoard已经上架Cydia，iOS设备美化控不能错过。作为越狱的一个主要原因，让iOS设备更个性化一直是不少用户的愿望，而WinterBoard则提供了这样一个平台。如果说iOS发展到今天已经没有其它必要越狱的话，美化或许会是最后的一个越狱理由。  &lt;/p&gt;
-&lt;h3 id=&quot;BioProtect&quot;&gt;&lt;a href=&quot;#BioProtect&quot; class=&quot;headerlink&quot; title=&quot;BioProtect&quot;&gt;&lt;/a&gt;BioProtect&lt;/h3&gt;&lt;p&gt;手机越来越成为人们生活的私密物品，大多数人的手机中多多少少都会储存着一些私密信息如私照、视频或是短信等等，而在日常使用中又难免有时会碰到别人借手机的情景，这个时候对私密信息进行加密就显得非常重要了。下面25PP小编为你推荐一款越狱指纹加密插件——BioProtect，支持iOS9越狱。&lt;/p&gt;
-&lt;h3 id=&quot;Forcy&quot;&gt;&lt;a href=&quot;#Forcy&quot; class=&quot;headerlink&quot; title=&quot;Forcy&quot;&gt;&lt;/a&gt;Forcy&lt;/h3&gt;&lt;p&gt;这款插件名为Forcy，与iPhone6s上通过按压呼出二级菜单不同，Forcy只需用户对桌面上的应用图标执行上滑操作便可呼出类似3D Touch的快捷菜单。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;a href=&quot;#介绍一些正在使用或者好玩的iOS越狱插件&quot; class=&quot;headerlink&quot; title=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;/a&gt;介绍一些正在使用或者好玩的iOS越狱插件&lt;/h1&gt;&lt;
-    
-    </summary>
-    
-    
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
-      <category term="越狱插件" scheme="http://yoursite.com/tags/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
-    
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览</title>
     <link href="http://yoursite.com/2016/03/11/iOS9%203DTouch%E3%80%81ShortcutItem%E3%80%81Peek%20And%20Pop%E6%8A%80%E6%9C%AF%E4%B8%80%E8%A7%88/"/>
     <id>http://yoursite.com/2016/03/11/iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览/</id>
@@ -779,11 +717,11 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
+      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
+    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
-      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
   </entry>
   
@@ -927,11 +865,11 @@ pod update --no-repo-update
     </summary>
     
     
+      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
+    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
-      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
   </entry>
   
