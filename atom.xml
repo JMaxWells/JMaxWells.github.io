@@ -85,9 +85,9 @@
     </summary>
     
     
-      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
-    
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
     
   </entry>
   
@@ -333,9 +333,9 @@
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -344,7 +344,7 @@
     <link href="http://yoursite.com/2016/03/11/%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%BA%9B%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E6%88%96%E8%80%85%E5%A5%BD%E7%8E%A9%E7%9A%84iOS%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
     <id>http://yoursite.com/2016/03/11/介绍一些正在使用或者好玩的iOS越狱插件/</id>
     <published>2016-03-11T07:07:58.000Z</published>
-    <updated>2016-03-15T05:49:13.000Z</updated>
+    <updated>2016-03-15T09:35:40.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;a href=&quot;#介绍一些正在使用或者好玩的iOS越狱插件&quot; class=&quot;headerlink&quot; title=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;/a&gt;介绍一些正在使用或者好玩的iOS越狱插件&lt;/h1&gt;&lt;h2 id=&quot;什么是越狱&quot;&gt;&lt;a href=&quot;#什么是越狱&quot; class=&quot;headerlink&quot; title=&quot;什么是越狱&quot;&gt;&lt;/a&gt;什么是越狱&lt;/h2&gt;&lt;p&gt;“越狱”指的是绕过苹果在其设备上对操作系统施加的很多限制，从而可以“Root访问”基础的操作系统。简单来说，“越狱”可以让iPhone用户从苹果应用商店外下载其他非官方的应用程序，或者对用户界面进行定制。&lt;/p&gt;
 &lt;h2 id=&quot;插件&quot;&gt;&lt;a href=&quot;#插件&quot; class=&quot;headerlink&quot; title=&quot;插件&quot;&gt;&lt;/a&gt;插件&lt;/h2&gt;&lt;h3 id=&quot;DataMember&quot;&gt;&lt;a href=&quot;#DataMember&quot; class=&quot;headerlink&quot; title=&quot;DataMember&quot;&gt;&lt;/a&gt;DataMember&lt;/h3&gt;&lt;p&gt;一款可以实时显示网络数据的悬浮窗控件。&lt;/p&gt;
@@ -375,6 +375,10 @@
       &lt;h1 id=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;a href=&quot;#介绍一些正在使用或者好玩的iOS越狱插件&quot; class=&quot;headerlink&quot; title=&quot;介绍一些正在使用或者好玩的iOS越狱插件&quot;&gt;&lt;/a&gt;介绍一些正在使用或者好玩的iOS越狱插件&lt;/h1&gt;&lt;
     
     </summary>
+    
+      <category term="越狱插件" scheme="http://yoursite.com/categories/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="iOS" scheme="http://yoursite.com/categories/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/iOS/"/>
     
     
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
@@ -550,9 +554,9 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
       <category term="3DTouch" scheme="http://yoursite.com/tags/3DTouch/"/>
     
@@ -596,9 +600,9 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -1041,11 +1045,11 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
@@ -1189,11 +1193,11 @@ pod update --no-repo-update
     </summary>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
