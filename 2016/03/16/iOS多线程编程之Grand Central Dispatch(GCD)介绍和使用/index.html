@@ -46,6 +46,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="这是一个利用Hexo搭建的博客" type="application/atom+xml" />
 
@@ -67,7 +69,7 @@
 <meta property="og:site_name" content="这是一个利用Hexo搭建的博客">
 <meta property="og:description" content="iOS多线程编程之Grand Central Dispatch(GCD)介绍和使用介绍：Grand Central Dispatch 简称（GCD）是苹果公司开发的技术，以优化的应用程序支持多核心处理器和其他的对称多处理系统的系统。这建立在任务并行执行的线程池模式的基础上的。它首次发布在Mac OS X 10.6 ，iOS 4及以上也可用。
 设计：GCD的工作原理是：让程序平行排队的特定任务，根据">
-<meta property="og:updated_time" content="2016-03-16T09:56:27.000Z">
+<meta property="og:updated_time" content="2016-03-16T09:58:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS多线程编程之Grand Central Dispatch(GCD)介绍和使用">
 <meta name="twitter:description" content="iOS多线程编程之Grand Central Dispatch(GCD)介绍和使用介绍：Grand Central Dispatch 简称（GCD）是苹果公司开发的技术，以优化的应用程序支持多核心处理器和其他的对称多处理系统的系统。这建立在任务并行执行的线程池模式的基础上的。它首次发布在Mac OS X 10.6 ，iOS 4及以上也可用。
@@ -314,7 +316,7 @@
 <p>用GCD实现这个流程的操作比前面介绍的NSThread  NSOperation的方法都要简单。代码框架结构如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^&#123;</span><br><span class="line">    // 耗时的操作</span><br><span class="line">    dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">        // 更新界面</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>如果这样还不清晰的话，那我们还是用上两篇博客中的下载图片为例子，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^&#123;</span><br><span class="line">    NSURL * url = [NSURL URLWithString:@&quot;http://avatar.csdn.net/2/C/D/1_totogo2010.jpg&quot;];</span><br><span class="line">    NSData * data = [[NSData alloc]initWithContentsOfURL:url];</span><br><span class="line">    UIImage *image = [[UIImage alloc]initWithData:data];</span><br><span class="line">    if (data != nil) &#123;</span><br><span class="line">        dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            self.imageView.image = image;</span><br><span class="line">         &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^&#123;</span><br><span class="line">    NSURL * url = [NSURL URLWithString:@&quot;http://avatar.csdn.net/2/C/D/1_totogo2010.jpg&quot;];</span><br><span class="line">    NSData * data = [[NSData alloc]initWithContentsOfURL:url];</span><br><span class="line">    UIImage *image = [[UIImage alloc]initWithData:data];</span><br><span class="line">    if (data != nil) &#123;</span><br><span class="line">        dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            self.imageView.image = image;</span><br><span class="line">         &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>运行显示：</p>
 <p>是不是代码比NSThread  NSOperation简洁很多，而且GCD会自动根据任务在多核处理器上分配资源，优化程序。</p>
 <p>系统给每一个应用程序提供了三个concurrent dispatch queues。这三个并发调度队列是全局的，它们只有优先级的不同。因为是全局的，我们不需要去创建。我们只需要通过使用函数dispath_get_global_queue去得到队列，如下：</p>
