@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>这是一个利用Hexo搭建的博客</title>
+  <title>MaxWellPro&#39;s Hexo Blog</title>
   <subtitle>分享一些技术文章和自己所整理的知识。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
