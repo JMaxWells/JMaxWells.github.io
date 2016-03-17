@@ -67,7 +67,7 @@
     <link href="http://yoursite.com/2016/03/16/iOS%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E4%B9%8BGrand%20Central%20Dispatch(GCD)%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2016/03/16/iOS多线程编程之Grand Central Dispatch(GCD)介绍和使用/</id>
     <published>2016-03-16T09:47:52.000Z</published>
-    <updated>2016-03-17T06:06:11.000Z</updated>
+    <updated>2016-03-17T06:07:35.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;iOS多线程编程之Grand-Central-Dispatch-GCD-介绍和使用&quot;&gt;&lt;a href=&quot;#iOS多线程编程之Grand-Central-Dispatch-GCD-介绍和使用&quot; class=&quot;headerlink&quot; title=&quot;iOS多线程编程之Grand Central Dispatch(GCD)介绍和使用&quot;&gt;&lt;/a&gt;iOS多线程编程之Grand Central Dispatch(GCD)介绍和使用&lt;/h1&gt;&lt;h2 id=&quot;介绍：&quot;&gt;&lt;a href=&quot;#介绍：&quot; class=&quot;headerlink&quot; title=&quot;介绍：&quot;&gt;&lt;/a&gt;介绍：&lt;/h2&gt;&lt;p&gt;Grand Central Dispatch 简称（GCD）是苹果公司开发的技术，以优化的应用程序支持多核心处理器和其他的对称多处理系统的系统。这建立在任务并行执行的线程池模式的基础上的。它首次发布在Mac OS X 10.6 ，iOS 4及以上也可用。&lt;/p&gt;
 &lt;h2 id=&quot;设计：&quot;&gt;&lt;a href=&quot;#设计：&quot; class=&quot;headerlink&quot; title=&quot;设计：&quot;&gt;&lt;/a&gt;设计：&lt;/h2&gt;&lt;p&gt;GCD的工作原理是：让程序平行排队的特定任务，根据可用的处理资源，安排他们在任何可用的处理器核心上执行任务。&lt;/p&gt;
@@ -112,7 +112,7 @@
 &lt;p&gt;请注意执行的时间，可以看到执行的顺序如上所述。&lt;/p&gt;
 &lt;h2 id=&quot;4、dispatch-apply&quot;&gt;&lt;a href=&quot;#4、dispatch-apply&quot; class=&quot;headerlink&quot; title=&quot;4、dispatch_apply&quot;&gt;&lt;/a&gt;4、dispatch_apply&lt;/h2&gt;&lt;p&gt;执行某个代码片段N次。&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;dispatch_apply(5, globalQ, ^(size_t index) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    // 执行5次&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;著作权声明：本文由&lt;a href=&quot;http://blog.csdn.net/totogo2010/原创，欢迎转载分享。请尊重作者劳动，转载时保留该声明和作者博客链接，谢谢!&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/totogo2010/原创，欢迎转载分享。请尊重作者劳动，转载时保留该声明和作者博客链接，谢谢!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;著作权声明：本文由&lt;a href=&quot;http://blog.csdn.net/totogo2010/原创&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/totogo2010/原创&lt;/a&gt;，欢迎转载分享。请尊重作者劳动，转载时保留该声明和作者博客链接，谢谢!&lt;/p&gt;
 </content>
     
     <summary type="html">
