@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-16T10:01:53.000Z</updated>
+  <updated>2016-03-17T02:29:08.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS多线程编程之NSOperation和NSOperationQueue的使用</title>
+    <link href="http://yoursite.com/2016/03/17/iOS%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E4%B9%8BNSOperation%E5%92%8CNSOperationQueue%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2016/03/17/iOS多线程编程之NSOperation和NSOperationQueue的使用/</id>
+    <published>2016-03-17T02:22:23.000Z</published>
+    <updated>2016-03-17T02:29:08.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;iOS多线程编程之NSOperation和NSOperationQueue的使用&quot;&gt;&lt;a href=&quot;#iOS多线程编程之NSOperation和NSOperationQueue的使用&quot; class=&quot;headerlink&quot; title=&quot;iOS多线程编程之NSOperation和NSOperationQueue的使用&quot;&gt;&lt;/a&gt;iOS多线程编程之NSOperation和NSOperationQueue的使用&lt;/h1&gt;&lt;h2 id=&quot;使用-NSOperation的方式有两种，&quot;&gt;&lt;a href=&quot;#使用-NSOperation的方式有两种，&quot; class=&quot;headerlink&quot; title=&quot;使用 NSOperation的方式有两种，&quot;&gt;&lt;/a&gt;使用 NSOperation的方式有两种，&lt;/h2&gt;&lt;h3 id=&quot;一种是用定义好的两个子类：&quot;&gt;&lt;a href=&quot;#一种是用定义好的两个子类：&quot; class=&quot;headerlink&quot; title=&quot;一种是用定义好的两个子类：&quot;&gt;&lt;/a&gt;一种是用定义好的两个子类：&lt;/h3&gt;&lt;p&gt;NSInvocationOperation 和 NSBlockOperation。&lt;/p&gt;
+&lt;h3 id=&quot;另一种是继承NSOperation&quot;&gt;&lt;a href=&quot;#另一种是继承NSOperation&quot; class=&quot;headerlink&quot; title=&quot;另一种是继承NSOperation&quot;&gt;&lt;/a&gt;另一种是继承NSOperation&lt;/h3&gt;&lt;p&gt;如果你也熟悉Java，NSOperation就和java.lang.Runnable接口很相似。和Java的Runnable一样，NSOperation也是设计用来扩展的，只需继承重写NSOperation的一个方法main。相当与java 中Runnalbe的Run方法。然后把NSOperation子类的对象放入NSOperationQueue队列中，该队列就会启动并开始处理它。&lt;/p&gt;
+&lt;h2 id=&quot;NSInvocationOperation例子：&quot;&gt;&lt;a href=&quot;#NSInvocationOperation例子：&quot; class=&quot;headerlink&quot; title=&quot;NSInvocationOperation例子：&quot;&gt;&lt;/a&gt;NSInvocationOperation例子：&lt;/h2&gt;&lt;p&gt;和前面一篇博文一样，我们实现一个下载图片的例子。新建一个Single View app，拖放一个ImageView控件到xib界面。&lt;/p&gt;
+&lt;p&gt;实现代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#import &amp;quot;ViewController.h&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#define kURL @&amp;quot;http://avatar.csdn.net/2/C/D/1_totogo2010.jpg&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@interface ViewController ()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@end&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@implementation ViewController&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-(void)viewDidLoad&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [super viewDidLoad];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSInvocationOperation *operation = [[NSInvocationOperation alloc]initWithTarget:self&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                                           selector:@selector(downloadImage:)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                                             object:kURL];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSOperationQueue *queue = [[NSOperationQueue alloc]init];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [queue addOperation:operation];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    // Do any additional setup after loading the view, typically from a nib.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-(void)downloadImage:(NSString *)url&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSLog(@&amp;quot;url:%@&amp;quot;, url);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSURL *nsUrl = [NSURL URLWithString:url];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSData *data = [[NSData alloc]initWithContentsOfURL:nsUrl];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    UIImage * image = [[UIImage alloc]initWithData:data];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [self performSelectorOnMainThread:@selector(updateUI:) withObject:image waitUntilDone:YES];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-(void)updateUI:(UIImage*) image&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    self.imageView.image = image;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;1.viewDidLoad方法里可以看到我们用NSInvocationOperation建了一个后台线程，并且放到NSOperationQueue中。后台线程执行downloadImage方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;2.downloadImage 方法处理下载图片的逻辑。下载完成后用performSelectorOnMainThread执行主线程updateUI方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;3.updateUI 并把下载的图片显示到图片控件中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;运行可以看到下载图片显示在界面上。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.my.csdn.net/uploads/201209/24/1348475303_2749.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;第二种方式继承NSOperation&quot;&gt;&lt;a href=&quot;#第二种方式继承NSOperation&quot; class=&quot;headerlink&quot; title=&quot;第二种方式继承NSOperation&quot;&gt;&lt;/a&gt;第二种方式继承NSOperation&lt;/h2&gt;&lt;p&gt;在.m文件中实现main方法，main方法编写要执行的代码即可。&lt;/p&gt;
+&lt;h3 id=&quot;如何控制线程池中的线程数？&quot;&gt;&lt;a href=&quot;#如何控制线程池中的线程数？&quot; class=&quot;headerlink&quot; title=&quot;如何控制线程池中的线程数？&quot;&gt;&lt;/a&gt;如何控制线程池中的线程数？&lt;/h3&gt;&lt;p&gt;队列里可以加入很多个NSOperation, 可以把NSOperationQueue看作一个线程池，可往线程池中添加操作（NSOperation）到队列中。线程池中的线程可看作消费者，从队列中取走操作，并执行它。&lt;/p&gt;
+&lt;p&gt;通过下面的代码设置：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[queue setMaxConcurrentOperationCount:5];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;线程池中的线程数，也就是并发操作数。默认情况下是-1，-1表示没有限制，这样会同时运行队列中的全部的操作。&lt;/p&gt;
+&lt;p&gt;著作权声明：本文由&lt;a href=&quot;http://blog.csdn.net/totogo2010/原创，欢迎转载分享。请尊重作者劳动，转载时保留该声明和作者博客链接，谢谢!&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/totogo2010/原创，欢迎转载分享。请尊重作者劳动，转载时保留该声明和作者博客链接，谢谢!&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;iOS多线程编程之NSOperation和NSOperationQueue的使用&quot;&gt;&lt;a href=&quot;#iOS多线程编程之NSOperation和NSOperationQueue的使用&quot; class=&quot;headerlink&quot; title=&quot;iOS多线程编程之NSO
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="多线程" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="多线程" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS多线程编程之Grand Central Dispatch(GCD)介绍和使用</title>
