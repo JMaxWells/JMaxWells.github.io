@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-23T08:02:28.000Z</updated>
+  <updated>2016-03-23T08:12:27.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/03/23/%E6%8F%90%E9%AB%98iOS%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7/"/>
     <id>http://yoursite.com/2016/03/23/提高iOS开发效率的工具/</id>
     <published>2016-03-23T07:30:29.000Z</published>
-    <updated>2016-03-23T08:02:28.000Z</updated>
+    <updated>2016-03-23T08:12:27.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;提高iOS开发效率的工具&quot;&gt;&lt;a href=&quot;#提高iOS开发效率的工具&quot; class=&quot;headerlink&quot; title=&quot;提高iOS开发效率的工具&quot;&gt;&lt;/a&gt;提高iOS开发效率的工具&lt;/h1&gt;&lt;p&gt;iOS开发中又很多可以提高开发效率的工具，这篇文章整理我使用提高效率的工具，如果你也有一些好的工具，可以向我推荐一下。&lt;/p&gt;
 &lt;ul&gt;
@@ -95,6 +95,17 @@
 &lt;/ul&gt;
 &lt;h4 id=&quot;Dash-for-Xcode&quot;&gt;&lt;a href=&quot;#Dash-for-Xcode&quot; class=&quot;headerlink&quot; title=&quot;Dash for Xcode&quot;&gt;&lt;/a&gt;Dash for Xcode&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;xcode文档插件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;xcode更新之后插件失效的解决办法&quot;&gt;&lt;a href=&quot;#xcode更新之后插件失效的解决办法&quot; class=&quot;headerlink&quot; title=&quot;xcode更新之后插件失效的解决办法&quot;&gt;&lt;/a&gt;xcode更新之后插件失效的解决办法&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;打开终端，输入以下代码：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID\&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;获取到DVTPlugInCompatibilityUUID，然后&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I&amp;#123;&amp;#125; defaults write &amp;#123;&amp;#125; DVTPlugInCompatibilityUUIDs -array-add 9F75337B-21B4-4ADC-B558-F9CADF7073A7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;重启xcode&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     
