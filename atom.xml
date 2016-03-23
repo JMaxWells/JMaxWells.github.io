@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-21T10:06:44.000Z</updated>
+  <updated>2016-03-23T07:43:43.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,111 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>提高iOS开发效率的工具</title>
+    <link href="http://yoursite.com/2016/03/23/%E6%8F%90%E9%AB%98iOS%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7/"/>
+    <id>http://yoursite.com/2016/03/23/提高iOS开发效率的工具/</id>
+    <published>2016-03-23T07:30:29.000Z</published>
+    <updated>2016-03-23T07:43:43.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;提高iOS开发效率的工具&quot;&gt;&lt;a href=&quot;#提高iOS开发效率的工具&quot; class=&quot;headerlink&quot; title=&quot;提高iOS开发效率的工具&quot;&gt;&lt;/a&gt;提高iOS开发效率的工具&lt;/h1&gt;&lt;p&gt;iOS开发中又很多可以提高开发效率的工具，这篇文章整理我使用提高效率的工具，如果你也有一些好的工具，可以向我推荐一下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;源代码依赖管理工具cocoaPods&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Xcode 好用的插件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;1-源代码依赖管理工具cocoaPods&quot;&gt;&lt;a href=&quot;#1-源代码依赖管理工具cocoaPods&quot; class=&quot;headerlink&quot; title=&quot;1:源代码依赖管理工具cocoaPods&quot;&gt;&lt;/a&gt;1:源代码依赖管理工具cocoaPods&lt;/h2&gt;&lt;p&gt;以来管理工具有很多，例如java的maven，android的gradle，js的bower，iOS中的cocaPods。他们可以帮你下载第三方包 并管理这些包的依赖关系。&lt;/p&gt;
+&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1:更新ruby环境 $ gem update rails ＝＝＝＝＝＝＝＝＝ Mac OS X 10.5以上&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2:更新gem环境 ： gem update –system&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3:安装cocoapods：sudo gem install cocoapods&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4:pod setup&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;配置项目依赖&quot;&gt;&lt;a href=&quot;#配置项目依赖&quot; class=&quot;headerlink&quot; title=&quot;配置项目依赖&quot;&gt;&lt;/a&gt;配置项目依赖&lt;/h3&gt;&lt;p&gt;1:创建prdfile文件 :touch Podfile&lt;/p&gt;
+&lt;p&gt;2:输入项目依赖 vi Podfile,例如&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;platform :ios, &amp;quot;6.1&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pod &amp;apos;MBProgressHUD&amp;apos;, &amp;apos;~&amp;gt; 0.8&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pod &amp;apos;MapBox&amp;apos;, &amp;apos;~&amp;gt; 1.1.0&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;3:pod install 安装&lt;/p&gt;
+&lt;p&gt;4:后续打开项目文件&lt;/p&gt;
+&lt;h3 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1:查看某个库是否存在 －－$ pod search AFNetworking&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2:更新pod －－$ pod update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3:安装pod – $ pod install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;使用下面两条命令可以提高速度，原因是不检查spec仓库更新&quot;&gt;&lt;a href=&quot;#使用下面两条命令可以提高速度，原因是不检查spec仓库更新&quot; class=&quot;headerlink&quot; title=&quot;使用下面两条命令可以提高速度，原因是不检查spec仓库更新&quot;&gt;&lt;/a&gt;使用下面两条命令可以提高速度，原因是不检查spec仓库更新&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pod install –verbose –no-repo-update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pod update –verbose –no-repo-update&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;2-xcode好用的插件&quot;&gt;&lt;a href=&quot;#2-xcode好用的插件&quot; class=&quot;headerlink&quot; title=&quot;2:xcode好用的插件&quot;&gt;&lt;/a&gt;2:xcode好用的插件&lt;/h2&gt;&lt;p&gt;xcode插件可以大大提高开发效率&lt;/p&gt;
+&lt;h3 id=&quot;插件安装方式&quot;&gt;&lt;a href=&quot;#插件安装方式&quot; class=&quot;headerlink&quot; title=&quot;插件安装方式&quot;&gt;&lt;/a&gt;插件安装方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;1：推荐！ 使用Alcatraz安装，commannd + sift + 9 调出图形界面，然后使用搜索插件安装&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;2：手动安装：对应有些好的插件，Alcatraz找不到的话，可以手动下载插件包，然后安装。 安装方法：下载附件，解压后放在：你的用户/Library/Application Support/Developer/Shared/Xcode/Plug-ins目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Alcatraz安装&quot;&gt;&lt;a href=&quot;#Alcatraz安装&quot; class=&quot;headerlink&quot; title=&quot;Alcatraz安装&quot;&gt;&lt;/a&gt;Alcatraz安装&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;作用：管理xcode插件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装：命令行执行：curl -fsSL &lt;a href=&quot;https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh&lt;/a&gt;    sh&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;删除：rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin&lt;/li&gt;
+&lt;li&gt;快捷键 command + shift + 9 github地址：&lt;a href=&quot;https://github.com/supermarin/Alcatraz&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/supermarin/Alcatraz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;推荐插件&quot;&gt;&lt;a href=&quot;#推荐插件&quot; class=&quot;headerlink&quot; title=&quot;推荐插件&quot;&gt;&lt;/a&gt;推荐插件&lt;/h3&gt;&lt;h4 id=&quot;KSImageNamed&quot;&gt;&lt;a href=&quot;#KSImageNamed&quot; class=&quot;headerlink&quot; title=&quot;KSImageNamed&quot;&gt;&lt;/a&gt;KSImageNamed&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Xcode资源文件在代码中添加只能感应，例如： [UIImage imageNamed: 会出现项目中的资源文件的智能感应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;OMColorSense&quot;&gt;&lt;a href=&quot;#OMColorSense&quot; class=&quot;headerlink&quot; title=&quot;OMColorSense&quot;&gt;&lt;/a&gt;OMColorSense&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Xcode 代码中可以通过选择颜色生成uicolor代码&lt;br&gt;使用:先随便写个颜色，然后点击颜色行，改行的右上角会出现色快，点击可以选择颜色。或点击Xcode导航中的Edit-》insert color&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;VVDocumenter-Xcode&quot;&gt;&lt;a href=&quot;#VVDocumenter-Xcode&quot; class=&quot;headerlink&quot; title=&quot;VVDocumenter-Xcode&quot;&gt;&lt;/a&gt;VVDocumenter-Xcode&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Xcode 按三次斜杠（///）后自动生成方法的注释&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;fuzzyAutocomplete-，hou或是AutoresizeMask-for-Xcode&quot;&gt;&lt;a href=&quot;#fuzzyAutocomplete-，hou或是AutoresizeMask-for-Xcode&quot; class=&quot;headerlink&quot; title=&quot;fuzzyAutocomplete ，hou或是AutoresizeMask-for-Xcode&quot;&gt;&lt;/a&gt;fuzzyAutocomplete ，hou或是AutoresizeMask-for-Xcode&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;加强版只能感应，只是模糊匹配,必装！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;SCXcodeMiniMap&quot;&gt;&lt;a href=&quot;#SCXcodeMiniMap&quot; class=&quot;headerlink&quot; title=&quot;SCXcodeMiniMap&quot;&gt;&lt;/a&gt;SCXcodeMiniMap&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;类似Sublime Text 右侧的迷你预览图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;XToDo&quot;&gt;&lt;a href=&quot;#XToDo&quot; class=&quot;headerlink&quot; title=&quot;XToDo&quot;&gt;&lt;/a&gt;XToDo&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;代办列表管理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;支持//TODO: //FIXME: //!!!: //???: 快捷键分别是 ： control + shift + T ,control + shift + X ,control + shift + ! ,control + shift + Q&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;打开list 快捷键control + T&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;injectionforxcode&quot;&gt;&lt;a href=&quot;#injectionforxcode&quot; class=&quot;headerlink&quot; title=&quot;injectionforxcode&quot;&gt;&lt;/a&gt;injectionforxcode&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;说明：动态修改app中的样式而不需要重新编译&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;教程：&lt;a href=&quot;http://nonomori.farbox.com/post/injection-plugin-for-xcode&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://nonomori.farbox.com/post/injection-plugin-for-xcode&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;快捷键：control = ：更新代码&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;XAlign&quot;&gt;&lt;a href=&quot;#XAlign&quot; class=&quot;headerlink&quot; title=&quot;XAlign&quot;&gt;&lt;/a&gt;XAlign&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;说明：自动对齐代码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;快捷键：command+shift+X&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;Code-Pilot&quot;&gt;&lt;a href=&quot;#Code-Pilot&quot; class=&quot;headerlink&quot; title=&quot;Code Pilot&quot;&gt;&lt;/a&gt;Code Pilot&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;xcode查找文件插件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;快捷键：command+shift+X,建议替换为control+X&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;CocoaPods&quot;&gt;&lt;a href=&quot;#CocoaPods&quot; class=&quot;headerlink&quot; title=&quot;CocoaPods&quot;&gt;&lt;/a&gt;CocoaPods&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;cocoaPods插件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;Peckham&quot;&gt;&lt;a href=&quot;#Peckham&quot; class=&quot;headerlink&quot; title=&quot;Peckham&quot;&gt;&lt;/a&gt;Peckham&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;自动import头文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;Dash-for-Xcode&quot;&gt;&lt;a href=&quot;#Dash-for-Xcode&quot; class=&quot;headerlink&quot; title=&quot;Dash for Xcode&quot;&gt;&lt;/a&gt;Dash for Xcode&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;xcode文档插件&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;提高iOS开发效率的工具&quot;&gt;&lt;a href=&quot;#提高iOS开发效率的工具&quot; class=&quot;headerlink&quot; title=&quot;提高iOS开发效率的工具&quot;&gt;&lt;/a&gt;提高iOS开发效率的工具&lt;/h1&gt;&lt;p&gt;iOS开发中又很多可以提高开发效率的工具，这篇文章整理我使用
+    
+    </summary>
+    
+      <category term="iOS开发，工具" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91%EF%BC%8C%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="iOS开发，工具" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91%EF%BC%8C%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS多线程编程之NSThread的使用</title>
@@ -1222,11 +1327,11 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
-    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
   </entry>
   
@@ -1370,11 +1475,11 @@ pod update --no-repo-update
     </summary>
     
     
-      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
-    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
   </entry>
   
