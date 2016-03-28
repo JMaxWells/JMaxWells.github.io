@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-28T03:10:31.000Z</updated>
+  <updated>2016-03-28T04:04:41.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>runtime之通过objc_setAssociatedObject关联及传值</title>
+    <link href="http://yoursite.com/2016/03/28/runtime%E4%B9%8B%E9%80%9A%E8%BF%87objc_setAssociatedObject%E5%85%B3%E8%81%94%E5%8F%8A%E4%BC%A0%E5%80%BC/"/>
+    <id>http://yoursite.com/2016/03/28/runtime之通过objc_setAssociatedObject关联及传值/</id>
+    <published>2016-03-28T04:00:51.000Z</published>
+    <updated>2016-03-28T04:04:41.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;runtime之通过objc-setAssociatedObject关联及传值&quot;&gt;&lt;a href=&quot;#runtime之通过objc-setAssociatedObject关联及传值&quot; class=&quot;headerlink&quot; title=&quot;runtime之通过objc_setAssociatedObject关联及传值&quot;&gt;&lt;/a&gt;runtime之通过objc_setAssociatedObject关联及传值&lt;/h1&gt;&lt;h2 id=&quot;关联&quot;&gt;&lt;a href=&quot;#关联&quot; class=&quot;headerlink&quot; title=&quot;关联&quot;&gt;&lt;/a&gt;关联&lt;/h2&gt;&lt;p&gt;关联是指把两个对象相互关联起来，使得其中的一个对象作为另外一个对象的一部分。&lt;br&gt;关联特性只有在Mac OS X V10.6以及以后的版本上才是可用的。&lt;/p&gt;
+&lt;h2 id=&quot;在类的定义之外为类增加额外的存储空间&quot;&gt;&lt;a href=&quot;#在类的定义之外为类增加额外的存储空间&quot; class=&quot;headerlink&quot; title=&quot;在类的定义之外为类增加额外的存储空间&quot;&gt;&lt;/a&gt;在类的定义之外为类增加额外的存储空间&lt;/h2&gt;&lt;p&gt;使用关联，我们可以不用修改类的定义而为其对象增加存储空间。这在我们无法访问到类的源码的时候或者是考虑到二进制兼容性的时候是非常有用。&lt;br&gt;关联是基于关键字的，因此，我们可以为任何对象增加任意多的关联，每个都使用不同的关键字即可。关联是可以保证被关联的对象在关联对象的整个生命周期都是可用的（在垃圾自动回收环境下也不会导致资源不可回收）。&lt;/p&gt;
+&lt;h2 id=&quot;创建关联&quot;&gt;&lt;a href=&quot;#创建关联&quot; class=&quot;headerlink&quot; title=&quot;创建关联&quot;&gt;&lt;/a&gt;创建关联&lt;/h2&gt;&lt;p&gt;创建关联要使用到Objective-C的运行时函数：objc_setAssociatedObject来把一个对象与另外一个对象进行关联。该函数需要四个参数：源对象，关键字，关联的对象和一个关联策略。当然，此处的关键字和关联策略是需要进一步讨论的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关键字是一个void类型的指针。每一个关联的关键字必须是唯一的。通常都是会采用静态变量来作为关键字。&lt;/li&gt;
+&lt;li&gt;关联策略表明了相关的对象是通过赋值，保留引用还是复制的方式进行关联的；还有这种关联是原子的还是非原子的。这里的关联策略和声明属性时的很类似。这种关联策略是通过使用预先定义好的常量来表示的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#import &amp;lt;objc/runtime.h&amp;gt;头文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//唯一静态变量key&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;static const char associatedkey;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//objc_setAssociatedObject需要四个参数：源对象，关键字，关联的对象和一个关联策略。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//1 源对象alert&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//2 关键字 唯一静态变量key associatedkey&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//3 关联的对象 @1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//4 关键策略  OBJC_ASSOCIATION_RETAIN_NONATOMIC&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@&amp;quot;test&amp;quot; message:@&amp;quot;msg&amp;quot; delegate:self cancelButtonTitle:@&amp;quot;no&amp;quot; otherButtonTitles:@&amp;quot;yes&amp;quot;, nil];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;objc_setAssociatedObject(alertView,&amp;amp;associatedkey,@1,OBJC_ASSOCIATION_RETAIN);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[alertView show];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;获取相关联的对象&quot;&gt;&lt;a href=&quot;#获取相关联的对象&quot; class=&quot;headerlink&quot; title=&quot;获取相关联的对象&quot;&gt;&lt;/a&gt;获取相关联的对象&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    if (buttonIndex == 1) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        NSNumber *number = (NSNumber *)objc_getAssociatedObject(alertView,&amp;amp;associatedkey);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        NSLog(@&amp;quot;number is %@&amp;quot;,number);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;断开关联&quot;&gt;&lt;a href=&quot;#断开关联&quot; class=&quot;headerlink&quot; title=&quot;断开关联&quot;&gt;&lt;/a&gt;断开关联&lt;/h2&gt;&lt;p&gt;断开关联是使用objc_setAssociatedObject函数，传入nil值即可。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;objc_setAssociatedObject(alertView, &amp;amp;associatedkey, nil, OBJC_ASSOCIATION_ASSIGN);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;其中，被关联的对象为nil，此时关联策略也就无关紧要了。&lt;br&gt;使用函数objc_removeAssociatedObjects可以断开所有关联。通常情况下不建议使用这个函数，因为他会断开所有关联。只有在需要把对象恢复到“原始状态”的时候才会使用这个函数。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;runtime之通过objc-setAssociatedObject关联及传值&quot;&gt;&lt;a href=&quot;#runtime之通过objc-setAssociatedObject关联及传值&quot; class=&quot;headerlink&quot; title=&quot;runtime之通过objc
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="runtime" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/runtime/"/>
+    
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="runtime" scheme="http://yoursite.com/tags/runtime/"/>
+    
+  </entry>
   
   <entry>
     <title>提高iOS开发效率的工具</title>

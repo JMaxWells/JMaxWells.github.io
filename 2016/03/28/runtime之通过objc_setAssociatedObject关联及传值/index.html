@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tags,博客,Hexo," />
+  <meta name="keywords" content="iOS开发,runtime," />
 
 
 
@@ -59,42 +59,19 @@
 
 
 
-<meta name="description" content="域名绑定
-域名解析域名购买成功后，在解析设置中添加以下解析
-
-
-记录类型为：A主机记录分别为“@”，“wwww”。其中设置@，可以用xxx.com进行访问。设置www，可以使用www.xxx.com进行访问。记录值都为 “192.30.252.153”
-
-添加CNAME文件
-
-打开自己本地的博客目录，在source文件夹下创建名为CNAME的文本文件。打开，输入自己的域名，格式为“xxx.com”">
+<meta name="description" content="runtime之通过objc_setAssociatedObject关联及传值关联关联是指把两个对象相互关联起来，使得其中的一个对象作为另外一个对象的一部分。关联特性只有在Mac OS X V10.6以及以后的版本上才是可用的。
+在类的定义之外为类增加额外的存储空间使用关联，我们可以不用修改类的定义而为其对象增加存储空间。这在我们无法访问到类的源码的时候或者是考虑到二进制兼容性的时候是非常有用。关">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用GithubPages-Hexo搭建免费博客（三）">
-<meta property="og:url" content="http://yoursite.com/2016/03/02/使用GithubPages-Hexo搭建免费博客（三）/index.html">
+<meta property="og:title" content="runtime之通过objc_setAssociatedObject关联及传值">
+<meta property="og:url" content="http://yoursite.com/2016/03/28/runtime之通过objc_setAssociatedObject关联及传值/index.html">
 <meta property="og:site_name" content="MaxWellPro's Hexo Blog">
-<meta property="og:description" content="域名绑定
-域名解析域名购买成功后，在解析设置中添加以下解析
-
-
-记录类型为：A主机记录分别为“@”，“wwww”。其中设置@，可以用xxx.com进行访问。设置www，可以使用www.xxx.com进行访问。记录值都为 “192.30.252.153”
-
-添加CNAME文件
-
-打开自己本地的博客目录，在source文件夹下创建名为CNAME的文本文件。打开，输入自己的域名，格式为“xxx.com”">
-<meta property="og:image" content="http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-03-03%20%E4%B8%8A%E5%8D%8812.02.04.png">
-<meta property="og:updated_time" content="2016-03-11T07:27:25.000Z">
+<meta property="og:description" content="runtime之通过objc_setAssociatedObject关联及传值关联关联是指把两个对象相互关联起来，使得其中的一个对象作为另外一个对象的一部分。关联特性只有在Mac OS X V10.6以及以后的版本上才是可用的。
+在类的定义之外为类增加额外的存储空间使用关联，我们可以不用修改类的定义而为其对象增加存储空间。这在我们无法访问到类的源码的时候或者是考虑到二进制兼容性的时候是非常有用。关">
+<meta property="og:updated_time" content="2016-03-28T04:04:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用GithubPages-Hexo搭建免费博客（三）">
-<meta name="twitter:description" content="域名绑定
-域名解析域名购买成功后，在解析设置中添加以下解析
-
-
-记录类型为：A主机记录分别为“@”，“wwww”。其中设置@，可以用xxx.com进行访问。设置www，可以使用www.xxx.com进行访问。记录值都为 “192.30.252.153”
-
-添加CNAME文件
-
-打开自己本地的博客目录，在source文件夹下创建名为CNAME的文本文件。打开，输入自己的域名，格式为“xxx.com”">
-<meta name="twitter:image" content="http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-03-03%20%E4%B8%8A%E5%8D%8812.02.04.png">
+<meta name="twitter:title" content="runtime之通过objc_setAssociatedObject关联及传值">
+<meta name="twitter:description" content="runtime之通过objc_setAssociatedObject关联及传值关联关联是指把两个对象相互关联起来，使得其中的一个对象作为另外一个对象的一部分。关联特性只有在Mac OS X V10.6以及以后的版本上才是可用的。
+在类的定义之外为类增加额外的存储空间使用关联，我们可以不用修改类的定义而为其对象增加存储空间。这在我们无法访问到类的源码的时候或者是考虑到二进制兼容性的时候是非常有用。关">
 
 
 
@@ -112,7 +89,7 @@
   };
 </script>
 
-  <title> 使用GithubPages-Hexo搭建免费博客（三） | MaxWellPro's Hexo Blog </title>
+  <title> runtime之通过objc_setAssociatedObject关联及传值 | MaxWellPro's Hexo Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -239,7 +216,7 @@
             
             
               
-                使用GithubPages-Hexo搭建免费博客（三）
+                runtime之通过objc_setAssociatedObject关联及传值
               
             
           </h1>
@@ -251,19 +228,50 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-02T23:52:40+08:00" content="2016-03-02">
-              2016-03-02
+            <time itemprop="dateCreated" datetime="2016-03-28T12:00:51+08:00" content="2016-03-28">
+              2016-03-28
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS开发/runtime/" itemprop="url" rel="index">
+                    <span itemprop="name">runtime</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/02/使用GithubPages-Hexo搭建免费博客（三）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/02/使用GithubPages-Hexo搭建免费博客（三）/" itemprop="commentsCount"></span>
+                <a href="/2016/03/28/runtime之通过objc_setAssociatedObject关联及传值/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/28/runtime之通过objc_setAssociatedObject关联及传值/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -285,20 +293,19 @@
       
 
       
-        <h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><ul>
-<li>域名解析<br>域名购买成功后，在解析设置中添加以下解析</li>
-</ul>
-<p><img src="http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-03-03%20%E4%B8%8A%E5%8D%8812.02.04.png" alt=""></p>
-<p>记录类型为：A<br>主机记录分别为“@”，“wwww”。其中设置@，可以用xxx.com进行访问。设置www，可以使用www.xxx.com进行访问。<br>记录值都为 “192.30.252.153”</p>
+        <h1 id="runtime之通过objc-setAssociatedObject关联及传值"><a href="#runtime之通过objc-setAssociatedObject关联及传值" class="headerlink" title="runtime之通过objc_setAssociatedObject关联及传值"></a>runtime之通过objc_setAssociatedObject关联及传值</h1><h2 id="关联"><a href="#关联" class="headerlink" title="关联"></a>关联</h2><p>关联是指把两个对象相互关联起来，使得其中的一个对象作为另外一个对象的一部分。<br>关联特性只有在Mac OS X V10.6以及以后的版本上才是可用的。</p>
+<h2 id="在类的定义之外为类增加额外的存储空间"><a href="#在类的定义之外为类增加额外的存储空间" class="headerlink" title="在类的定义之外为类增加额外的存储空间"></a>在类的定义之外为类增加额外的存储空间</h2><p>使用关联，我们可以不用修改类的定义而为其对象增加存储空间。这在我们无法访问到类的源码的时候或者是考虑到二进制兼容性的时候是非常有用。<br>关联是基于关键字的，因此，我们可以为任何对象增加任意多的关联，每个都使用不同的关键字即可。关联是可以保证被关联的对象在关联对象的整个生命周期都是可用的（在垃圾自动回收环境下也不会导致资源不可回收）。</p>
+<h2 id="创建关联"><a href="#创建关联" class="headerlink" title="创建关联"></a>创建关联</h2><p>创建关联要使用到Objective-C的运行时函数：objc_setAssociatedObject来把一个对象与另外一个对象进行关联。该函数需要四个参数：源对象，关键字，关联的对象和一个关联策略。当然，此处的关键字和关联策略是需要进一步讨论的。</p>
 <ul>
-<li>添加CNAME文件</li>
+<li>关键字是一个void类型的指针。每一个关联的关键字必须是唯一的。通常都是会采用静态变量来作为关键字。</li>
+<li>关联策略表明了相关的对象是通过赋值，保留引用还是复制的方式进行关联的；还有这种关联是原子的还是非原子的。这里的关联策略和声明属性时的很类似。这种关联策略是通过使用预先定义好的常量来表示的。</li>
 </ul>
-<p>打开自己本地的博客目录，在source文件夹下创建名为CNAME的文本文件。打开，输入自己的域名，格式为“xxx.com”，保存后使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>部署到github。</p>
-<p>至此，便可使用我们自己的域名进行访问了！</p>
-<h2 id="图片存储"><a href="#图片存储" class="headerlink" title="图片存储"></a>图片存储</h2><p>可以使用<a href="https://portal.qiniu.com/" target="_blank" rel="external">七牛云存储</a></p>
-<h2 id="Mac上好用的GIF图截屏工具"><a href="#Mac上好用的GIF图截屏工具" class="headerlink" title="Mac上好用的GIF图截屏工具"></a><a href="http://www.cockos.com/licecap/" target="_blank" rel="external">Mac上好用的GIF图截屏工具</a></h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;objc/runtime.h&gt;头文件</span><br><span class="line"></span><br><span class="line">//唯一静态变量key</span><br><span class="line">static const char associatedkey;</span><br><span class="line"></span><br><span class="line">//objc_setAssociatedObject需要四个参数：源对象，关键字，关联的对象和一个关联策略。</span><br><span class="line"></span><br><span class="line">//1 源对象alert</span><br><span class="line">//2 关键字 唯一静态变量key associatedkey</span><br><span class="line">//3 关联的对象 @1</span><br><span class="line">//4 关键策略  OBJC_ASSOCIATION_RETAIN_NONATOMIC</span><br><span class="line"></span><br><span class="line">UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@&quot;test&quot; message:@&quot;msg&quot; delegate:self cancelButtonTitle:@&quot;no&quot; otherButtonTitles:@&quot;yes&quot;, nil];</span><br><span class="line">objc_setAssociatedObject(alertView,&amp;associatedkey,@1,OBJC_ASSOCIATION_RETAIN);</span><br><span class="line">[alertView show];</span><br></pre></td></tr></table></figure>
+<h2 id="获取相关联的对象"><a href="#获取相关联的对象" class="headerlink" title="获取相关联的对象"></a>获取相关联的对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex</span><br><span class="line">&#123;</span><br><span class="line">    if (buttonIndex == 1) &#123;</span><br><span class="line">        NSNumber *number = (NSNumber *)objc_getAssociatedObject(alertView,&amp;associatedkey);</span><br><span class="line">        NSLog(@&quot;number is %@&quot;,number);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="断开关联"><a href="#断开关联" class="headerlink" title="断开关联"></a>断开关联</h2><p>断开关联是使用objc_setAssociatedObject函数，传入nil值即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">objc_setAssociatedObject(alertView, &amp;associatedkey, nil, OBJC_ASSOCIATION_ASSIGN);</span><br></pre></td></tr></table></figure>
+<p>其中，被关联的对象为nil，此时关联策略也就无关紧要了。<br>使用函数objc_removeAssociatedObjects可以断开所有关联。通常情况下不建议使用这个函数，因为他会断开所有关联。只有在需要把对象恢复到“原始状态”的时候才会使用这个函数。</p>
+
       
     </div>
 
@@ -312,11 +319,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tags/" rel="tag">#tags</a>
+            <a href="/tags/iOS开发/" rel="tag">#iOS开发</a>
           
-            <a href="/tags/博客/" rel="tag">#博客</a>
-          
-            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/runtime/" rel="tag">#runtime</a>
           
         </div>
       
@@ -325,17 +330,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/26/使用GithubPages-Hexo搭建免费博客（二）/" rel="next" title="使用GithubPages-Hexo搭建免费博客（二）">
-                <i class="fa fa-chevron-left"></i> 使用GithubPages-Hexo搭建免费博客（二）
+              <a href="/2016/03/23/提高iOS开发效率的工具/" rel="next" title="提高iOS开发效率的工具">
+                <i class="fa fa-chevron-left"></i> 提高iOS开发效率的工具
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/10/AppStore上线素材准备篇/" rel="prev" title="AppStore上线素材准备篇">
-                AppStore上线素材准备篇 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -361,8 +362,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/02/使用GithubPages-Hexo搭建免费博客（三）/"
-           data-title="使用GithubPages-Hexo搭建免费博客（三）" data-url="http://yoursite.com/2016/03/02/使用GithubPages-Hexo搭建免费博客（三）/">
+      <div class="ds-thread" data-thread-key="2016/03/28/runtime之通过objc_setAssociatedObject关联及传值/"
+           data-title="runtime之通过objc_setAssociatedObject关联及传值" data-url="http://yoursite.com/2016/03/28/runtime之通过objc_setAssociatedObject关联及传值/">
       </div>
     
   </div>
@@ -482,7 +483,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#域名绑定"><span class="nav-number">1.</span> <span class="nav-text">域名绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片存储"><span class="nav-number">2.</span> <span class="nav-text">图片存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac上好用的GIF图截屏工具"><span class="nav-number">3.</span> <span class="nav-text">Mac上好用的GIF图截屏工具</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#runtime之通过objc-setAssociatedObject关联及传值"><span class="nav-number">1.</span> <span class="nav-text">runtime之通过objc_setAssociatedObject关联及传值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关联"><span class="nav-number">1.1.</span> <span class="nav-text">关联</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在类的定义之外为类增加额外的存储空间"><span class="nav-number">1.2.</span> <span class="nav-text">在类的定义之外为类增加额外的存储空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建关联"><span class="nav-number">1.3.</span> <span class="nav-text">创建关联</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取相关联的对象"><span class="nav-number">1.4.</span> <span class="nav-text">获取相关联的对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#断开关联"><span class="nav-number">1.5.</span> <span class="nav-text">断开关联</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
