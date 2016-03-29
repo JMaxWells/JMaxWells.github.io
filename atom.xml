@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-29T03:54:49.000Z</updated>
+  <updated>2016-03-29T05:59:39.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2016/03/29/iOS%209%20Design%20Guidelines%20for%20iPhone%20and%20iPad/"/>
     <id>http://yoursite.com/2016/03/29/iOS 9 Design Guidelines for iPhone and iPad/</id>
     <published>2016-03-29T03:18:37.000Z</published>
-    <updated>2016-03-29T03:54:49.000Z</updated>
+    <updated>2016-03-29T05:59:39.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;iOS-9-Design-Guidelines-for-iPhone-and-iPad&quot;&gt;&lt;a href=&quot;#iOS-9-Design-Guidelines-for-iPhone-and-iPad&quot; class=&quot;headerlink&quot; title=&quot;iOS 9 Design Guidelines for iPhone and iPad&quot;&gt;&lt;/a&gt;iOS 9 Design Guidelines for iPhone and iPad&lt;/h1&gt;&lt;p&gt;iOS has matured a lot over the years. In its 9th upgrade, Apple introduced a new system font called San Francisco, 3D Touch and multi-tasking on the iPad. In Xcode, you’ll find Stack Views, a fantastic tool for making your layouts more adaptive without the complexity of Auto Layout. More than ever, Apple encourages adaptive layouts so that your design works across multiple devices.&lt;/p&gt;
+    <content type="html">&lt;p&gt;iOS has matured a lot over the years. In its 9th upgrade, Apple introduced a new system font called San Francisco, 3D Touch and multi-tasking on the iPad. In Xcode, you’ll find Stack Views, a fantastic tool for making your layouts more adaptive without the complexity of Auto Layout. More than ever, Apple encourages adaptive layouts so that your design works across multiple devices.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-StackViews.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Adaptive-Layout-and-Multitasking&quot;&gt;&lt;a href=&quot;#Adaptive-Layout-and-Multitasking&quot; class=&quot;headerlink&quot; title=&quot;Adaptive Layout and Multitasking&quot;&gt;&lt;/a&gt;Adaptive Layout and Multitasking&lt;/h2&gt;&lt;p&gt;With the increasing number of device resolutions to deal with, it is crucial to make your layout adaptive. Using tools like Sketch Constraints or Xcode, you have to design in a way that the screen size is flexible and can show extra menus if needed.&lt;br&gt;Here’s how the layout adapts from iPhone to iPad Pro. The user interface expands rather than scale up. For larger screens such as the iPad and the iPhone 6 Plus in landscape mode, a Left Navigation will appear instead of the Tab Bar. Download the Keynote file here.&lt;/p&gt;
 &lt;iframe height=&quot;400&quot; width=&quot;640&quot; src=&quot;https://designcode.io/cloud/chapter1/Adaptive-Layout-iOS.mp4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
@@ -134,7 +134,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;iOS-9-Design-Guidelines-for-iPhone-and-iPad&quot;&gt;&lt;a href=&quot;#iOS-9-Design-Guidelines-for-iPhone-and-iPad&quot; class=&quot;headerlink&quot; title=&quot;iOS 9 
+      &lt;p&gt;iOS has matured a lot over the years. In its 9th upgrade, Apple introduced a new system font called San Francisco, 3D Touch and multi-tas
     
     </summary>
     
@@ -147,9 +147,9 @@
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
-    
       <category term="UI" scheme="http://yoursite.com/tags/UI/"/>
+    
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
     
   </entry>
   
@@ -844,9 +844,9 @@
     
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
-      <category term="越狱插件" scheme="http://yoursite.com/tags/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
-    
       <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+      <category term="越狱插件" scheme="http://yoursite.com/tags/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
