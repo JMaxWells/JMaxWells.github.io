@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-29T03:30:21.000Z</updated>
+  <updated>2016-03-29T03:54:49.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,31 +20,121 @@
     <link href="http://yoursite.com/2016/03/29/iOS%209%20Design%20Guidelines%20for%20iPhone%20and%20iPad/"/>
     <id>http://yoursite.com/2016/03/29/iOS 9 Design Guidelines for iPhone and iPad/</id>
     <published>2016-03-29T03:18:37.000Z</published>
-    <updated>2016-03-29T03:30:21.000Z</updated>
+    <updated>2016-03-29T03:54:49.000Z</updated>
     
-    <content type="html">&lt;p&gt;iOS has matured a lot over the years. In its 9th upgrade, Apple introduced a new system font called San Francisco, 3D Touch and multi-tasking on the iPad. In Xcode, you’ll find Stack Views, a fantastic tool for making your layouts more adaptive without the complexity of Auto Layout. More than ever, Apple encourages adaptive layouts so that your design works across multiple devices.&lt;/p&gt;
+    <content type="html">&lt;h1 id=&quot;iOS-9-Design-Guidelines-for-iPhone-and-iPad&quot;&gt;&lt;a href=&quot;#iOS-9-Design-Guidelines-for-iPhone-and-iPad&quot; class=&quot;headerlink&quot; title=&quot;iOS 9 Design Guidelines for iPhone and iPad&quot;&gt;&lt;/a&gt;iOS 9 Design Guidelines for iPhone and iPad&lt;/h1&gt;&lt;p&gt;iOS has matured a lot over the years. In its 9th upgrade, Apple introduced a new system font called San Francisco, 3D Touch and multi-tasking on the iPad. In Xcode, you’ll find Stack Views, a fantastic tool for making your layouts more adaptive without the complexity of Auto Layout. More than ever, Apple encourages adaptive layouts so that your design works across multiple devices.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-StackViews.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Adaptive-Layout-and-Multitasking&quot;&gt;&lt;a href=&quot;#Adaptive-Layout-and-Multitasking&quot; class=&quot;headerlink&quot; title=&quot;Adaptive Layout and Multitasking&quot;&gt;&lt;/a&gt;Adaptive Layout and Multitasking&lt;/h1&gt;&lt;p&gt;With the increasing number of device resolutions to deal with, it is crucial to make your layout adaptive. Using tools like Sketch Constraints or Xcode, you have to design in a way that the screen size is flexible and can show extra menus if needed.&lt;br&gt;Here’s how the layout adapts from iPhone to iPad Pro. The user interface expands rather than scale up. For larger screens such as the iPad and the iPhone 6 Plus in landscape mode, a Left Navigation will appear instead of the Tab Bar. Download the Keynote file here.&lt;/p&gt;
+&lt;h2 id=&quot;Adaptive-Layout-and-Multitasking&quot;&gt;&lt;a href=&quot;#Adaptive-Layout-and-Multitasking&quot; class=&quot;headerlink&quot; title=&quot;Adaptive Layout and Multitasking&quot;&gt;&lt;/a&gt;Adaptive Layout and Multitasking&lt;/h2&gt;&lt;p&gt;With the increasing number of device resolutions to deal with, it is crucial to make your layout adaptive. Using tools like Sketch Constraints or Xcode, you have to design in a way that the screen size is flexible and can show extra menus if needed.&lt;br&gt;Here’s how the layout adapts from iPhone to iPad Pro. The user interface expands rather than scale up. For larger screens such as the iPad and the iPhone 6 Plus in landscape mode, a Left Navigation will appear instead of the Tab Bar. Download the Keynote file here.&lt;/p&gt;
 &lt;iframe height=&quot;400&quot; width=&quot;640&quot; src=&quot;https://designcode.io/cloud/chapter1/Adaptive-Layout-iOS.mp4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;How Fluid helps you adjust the design based on the Artboard size. Download the Sketch file.&lt;/p&gt;
 &lt;iframe height=&quot;400&quot; width=&quot;640&quot; src=&quot;https://designcode.io/cloud/chapter1/Sketch-Constraints-Groups.mp4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;h1 id=&quot;San-Francisco-Font&quot;&gt;&lt;a href=&quot;#San-Francisco-Font&quot; class=&quot;headerlink&quot; title=&quot;San Francisco Font&quot;&gt;&lt;/a&gt;San Francisco Font&lt;/h1&gt;&lt;p&gt;With the release of iOS 9 and El Capitan, the default font is now the San Francisco font, which is made in-house by Apple. I encourage you to watch the video to understand how it affects the design for iOS.&lt;/p&gt;
+&lt;h2 id=&quot;San-Francisco-Font&quot;&gt;&lt;a href=&quot;#San-Francisco-Font&quot; class=&quot;headerlink&quot; title=&quot;San Francisco Font&quot;&gt;&lt;/a&gt;San Francisco Font&lt;/h2&gt;&lt;p&gt;With the release of iOS 9 and El Capitan, the default font is now the San Francisco font, which is made in-house by Apple. I encourage you to watch the video to understand how it affects the design for iOS.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Typography.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;SF-Font-Tracking&quot;&gt;&lt;a href=&quot;#SF-Font-Tracking&quot; class=&quot;headerlink&quot; title=&quot;SF Font Tracking&quot;&gt;&lt;/a&gt;SF Font Tracking&lt;/h1&gt;&lt;p&gt;iOS automatically adjusts the tracking value and Text/Display for San Francisco based on the font size. This ensures that the typeface is always easy to read. At 20 pt or more, SF UI Display should be used, otherwise use SF UI Text. These tracking values can only be applied in Photoshop, but here’s a formula for converting in Sketch.&lt;/p&gt;
+&lt;h2 id=&quot;SF-Font-Tracking&quot;&gt;&lt;a href=&quot;#SF-Font-Tracking&quot; class=&quot;headerlink&quot; title=&quot;SF Font Tracking&quot;&gt;&lt;/a&gt;SF Font Tracking&lt;/h2&gt;&lt;p&gt;iOS automatically adjusts the tracking value and Text/Display for San Francisco based on the font size. This ensures that the typeface is always easy to read. At 20 pt or more, SF UI Display should be used, otherwise use SF UI Text. These tracking values can only be applied in Photoshop, but here’s a formula for converting in Sketch.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/iOS-Tracking.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Use this Sketch plugin to quickly apply the correct character spacing values.&lt;/p&gt;
-&lt;h1 id=&quot;3D-Touch&quot;&gt;&lt;a href=&quot;#3D-Touch&quot; class=&quot;headerlink&quot; title=&quot;3D Touch&quot;&gt;&lt;/a&gt;3D Touch&lt;/h1&gt;&lt;iframe height=&quot;400&quot; width=&quot;640&quot; src=&quot;https://designcode.io/cloud/chapter1/Design-3DTouch.mp4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h2 id=&quot;3D-Touch&quot;&gt;&lt;a href=&quot;#3D-Touch&quot; class=&quot;headerlink&quot; title=&quot;3D Touch&quot;&gt;&lt;/a&gt;3D Touch&lt;/h2&gt;&lt;iframe height=&quot;400&quot; width=&quot;640&quot; src=&quot;https://designcode.io/cloud/chapter1/Design-3DTouch.mp4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;A key new feature in iOS 9 is called 3D Touch, allowing people to quickly access options inside and outside of your app.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Screen-3DTouch.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Users can now force-press your App Icon and find frequently used items. Inside an app, mails can be peeked and links can be previewed before entering full-screen.&lt;br&gt;Think of 3D Touch like the keyboard shortcuts on your Mac – they enable people to do repeated tasks quicker. You have to design shortcuts that make power users more productive. But just like Keyboard shortcuts, essential features shouldn’t be exclusive to 3D Touch. Your users must be able to operate your app normally without it.&lt;/p&gt;
+&lt;h2 id=&quot;Points-and-Pixels&quot;&gt;&lt;a href=&quot;#Points-and-Pixels&quot; class=&quot;headerlink&quot; title=&quot;Points and Pixels&quot;&gt;&lt;/a&gt;Points and Pixels&lt;/h2&gt;&lt;p&gt;Developers work with point values, so it is important to understand the difference with pixels. When the iPhone was first introduced, the two units were the same: 1pt equals 1px. Then when retina screens came along, 1pt became 2px. So think of points as the values in the original iPhone, and pixels as the real values depending on the pixel density (iPhone 4,5,6 = @2x, iPhone 6 Plus = @3x).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Resolutions.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;For more info, check out this &lt;a href=&quot;http://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;iPhone-Resolutions&quot;&gt;&lt;a href=&quot;#iPhone-Resolutions&quot; class=&quot;headerlink&quot; title=&quot;iPhone Resolutions&quot;&gt;&lt;/a&gt;iPhone Resolutions&lt;/h2&gt;&lt;p&gt;The iPhone has 4 main resolutions: 320 x 480 pt (iPhone 4), 320 x 568 pt (iPhone 5), 375 x 667 pt (iPhone 6) and 414 x 736 pt (iPhone 6 Plus). The layout doesn’t scale but expands based on the resolution. For example, the Navigation Bar only adjusts the width but keeps the same height. Elements inside it remain intact.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-iPhone.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The iPhone 6 Plus is the only iPhone that acts more like an iPad in Landscape mode. In other words, a Left Navigation will appear, replacing the need for the Tab Bar.&lt;/p&gt;
+&lt;h2 id=&quot;iPad-Resolutions&quot;&gt;&lt;a href=&quot;#iPad-Resolutions&quot; class=&quot;headerlink&quot; title=&quot;iPad Resolutions&quot;&gt;&lt;/a&gt;iPad Resolutions&lt;/h2&gt;&lt;p&gt;The iPad has 2 main resolutions: 768 x 1024 pt (iPad), 1024 x 1366 pt (iPad Pro).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-iPad.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The iPad has 2 new features: Slide Over and Split View. Slide Over is an overlay that appears on the right of the screen without affecting the current app’s layout.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-SlideOver.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Split View allows users to multitask by running 2 apps simultaneously next to each other in Portrait mode.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-SplitView.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;App-Icon&quot;&gt;&lt;a href=&quot;#App-Icon&quot; class=&quot;headerlink&quot; title=&quot;App Icon&quot;&gt;&lt;/a&gt;App Icon&lt;/h2&gt;&lt;p&gt;The App Icon is used for the branding of your app. It’s the first thing that users see when they experience it. It appears prominently on the Home screen, the App Store, in Spotlight and Settings.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-AppIcon.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The App Icon template in the iOS 9 GUI.&lt;/p&gt;
+&lt;p&gt;@1x assets are no longer supported for the iPhone, so you don’t need to generate them. App icons have 2 resolutions now: @2x and @3x. There are 3 types: App Icon, Spotlight and Settings. For the iPad, @1x and @2x are used.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-AppIconsRes.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Super-Ellipse&quot;&gt;&lt;a href=&quot;#Super-Ellipse&quot; class=&quot;headerlink&quot; title=&quot;Super-Ellipse&quot;&gt;&lt;/a&gt;Super-Ellipse&lt;/h2&gt;&lt;p&gt;Since iOS 7, the rounded corners have shifted from plain rounded corners to a super-ellipse shape. It is important to keep note that you shouldn’t export the icons with the mask, or you’ll potentially find black artifacts. Instead, just export square assets to the App Store.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Rounded%20Corners.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Icon-Grid&quot;&gt;&lt;a href=&quot;#Icon-Grid&quot; class=&quot;headerlink&quot; title=&quot;Icon Grid&quot;&gt;&lt;/a&gt;Icon Grid&lt;/h2&gt;&lt;p&gt;Apple applied a golden ratio on some of their icons. This ensures that the icons are the heroes while keeping good proportions. While this is a good rule to follow, it’s not a strict rule. Even Apple omitted it on many of their icons.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Icon%20Grid.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Colors&quot;&gt;&lt;a href=&quot;#Colors&quot; class=&quot;headerlink&quot; title=&quot;Colors&quot;&gt;&lt;/a&gt;Colors&lt;/h2&gt;&lt;p&gt;iOS uses vibrant colors to bring out the buttons. These colors tend to work well against a white background as much as a black background. Keep in mind that colors should be used sparsely, for call-to-actions and minimal branding areas like the navigation bar. Roughly, only 10-20% of your design should have colors, or they will compete too much against the content.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Colors.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;iOS often uses neutral colors to serve as the background and menu areas. A well-contrasted black text against a white background is used to make the text comfortable to read. Finally, the pastel blue is applied for making the buttons stand out.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Screen-Colors.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Button-and-Font-Sizes&quot;&gt;&lt;a href=&quot;#Button-and-Font-Sizes&quot; class=&quot;headerlink&quot; title=&quot;Button and Font Sizes&quot;&gt;&lt;/a&gt;Button and Font Sizes&lt;/h2&gt;&lt;p&gt;The general rule is 44pt for buttons and 12pt for small text, 17pt for body text and 20pt+ for titles.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Sizes.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Spacing-and-Alignment&quot;&gt;&lt;a href=&quot;#Spacing-and-Alignment&quot; class=&quot;headerlink&quot; title=&quot;Spacing and Alignment&quot;&gt;&lt;/a&gt;Spacing and Alignment&lt;/h2&gt;&lt;p&gt;A general rule is to have a minimum padding or margin of 8pt. This creates enough breathing room, which makes the layout easier to scan and the text more readable. Also, UI elements should be aligned and texts should have the same baseline position.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-SpacingAlign.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Status-Bar&quot;&gt;&lt;a href=&quot;#Status-Bar&quot; class=&quot;headerlink&quot; title=&quot;Status Bar&quot;&gt;&lt;/a&gt;Status Bar&lt;/h2&gt;&lt;p&gt;It is recommended to include the status bar in as many places as you can. Users rely on it for important information such as signal, time and battery. The text and icons can be white or black, but the background can be customized into any color and merge with the Navigation Bar.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-StatusBar.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Navigation-Bar&quot;&gt;&lt;a href=&quot;#Navigation-Bar&quot; class=&quot;headerlink&quot; title=&quot;Navigation Bar&quot;&gt;&lt;/a&gt;Navigation Bar&lt;/h2&gt;&lt;p&gt;The Navigation Bar is used for quick information about the screen. The left portion can be used for placing Back, Profile, Menu buttons whereas the right portion is generally used for action buttons like Add, Edit, Done. Note that if you use any of these system icons, you don’t need to create assets for them.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-NavigationBar.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Just like the Status Bar, the background can be customized to any color and typically has a subtle blur to ensure that the text is always readable. When the Status Bar is present, both backgrounds are merged.&lt;/p&gt;
+&lt;h2 id=&quot;Search-Bar&quot;&gt;&lt;a href=&quot;#Search-Bar&quot; class=&quot;headerlink&quot; title=&quot;Search Bar&quot;&gt;&lt;/a&gt;Search Bar&lt;/h2&gt;&lt;p&gt;When you have a lot of content, it is always wise to make it searchable.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Search.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Toolbar&quot;&gt;&lt;a href=&quot;#Toolbar&quot; class=&quot;headerlink&quot; title=&quot;Toolbar&quot;&gt;&lt;/a&gt;Toolbar&lt;/h2&gt;&lt;p&gt;When you need more real estate to place your action buttons and screen status, you’ll want to use the Toolbar.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Toolbar.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Tab-Bar&quot;&gt;&lt;a href=&quot;#Tab-Bar&quot; class=&quot;headerlink&quot; title=&quot;Tab Bar&quot;&gt;&lt;/a&gt;Tab Bar&lt;/h2&gt;&lt;p&gt;The Tab Bar is the main navigation between multiple screens. Avoid the Hamburger menu if you have few items. Menus that are always visible will increase usage since obvious always win. Additionally, it is encouraged to add text next to your icons as most people won’t instantly recognize symbols, especially when they’re not universally known.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Tab%20Bar.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;When they’re not active, icons will generally have an outline instead of being filled. Like this, they attract less attention.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Tab%20Bar%20Sizes.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Table-View&quot;&gt;&lt;a href=&quot;#Table-View&quot; class=&quot;headerlink&quot; title=&quot;Table View&quot;&gt;&lt;/a&gt;Table View&lt;/h2&gt;&lt;p&gt;The Table View is a very common user interface for listing content. Most apps use a form of Table View. That’s because it can be very basic, or highly customizable down to the smallest elements.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-TableExamples.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;At the basic level, you can use a number of preset Styles and Accessories.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-TableView.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Cells can also be grouped, with a title above and description underneath.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-TableGrouped.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Collection-View&quot;&gt;&lt;a href=&quot;#Collection-View&quot; class=&quot;headerlink&quot; title=&quot;Collection View&quot;&gt;&lt;/a&gt;Collection View&lt;/h2&gt;&lt;p&gt;When you have both rows and columns in a grid style, you’ll need the Collection View. Although a little more advanced, it can pretty much create any layout you can dream of.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-CollectionExamples.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Collection View layouts may look like these, or a combination of them. The possibilities are endless.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-CollectionView.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Modals&quot;&gt;&lt;a href=&quot;#Modals&quot; class=&quot;headerlink&quot; title=&quot;Modals&quot;&gt;&lt;/a&gt;Modals&lt;/h2&gt;&lt;p&gt;The Alert dialog is used for conveying critical information and prompting quick actions. Alerts should be kept minimal and exiting must be obvious.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Alert.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The Activity dialog allows you to share content (text, images, links) to iOS features like Airdrop, Favorites, Bookmarks and apps like Mail, Facebook, Twitter. While the look can’t be customized, the options are.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Share.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;When the information presented isn’t short, you can design a modal that is full-sized, typically appearing from a slide, fade, flip or page animation. Like other modals, it must be easy to cancel and kept as short as possible.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Modal.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Keyboards&quot;&gt;&lt;a href=&quot;#Keyboards&quot; class=&quot;headerlink&quot; title=&quot;Keyboards&quot;&gt;&lt;/a&gt;Keyboards&lt;/h2&gt;&lt;p&gt;The keyboard is used to input information in text fields such as search, chat or login. It’s highly customizable, for URL, Email, Phone numbers and even Emoji. You can choose between the Light and Dark themes, as well as how the action button is named (return being the default).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Keyboards.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;There’s a good Keyboard Kit for Sketch that you should download.&lt;/p&gt;
+&lt;h2 id=&quot;Picker&quot;&gt;&lt;a href=&quot;#Picker&quot; class=&quot;headerlink&quot; title=&quot;Picker&quot;&gt;&lt;/a&gt;Picker&lt;/h2&gt;&lt;p&gt;When you have multiple options to choose from, you can use the Picker control. It’s particularly useful for dates, which controls 3 fields in one action.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Picker.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Segmented-Control&quot;&gt;&lt;a href=&quot;#Segmented-Control&quot; class=&quot;headerlink&quot; title=&quot;Segmented Control&quot;&gt;&lt;/a&gt;Segmented Control&lt;/h2&gt;&lt;p&gt;While the Tab Bar navigates to the main sections, the Segmented Control is used for sub-sections.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-SementedControl.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Sliders&quot;&gt;&lt;a href=&quot;#Sliders&quot; class=&quot;headerlink&quot; title=&quot;Sliders&quot;&gt;&lt;/a&gt;Sliders&lt;/h2&gt;&lt;p&gt;Sliders are interactive controls that are less precise, but extremely useful for quick settings like Sound, Brightness and Video Progress.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Sliders.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Progress&quot;&gt;&lt;a href=&quot;#Progress&quot; class=&quot;headerlink&quot; title=&quot;Progress&quot;&gt;&lt;/a&gt;Progress&lt;/h2&gt;&lt;p&gt;The Progress bar is an indicator showing how far an activity has gone. For example, you can use this to show the loading progress of a Web View. Note that the height can be customized.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Progress.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Switch&quot;&gt;&lt;a href=&quot;#Switch&quot; class=&quot;headerlink&quot; title=&quot;Switch&quot;&gt;&lt;/a&gt;Switch&lt;/h2&gt;&lt;p&gt;Use this to quickly toggle between on and off. Do not use this for anything else than on / off.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Switches.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Stepper&quot;&gt;&lt;a href=&quot;#Stepper&quot; class=&quot;headerlink&quot; title=&quot;Stepper&quot;&gt;&lt;/a&gt;Stepper&lt;/h2&gt;&lt;p&gt;Slower but more precise than the Slider, the Stepper allows the user to increase or decrease a value by an increment of one. The border and background are customizable.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Stepper.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;iOS-Icons&quot;&gt;&lt;a href=&quot;#iOS-Icons&quot; class=&quot;headerlink&quot; title=&quot;iOS Icons&quot;&gt;&lt;/a&gt;iOS Icons&lt;/h2&gt;&lt;p&gt;These are the native icons that permeate iOS. Since they’re commonly used, they’re instantly recognized by users for their meaning. Using them for other purposes may confuse your users, so it’s important to be aware of how they’re used in iOS.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Design-Icons.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;When you design custom icons outside of these, it is important to use well-known symbols. Additionally, I strongly recommend to always accompany them with a small text of 10pt or more.&lt;/p&gt;
+&lt;h2 id=&quot;Resources&quot;&gt;&lt;a href=&quot;#Resources&quot; class=&quot;headerlink&quot; title=&quot;Resources&quot;&gt;&lt;/a&gt;Resources&lt;/h2&gt;&lt;p&gt;These templates are not only useful for study but also to re-use and customize, so you don’t have to start from scratch and open the possibility for errors. As you get more comfortable with them, you’ll be able to get creative.&lt;/p&gt;
+&lt;h2 id=&quot;iOS-9-GUI-for-iPhone&quot;&gt;&lt;a href=&quot;#iOS-9-GUI-for-iPhone&quot; class=&quot;headerlink&quot; title=&quot;iOS 9 GUI for iPhone&quot;&gt;&lt;/a&gt;iOS 9 GUI for iPhone&lt;/h2&gt;&lt;p&gt;If you’re designing for iOS, you’ll want to use pre-made elements such as the status, navigation and tab bars. Get comfortable with all the colors, sizes, fonts and components.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Mockup%2002.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;iOS-9-GUI-for-iPad&quot;&gt;&lt;a href=&quot;#iOS-9-GUI-for-iPad&quot; class=&quot;headerlink&quot; title=&quot;iOS 9 GUI for iPad&quot;&gt;&lt;/a&gt;iOS 9 GUI for iPad&lt;/h2&gt;&lt;p&gt;The new iPad UI Kit features the iPad Pro device and keyboards in both portrait and landscape modes. Everything is in vector.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Mockup-iPad800.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Apple-Watch-GUI&quot;&gt;&lt;a href=&quot;#Apple-Watch-GUI&quot; class=&quot;headerlink&quot; title=&quot;Apple Watch GUI&quot;&gt;&lt;/a&gt;Apple Watch GUI&lt;/h2&gt;&lt;p&gt;A very complete UI Kit for the Apple Watch with very element including the Apple Watch devices, icons and clocks in vector. You can resize and export them at any resolution.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/Apple%20Watch%20GUI%20with%20SF%20Compact.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;UI-Design-Dos-and-Don’ts&quot;&gt;&lt;a href=&quot;#UI-Design-Dos-and-Don’ts&quot; class=&quot;headerlink&quot; title=&quot;UI Design Dos and Don’ts&quot;&gt;&lt;/a&gt;UI Design Dos and Don’ts&lt;/h2&gt;&lt;p&gt;There are practices that you should avoid at all cost, especially if you’re new to iOS. Follow these simple examples put together by Apple.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/appledosanddonts.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;iOS-Human-Interface-Guidelines-by-Apple&quot;&gt;&lt;a href=&quot;#iOS-Human-Interface-Guidelines-by-Apple&quot; class=&quot;headerlink&quot; title=&quot;iOS Human Interface Guidelines by Apple&quot;&gt;&lt;/a&gt;iOS Human Interface Guidelines by Apple&lt;/h2&gt;&lt;p&gt;A high level and essential read by Apple, even if it’s just scanning the whole thing. iBooks format is also available.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/iOS%20Human%20Interface%20Guidelines:%20Designing%20for%20iOS.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;iOS-Guidelines-by-Ivo-Mynttinen&quot;&gt;&lt;a href=&quot;#iOS-Guidelines-by-Ivo-Mynttinen&quot; class=&quot;headerlink&quot; title=&quot;iOS Guidelines by Ivo Mynttinen&quot;&gt;&lt;/a&gt;iOS Guidelines by Ivo Mynttinen&lt;/h2&gt;&lt;p&gt;If you’d like to read more about iOS from a different perspective, check out this excellent and comprehensive guide.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://designcode.io/cloud/chapter1/The%20iOS%20Design%20Guidelines%20-%20Ivo%20Mynttinen%20:%20User%20Interface%20Designer%202.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;原文地址链接:&lt;a href=&quot;https://designcode.io/iosdesign-guidelines,使用VPN加载更优。&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://designcode.io/iosdesign-guidelines,使用VPN加载更优。&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;iOS has matured a lot over the years. In its 9th upgrade, Apple introduced a new system font called San Francisco, 3D Touch and multi-tas
+      &lt;h1 id=&quot;iOS-9-Design-Guidelines-for-iPhone-and-iPad&quot;&gt;&lt;a href=&quot;#iOS-9-Design-Guidelines-for-iPhone-and-iPad&quot; class=&quot;headerlink&quot; title=&quot;iOS 9 
     
     </summary>
     
@@ -57,9 +147,9 @@
     
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
-      <category term="UI" scheme="http://yoursite.com/tags/UI/"/>
-    
       <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+      <category term="UI" scheme="http://yoursite.com/tags/UI/"/>
     
   </entry>
   
@@ -752,11 +842,11 @@
       <category term="iOS" scheme="http://yoursite.com/categories/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/iOS/"/>
     
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
-    
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
       <category term="越狱插件" scheme="http://yoursite.com/tags/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
     
   </entry>
   
@@ -1416,9 +1506,9 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
@@ -1564,9 +1654,9 @@ pod update --no-repo-update
     </summary>
     
     
-      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
       <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
