@@ -752,9 +752,9 @@
       <category term="iOS" scheme="http://yoursite.com/categories/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/iOS/"/>
     
     
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
       <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
       <category term="越狱插件" scheme="http://yoursite.com/tags/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
     
@@ -1416,9 +1416,9 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
     </summary>
     
     
-      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
-    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
@@ -1564,9 +1564,9 @@ pod update --no-repo-update
     </summary>
     
     
-      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
-    
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="AppStore" scheme="http://yoursite.com/tags/AppStore/"/>
     
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
