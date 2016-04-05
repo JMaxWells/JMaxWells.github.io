@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-29T05:59:39.000Z</updated>
+  <updated>2016-04-05T07:05:20.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>runtime之method_exchangeImplementations交换IMP指针</title>
+    <link href="http://yoursite.com/2016/04/05/runtime%E4%B9%8Bmethod_exchangeImplementations%E4%BA%A4%E6%8D%A2IMP%E6%8C%87%E9%92%88/"/>
+    <id>http://yoursite.com/2016/04/05/runtime之method_exchangeImplementations交换IMP指针/</id>
+    <published>2016-04-05T07:00:28.000Z</published>
+    <updated>2016-04-05T07:05:20.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;runtime之method-exchangeImplementations交换IMP指针&quot;&gt;&lt;a href=&quot;#runtime之method-exchangeImplementations交换IMP指针&quot; class=&quot;headerlink&quot; title=&quot;runtime之method_exchangeImplementations交换IMP指针&quot;&gt;&lt;/a&gt;runtime之method_exchangeImplementations交换IMP指针&lt;/h1&gt;&lt;p&gt;method_exchangeImplementations作用：method_exchangeImplementations可以交换两个方法的具体实现，先举个例子，再解释。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;@implementation ViewController&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (void)viewDidLoad &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [super viewDidLoad];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [self methodExchange];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [self method1];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [self method2];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-(void)method1 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSLog(@&amp;quot;method1&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (void)method2 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      NSLog(@&amp;quot;method2&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (void)methodExchange &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Method method1 = class_getInstanceMethod([self class], @selector(method1));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Method method2 = class_getInstanceMethod([self class], @selector(method2));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //交换method1和么thod的IMP指针，(IMP代表了方法的具体的实现）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    method_exchangeImplementations(method1, method2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@end&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;[self method1]输出method2，[self method2]输出method1。&lt;/p&gt;
+&lt;p&gt;原理如下：&lt;/p&gt;
+&lt;p&gt;@selector(method1) ——-&amp;gt;IMP1(函数指针，具体实现输出么method1)&lt;/p&gt;
+&lt;p&gt;@selector(method2) ——-&amp;gt;IMP1(函数指针，具体实现输出么method2)&lt;/p&gt;
+&lt;p&gt;当执行method_exchangeImplementations(method1, method2)变成如下：&lt;/p&gt;
+&lt;p&gt;@selector(method1) ——-&amp;gt;IMP2(函数指针，具体实现输出么method2)&lt;/p&gt;
+&lt;p&gt;@selector(method2) ——-&amp;gt;IMP1(函数指针，具体实现输出么method1)&lt;/p&gt;
+&lt;p&gt;所以，[self method1]输出method2，[self method2]输出method1。&lt;/p&gt;
+&lt;p&gt;文／jiangamh（简书作者）&lt;/p&gt;
+&lt;p&gt;原文链接：&lt;a href=&quot;http://www.jianshu.com/p/99a4f5c6f59b&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/99a4f5c6f59b&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;runtime之method-exchangeImplementations交换IMP指针&quot;&gt;&lt;a href=&quot;#runtime之method-exchangeImplementations交换IMP指针&quot; class=&quot;headerlink&quot; title=&quot;ru
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="runtime" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/runtime/"/>
+    
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="runtime" scheme="http://yoursite.com/tags/runtime/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS 9 Design Guidelines for iPhone and iPad</title>
