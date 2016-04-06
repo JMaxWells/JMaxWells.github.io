@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-05T07:08:12.000Z</updated>
+  <updated>2016-04-06T10:27:54.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS面试题（备份）</title>
+    <link href="http://yoursite.com/2016/04/06/iOS%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%88%E5%A4%87%E4%BB%BD%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/04/06/iOS面试题（备份）/</id>
+    <published>2016-04-06T10:26:26.000Z</published>
+    <updated>2016-04-06T10:27:54.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;iOS面试题（备份）&quot;&gt;&lt;a href=&quot;#iOS面试题（备份）&quot; class=&quot;headerlink&quot; title=&quot;iOS面试题（备份）&quot;&gt;&lt;/a&gt;iOS面试题（备份）&lt;/h1&gt;&lt;p&gt;1.运行一下代码，控制台会输出什么？&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;@implementation ViewController&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (void)viewDidLoad &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [super viewDidLoad];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [self methodExchange];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [self method1];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [self method2];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (void)method1 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSLog(@&amp;quot;method1&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (void)method2 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      NSLog(@&amp;quot;method2&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (void)methodExchange &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Method method1 = class_getInstanceMethod([self class], @selector(method1));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Method method2 = class_getInstanceMethod([self class], @selector(method2));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    method_exchangeImplementations(method1, method2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@end&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2.对methodExchange方法中的代码有没有改进意见？如果有，请说明原因。&lt;/p&gt;
+&lt;p&gt;3.如何給NSArray添加一个属性（不能使用继承）。&lt;/p&gt;
+&lt;p&gt;4.写出iOS9相对于iOS8增加了哪些新特性（5个以上）？&lt;/p&gt;
+&lt;p&gt;5.以下这段代码的作用是？&lt;/p&gt;
+&lt;p&gt;dispatch_apply(5, globalQ, ^(size_t index) {&lt;br&gt;    // dosometing&lt;br&gt;});&lt;/p&gt;
+&lt;p&gt;6.写出以下控件的高度（默认情况下）&lt;br&gt;Navigation Bar:&lt;br&gt;Status Bar:&lt;br&gt;Toolbar:&lt;br&gt;Keyboards:&lt;br&gt;Switch:&lt;/p&gt;
+&lt;p&gt;7.&lt;br&gt;1、在一条街上，有5座房子，喷了5种颜色。&lt;br&gt;2、每个房里住着不同国籍的人&lt;br&gt;3、每个人喝不同的饮料，抽不同品牌的香烟，养不同的宠物&lt;/p&gt;
+&lt;p&gt;问题是：谁养鱼？&lt;/p&gt;
+&lt;p&gt;提示：&lt;br&gt;1、英国人住红色房子&lt;br&gt;2、瑞典人养狗&lt;br&gt;3、丹麦人喝茶&lt;br&gt;4、绿色房子在白色房子左面&lt;br&gt;5、绿色房子主人喝咖啡&lt;br&gt;6、抽Pall Mall 香烟的人养鸟&lt;br&gt;7、黄色房子主人抽Dunhill香烟&lt;br&gt;8、住在中间房子的人喝牛奶&lt;br&gt;9、 挪威人住第一间房&lt;br&gt;10、抽Blends香烟的人住在养猫的人隔壁&lt;br&gt;11、养马的人住抽Dunhill 香烟的人隔壁&lt;br&gt;12、抽Blue Master的人喝啤酒&lt;br&gt;13、德国人抽Prince香烟&lt;br&gt;14、挪威人住蓝色房子隔壁&lt;br&gt;15、抽Blends香烟的人有一个喝水的邻居&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;iOS面试题（备份）&quot;&gt;&lt;a href=&quot;#iOS面试题（备份）&quot; class=&quot;headerlink&quot; title=&quot;iOS面试题（备份）&quot;&gt;&lt;/a&gt;iOS面试题（备份）&lt;/h1&gt;&lt;p&gt;1.运行一下代码，控制台会输出什么？&lt;/p&gt;
+&lt;figure class=&quot;
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+    
+    
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>runtime之method_exchangeImplementations交换IMP指针</title>
