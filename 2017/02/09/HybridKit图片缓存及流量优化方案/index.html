@@ -1,0 +1,792 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MaxWellPro's Hexo Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="HybridKit缓存及流量优化方案
+年前，一直在忙项目上的事情也没时间写些东西，趁现在项目还处于空闲期，写下项目中遇到的优化方案。刚解决完发热问题，用户就开始反馈我们的app超级费流量，领导也非常重视。我们所用的图片服务器是又拍云支持尺寸裁剪，但是裁剪后的储存大小还是不可观。正好又拍云支持WebP图片格式，何不尝试下呢?
+
+导致费流量的原因
+1.HybridKit的UIWebView没有做缓存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HybridKit图片缓存及流量优化方案">
+<meta property="og:url" content="http://yoursite.com/2017/02/09/HybridKit图片缓存及流量优化方案/index.html">
+<meta property="og:site_name" content="MaxWellPro's Hexo Blog">
+<meta property="og:description" content="HybridKit缓存及流量优化方案
+年前，一直在忙项目上的事情也没时间写些东西，趁现在项目还处于空闲期，写下项目中遇到的优化方案。刚解决完发热问题，用户就开始反馈我们的app超级费流量，领导也非常重视。我们所用的图片服务器是又拍云支持尺寸裁剪，但是裁剪后的储存大小还是不可观。正好又拍云支持WebP图片格式，何不尝试下呢?
+
+导致费流量的原因
+1.HybridKit的UIWebView没有做缓存">
+<meta property="og:image" content="http://img.blog.csdn.net/20160611233012021?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:updated_time" content="2017-02-09T08:40:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HybridKit图片缓存及流量优化方案">
+<meta name="twitter:description" content="HybridKit缓存及流量优化方案
+年前，一直在忙项目上的事情也没时间写些东西，趁现在项目还处于空闲期，写下项目中遇到的优化方案。刚解决完发热问题，用户就开始反馈我们的app超级费流量，领导也非常重视。我们所用的图片服务器是又拍云支持尺寸裁剪，但是裁剪后的储存大小还是不可观。正好又拍云支持WebP图片格式，何不尝试下呢?
+
+导致费流量的原因
+1.HybridKit的UIWebView没有做缓存">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160611233012021?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6260345940964541000,
+      author: 'MaxWellPro'
+    }
+  };
+</script>
+
+  <title> HybridKit图片缓存及流量优化方案 | MaxWellPro's Hexo Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+    <div class="site-meta-headline">
+      <a>
+        <img class="custom-logo-image" src="http://image.woshipm.com/wp-files/2015/03/4ffce04d92a4d6cb21c1494cdfcd6dc1328.jpg"
+             alt="MaxWellPro's Hexo Blog"/>
+      </a>
+    </div>
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MaxWellPro's Hexo Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">分享一些技术文章和自己所整理的知识。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HybridKit图片缓存及流量优化方案
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-09T16:39:40+08:00" content="2017-02-09">
+              2017-02-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/09/HybridKit图片缓存及流量优化方案/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/09/HybridKit图片缓存及流量优化方案/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="HybridKit缓存及流量优化方案"><a href="#HybridKit缓存及流量优化方案" class="headerlink" title="HybridKit缓存及流量优化方案"></a>HybridKit缓存及流量优化方案</h1><blockquote>
+<p>年前，一直在忙项目上的事情也没时间写些东西，趁现在项目还处于空闲期，写下项目中遇到的优化方案。刚解决完发热问题，用户就开始反馈我们的app超级费流量，领导也非常重视。我们所用的图片服务器是又拍云支持尺寸裁剪，但是裁剪后的储存大小还是不可观。正好又拍云支持WebP图片格式，何不尝试下呢?</p>
+</blockquote>
+<h2 id="导致费流量的原因"><a href="#导致费流量的原因" class="headerlink" title="导致费流量的原因"></a>导致费流量的原因</h2><ul>
+<li>1.HybridKit的UIWebView没有做缓存</li>
+<li>2.又拍云裁剪后的储存大小还是不够可观</li>
+</ul>
+<h2 id="WebP"><a href="#WebP" class="headerlink" title="WebP"></a>WebP</h2><blockquote>
+<p>WebP（发音 weppy，项目主页），是一种支持有损压缩和无损压缩的图片文件格式，派生自图像编码格式 VP8。根据 Google 的测试，无损压缩后的 WebP 比 PNG 文件少了 45％ 的文件大小，即使这些 PNG 文件经过其他压缩工具压缩之后，WebP 还是可以减少 28％ 的文件大小。</p>
+<p>2010 年发布的 WebP 已经不算是新鲜事物了，在 Google 的明星产品如 Youtube、Gmail、Google Play 中都可以看到 WebP 的身影，而 Chrome 网上商店甚至已完全使用了 WebP。国外公司如 Facebook、ebay 和国内公司如腾讯、淘宝、美团等也早已尝鲜。目前 WebP 也在我厂很多的项目中得到应用，如腾讯新闻客户端、腾讯网、QQ空间等，同时也有一些针对 WebP 的图片格式转换工具，如 智图，iSparta 等。</p>
+</blockquote>
+<h2 id="缓存方案"><a href="#缓存方案" class="headerlink" title="缓存方案"></a>缓存方案</h2><h3 id="SDWebImage"><a href="#SDWebImage" class="headerlink" title="SDWebImage"></a>SDWebImage</h3><blockquote>
+<p>SDWebImage是iOS开发者经常使用的一个开源框架,这个框架的主要作用是：一个异步下载图片并且支持缓存的UIImageView分类。相信各位iOS开发工程师都不会陌生。</p>
+</blockquote>
+<h3 id="集成方法"><a href="#集成方法" class="headerlink" title="集成方法"></a>集成方法</h3><p>1.CocoaPods</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &apos;SDWebImage/WebP&apos;</span><br></pre></td></tr></table></figure>
+<p>2.手动导入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.工程引入SDWebImage开源库；</span><br><span class="line">2.引入WebP.framework,下载地址：https://github.com/seanooi/iOS-WebP          </span><br><span class="line">3.让SDWebImage支持WebP，设置如下Build Settings -- Preprocessor Macros , add SD_WEBP=1</span><br></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20160611233012021?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+<h3 id="NSURLCache"><a href="#NSURLCache" class="headerlink" title="NSURLCache"></a>NSURLCache</h3><ul>
+<li>NSURLCache 为应用的 URL 请求提供了内存以及磁盘上的综合缓存机制，作为基础类库 URL 加载的一部分，任何通过 NSURLConnection 加载的请求都将被 NSURLCache 处理。</li>
+<li>网络缓存减少了需要向服务器发送请求的次数，同时也提升了离线或在低速网络中使用应用的体验。</li>
+<li>当一个请求完成下载来自服务器的回应，一个缓存的回应将在本地保存。下一次同一个请求再发起时，本地保存的回应就会马上返回，不需要连接服务器。NSURLCache<br>会 自动 且 透明 地返回回应。</li>
+<li>为了好好利用 NSURLCache，你需要初始化并设置一个共享的 URL 缓存。在 iOS 中这项工作需要在 -application:didFinishLaunchingWithOptions: 完成</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)application:(UIApplication *)application</span><br><span class="line">    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions</span><br><span class="line">&#123;</span><br><span class="line">  NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024</span><br><span class="line">                                                       diskCapacity:20 * 1024 * 1024</span><br><span class="line">                                                           diskPath:nil];</span><br><span class="line">  [NSURLCache setSharedURLCache:URLCache];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="NSURLProtocol"><a href="#NSURLProtocol" class="headerlink" title="NSURLProtocol"></a>NSURLProtocol</h3><blockquote>
+<p>NSURLProtocol可以拦截监听每一个URL Loading System中发出request请求，记住是URL Loading System中那些类发出的请求，也支持AFNetwoking，UIWebView发出的request。如果不是这些类发出的请求，NSURLProtocol就没办法拦截和监听了。</p>
+</blockquote>
+<p>之所以使用NSURLProtocol而不使用NSURLCache的原因是：NSURLProtocol可以拦截UIWebView发出的图片请求，如果检测到时偷拍云图片链接，会把请求图片地址更改为Webp格式并使用SDWebImageDownloader来进行图片加载，这是NSURLCache不能实现的。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>1.在AppDelegate的-application:didFinishLaunchingWithOptions:方法中进行注册，这样NSURLProtocol才会正常工作。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)application:(<span class="type">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="type">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line">    [<span class="type">BFNSURLProtocol</span> registerClass:[<span class="type">BFNSURLProtocol</span> <span class="class"><span class="keyword">class</span>]];</span><br><span class="line">    </span><br><span class="line">     <span class="title">return</span> <span class="title">YES</span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>2.WebView 图片请求替换</p>
+<blockquote>
+<p>webkit内核现在都不支持解析WebP格式的图片，这里主要采用的iOS系统的NSURLProtocol来替换其网络请求（不了解NSURLProtocol，可以动动自己勤劳的小手Google一下），再将网络回包数据进行转码成jpg或者png（为了透明度），再返回给webview进行渲染的。</p>
+</blockquote>
+<p>另外，NSURLProtocol会拦截全局的网络流量，为避免误伤，这里需要单独识别是否是WebView发起的请求，可以通过识别request中的UA是否包含”AppleWebKit”来实现。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">@implementation <span class="type">BFNSURLProtocol</span></span><br><span class="line">+ (<span class="type">BOOL</span>)canInitWithRequest:(<span class="type">NSURLRequest</span> *)request &#123;</span><br><span class="line">    <span class="comment">// 屏蔽非又拍云地址</span></span><br><span class="line">    <span class="keyword">if</span> ([[request.<span class="type">URL</span> absoluteString] rangeOfString:@<span class="string">"upaiyun"</span>].location == <span class="type">NSNotFound</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">NO</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//只处理http和https请求</span></span><br><span class="line">    <span class="type">NSString</span> *scheme = [[request <span class="type">URL</span>] scheme];</span><br><span class="line">    <span class="keyword">if</span> (([scheme caseInsensitiveCompare:@<span class="string">"http"</span>] == <span class="type">NSOrderedSame</span> || [scheme caseInsensitiveCompare:@<span class="string">"https"</span>] == <span class="type">NSOrderedSame</span>)) &#123;</span><br><span class="line">        <span class="comment">//看看是否已经处理过了，防止无限循环</span></span><br><span class="line">        <span class="keyword">if</span> ([<span class="type">NSURLProtocol</span> propertyForKey:<span class="type">URLProtocolHandledKey</span> inRequest:request]) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="type">NO</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="type">NSString</span> *agent = [request valueForHTTPHeaderField:@<span class="string">"User-Agent"</span>];</span><br><span class="line">        <span class="comment">// 只过滤UIWebview里边的加载图片请求</span></span><br><span class="line">        <span class="keyword">if</span> ([agent rangeOfString:@<span class="string">"AppleWebKit"</span>].location != <span class="type">NSNotFound</span> &amp;&amp; [request.<span class="type">URL</span> isImageURL]) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="type">YES</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="type">NO</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>敲黑板，划重点了！划重点了！划重点了！（重要的事情说三遍）</p>
+</blockquote>
+<p>这里可以接管所有WebView中需要替换的图片URL。</p>
+<p>下面，会自动调用startLoading方法，利用SDWebImageManager来加载WebP图片，不仅能实现WebP的省流量功能，还能将图片缓存在本地，下次加载同一图片地址的时候又达到了省流量的目的。耶！~</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">- (void)startLoading &#123;</span><br><span class="line">    <span class="type">NSMutableURLRequest</span> *mutableReqeust = [[<span class="keyword">self</span> request] mutableCopy];</span><br><span class="line">    <span class="comment">//标示改request已经处理过了，防止无限循环</span></span><br><span class="line">    [<span class="type">NSURLProtocol</span> setProperty:@<span class="type">YES</span> forKey:<span class="type">URLProtocolHandledKey</span> inRequest:mutableReqeust];</span><br><span class="line">    <span class="type">NSString</span> *<span class="type">URLString</span> = [<span class="keyword">self</span>.request.<span class="type">URL</span> absoluteString];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 重定义请求地址 将format为jpg改为webp格式</span></span><br><span class="line">    <span class="keyword">if</span> ([<span class="type">URLString</span> rangeOfString:@<span class="string">"format"</span>].location == <span class="type">NSNotFound</span>) &#123;</span><br><span class="line">        <span class="type">URLString</span> = [[<span class="type">BFWebImageHelper</span> imageStringToURL:<span class="type">URLString</span> width:<span class="number">0</span> height:<span class="number">0</span>] absoluteString];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ([<span class="type">URLString</span> rangeOfString:@<span class="string">"format/jpg"</span>].location != <span class="type">NSNotFound</span>) &#123;</span><br><span class="line">        <span class="type">URLString</span> = [[<span class="type">BFWebImageHelper</span> imageStringToURL:<span class="type">URLString</span> width:<span class="number">0</span> height:<span class="number">0</span>] absoluteString];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">self</span>.connection = [<span class="type">NSURLConnection</span> connectionWithRequest:mutableReqeust delegate:<span class="keyword">self</span>];</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="type">NSURL</span> *url = [<span class="type">NSURL</span> <span class="type">URLWithString</span>:<span class="type">URLString</span>];</span><br><span class="line">    </span><br><span class="line">    [[<span class="type">SDWebImageManager</span> sharedManager] downloadImageWithURL:url</span><br><span class="line">                                                    options:<span class="type">SDWebImageAllowInvalidSSLCertificates</span></span><br><span class="line">                                                   progress:<span class="literal">nil</span></span><br><span class="line">                                                  completed:^(<span class="type">UIImage</span> *image, <span class="type">NSError</span> *error, <span class="type">SDImageCacheType</span> cacheType, <span class="type">BOOL</span> finished, <span class="type">NSURL</span> *imageURL) &#123;</span><br><span class="line">                                                      <span class="type">NSData</span> *data;</span><br><span class="line">                                                      <span class="comment">// 是否以png结尾</span></span><br><span class="line">                                                      <span class="keyword">if</span> ([imageURL.absoluteString.lowercaseString hasSuffix:@<span class="string">".png"</span>]) &#123;</span><br><span class="line">                                                          data = <span class="type">UIImagePNGRepresentation</span>(image);</span><br><span class="line">                                                      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                                          data = <span class="type">UIImageJPEGRepresentation</span>(image, <span class="number">1</span>);</span><br><span class="line">                                                      &#125;</span><br><span class="line">                                                      <span class="keyword">if</span> (!<span class="keyword">self</span>.client) &#123;</span><br><span class="line">                                                          <span class="keyword">return</span> ;</span><br><span class="line">                                                      &#125;</span><br><span class="line">                                                      [<span class="keyword">self</span>.client <span class="type">URLProtocol</span>:<span class="keyword">self</span> didLoadData:data];</span><br><span class="line">                                                      [<span class="keyword">self</span>.client <span class="type">URLProtocolDidFinishLoading</span>:<span class="keyword">self</span>];</span><br><span class="line">                                                  &#125;];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)stopLoading &#123;</span><br><span class="line">    [<span class="keyword">self</span>.connection cancel];</span><br><span class="line">    <span class="keyword">self</span>.connection = <span class="literal">nil</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (<span class="type">NSURLRequest</span> *)canonicalRequestForRequest:(<span class="type">NSURLRequest</span> *)request &#123;</span><br><span class="line">    <span class="type">NSMutableURLRequest</span> *mutableReqeust = [request mutableCopy];</span><br><span class="line">    mutableReqeust = [<span class="keyword">self</span> redirectHostInRequset:mutableReqeust];</span><br><span class="line">    <span class="keyword">return</span> mutableReqeust;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (<span class="type">BOOL</span>)requestIsCacheEquivalent:(<span class="type">NSURLRequest</span> *)equivalent toRequest:(<span class="type">NSURLRequest</span> *)request; &#123;</span><br><span class="line">    <span class="keyword">return</span> [<span class="keyword">super</span> requestIsCacheEquivalent:equivalent toRequest:request];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (<span class="type">NSMutableURLRequest</span> *)redirectHostInRequset:(<span class="type">NSMutableURLRequest</span> *)request &#123;</span><br><span class="line">    <span class="keyword">return</span> request;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其他代理</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark - <span class="type">NSURLConnectionDataDelegate</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求响应时</span></span><br><span class="line">- (void)connection:(<span class="type">NSURLConnection</span> *)connection didReceiveResponse:(<span class="type">NSURLResponse</span> *)response &#123;</span><br><span class="line">    [<span class="keyword">self</span>.client <span class="type">URLProtocol</span>:<span class="keyword">self</span> didReceiveResponse:response cacheStoragePolicy:<span class="type">NSURLCacheStorageNotAllowed</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求接收数据时</span></span><br><span class="line">- (void)connection:(<span class="type">NSURLConnection</span> *)connection didReceiveData:(<span class="type">NSData</span> *)data &#123;</span><br><span class="line">    [<span class="keyword">self</span>.client <span class="type">URLProtocol</span>:<span class="keyword">self</span> didLoadData:data];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求完成的代理</span></span><br><span class="line">- (void)connectionDidFinishLoading:(<span class="type">NSURLConnection</span> *)connection &#123;</span><br><span class="line">    [<span class="keyword">self</span>.client <span class="type">URLProtocolDidFinishLoading</span>:<span class="keyword">self</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求失败&amp;错误的代理</span></span><br><span class="line">- (void)connection:(<span class="type">NSURLConnection</span> *)connection didFailWithError:(<span class="type">NSError</span> *)error &#123;</span><br><span class="line">    [<span class="keyword">self</span>.client <span class="type">URLProtocol</span>:<span class="keyword">self</span> didFailWithError:error];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>PS：流程图<br><a href="https://www.processon.com/view/link/589c29abe4b0a17827f86f32" target="_blank" rel="external">流程图链接processon</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在使用了Webp之后，经QA同事的多次测试，同样一套步骤下比未优化前流量节省了47%，使用NSURLProtocol缓存方案后，在WebP优化基础上又优化了12%的流量。其实NSURLProtocol的功能远远不止这些，NSURLProtocol就是一个黑魔法，有兴趣的童鞋可以深入研究一下。今天就写到这里吧。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/09/直播解决方案整理/" rel="next" title="直播解决方案整理">
+                <i class="fa fa-chevron-left"></i> 直播解决方案整理
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/09/HybridKit图片缓存及流量优化方案/"
+           data-title="HybridKit图片缓存及流量优化方案" data-url="http://yoursite.com/2017/02/09/HybridKit图片缓存及流量优化方案/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7xojj3.com5.z0.glb.qiniucdn.com/image%2Favatar%2F7ead8c33da3d43552445740501595d76.jpg"
+               alt="MaxWellPro" />
+          <p class="site-author-name" itemprop="name">MaxWellPro</p>
+          <p class="site-description motion-element" itemprop="description">一个90后iOS软件攻城狮，热爱coding，并且喜欢数码、外设、键盘等等。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+          
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/JMaxWells/JMaxWells.github.io" target="_blank">
+                  
+                    <i class="fa fa-gitHub"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2379733281" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HybridKit缓存及流量优化方案"><span class="nav-number">1.</span> <span class="nav-text">HybridKit缓存及流量优化方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导致费流量的原因"><span class="nav-number">1.1.</span> <span class="nav-text">导致费流量的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebP"><span class="nav-number">1.2.</span> <span class="nav-text">WebP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存方案"><span class="nav-number">1.3.</span> <span class="nav-text">缓存方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SDWebImage"><span class="nav-number">1.3.1.</span> <span class="nav-text">SDWebImage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集成方法"><span class="nav-number">1.3.2.</span> <span class="nav-text">集成方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSURLCache"><span class="nav-number">1.3.3.</span> <span class="nav-text">NSURLCache</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSURLProtocol"><span class="nav-number">1.3.4.</span> <span class="nav-text">NSURLProtocol</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">1.4.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MaxWellPro</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"maxwellpro"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+
+</body>
+</html>
