@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-09T08:40:18.000Z</updated>
+  <updated>2017-02-09T08:47:03.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/02/09/HybridKit%E5%9B%BE%E7%89%87%E7%BC%93%E5%AD%98%E5%8F%8A%E6%B5%81%E9%87%8F%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/"/>
     <id>http://yoursite.com/2017/02/09/HybridKit图片缓存及流量优化方案/</id>
     <published>2017-02-09T08:39:40.000Z</published>
-    <updated>2017-02-09T08:40:18.000Z</updated>
+    <updated>2017-02-09T08:47:03.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;HybridKit缓存及流量优化方案&quot;&gt;&lt;a href=&quot;#HybridKit缓存及流量优化方案&quot; class=&quot;headerlink&quot; title=&quot;HybridKit缓存及流量优化方案&quot;&gt;&lt;/a&gt;HybridKit缓存及流量优化方案&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;年前，一直在忙项目上的事情也没时间写些东西，趁现在项目还处于空闲期，写下项目中遇到的优化方案。刚解决完发热问题，用户就开始反馈我们的app超级费流量，领导也非常重视。我们所用的图片服务器是又拍云支持尺寸裁剪，但是裁剪后的储存大小还是不可观。正好又拍云支持WebP图片格式，何不尝试下呢?&lt;/p&gt;
@@ -36,7 +36,7 @@
 &lt;h2 id=&quot;缓存方案&quot;&gt;&lt;a href=&quot;#缓存方案&quot; class=&quot;headerlink&quot; title=&quot;缓存方案&quot;&gt;&lt;/a&gt;缓存方案&lt;/h2&gt;&lt;h3 id=&quot;SDWebImage&quot;&gt;&lt;a href=&quot;#SDWebImage&quot; class=&quot;headerlink&quot; title=&quot;SDWebImage&quot;&gt;&lt;/a&gt;SDWebImage&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;SDWebImage是iOS开发者经常使用的一个开源框架,这个框架的主要作用是：一个异步下载图片并且支持缓存的UIImageView分类。相信各位iOS开发工程师都不会陌生。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;集成方法&quot;&gt;&lt;a href=&quot;#集成方法&quot; class=&quot;headerlink&quot; title=&quot;集成方法&quot;&gt;&lt;/a&gt;集成方法&lt;/h3&gt;&lt;p&gt;1.CocoaPods&lt;/p&gt;
+&lt;h3 id=&quot;WebP集成方法&quot;&gt;&lt;a href=&quot;#WebP集成方法&quot; class=&quot;headerlink&quot; title=&quot;WebP集成方法&quot;&gt;&lt;/a&gt;WebP集成方法&lt;/h3&gt;&lt;p&gt;1.CocoaPods&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pod &amp;apos;SDWebImage/WebP&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;2.手动导入&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1.工程引入SDWebImage开源库；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.引入WebP.framework,下载地址：https://github.com/seanooi/iOS-WebP          &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3.让SDWebImage支持WebP，设置如下Build Settings -- Preprocessor Macros , add SD_WEBP=1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -51,7 +51,7 @@
 &lt;h3 id=&quot;NSURLProtocol&quot;&gt;&lt;a href=&quot;#NSURLProtocol&quot; class=&quot;headerlink&quot; title=&quot;NSURLProtocol&quot;&gt;&lt;/a&gt;NSURLProtocol&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;NSURLProtocol可以拦截监听每一个URL Loading System中发出request请求，记住是URL Loading System中那些类发出的请求，也支持AFNetwoking，UIWebView发出的request。如果不是这些类发出的请求，NSURLProtocol就没办法拦截和监听了。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;之所以使用NSURLProtocol而不使用NSURLCache的原因是：NSURLProtocol可以拦截UIWebView发出的图片请求，如果检测到时偷拍云图片链接，会把请求图片地址更改为Webp格式并使用SDWebImageDownloader来进行图片加载，这是NSURLCache不能实现的。&lt;/p&gt;
+&lt;p&gt;之所以使用NSURLProtocol而不使用NSURLCache的原因是：NSURLProtocol可以拦截UIWebView发出的图片请求，如果检测到时又拍云图片链接，会把请求图片地址更改为WebP格式并使用SDWebImageDownloader来进行图片加载，这是NSURLCache不能实现的。&lt;/p&gt;
 &lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot; title=&quot;实现&quot;&gt;&lt;/a&gt;实现&lt;/h2&gt;&lt;p&gt;1.在AppDelegate的-application:didFinishLaunchingWithOptions:方法中进行注册，这样NSURLProtocol才会正常工作。&lt;/p&gt;
 &lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;type&quot;&gt;BOOL&lt;/span&gt;)application:(&lt;span class=&quot;type&quot;&gt;UIApplication&lt;/span&gt; *)application didFinishLaunchingWithOptions:(&lt;span class=&quot;type&quot;&gt;NSDictionary&lt;/span&gt; *)launchOptions &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [&lt;span class=&quot;type&quot;&gt;BFNSURLProtocol&lt;/span&gt; registerClass:[&lt;span class=&quot;type&quot;&gt;BFNSURLProtocol&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;]];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;title&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;YES&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;2.WebView 图片请求替换&lt;/p&gt;

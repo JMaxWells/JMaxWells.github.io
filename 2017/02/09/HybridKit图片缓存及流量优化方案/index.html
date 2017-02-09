@@ -74,7 +74,7 @@
 导致费流量的原因
 1.HybridKit的UIWebView没有做缓存">
 <meta property="og:image" content="http://img.blog.csdn.net/20160611233012021?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:updated_time" content="2017-02-09T08:40:18.000Z">
+<meta property="og:updated_time" content="2017-02-09T08:47:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HybridKit图片缓存及流量优化方案">
 <meta name="twitter:description" content="HybridKit缓存及流量优化方案
@@ -287,7 +287,7 @@
 <h2 id="缓存方案"><a href="#缓存方案" class="headerlink" title="缓存方案"></a>缓存方案</h2><h3 id="SDWebImage"><a href="#SDWebImage" class="headerlink" title="SDWebImage"></a>SDWebImage</h3><blockquote>
 <p>SDWebImage是iOS开发者经常使用的一个开源框架,这个框架的主要作用是：一个异步下载图片并且支持缓存的UIImageView分类。相信各位iOS开发工程师都不会陌生。</p>
 </blockquote>
-<h3 id="集成方法"><a href="#集成方法" class="headerlink" title="集成方法"></a>集成方法</h3><p>1.CocoaPods</p>
+<h3 id="WebP集成方法"><a href="#WebP集成方法" class="headerlink" title="WebP集成方法"></a>WebP集成方法</h3><p>1.CocoaPods</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &apos;SDWebImage/WebP&apos;</span><br></pre></td></tr></table></figure>
 <p>2.手动导入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.工程引入SDWebImage开源库；</span><br><span class="line">2.引入WebP.framework,下载地址：https://github.com/seanooi/iOS-WebP          </span><br><span class="line">3.让SDWebImage支持WebP，设置如下Build Settings -- Preprocessor Macros , add SD_WEBP=1</span><br></pre></td></tr></table></figure>
@@ -302,7 +302,7 @@
 <h3 id="NSURLProtocol"><a href="#NSURLProtocol" class="headerlink" title="NSURLProtocol"></a>NSURLProtocol</h3><blockquote>
 <p>NSURLProtocol可以拦截监听每一个URL Loading System中发出request请求，记住是URL Loading System中那些类发出的请求，也支持AFNetwoking，UIWebView发出的request。如果不是这些类发出的请求，NSURLProtocol就没办法拦截和监听了。</p>
 </blockquote>
-<p>之所以使用NSURLProtocol而不使用NSURLCache的原因是：NSURLProtocol可以拦截UIWebView发出的图片请求，如果检测到时偷拍云图片链接，会把请求图片地址更改为Webp格式并使用SDWebImageDownloader来进行图片加载，这是NSURLCache不能实现的。</p>
+<p>之所以使用NSURLProtocol而不使用NSURLCache的原因是：NSURLProtocol可以拦截UIWebView发出的图片请求，如果检测到时又拍云图片链接，会把请求图片地址更改为WebP格式并使用SDWebImageDownloader来进行图片加载，这是NSURLCache不能实现的。</p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>1.在AppDelegate的-application:didFinishLaunchingWithOptions:方法中进行注册，这样NSURLProtocol才会正常工作。</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)application:(<span class="type">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="type">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line">    [<span class="type">BFNSURLProtocol</span> registerClass:[<span class="type">BFNSURLProtocol</span> <span class="class"><span class="keyword">class</span>]];</span><br><span class="line">    </span><br><span class="line">     <span class="title">return</span> <span class="title">YES</span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>2.WebView 图片请求替换</p>
@@ -491,7 +491,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HybridKit缓存及流量优化方案"><span class="nav-number">1.</span> <span class="nav-text">HybridKit缓存及流量优化方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导致费流量的原因"><span class="nav-number">1.1.</span> <span class="nav-text">导致费流量的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebP"><span class="nav-number">1.2.</span> <span class="nav-text">WebP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存方案"><span class="nav-number">1.3.</span> <span class="nav-text">缓存方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SDWebImage"><span class="nav-number">1.3.1.</span> <span class="nav-text">SDWebImage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集成方法"><span class="nav-number">1.3.2.</span> <span class="nav-text">集成方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSURLCache"><span class="nav-number">1.3.3.</span> <span class="nav-text">NSURLCache</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSURLProtocol"><span class="nav-number">1.3.4.</span> <span class="nav-text">NSURLProtocol</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">1.4.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HybridKit缓存及流量优化方案"><span class="nav-number">1.</span> <span class="nav-text">HybridKit缓存及流量优化方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导致费流量的原因"><span class="nav-number">1.1.</span> <span class="nav-text">导致费流量的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebP"><span class="nav-number">1.2.</span> <span class="nav-text">WebP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存方案"><span class="nav-number">1.3.</span> <span class="nav-text">缓存方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SDWebImage"><span class="nav-number">1.3.1.</span> <span class="nav-text">SDWebImage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebP集成方法"><span class="nav-number">1.3.2.</span> <span class="nav-text">WebP集成方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSURLCache"><span class="nav-number">1.3.3.</span> <span class="nav-text">NSURLCache</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSURLProtocol"><span class="nav-number">1.3.4.</span> <span class="nav-text">NSURLProtocol</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">1.4.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
