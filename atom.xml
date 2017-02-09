@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-06T10:29:40.000Z</updated>
+  <updated>2017-02-09T03:13:02.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,378 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>直播解决方案整理</title>
+    <link href="http://yoursite.com/2017/02/09/%E7%9B%B4%E6%92%AD%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E6%95%B4%E7%90%86/"/>
+    <id>http://yoursite.com/2017/02/09/直播解决方案整理/</id>
+    <published>2017-02-09T03:12:46.000Z</published>
+    <updated>2017-02-09T03:13:02.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;直播云解决方案整理&quot;&gt;&lt;a href=&quot;#直播云解决方案整理&quot; class=&quot;headerlink&quot; title=&quot;直播云解决方案整理&quot;&gt;&lt;/a&gt;直播云解决方案整理&lt;/h1&gt;&lt;h2 id=&quot;TOC&quot;&gt;&lt;a href=&quot;#TOC&quot; class=&quot;headerlink&quot; title=&quot;[TOC]&quot;&gt;&lt;/a&gt;[TOC]&lt;/h2&gt;&lt;h2 id=&quot;1-又拍云直播&quot;&gt;&lt;a href=&quot;#1-又拍云直播&quot; class=&quot;headerlink&quot; title=&quot;1.又拍云直播&quot;&gt;&lt;/a&gt;1.又拍云直播&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;又拍直播云（UPLive），基于又拍云内容分发网络为直播应用提供超低延迟、高码率、高并发的从推流端到播放端的一站式解决方案，支持 RTMP、HTTP-FLV 和 HLS 输出等基本功能，包括录制、转码等增值服务。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;IOS-推流-SDK&quot;&gt;&lt;a href=&quot;#IOS-推流-SDK&quot; class=&quot;headerlink&quot; title=&quot;IOS 推流 SDK&quot;&gt;&lt;/a&gt;IOS 推流 SDK&lt;/h3&gt;&lt;h3 id=&quot;系统说明&quot;&gt;&lt;a href=&quot;#系统说明&quot; class=&quot;headerlink&quot; title=&quot;系统说明&quot;&gt;&lt;/a&gt;系统说明&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;支持 iOS 8 及以上系统版本 &lt;/li&gt;
+&lt;li&gt;支持 ARMv7，ARM64，x86_64 架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;功能说明&quot;&gt;&lt;a href=&quot;#功能说明&quot; class=&quot;headerlink&quot; title=&quot;功能说明&quot;&gt;&lt;/a&gt;功能说明&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;采集模块源码开放，音视频可以自由配置 &lt;/li&gt;
+&lt;li&gt;支持硬件编码 &lt;/li&gt;
+&lt;li&gt;多码率可选 &lt;/li&gt;
+&lt;li&gt;支持 H.264 视频编码 &lt;/li&gt;
+&lt;li&gt;支持 AAC 音频编码 &lt;/li&gt;
+&lt;li&gt;支持前后摄像头 &lt;/li&gt;
+&lt;li&gt;支持自动对焦 &lt;/li&gt;
+&lt;li&gt;支持手动调整对焦点 &lt;/li&gt;
+&lt;li&gt;支持闪光灯操作 &lt;/li&gt;
+&lt;li&gt;支持多分辨率编码 &lt;/li&gt;
+&lt;li&gt;支持构造带安全授权凭证的 RTMP 推流地址 &lt;/li&gt;
+&lt;li&gt;支持 ARMv7, ARM64, x86_64 架构 &lt;/li&gt;
+&lt;li&gt;支持 RTMP 协议直播推流 &lt;/li&gt;
+&lt;li&gt;支持推流时可变码率 &lt;/li&gt;
+&lt;li&gt;提供发送 buffer &lt;/li&gt;
+&lt;li&gt;支持视频 Orientation 操作 &lt;/li&gt;
+&lt;li&gt;支持弱网丢帧策略 &lt;/li&gt;
+&lt;li&gt;支持后台音频推流 &lt;/li&gt;
+&lt;li&gt;支持水印功能 &lt;/li&gt;
+&lt;li&gt;支持美颜功能 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/upyun/ios-live-sdk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;项目地址&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;安卓推流-SDK&quot;&gt;&lt;a href=&quot;#安卓推流-SDK&quot; class=&quot;headerlink&quot; title=&quot;安卓推流 SDK&quot;&gt;&lt;/a&gt;安卓推流 SDK&lt;/h3&gt;&lt;h4 id=&quot;系统说明-1&quot;&gt;&lt;a href=&quot;#系统说明-1&quot; class=&quot;headerlink&quot; title=&quot;系统说明&quot;&gt;&lt;/a&gt;系统说明&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Android 4.1(API 16) 以上&lt;/li&gt;
+&lt;li&gt;支持 ARMv5，ARMv7，ARMv8 版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;功能说明-1&quot;&gt;&lt;a href=&quot;#功能说明-1&quot; class=&quot;headerlink&quot; title=&quot;功能说明&quot;&gt;&lt;/a&gt;功能说明&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;支持 H.264 和 AAC 硬编&lt;/li&gt;
+&lt;li&gt;硬编支持 Android Min API 18（Android 4.3）及其以上版本&lt;/li&gt;
+&lt;li&gt;支持 RTMP 封包及推流&lt;/li&gt;
+&lt;li&gt;支持 RTMP 推流自适应网络质量动态切换码率或自定义策略&lt;/li&gt;
+&lt;li&gt;支持纯音频推流，以及后台运行&lt;/li&gt;
+&lt;li&gt;支持动态更改 Encoding Orientation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/upyun/android-push-sdk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;项目地址&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;IOS-播放器-SDK&quot;&gt;&lt;a href=&quot;#IOS-播放器-SDK&quot; class=&quot;headerlink&quot; title=&quot;IOS 播放器 SDK&quot;&gt;&lt;/a&gt;IOS 播放器 SDK&lt;/h3&gt;&lt;h4 id=&quot;系统说明-2&quot;&gt;&lt;a href=&quot;#系统说明-2&quot; class=&quot;headerlink&quot; title=&quot;系统说明&quot;&gt;&lt;/a&gt;系统说明&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;支持 iOS 8 及以上系统版本 &lt;/li&gt;
+&lt;li&gt;支持 ARMv7，ARM64，x86_64 架构 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;功能说明-2&quot;&gt;&lt;a href=&quot;#功能说明-2&quot; class=&quot;headerlink&quot; title=&quot;功能说明&quot;&gt;&lt;/a&gt;功能说明&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;支持 RTMP 、HLS 和 HTTP-FLV 协议的直播流媒体播放&lt;/li&gt;
+&lt;li&gt;高可定制：可自定义尺寸，按钮，进度条，全屏，旋转等 UI 属性&lt;/li&gt;
+&lt;li&gt;支持单音频播放&lt;/li&gt;
+&lt;li&gt;支持 RTMP 直播首屏秒开&lt;/li&gt;
+&lt;li&gt;RTMP 直播累积延迟消除技术&lt;/li&gt;
+&lt;li&gt;支持 speex 解码&lt;/li&gt;
+&lt;li&gt;音画同步调整&lt;/li&gt;
+&lt;li&gt;一屏多画&lt;/li&gt;
+&lt;li&gt;点播支持&lt;/li&gt;
+&lt;li&gt;支持 seek 功能&lt;/li&gt;
+&lt;li&gt;视频缓冲设置，缓冲进度&lt;/li&gt;
+&lt;li&gt;支持预连接，后播放功能&lt;/li&gt;
+&lt;li&gt;集成亮度调整和音量调整&lt;/li&gt;
+&lt;li&gt;支持静音播放&lt;/li&gt;
+&lt;li&gt;支持播放器状态回调&lt;/li&gt;
+&lt;li&gt;支持流信息，播放器信息察看（Dashboard）&lt;/li&gt;
+&lt;li&gt;支持播放本地视频文件&lt;/li&gt;
+&lt;li&gt;集成播放质量监控 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/upyun/ios-live-sdk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;项目地址&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;安卓播放器-SDK&quot;&gt;&lt;a href=&quot;#安卓播放器-SDK&quot; class=&quot;headerlink&quot; title=&quot;安卓播放器 SDK&quot;&gt;&lt;/a&gt;安卓播放器 SDK&lt;/h3&gt;&lt;h4 id=&quot;系统说明-3&quot;&gt;&lt;a href=&quot;#系统说明-3&quot; class=&quot;headerlink&quot; title=&quot;系统说明&quot;&gt;&lt;/a&gt;系统说明&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Android 2.3 (API 9) 及其以上&lt;/li&gt;
+&lt;li&gt;支持 ARMv5，ARMv7，ARMv8 版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;功能说明-3&quot;&gt;&lt;a href=&quot;#功能说明-3&quot; class=&quot;headerlink&quot; title=&quot;功能说明&quot;&gt;&lt;/a&gt;功能说明&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;支持 RTMP 、HLS 和 HTTP-FLV 协议的直播流媒体播放&lt;/li&gt;
+&lt;li&gt;支持常见的音视频文件播放（MP4、M4A、FLV 等）&lt;/li&gt;
+&lt;li&gt;支持 MediaCodec 硬件解码&lt;/li&gt;
+&lt;li&gt;提供播放器核心类 PLMediaPlayer&lt;/li&gt;
+&lt;li&gt;提供 PLVideoView 控件&lt;/li&gt;
+&lt;li&gt;支持播放器音量设置，可实现静音功能&lt;/li&gt;
+&lt;li&gt;支持纯音频播放&lt;/li&gt;
+&lt;li&gt;支持直播累积延时优化&lt;/li&gt;
+&lt;li&gt;支持 ARM，ARMv7a，ARM64v8a，X86 主流芯片体系架构&lt;/li&gt;
+&lt;li&gt;可高度定制化的 MediaController&lt;/li&gt;
+&lt;li&gt;高可定制：可自定义尺寸，按钮，进度条，全屏，旋转等 UI 属性&lt;/li&gt;
+&lt;li&gt;单音频播放&lt;/li&gt;
+&lt;li&gt;RTMP 直播首屏秒开支持&lt;/li&gt;
+&lt;li&gt;RTMP 直播累积延迟消除技术&lt;/li&gt;
+&lt;li&gt;支持 speex 解码&lt;/li&gt;
+&lt;li&gt;音画同步调整&lt;/li&gt;
+&lt;li&gt;支持点播&lt;/li&gt;
+&lt;li&gt;支持 seek 功能&lt;/li&gt;
+&lt;li&gt;视频缓冲设置，缓冲进度&lt;/li&gt;
+&lt;li&gt;支持预连接，后播放功能&lt;/li&gt;
+&lt;li&gt;集成亮度调整和音量调整&lt;/li&gt;
+&lt;li&gt;支持静音播放&lt;/li&gt;
+&lt;li&gt;支持播放器状态回调&lt;/li&gt;
+&lt;li&gt;支持流信息，播放器信息察看（Dashboard）&lt;/li&gt;
+&lt;li&gt;支持播放本地视频文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/upyun/android-player-sdk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;项目地址&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;产品价格&quot;&gt;&lt;a href=&quot;#产品价格&quot; class=&quot;headerlink&quot; title=&quot;产品价格&quot;&gt;&lt;/a&gt;产品价格&lt;/h3&gt;&lt;p&gt;详见&lt;a href=&quot;https://www.upyun.com/price.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;合作案例&quot;&gt;&lt;a href=&quot;#合作案例&quot; class=&quot;headerlink&quot; title=&quot;合作案例&quot;&gt;&lt;/a&gt;合作案例&lt;/h3&gt;&lt;p&gt;无&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;2-七牛云直播&quot;&gt;&lt;a href=&quot;#2-七牛云直播&quot; class=&quot;headerlink&quot; title=&quot;2.七牛云直播&quot;&gt;&lt;/a&gt;2.七牛云直播&lt;/h2&gt;&lt;h3 id=&quot;iOS-推流端-SDK&quot;&gt;&lt;a href=&quot;#iOS-推流端-SDK&quot; class=&quot;headerlink&quot; title=&quot;iOS 推流端 SDK&quot;&gt;&lt;/a&gt;iOS 推流端 SDK&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;PLMediaStreamingKit 是一个适用于 iOS 的 RTMP 直播推流 SDK，可高度定制化和二次开发。SDK 提供 RTMP 推流的全套解决方案，包括采集，处理（美颜，水印等），编码，封包，发送。特色是支持 H.264 硬编码，以及支持 AAC-LC 硬编码的同时，还根据移动网络环境的多变性，实现了一套可供开发者灵活选择的编码参数集合。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;特性&quot;&gt;&lt;a href=&quot;#特性&quot; class=&quot;headerlink&quot; title=&quot;特性&quot;&gt;&lt;/a&gt;特性&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;硬件编码&lt;/li&gt;
+&lt;li&gt;支持美颜，以及调节磨皮、美白、红润效果&lt;/li&gt;
+&lt;li&gt;添加水印&lt;/li&gt;
+&lt;li&gt;多码率可选&lt;/li&gt;
+&lt;li&gt;H.264 视频编码&lt;/li&gt;
+&lt;li&gt;AAC 音频编码&lt;/li&gt;
+&lt;li&gt;支持多分辨率编码&lt;/li&gt;
+&lt;li&gt;支持 HeaderDoc 文档&lt;/li&gt;
+&lt;li&gt;内置生成安全的 RTMP 推流地址&lt;/li&gt;
+&lt;li&gt;支持 ARM64&lt;/li&gt;
+&lt;li&gt;支持 RTMP 协议直播推流&lt;/li&gt;
+&lt;li&gt;音视频配置分离&lt;/li&gt;
+&lt;li&gt;推流时可变码率&lt;/li&gt;
+&lt;li&gt;提供发送 buffer&lt;/li&gt;
+&lt;li&gt;后台推流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;iOS-播放端-SDK&quot;&gt;&lt;a href=&quot;#iOS-播放端-SDK&quot; class=&quot;headerlink&quot; title=&quot;iOS 播放端 SDK&quot;&gt;&lt;/a&gt;iOS 播放端 SDK&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;PLPlayerKit 是一个适用于 iOS 的 HLS 及 RTMP 播放 SDK，可高度定制化和二次开发。特色是支持 RTMP 协议下 H.264 编码 FLV 封装的多媒体流的播放，针对与用户体验密切相关的首开缓冲时间进行了优化，另外还根据移动网络的多变性以及直播场景对播放实时性的需求提供了跳帧机制。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;特性-1&quot;&gt;&lt;a href=&quot;#特性-1&quot; class=&quot;headerlink&quot; title=&quot;特性&quot;&gt;&lt;/a&gt;特性&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;高可定制&lt;/li&gt;
+&lt;li&gt;直播累积延迟消除技术&lt;/li&gt;
+&lt;li&gt;支持首屏秒开&lt;/li&gt;
+&lt;li&gt;支持 RTMP 直播流播放&lt;/li&gt;
+&lt;li&gt;支持 HTTP-FLV 直播流播放&lt;/li&gt;
+&lt;li&gt;支持 HLS 播放&lt;/li&gt;
+&lt;li&gt;支持 HTTPS 播放&lt;/li&gt;
+&lt;li&gt;支持多种画面预览模式&lt;/li&gt;
+&lt;li&gt;支持画面旋转与镜像&lt;/li&gt;
+&lt;li&gt;支持播放器音量设置&lt;/li&gt;
+&lt;li&gt;支持纯音频播放&lt;/li&gt;
+&lt;li&gt;支持后台播放&lt;/li&gt;
+&lt;li&gt;支持使用 IP 地址的 URL&lt;/li&gt;
+&lt;li&gt;支持软硬解自动切换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;费用&quot;&gt;&lt;a href=&quot;#费用&quot; class=&quot;headerlink&quot; title=&quot;费用&quot;&gt;&lt;/a&gt;费用&lt;/h3&gt;&lt;p&gt;服务价格等详细信息您可以联系：sales@qiniu.com，或者直接登录您的七牛账号选择申请开通直播服务，会有专人与您联系。&lt;/p&gt;
+&lt;h3 id=&quot;合作案例-1&quot;&gt;&lt;a href=&quot;#合作案例-1&quot; class=&quot;headerlink&quot; title=&quot;合作案例&quot;&gt;&lt;/a&gt;合作案例&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;PandaTV &lt;/li&gt;
+&lt;li&gt;懂球帝&lt;/li&gt;
+&lt;li&gt;美拍 &lt;/li&gt;
+&lt;li&gt;大神TV&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;3-阿里云直播&quot;&gt;&lt;a href=&quot;#3-阿里云直播&quot; class=&quot;headerlink&quot; title=&quot;3.阿里云直播&quot;&gt;&lt;/a&gt;3.阿里云直播&lt;/h2&gt;&lt;h3 id=&quot;iOS-播放端-SDK-1&quot;&gt;&lt;a href=&quot;#iOS-播放端-SDK-1&quot; class=&quot;headerlink&quot; title=&quot;iOS 播放端 SDK&quot;&gt;&lt;/a&gt;iOS 播放端 SDK&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;AlivcMediaPlayer是一款基于IOS平台的多媒体视频播放SDK。它为IOS的开发者提供了简单易用的接口，帮助开发者方便快捷、低门槛的实现多媒体播放功能的开发。它支持HLS、RTMP、HTTP FLV、MP4等多种流媒体播放格式，视频支持h264格式、音频支持AAC格式。另外，针对直播用户的需求，还增加了首帧秒开的功能；同时为了减少直播的延迟，增加了弱网条件下播放的跳帧功能。&lt;br&gt;版本和新增功能&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;特性-2&quot;&gt;&lt;a href=&quot;#特性-2&quot; class=&quot;headerlink&quot; title=&quot;特性&quot;&gt;&lt;/a&gt;特性&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;支持HLS、RTMP、HTTP FLV、mp4等流格式&lt;/li&gt;
+&lt;li&gt;支持h264+aac&lt;/li&gt;
+&lt;li&gt;支持armv7、arm64    v2.0&lt;/li&gt;
+&lt;li&gt;支持直播首帧秒开 &lt;/li&gt;
+&lt;li&gt;支持弱网条件下的丢帧策略&lt;/li&gt;
+&lt;li&gt;支持多实例、支持模拟器调试，支持https &lt;/li&gt;
+&lt;li&gt;支持带切边的视频渲染模式&lt;/li&gt;
+&lt;li&gt;支持苹果2017年1月1号后强制使用HTTPS的要求    v2.2.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;iOS-推流端-SDK-1&quot;&gt;&lt;a href=&quot;#iOS-推流端-SDK-1&quot; class=&quot;headerlink&quot; title=&quot;iOS 推流端 SDK&quot;&gt;&lt;/a&gt;iOS 推流端 SDK&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;iOS推流SDK是在iOS平台上使用的软件开发工具包(Soft Development Kit)，为iOS开发者提供简单易用的接口，帮助开发者实现iOS平台上的推流应用开发。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;功能说明-4&quot;&gt;&lt;a href=&quot;#功能说明-4&quot; class=&quot;headerlink&quot; title=&quot;功能说明&quot;&gt;&lt;/a&gt;功能说明&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;方便快捷、低门槛实现媒体推流功能。用户无须关心内部实现细节，只需要自定义界面既可以实现专业级的推流应用。 &lt;/li&gt;
+&lt;li&gt;推流支持格式：rtmp&lt;/li&gt;
+&lt;li&gt;编码目前为硬编&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;费用-1&quot;&gt;&lt;a href=&quot;#费用-1&quot; class=&quot;headerlink&quot; title=&quot;费用&quot;&gt;&lt;/a&gt;费用&lt;/h3&gt;&lt;h4 id=&quot;直播峰值带宽计费说明：&quot;&gt;&lt;a href=&quot;#直播峰值带宽计费说明：&quot; class=&quot;headerlink&quot; title=&quot;直播峰值带宽计费说明：&quot;&gt;&lt;/a&gt;直播峰值带宽计费说明：&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;直播峰值带宽阶梯&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;价格（元/Mbps/日）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0-500Mbps（含）&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;1.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;500Mbps-5Gbps（含）&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.90&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;大于5Gbps&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.76&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;费用 = [500 x 1.00 + (5000-500) x 0.90 + (A-5000) x 0.76]&lt;/p&gt;
+&lt;h4 id=&quot;直播转码计费说明：&quot;&gt;&lt;a href=&quot;#直播转码计费说明：&quot; class=&quot;headerlink&quot; title=&quot;直播转码计费说明：&quot;&gt;&lt;/a&gt;直播转码计费说明：&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;直播转码规格（H.264）&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;价格（元/分钟）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;480P（含）及以下&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.0675&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;480P-720P（含）&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.133&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;720P-1080P（含）&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;0.266&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;详情&lt;a href=&quot;https://cn.aliyun.com/price/product#/live/detail&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;合作案例-2&quot;&gt;&lt;a href=&quot;#合作案例-2&quot; class=&quot;headerlink&quot; title=&quot;合作案例&quot;&gt;&lt;/a&gt;合作案例&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;芒果TV &lt;/li&gt;
+&lt;li&gt;映客&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;4-腾讯云直播&quot;&gt;&lt;a href=&quot;#4-腾讯云直播&quot; class=&quot;headerlink&quot; title=&quot;4.腾讯云直播&quot;&gt;&lt;/a&gt;4.腾讯云直播&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;移动直播（Mobile Live Video Broadcasting）是腾讯云直播服务(LVB) 在手机直播方向的延伸，相比于主要面向云对接的直播(LVB) 服务，移动直播（MLVB）即提供了基于 RTMP SDK 的“快速集成方案”，也提供了集直播(LVB)、点播(VOD)、云通信(IM) 和 对象存储(COS) 等多云端服务与一体的“一体化解决方案”，且不收取除流量之外的额外费用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;iOS-推流端-SDK-2&quot;&gt;&lt;a href=&quot;#iOS-推流端-SDK-2&quot; class=&quot;headerlink&quot; title=&quot;iOS 推流端 SDK&quot;&gt;&lt;/a&gt;iOS 推流端 SDK&lt;/h3&gt;&lt;h4 id=&quot;基础知识&quot;&gt;&lt;a href=&quot;#基础知识&quot; class=&quot;headerlink&quot; title=&quot;基础知识&quot;&gt;&lt;/a&gt;基础知识&lt;/h4&gt;&lt;p&gt;推流（也叫发布）是指将音视频数据采集编码之后，推送到您指定的视频云平台上，这里涉及大量的音视频基础知识，而且需要长时间的打磨和优化才能达到符合预期的效果。&lt;/p&gt;
+&lt;p&gt;腾讯云 RTMP SDK 主要帮您解决在智能手机上的推流问题，它的接口非常简单易用，只需要一个推流URL就能驱动：&lt;br&gt;&lt;img src=&quot;http://qzonestyle.gtimg.cn/qzone/vas/opensns/res/img/pusher_demo_introduction_2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;特别说明&quot;&gt;&lt;a href=&quot;#特别说明&quot; class=&quot;headerlink&quot; title=&quot;特别说明&quot;&gt;&lt;/a&gt;特别说明&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;不限制云服务商&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;RTMP SDK 不会限制您向非腾讯云地址推流，但如何才能推流到非腾讯云地址呢？&lt;/p&gt;
+&lt;p&gt;为解决国内 DNS 映射不准确的问题，SDK 1.5.2 版本开始引入就近选路，即通过腾讯云就近选路服务器选择离主播最优的推流线路，这一改进对推流质量提升很大。但相应的，选路结果中只有腾讯云的服务器地址。而且，由于我们大量的客户采用专属推流域名，SDK 无法简单通过 URL 文本分析就辨别出是不是推到腾讯云。&lt;/p&gt;
+&lt;p&gt;所以，如果您需要推流到其他云商的推流地址，可以通过客服联系我们，我们可以为您的账号关闭就近选路。该项配置通过云控实现，故您不需要发布新的客户端版本来解决这个问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;x86 模拟器调试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于RTMP SDK大量使用iOS系统的高级特性，我们不能保证所有特性在x86环境的模拟器下都能正常运行，而且音视频是性能敏感的功能，模拟器下的表现跟真机会有很大的不同。所以，如果条件允许，推荐您尽量使用真机调试。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;iOS-播放端-SDK-2&quot;&gt;&lt;a href=&quot;#iOS-播放端-SDK-2&quot; class=&quot;headerlink&quot; title=&quot;iOS 播放端 SDK&quot;&gt;&lt;/a&gt;iOS 播放端 SDK&lt;/h3&gt;&lt;h4 id=&quot;基础知识-1&quot;&gt;&lt;a href=&quot;#基础知识-1&quot; class=&quot;headerlink&quot; title=&quot;基础知识&quot;&gt;&lt;/a&gt;基础知识&lt;/h4&gt;&lt;p&gt;RTMP SDK 包含推流和播放两方面功能，推流为主播端功能，播放（分为直播和点播）为观众端功能。对接之前，我们先列表如下一些基本知识会大有裨益：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直播和点播&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;直播 的视频源是实时生成的，有人推流直播才有意义。所以，一旦主播停播，直播URL也就进失效了，而且由于是实时直播，所以播放器在播直播视频的时候是没有进度条的。&lt;/p&gt;
+&lt;p&gt;点播 的视频源是云端的一个文件，文件只要没有被提供方删除，就随时可以播放， 而且由于整个视频都在服务器上，所以播放的时候是有进度条的哦。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;协议的支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通常使用的直播协议如下，APP端推荐使用 FLV 协议的直播地址(以“http”打头，以“.flv”结尾)：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mc.qcloudimg.com/static/img/94c348ff7f854b481cdab7f5ba793921/image.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;通常使用的点播协议如下，现在比较流行的是HLS(以“http”打头，以“.m3u8”结尾)的点播地址：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mc.qcloudimg.com/static/img/4b42a00bb7ce2f58f362f35397734177/image.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;特别说明-1&quot;&gt;&lt;a href=&quot;#特别说明-1&quot; class=&quot;headerlink&quot; title=&quot;特别说明&quot;&gt;&lt;/a&gt;特别说明&lt;/h4&gt;&lt;p&gt;腾讯云 RTMP SDK 不对 播放地址的来源做限制，即您可以用它来播放腾讯云或非腾讯云的播放地址。但 RTMP SDK 中的播放器只支持 FLV 、RTMP 和 HLS（m3u8）三种格式的直播地址，以及 FLV 、MP4 和 HLS（m3u8）三种格式的点播地址。&lt;/p&gt;
+&lt;h4 id=&quot;价格总览&quot;&gt;&lt;a href=&quot;#价格总览&quot; class=&quot;headerlink&quot; title=&quot;价格总览&quot;&gt;&lt;/a&gt;价格总览&lt;/h4&gt;&lt;p&gt;移动直播本身不是一项独立的云服务，所以费用全部源自其依赖的如下几项基础云服务，没有自身的额外费用：&lt;/p&gt;
+&lt;h5 id=&quot;直播云服务（LVB）&quot;&gt;&lt;a href=&quot;#直播云服务（LVB）&quot; class=&quot;headerlink&quot; title=&quot;直播云服务（LVB）&quot;&gt;&lt;/a&gt;直播云服务（LVB）&lt;/h5&gt;&lt;p&gt;移动直播本身就是围绕直播的手机直播解决方案，所以直播服务的开通是前提：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;套餐列表&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;直播流量（下行）&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;价格（元）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;19元套餐包&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;10G&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;免费&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;49元套餐包&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;50G&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;49&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;95元套餐包&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;100G&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;95&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;470元套餐包&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;500G&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;470&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;939元套餐包&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;1T&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;939&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;注：套餐有限期1年，超出套餐部分按照1.1元／G计算，月结周期内续订套餐可抵消超出流量。 详情&lt;a href=&quot;https://www.qcloud.com/document/product/454/7880&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网站&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;案例：&quot;&gt;&lt;a href=&quot;#案例：&quot; class=&quot;headerlink&quot; title=&quot;案例：&quot;&gt;&lt;/a&gt;案例：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;企鹅电竞&lt;/li&gt;
+&lt;li&gt;东方财富&lt;/li&gt;
+&lt;li&gt;美团 &lt;/li&gt;
+&lt;li&gt;唯品会&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;5-金山云直播&quot;&gt;&lt;a href=&quot;#5-金山云直播&quot; class=&quot;headerlink&quot; title=&quot;5.金山云直播&quot;&gt;&lt;/a&gt;5.金山云直播&lt;/h2&gt;&lt;h4 id=&quot;产品功能&quot;&gt;&lt;a href=&quot;#产品功能&quot; class=&quot;headerlink&quot; title=&quot;产品功能&quot;&gt;&lt;/a&gt;产品功能&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;输入：RTMP；&lt;/li&gt;
+&lt;li&gt;输出：RTMP，HDL( HTTP+FLV )，HLS；支持多屏播放，在线实时转码&lt;/li&gt;
+&lt;li&gt;多IP集群，主热备方案， 7X24小时无故障服务; 可根据用户业务自动扩展&lt;/li&gt;
+&lt;li&gt;智能CDN调度，直播延迟1-3;SDeviceAPI,多平台客户端SDK接入&lt;/li&gt;
+&lt;li&gt;防盗链（签名，过期时间），DRM加密，确保流媒体数据安全；99.9% SLA保证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;播放器SDK-IOS&quot;&gt;&lt;a href=&quot;#播放器SDK-IOS&quot; class=&quot;headerlink&quot; title=&quot;播放器SDK IOS&quot;&gt;&lt;/a&gt;播放器SDK IOS&lt;/h3&gt;&lt;h4 id=&quot;产品概述&quot;&gt;&lt;a href=&quot;#产品概述&quot; class=&quot;headerlink&quot; title=&quot;产品概述&quot;&gt;&lt;/a&gt;产品概述&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;金山云播放内核涵盖Android、iOS、Flash和浏览器插件四个平台，基于FFmpeg自主研发音视频媒体播放内核，作为一款全平台兼容的软件播放方案，金山云播放内核提供了跨终端平台的播放器SDK，以及开放的音视频播放、控制接口和完整的开源调用示例，不仅极大降低开发门槛，同时支持客户快速在多个平台发布产品。 KSY MediaPlayer iOS SDK是金山云播放内核官方推出的iOS平台上使用的软件开发工具包(SDK)，为iOS开发者提供简单、快捷的接口，帮助开发者实现iOS平台上的多媒体播放应用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;KSYMediaPlayer-SDK-功能说明&quot;&gt;&lt;a href=&quot;#KSYMediaPlayer-SDK-功能说明&quot; class=&quot;headerlink&quot; title=&quot;KSYMediaPlayer SDK 功能说明&quot;&gt;&lt;/a&gt;KSYMediaPlayer SDK 功能说明&lt;/h4&gt;&lt;p&gt;与系统播放器MPMoviePlayerController接口一致，可以无缝快速切换至KSYMediaPlayer；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地全媒体格式支持, 并对主流的媒体格式(mp4, avi, wmv, flv, mkv, mov, rmvb 等 )进行优化；&lt;/li&gt;
+&lt;li&gt;支持广泛的流式视频格式, HLS, RTMP, HTTP Rseudo-Streaming 等；&lt;/li&gt;
+&lt;li&gt;低延时直播体验，配合金山云推流sdk，可以达到全程直播稳定的4秒内延时；&lt;/li&gt;
+&lt;li&gt;实现快速满屏播放，为用户带来更快捷优质的播放体验；&lt;/li&gt;
+&lt;li&gt;版本适配支持iOS 7.0以上版本；&lt;/li&gt;
+&lt;li&gt;业内一流的H.265解码；&lt;/li&gt;
+&lt;li&gt;小于2M大小的超轻量级直播sdk；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;运行环境&quot;&gt;&lt;a href=&quot;#运行环境&quot; class=&quot;headerlink&quot; title=&quot;运行环境&quot;&gt;&lt;/a&gt;运行环境&lt;/h4&gt;&lt;p&gt;KSY MediaPlayer iOS SDK可运行于 iPhone/iPod Touch/iPad，支持 iOS 7.0 及以上版本; 支持 armv7/arm64以及虚拟机运行。&lt;/p&gt;
+&lt;h3 id=&quot;推流工具-SDK-IOS&quot;&gt;&lt;a href=&quot;#推流工具-SDK-IOS&quot; class=&quot;headerlink&quot; title=&quot;推流工具 SDK IOS&quot;&gt;&lt;/a&gt;推流工具 SDK IOS&lt;/h3&gt;&lt;h4 id=&quot;KSY-Live-iOS-SDK-概述&quot;&gt;&lt;a href=&quot;#KSY-Live-iOS-SDK-概述&quot; class=&quot;headerlink&quot; title=&quot;KSY Live iOS SDK 概述&quot;&gt;&lt;/a&gt;KSY Live iOS SDK 概述&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;KSY Live iOS SDK是金山云推出的 iOS 平台上使用的软件开发工具包(SDK), 其中Stremer负责采集和推流。MediaPlayer负责视频播放。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;主要功能点&quot;&gt;&lt;a href=&quot;#主要功能点&quot; class=&quot;headerlink&quot; title=&quot;主要功能点&quot;&gt;&lt;/a&gt;主要功能点&lt;/h4&gt;&lt;h5 id=&quot;Stremer推流特点&quot;&gt;&lt;a href=&quot;#Stremer推流特点&quot; class=&quot;headerlink&quot; title=&quot;Stremer推流特点&quot;&gt;&lt;/a&gt;Stremer推流特点&lt;/h5&gt;&lt;p&gt;音频编码：AAC&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;视频编码：H.264 &lt;/li&gt;
+&lt;li&gt;推流协议：RTMP&lt;/li&gt;
+&lt;li&gt;视频分辨率：1280x720, 960x540,640x480,640x360,352x288&lt;/li&gt;
+&lt;li&gt;屏幕朝向： 横屏, 竖屏&lt;/li&gt;
+&lt;li&gt;iOS摄像头：前, 后置摄像头（可动态切换）&lt;/li&gt;
+&lt;li&gt;音视频目标码率：可设&lt;/li&gt;
+&lt;li&gt;根据网络带宽自适应调整视频的码率&lt;/li&gt;
+&lt;li&gt;闪光灯：开/关&lt;/li&gt;
+&lt;li&gt;Apple Doc 文档支持&lt;/li&gt;
+&lt;li&gt;可使用系统原生接口对当前采集设备进行操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;MediaPlayer播放特点&quot;&gt;&lt;a href=&quot;#MediaPlayer播放特点&quot; class=&quot;headerlink&quot; title=&quot;MediaPlayer播放特点&quot;&gt;&lt;/a&gt;MediaPlayer播放特点&lt;/h5&gt;&lt;p&gt;与系统播放器MPMoviePlayerController接口一致，可以无缝快速切换至KSYMediaPlayer；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地全媒体格式支持, 并对主流的媒体格式(mp4, avi, wmv, flv, mkv, mov, rmvb 等 )进行优化；&lt;/li&gt;
+&lt;li&gt;支持广泛的流式视频格式, HLS, RTMP, HTTP Rseudo-Streaming 等；&lt;/li&gt;
+&lt;li&gt;低延时直播体验，配合金山云推流sdk，可以达到全程直播稳定的4秒内延时；&lt;/li&gt;
+&lt;li&gt;实现快速满屏播放，为用户带来更快捷优质的播放体验；&lt;/li&gt;
+&lt;li&gt;版本适配支持iOS 7.0以上版本；&lt;/li&gt;
+&lt;li&gt;业内一流的H.265解码；&lt;/li&gt;
+&lt;li&gt;小于2M大小的超轻量级直播sdk；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;合作案例-3&quot;&gt;&lt;a href=&quot;#合作案例-3&quot; class=&quot;headerlink&quot; title=&quot;合作案例&quot;&gt;&lt;/a&gt;合作案例&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;今日头条 &lt;/li&gt;
+&lt;li&gt;猎豹移动 &lt;/li&gt;
+&lt;li&gt;小蚁 &lt;/li&gt;
+&lt;li&gt;Nice好赞&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;直播云解决方案整理&quot;&gt;&lt;a href=&quot;#直播云解决方案整理&quot; class=&quot;headerlink&quot; title=&quot;直播云解决方案整理&quot;&gt;&lt;/a&gt;直播云解决方案整理&lt;/h1&gt;&lt;h2 id=&quot;TOC&quot;&gt;&lt;a href=&quot;#TOC&quot; class=&quot;headerlink
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>iOS面试题（备份）</title>
@@ -1890,115 +2262,6 @@ pod update --no-repo-update
       &lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/hexoThemes.png&quot; alt=&quot;Hexo主题&quot;&gt;&lt;/p&gt;
 &lt;p&gt;上篇讲到Hexo的安装，本篇继续，先来说说Hexo安装后的文件结构与功能。&lt;/p&gt;
 &lt;h2 id=&quot;HE
-    
-    </summary>
-    
-    
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
-      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用GithubPages-Hexo搭建免费博客_Mac（一）</title>
-    <link href="http://yoursite.com/2016/02/25/%E4%BD%BF%E7%94%A8GithubPages-Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>http://yoursite.com/2016/02/25/使用GithubPages-Hexo搭建免费博客（一）/</id>
-    <published>2016-02-25T07:53:51.000Z</published>
-    <updated>2016-03-11T07:27:21.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/A5FBB7EA-1FC0-45DD-ACC5-FB49737D9237.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;关于MarkDown&quot;&gt;&lt;a href=&quot;#关于MarkDown&quot; class=&quot;headerlink&quot; title=&quot;关于MarkDown&quot;&gt;&lt;/a&gt;关于MarkDown&lt;/h3&gt;&lt;p&gt;Markdown 是一种用来写作的轻量级「标记语言」，它用简洁的语法代替排版，而不像一般我们用的字处理软件 Word 或 Pages 有大量的排版、字体设置。它使我们专心于码字，用「标记」语法，来代替常见的排版格式。&lt;/p&gt;
-&lt;p&gt;其详细的介绍，可以看下&lt;a href=&quot;http://wowubuntu.com/markdown/#list&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown 语法说明 (简体中文版)&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h5&gt;&lt;ul&gt;
-&lt;li&gt;专注你的文字内容，排版样式也只是需要键盘即可搞定&lt;/li&gt;
-&lt;li&gt;纯文本，兼容所有的文本编辑器与文字处理软件&lt;/li&gt;
-&lt;li&gt;可读，直观，简介，学习成本低&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;#####&lt;a href=&quot;https://www.zybuluo.com/mdeditor&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown使用示例&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&quot;书写工具&quot;&gt;&lt;a href=&quot;#书写工具&quot; class=&quot;headerlink&quot; title=&quot;书写工具&quot;&gt;&lt;/a&gt;书写工具&lt;/h5&gt;&lt;p&gt;Mac下有两款优秀的 Markdown 编辑器，&lt;a href=&quot;http://25.io/mou/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mou&lt;/a&gt;和&lt;a href=&quot;http://macdown.uranusjr.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MacDown&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://25.io/mou/Mou_128.png&quot; alt=&quot;Mou icon&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://macdown.uranusjr.com/static/base/img/logo-160.png&quot; alt=&quot;MacDown logo&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;关于其优缺点，可以移步这里-至于选择哪款，看个人喜好。&quot;&gt;&lt;a href=&quot;#关于其优缺点，可以移步这里-至于选择哪款，看个人喜好。&quot; class=&quot;headerlink&quot; title=&quot;关于其优缺点，可以移步这里,至于选择哪款，看个人喜好。&quot;&gt;&lt;/a&gt;关于其优缺点，可以移步&lt;a href=&quot;http://www.jianshu.com/p/6c157af09e84&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;,至于选择哪款，看个人喜好。&lt;/h2&gt;&lt;h3 id=&quot;关于Hexo&quot;&gt;&lt;a href=&quot;#关于Hexo&quot; class=&quot;headerlink&quot; title=&quot;关于Hexo&quot;&gt;&lt;/a&gt;关于Hexo&lt;/h3&gt;&lt;p&gt;Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;br&gt;&lt;a href=&quot;https://hexo.io/zh-cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo官网&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;关于GithubPages&quot;&gt;&lt;a href=&quot;#关于GithubPages&quot; class=&quot;headerlink&quot; title=&quot;关于GithubPages&quot;&gt;&lt;/a&gt;关于GithubPages&lt;/h3&gt;&lt;p&gt;在Github里面，每一个项目都拥有它的一个主页，列出项目的源文件，但是对于新手来说，看到那么多的源代码，只会让人感到头晕脑胀，无从下手，他更希望的是，该项目有一个简明易懂的页面，告诉他每一步要怎么去做。&lt;/p&gt;
-&lt;p&gt;因此，Github就设计了Github Pages这个功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，Github Pages可以被认为是用户编写的、托管在github上的静态网页。&lt;/p&gt;
-&lt;p&gt;通过上面的介绍，大家对Hexo和Github已经有了大概的了解。&lt;br&gt;我们的方式就是，利用Markdown进行博客的编写，通过Hexo这个框架解析生成靓丽的静态页面，然后部署到Github上供大家浏览。&lt;/p&gt;
-&lt;h2 id=&quot;环境搭建&quot;&gt;&lt;a href=&quot;#环境搭建&quot; class=&quot;headerlink&quot; title=&quot;环境搭建&quot;&gt;&lt;/a&gt;环境搭建&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;硬件&lt;br&gt;此版本为Mac版👽&lt;/li&gt;
-&lt;li&gt;软件&lt;ol&gt;
-&lt;li&gt;node.js&lt;/li&gt;
-&lt;li&gt;npm&lt;/li&gt;
-&lt;li&gt;hexo&lt;/li&gt;
-&lt;li&gt;github账号&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;安装node-js与npm&quot;&gt;&lt;a href=&quot;#安装node-js与npm&quot; class=&quot;headerlink&quot; title=&quot;安装node.js与npm&quot;&gt;&lt;/a&gt;安装node.js与npm&lt;/h3&gt;&lt;p&gt;下载node.js 有多种方法：使用 &lt;a href=&quot;http://brew.sh/index_zh-cn.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Homebrew&lt;/a&gt; 下载 或者直接下载安装包。 建议 node.js 直接下载 安装包，因为使用 brew 有可能失败，会被墙掉。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/download/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;node.js下载地址&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-02-26%20%E4%B8%8B%E5%8D%883.37.18.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;node.js 下载完成后 安装到电脑上就可以了。安装成功后显示出来安装路径，可以看到 安装node.js 的时候 npm 也安装了。&lt;/p&gt;
-&lt;p&gt;检测安装是否成功 终端输入 -v , 成功则显示版本号&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ node -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;v4.3.1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.14.12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;文档里给出了详细的安装方法，只需要按其一步步来就好&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;-v表示全局安装，所以需要使用管理员身份&lt;/p&gt;
-&lt;p&gt;安装成功，使用hexo 命令的时候，可能会出现以下错误&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; [Error: Cannot find module &amp;apos;./build/Release/DTraceProviderBindings&amp;apos;] code: &amp;apos;MODULE_NOT_FOUND&amp;apos; &amp;#125;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; [Error: Cannot find module &amp;apos;./build/default/DTraceProviderBindings&amp;apos;] code: &amp;apos;MODULE_NOT_FOUND&amp;apos; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; [Error: Cannot find module &amp;apos;./build/Debug/DTraceProviderBindings&amp;apos;] code: &amp;apos;MODULE_NOT_FOUND&amp;apos; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;据说是由于GFW的问题，导致安装Hexo的时候少装了几个库。&lt;/p&gt;
-&lt;p&gt;查询出的解决方法为，使用以下命令行重新安装&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo –no-optional&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;然而于我而言，并没有什么卵用。这个错误也没有造成任何影响，所以忽略，Go on。&lt;br&gt;完成后，验证下是否安装成功&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo -v&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;Hexo的使用&quot;&gt;&lt;a href=&quot;#Hexo的使用&quot; class=&quot;headerlink&quot; title=&quot;Hexo的使用&quot;&gt;&lt;/a&gt;Hexo的使用&lt;/h4&gt;&lt;h5 id=&quot;1-创建存放博客的文件夹&quot;&gt;&lt;a href=&quot;#1-创建存放博客的文件夹&quot; class=&quot;headerlink&quot; title=&quot;1. 创建存放博客的文件夹&quot;&gt;&lt;/a&gt;1. 创建存放博客的文件夹&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir myblog&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h5 id=&quot;2-执行以下命令，Hexo会在目标文件夹建立博客所需要的文件&quot;&gt;&lt;a href=&quot;#2-执行以下命令，Hexo会在目标文件夹建立博客所需要的文件&quot; class=&quot;headerlink&quot; title=&quot;2. 执行以下命令，Hexo会在目标文件夹建立博客所需要的文件&quot;&gt;&lt;/a&gt;2. 执行以下命令，Hexo会在目标文件夹建立博客所需要的文件&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 输出以下信息&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;INFO  Cloning hexo-starter to ~/Documents/mytest&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Cloning into &amp;apos;/Users/Quncao/Documents/mytest&amp;apos;...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;成功之后文件夹的样子&lt;br&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-02-26%20%E4%B8%8B%E5%8D%884.13.00.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;_config.yml : Hexo和站点的配置文件，里面可以设置博客的名字、标题、作者、链接格式等相关项&lt;/li&gt;
-&lt;li&gt;scaffolds : 脚手架，用于存放我们创建文章时的模版&lt;/li&gt;
-&lt;li&gt;source : 用于存放我们用markdown编写的博文原文件、其他静态资源文件&lt;/li&gt;
-&lt;li&gt;themes : 用于存放主题，里面有我们博客的默认主题landscape&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id=&quot;3-执行以下命令，进行依赖包的安装&quot;&gt;&lt;a href=&quot;#3-执行以下命令，进行依赖包的安装&quot; class=&quot;headerlink&quot; title=&quot;3. 执行以下命令，进行依赖包的安装&quot;&gt;&lt;/a&gt;3. 执行以下命令，进行依赖包的安装&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;node_modules: 关联保存了将会使用到的hexo依赖包&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id=&quot;4-安装相关插件&quot;&gt;&lt;a href=&quot;#4-安装相关插件&quot; class=&quot;headerlink&quot; title=&quot;4. 安装相关插件&quot;&gt;&lt;/a&gt;4. 安装相关插件&lt;/h5&gt;&lt;p&gt;插件会安装至node_modules文件夹下，如果已经安装好的可以直接忽略&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;安装便于自动部署到Github上的插件&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-deployer-git --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装atom生成插件，便于感兴趣的小伙伴们订阅&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-feed --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装博客首页生成插件&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-index --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装归档生成插件&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-archive --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装tag生成插件&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-tag --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装category生成插件&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-category --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装Sitemap文件生成插件&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-sitemap --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装百度Sitemap文件生成插件，因为普通的Sitemap格式不符合百度的要求&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-baidu-sitemap --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;未完待续，继续请移步&lt;a href=&quot;http://icehulu.com/2016/02/26/%E4%BD%BF%E7%94%A8GithubPages-Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/A5FBB7EA-1FC0-45DD-ACC5-FB49737D9237.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;关于MarkDown&quot;&gt;&lt;a href=&quot;#关于Mar
     
     </summary>
     

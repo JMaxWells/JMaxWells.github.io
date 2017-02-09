@@ -1,0 +1,1112 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MaxWellPro's Hexo Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="直播云解决方案整理[TOC]1.又拍云直播
+又拍直播云（UPLive），基于又拍云内容分发网络为直播应用提供超低延迟、高码率、高并发的从推流端到播放端的一站式解决方案，支持 RTMP、HTTP-FLV 和 HLS 输出等基本功能，包括录制、转码等增值服务。
+
+IOS 推流 SDK系统说明
+支持 iOS 8 及以上系统版本 
+支持 ARMv7，ARM64，x86_64 架构
+
+功能说明
+采集模块源码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="直播解决方案整理">
+<meta property="og:url" content="http://yoursite.com/2017/02/09/直播解决方案整理/index.html">
+<meta property="og:site_name" content="MaxWellPro's Hexo Blog">
+<meta property="og:description" content="直播云解决方案整理[TOC]1.又拍云直播
+又拍直播云（UPLive），基于又拍云内容分发网络为直播应用提供超低延迟、高码率、高并发的从推流端到播放端的一站式解决方案，支持 RTMP、HTTP-FLV 和 HLS 输出等基本功能，包括录制、转码等增值服务。
+
+IOS 推流 SDK系统说明
+支持 iOS 8 及以上系统版本 
+支持 ARMv7，ARM64，x86_64 架构
+
+功能说明
+采集模块源码">
+<meta property="og:image" content="http://qzonestyle.gtimg.cn/qzone/vas/opensns/res/img/pusher_demo_introduction_2.jpg">
+<meta property="og:image" content="https://mc.qcloudimg.com/static/img/94c348ff7f854b481cdab7f5ba793921/image.jpg">
+<meta property="og:image" content="https://mc.qcloudimg.com/static/img/4b42a00bb7ce2f58f362f35397734177/image.jpg">
+<meta property="og:updated_time" content="2017-02-09T03:13:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="直播解决方案整理">
+<meta name="twitter:description" content="直播云解决方案整理[TOC]1.又拍云直播
+又拍直播云（UPLive），基于又拍云内容分发网络为直播应用提供超低延迟、高码率、高并发的从推流端到播放端的一站式解决方案，支持 RTMP、HTTP-FLV 和 HLS 输出等基本功能，包括录制、转码等增值服务。
+
+IOS 推流 SDK系统说明
+支持 iOS 8 及以上系统版本 
+支持 ARMv7，ARM64，x86_64 架构
+
+功能说明
+采集模块源码">
+<meta name="twitter:image" content="http://qzonestyle.gtimg.cn/qzone/vas/opensns/res/img/pusher_demo_introduction_2.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6260345940964541000,
+      author: 'MaxWellPro'
+    }
+  };
+</script>
+
+  <title> 直播解决方案整理 | MaxWellPro's Hexo Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+    <div class="site-meta-headline">
+      <a>
+        <img class="custom-logo-image" src="http://image.woshipm.com/wp-files/2015/03/4ffce04d92a4d6cb21c1494cdfcd6dc1328.jpg"
+             alt="MaxWellPro's Hexo Blog"/>
+      </a>
+    </div>
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MaxWellPro's Hexo Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">分享一些技术文章和自己所整理的知识。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                直播解决方案整理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-09T11:12:46+08:00" content="2017-02-09">
+              2017-02-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/09/直播解决方案整理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/09/直播解决方案整理/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="直播云解决方案整理"><a href="#直播云解决方案整理" class="headerlink" title="直播云解决方案整理"></a>直播云解决方案整理</h1><h2 id="TOC"><a href="#TOC" class="headerlink" title="[TOC]"></a>[TOC]</h2><h2 id="1-又拍云直播"><a href="#1-又拍云直播" class="headerlink" title="1.又拍云直播"></a>1.又拍云直播</h2><blockquote>
+<p>又拍直播云（UPLive），基于又拍云内容分发网络为直播应用提供超低延迟、高码率、高并发的从推流端到播放端的一站式解决方案，支持 RTMP、HTTP-FLV 和 HLS 输出等基本功能，包括录制、转码等增值服务。</p>
+</blockquote>
+<h3 id="IOS-推流-SDK"><a href="#IOS-推流-SDK" class="headerlink" title="IOS 推流 SDK"></a>IOS 推流 SDK</h3><h3 id="系统说明"><a href="#系统说明" class="headerlink" title="系统说明"></a>系统说明</h3><ul>
+<li>支持 iOS 8 及以上系统版本 </li>
+<li>支持 ARMv7，ARM64，x86_64 架构</li>
+</ul>
+<h3 id="功能说明"><a href="#功能说明" class="headerlink" title="功能说明"></a>功能说明</h3><ul>
+<li>采集模块源码开放，音视频可以自由配置 </li>
+<li>支持硬件编码 </li>
+<li>多码率可选 </li>
+<li>支持 H.264 视频编码 </li>
+<li>支持 AAC 音频编码 </li>
+<li>支持前后摄像头 </li>
+<li>支持自动对焦 </li>
+<li>支持手动调整对焦点 </li>
+<li>支持闪光灯操作 </li>
+<li>支持多分辨率编码 </li>
+<li>支持构造带安全授权凭证的 RTMP 推流地址 </li>
+<li>支持 ARMv7, ARM64, x86_64 架构 </li>
+<li>支持 RTMP 协议直播推流 </li>
+<li>支持推流时可变码率 </li>
+<li>提供发送 buffer </li>
+<li>支持视频 Orientation 操作 </li>
+<li>支持弱网丢帧策略 </li>
+<li>支持后台音频推流 </li>
+<li>支持水印功能 </li>
+<li>支持美颜功能 </li>
+</ul>
+<p><a href="https://github.com/upyun/ios-live-sdk" target="_blank" rel="external">项目地址</a></p>
+<h3 id="安卓推流-SDK"><a href="#安卓推流-SDK" class="headerlink" title="安卓推流 SDK"></a>安卓推流 SDK</h3><h4 id="系统说明-1"><a href="#系统说明-1" class="headerlink" title="系统说明"></a>系统说明</h4><ul>
+<li>Android 4.1(API 16) 以上</li>
+<li>支持 ARMv5，ARMv7，ARMv8 版本</li>
+</ul>
+<h4 id="功能说明-1"><a href="#功能说明-1" class="headerlink" title="功能说明"></a>功能说明</h4><ul>
+<li>支持 H.264 和 AAC 硬编</li>
+<li>硬编支持 Android Min API 18（Android 4.3）及其以上版本</li>
+<li>支持 RTMP 封包及推流</li>
+<li>支持 RTMP 推流自适应网络质量动态切换码率或自定义策略</li>
+<li>支持纯音频推流，以及后台运行</li>
+<li>支持动态更改 Encoding Orientation</li>
+</ul>
+<p><a href="https://github.com/upyun/android-push-sdk" target="_blank" rel="external">项目地址</a></p>
+<h3 id="IOS-播放器-SDK"><a href="#IOS-播放器-SDK" class="headerlink" title="IOS 播放器 SDK"></a>IOS 播放器 SDK</h3><h4 id="系统说明-2"><a href="#系统说明-2" class="headerlink" title="系统说明"></a>系统说明</h4><ul>
+<li>支持 iOS 8 及以上系统版本 </li>
+<li>支持 ARMv7，ARM64，x86_64 架构 </li>
+</ul>
+<h4 id="功能说明-2"><a href="#功能说明-2" class="headerlink" title="功能说明"></a>功能说明</h4><ul>
+<li>支持 RTMP 、HLS 和 HTTP-FLV 协议的直播流媒体播放</li>
+<li>高可定制：可自定义尺寸，按钮，进度条，全屏，旋转等 UI 属性</li>
+<li>支持单音频播放</li>
+<li>支持 RTMP 直播首屏秒开</li>
+<li>RTMP 直播累积延迟消除技术</li>
+<li>支持 speex 解码</li>
+<li>音画同步调整</li>
+<li>一屏多画</li>
+<li>点播支持</li>
+<li>支持 seek 功能</li>
+<li>视频缓冲设置，缓冲进度</li>
+<li>支持预连接，后播放功能</li>
+<li>集成亮度调整和音量调整</li>
+<li>支持静音播放</li>
+<li>支持播放器状态回调</li>
+<li>支持流信息，播放器信息察看（Dashboard）</li>
+<li>支持播放本地视频文件</li>
+<li>集成播放质量监控 </li>
+</ul>
+<p><a href="https://github.com/upyun/ios-live-sdk" target="_blank" rel="external">项目地址</a></p>
+<h3 id="安卓播放器-SDK"><a href="#安卓播放器-SDK" class="headerlink" title="安卓播放器 SDK"></a>安卓播放器 SDK</h3><h4 id="系统说明-3"><a href="#系统说明-3" class="headerlink" title="系统说明"></a>系统说明</h4><ul>
+<li>Android 2.3 (API 9) 及其以上</li>
+<li>支持 ARMv5，ARMv7，ARMv8 版本</li>
+</ul>
+<h4 id="功能说明-3"><a href="#功能说明-3" class="headerlink" title="功能说明"></a>功能说明</h4><ul>
+<li>支持 RTMP 、HLS 和 HTTP-FLV 协议的直播流媒体播放</li>
+<li>支持常见的音视频文件播放（MP4、M4A、FLV 等）</li>
+<li>支持 MediaCodec 硬件解码</li>
+<li>提供播放器核心类 PLMediaPlayer</li>
+<li>提供 PLVideoView 控件</li>
+<li>支持播放器音量设置，可实现静音功能</li>
+<li>支持纯音频播放</li>
+<li>支持直播累积延时优化</li>
+<li>支持 ARM，ARMv7a，ARM64v8a，X86 主流芯片体系架构</li>
+<li>可高度定制化的 MediaController</li>
+<li>高可定制：可自定义尺寸，按钮，进度条，全屏，旋转等 UI 属性</li>
+<li>单音频播放</li>
+<li>RTMP 直播首屏秒开支持</li>
+<li>RTMP 直播累积延迟消除技术</li>
+<li>支持 speex 解码</li>
+<li>音画同步调整</li>
+<li>支持点播</li>
+<li>支持 seek 功能</li>
+<li>视频缓冲设置，缓冲进度</li>
+<li>支持预连接，后播放功能</li>
+<li>集成亮度调整和音量调整</li>
+<li>支持静音播放</li>
+<li>支持播放器状态回调</li>
+<li>支持流信息，播放器信息察看（Dashboard）</li>
+<li>支持播放本地视频文件</li>
+</ul>
+<p><a href="https://github.com/upyun/android-player-sdk" target="_blank" rel="external">项目地址</a></p>
+<h3 id="产品价格"><a href="#产品价格" class="headerlink" title="产品价格"></a>产品价格</h3><p>详见<a href="https://www.upyun.com/price.html" target="_blank" rel="external">官网</a></p>
+<h3 id="合作案例"><a href="#合作案例" class="headerlink" title="合作案例"></a>合作案例</h3><p>无</p>
+<hr>
+<h2 id="2-七牛云直播"><a href="#2-七牛云直播" class="headerlink" title="2.七牛云直播"></a>2.七牛云直播</h2><h3 id="iOS-推流端-SDK"><a href="#iOS-推流端-SDK" class="headerlink" title="iOS 推流端 SDK"></a>iOS 推流端 SDK</h3><blockquote>
+<p>PLMediaStreamingKit 是一个适用于 iOS 的 RTMP 直播推流 SDK，可高度定制化和二次开发。SDK 提供 RTMP 推流的全套解决方案，包括采集，处理（美颜，水印等），编码，封包，发送。特色是支持 H.264 硬编码，以及支持 AAC-LC 硬编码的同时，还根据移动网络环境的多变性，实现了一套可供开发者灵活选择的编码参数集合。</p>
+</blockquote>
+<h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><ul>
+<li>硬件编码</li>
+<li>支持美颜，以及调节磨皮、美白、红润效果</li>
+<li>添加水印</li>
+<li>多码率可选</li>
+<li>H.264 视频编码</li>
+<li>AAC 音频编码</li>
+<li>支持多分辨率编码</li>
+<li>支持 HeaderDoc 文档</li>
+<li>内置生成安全的 RTMP 推流地址</li>
+<li>支持 ARM64</li>
+<li>支持 RTMP 协议直播推流</li>
+<li>音视频配置分离</li>
+<li>推流时可变码率</li>
+<li>提供发送 buffer</li>
+<li>后台推流</li>
+</ul>
+<h3 id="iOS-播放端-SDK"><a href="#iOS-播放端-SDK" class="headerlink" title="iOS 播放端 SDK"></a>iOS 播放端 SDK</h3><blockquote>
+<p>PLPlayerKit 是一个适用于 iOS 的 HLS 及 RTMP 播放 SDK，可高度定制化和二次开发。特色是支持 RTMP 协议下 H.264 编码 FLV 封装的多媒体流的播放，针对与用户体验密切相关的首开缓冲时间进行了优化，另外还根据移动网络的多变性以及直播场景对播放实时性的需求提供了跳帧机制。</p>
+</blockquote>
+<h4 id="特性-1"><a href="#特性-1" class="headerlink" title="特性"></a>特性</h4><ul>
+<li>高可定制</li>
+<li>直播累积延迟消除技术</li>
+<li>支持首屏秒开</li>
+<li>支持 RTMP 直播流播放</li>
+<li>支持 HTTP-FLV 直播流播放</li>
+<li>支持 HLS 播放</li>
+<li>支持 HTTPS 播放</li>
+<li>支持多种画面预览模式</li>
+<li>支持画面旋转与镜像</li>
+<li>支持播放器音量设置</li>
+<li>支持纯音频播放</li>
+<li>支持后台播放</li>
+<li>支持使用 IP 地址的 URL</li>
+<li>支持软硬解自动切换</li>
+</ul>
+<h3 id="费用"><a href="#费用" class="headerlink" title="费用"></a>费用</h3><p>服务价格等详细信息您可以联系：sales@qiniu.com，或者直接登录您的七牛账号选择申请开通直播服务，会有专人与您联系。</p>
+<h3 id="合作案例-1"><a href="#合作案例-1" class="headerlink" title="合作案例"></a>合作案例</h3><ul>
+<li>PandaTV </li>
+<li>懂球帝</li>
+<li>美拍 </li>
+<li>大神TV</li>
+</ul>
+<hr>
+<h2 id="3-阿里云直播"><a href="#3-阿里云直播" class="headerlink" title="3.阿里云直播"></a>3.阿里云直播</h2><h3 id="iOS-播放端-SDK-1"><a href="#iOS-播放端-SDK-1" class="headerlink" title="iOS 播放端 SDK"></a>iOS 播放端 SDK</h3><blockquote>
+<p>AlivcMediaPlayer是一款基于IOS平台的多媒体视频播放SDK。它为IOS的开发者提供了简单易用的接口，帮助开发者方便快捷、低门槛的实现多媒体播放功能的开发。它支持HLS、RTMP、HTTP FLV、MP4等多种流媒体播放格式，视频支持h264格式、音频支持AAC格式。另外，针对直播用户的需求，还增加了首帧秒开的功能；同时为了减少直播的延迟，增加了弱网条件下播放的跳帧功能。<br>版本和新增功能</p>
+</blockquote>
+<h3 id="特性-2"><a href="#特性-2" class="headerlink" title="特性"></a>特性</h3><ul>
+<li>支持HLS、RTMP、HTTP FLV、mp4等流格式</li>
+<li>支持h264+aac</li>
+<li>支持armv7、arm64    v2.0</li>
+<li>支持直播首帧秒开 </li>
+<li>支持弱网条件下的丢帧策略</li>
+<li>支持多实例、支持模拟器调试，支持https </li>
+<li>支持带切边的视频渲染模式</li>
+<li>支持苹果2017年1月1号后强制使用HTTPS的要求    v2.2.1</li>
+</ul>
+<h3 id="iOS-推流端-SDK-1"><a href="#iOS-推流端-SDK-1" class="headerlink" title="iOS 推流端 SDK"></a>iOS 推流端 SDK</h3><blockquote>
+<p>iOS推流SDK是在iOS平台上使用的软件开发工具包(Soft Development Kit)，为iOS开发者提供简单易用的接口，帮助开发者实现iOS平台上的推流应用开发。</p>
+</blockquote>
+<h3 id="功能说明-4"><a href="#功能说明-4" class="headerlink" title="功能说明"></a>功能说明</h3><ul>
+<li>方便快捷、低门槛实现媒体推流功能。用户无须关心内部实现细节，只需要自定义界面既可以实现专业级的推流应用。 </li>
+<li>推流支持格式：rtmp</li>
+<li>编码目前为硬编</li>
+</ul>
+<h3 id="费用-1"><a href="#费用-1" class="headerlink" title="费用"></a>费用</h3><h4 id="直播峰值带宽计费说明："><a href="#直播峰值带宽计费说明：" class="headerlink" title="直播峰值带宽计费说明："></a>直播峰值带宽计费说明：</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">直播峰值带宽阶梯</th>
+<th style="text-align:center">价格（元/Mbps/日）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0-500Mbps（含）</td>
+<td style="text-align:center">1.00</td>
+</tr>
+<tr>
+<td style="text-align:center">500Mbps-5Gbps（含）</td>
+<td style="text-align:center">0.90</td>
+</tr>
+<tr>
+<td style="text-align:center">大于5Gbps</td>
+<td style="text-align:center">0.76</td>
+</tr>
+</tbody>
+</table>
+<p>费用 = [500 x 1.00 + (5000-500) x 0.90 + (A-5000) x 0.76]</p>
+<h4 id="直播转码计费说明："><a href="#直播转码计费说明：" class="headerlink" title="直播转码计费说明："></a>直播转码计费说明：</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">直播转码规格（H.264）</th>
+<th style="text-align:center">价格（元/分钟）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">480P（含）及以下</td>
+<td style="text-align:center">0.0675</td>
+</tr>
+<tr>
+<td style="text-align:center">480P-720P（含）</td>
+<td style="text-align:center">0.133</td>
+</tr>
+<tr>
+<td style="text-align:center">720P-1080P（含）</td>
+<td style="text-align:center">0.266</td>
+</tr>
+</tbody>
+</table>
+<p>详情<a href="https://cn.aliyun.com/price/product#/live/detail" target="_blank" rel="external">官网</a></p>
+<h3 id="合作案例-2"><a href="#合作案例-2" class="headerlink" title="合作案例"></a>合作案例</h3><ul>
+<li>芒果TV </li>
+<li>映客</li>
+</ul>
+<hr>
+<h2 id="4-腾讯云直播"><a href="#4-腾讯云直播" class="headerlink" title="4.腾讯云直播"></a>4.腾讯云直播</h2><blockquote>
+<p>移动直播（Mobile Live Video Broadcasting）是腾讯云直播服务(LVB) 在手机直播方向的延伸，相比于主要面向云对接的直播(LVB) 服务，移动直播（MLVB）即提供了基于 RTMP SDK 的“快速集成方案”，也提供了集直播(LVB)、点播(VOD)、云通信(IM) 和 对象存储(COS) 等多云端服务与一体的“一体化解决方案”，且不收取除流量之外的额外费用。</p>
+</blockquote>
+<h3 id="iOS-推流端-SDK-2"><a href="#iOS-推流端-SDK-2" class="headerlink" title="iOS 推流端 SDK"></a>iOS 推流端 SDK</h3><h4 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h4><p>推流（也叫发布）是指将音视频数据采集编码之后，推送到您指定的视频云平台上，这里涉及大量的音视频基础知识，而且需要长时间的打磨和优化才能达到符合预期的效果。</p>
+<p>腾讯云 RTMP SDK 主要帮您解决在智能手机上的推流问题，它的接口非常简单易用，只需要一个推流URL就能驱动：<br><img src="http://qzonestyle.gtimg.cn/qzone/vas/opensns/res/img/pusher_demo_introduction_2.jpg" alt=""></p>
+<h3 id="特别说明"><a href="#特别说明" class="headerlink" title="特别说明"></a>特别说明</h3><ul>
+<li>不限制云服务商</li>
+</ul>
+<blockquote>
+<p>RTMP SDK 不会限制您向非腾讯云地址推流，但如何才能推流到非腾讯云地址呢？</p>
+<p>为解决国内 DNS 映射不准确的问题，SDK 1.5.2 版本开始引入就近选路，即通过腾讯云就近选路服务器选择离主播最优的推流线路，这一改进对推流质量提升很大。但相应的，选路结果中只有腾讯云的服务器地址。而且，由于我们大量的客户采用专属推流域名，SDK 无法简单通过 URL 文本分析就辨别出是不是推到腾讯云。</p>
+<p>所以，如果您需要推流到其他云商的推流地址，可以通过客服联系我们，我们可以为您的账号关闭就近选路。该项配置通过云控实现，故您不需要发布新的客户端版本来解决这个问题。</p>
+</blockquote>
+<ul>
+<li>x86 模拟器调试</li>
+</ul>
+<blockquote>
+<p>由于RTMP SDK大量使用iOS系统的高级特性，我们不能保证所有特性在x86环境的模拟器下都能正常运行，而且音视频是性能敏感的功能，模拟器下的表现跟真机会有很大的不同。所以，如果条件允许，推荐您尽量使用真机调试。</p>
+</blockquote>
+<h3 id="iOS-播放端-SDK-2"><a href="#iOS-播放端-SDK-2" class="headerlink" title="iOS 播放端 SDK"></a>iOS 播放端 SDK</h3><h4 id="基础知识-1"><a href="#基础知识-1" class="headerlink" title="基础知识"></a>基础知识</h4><p>RTMP SDK 包含推流和播放两方面功能，推流为主播端功能，播放（分为直播和点播）为观众端功能。对接之前，我们先列表如下一些基本知识会大有裨益：</p>
+<ul>
+<li>直播和点播</li>
+</ul>
+<p>直播 的视频源是实时生成的，有人推流直播才有意义。所以，一旦主播停播，直播URL也就进失效了，而且由于是实时直播，所以播放器在播直播视频的时候是没有进度条的。</p>
+<p>点播 的视频源是云端的一个文件，文件只要没有被提供方删除，就随时可以播放， 而且由于整个视频都在服务器上，所以播放的时候是有进度条的哦。</p>
+<ul>
+<li>协议的支持</li>
+</ul>
+<p>通常使用的直播协议如下，APP端推荐使用 FLV 协议的直播地址(以“http”打头，以“.flv”结尾)：</p>
+<p><img src="https://mc.qcloudimg.com/static/img/94c348ff7f854b481cdab7f5ba793921/image.jpg" alt=""></p>
+<p>通常使用的点播协议如下，现在比较流行的是HLS(以“http”打头，以“.m3u8”结尾)的点播地址：</p>
+<p><img src="https://mc.qcloudimg.com/static/img/4b42a00bb7ce2f58f362f35397734177/image.jpg" alt=""></p>
+<h4 id="特别说明-1"><a href="#特别说明-1" class="headerlink" title="特别说明"></a>特别说明</h4><p>腾讯云 RTMP SDK 不对 播放地址的来源做限制，即您可以用它来播放腾讯云或非腾讯云的播放地址。但 RTMP SDK 中的播放器只支持 FLV 、RTMP 和 HLS（m3u8）三种格式的直播地址，以及 FLV 、MP4 和 HLS（m3u8）三种格式的点播地址。</p>
+<h4 id="价格总览"><a href="#价格总览" class="headerlink" title="价格总览"></a>价格总览</h4><p>移动直播本身不是一项独立的云服务，所以费用全部源自其依赖的如下几项基础云服务，没有自身的额外费用：</p>
+<h5 id="直播云服务（LVB）"><a href="#直播云服务（LVB）" class="headerlink" title="直播云服务（LVB）"></a>直播云服务（LVB）</h5><p>移动直播本身就是围绕直播的手机直播解决方案，所以直播服务的开通是前提：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">套餐列表</th>
+<th style="text-align:center">直播流量（下行）</th>
+<th style="text-align:center">价格（元）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">19元套餐包</td>
+<td style="text-align:center">10G</td>
+<td style="text-align:center">免费</td>
+</tr>
+<tr>
+<td style="text-align:center">49元套餐包</td>
+<td style="text-align:center">50G</td>
+<td style="text-align:center">49</td>
+</tr>
+<tr>
+<td style="text-align:center">95元套餐包</td>
+<td style="text-align:center">100G</td>
+<td style="text-align:center">95</td>
+</tr>
+<tr>
+<td style="text-align:center">470元套餐包</td>
+<td style="text-align:center">500G</td>
+<td style="text-align:center">470</td>
+</tr>
+<tr>
+<td style="text-align:center">939元套餐包</td>
+<td style="text-align:center">1T</td>
+<td style="text-align:center">939</td>
+</tr>
+</tbody>
+</table>
+<p>注：套餐有限期1年，超出套餐部分按照1.1元／G计算，月结周期内续订套餐可抵消超出流量。 详情<a href="https://www.qcloud.com/document/product/454/7880" target="_blank" rel="external">网站</a></p>
+<h3 id="案例："><a href="#案例：" class="headerlink" title="案例："></a>案例：</h3><ul>
+<li>企鹅电竞</li>
+<li>东方财富</li>
+<li>美团 </li>
+<li>唯品会</li>
+</ul>
+<hr>
+<h2 id="5-金山云直播"><a href="#5-金山云直播" class="headerlink" title="5.金山云直播"></a>5.金山云直播</h2><h4 id="产品功能"><a href="#产品功能" class="headerlink" title="产品功能"></a>产品功能</h4><ul>
+<li>输入：RTMP；</li>
+<li>输出：RTMP，HDL( HTTP+FLV )，HLS；支持多屏播放，在线实时转码</li>
+<li>多IP集群，主热备方案， 7X24小时无故障服务; 可根据用户业务自动扩展</li>
+<li>智能CDN调度，直播延迟1-3;SDeviceAPI,多平台客户端SDK接入</li>
+<li>防盗链（签名，过期时间），DRM加密，确保流媒体数据安全；99.9% SLA保证</li>
+</ul>
+<h3 id="播放器SDK-IOS"><a href="#播放器SDK-IOS" class="headerlink" title="播放器SDK IOS"></a>播放器SDK IOS</h3><h4 id="产品概述"><a href="#产品概述" class="headerlink" title="产品概述"></a>产品概述</h4><blockquote>
+<p>金山云播放内核涵盖Android、iOS、Flash和浏览器插件四个平台，基于FFmpeg自主研发音视频媒体播放内核，作为一款全平台兼容的软件播放方案，金山云播放内核提供了跨终端平台的播放器SDK，以及开放的音视频播放、控制接口和完整的开源调用示例，不仅极大降低开发门槛，同时支持客户快速在多个平台发布产品。 KSY MediaPlayer iOS SDK是金山云播放内核官方推出的iOS平台上使用的软件开发工具包(SDK)，为iOS开发者提供简单、快捷的接口，帮助开发者实现iOS平台上的多媒体播放应用。</p>
+</blockquote>
+<h4 id="KSYMediaPlayer-SDK-功能说明"><a href="#KSYMediaPlayer-SDK-功能说明" class="headerlink" title="KSYMediaPlayer SDK 功能说明"></a>KSYMediaPlayer SDK 功能说明</h4><p>与系统播放器MPMoviePlayerController接口一致，可以无缝快速切换至KSYMediaPlayer；</p>
+<ul>
+<li>本地全媒体格式支持, 并对主流的媒体格式(mp4, avi, wmv, flv, mkv, mov, rmvb 等 )进行优化；</li>
+<li>支持广泛的流式视频格式, HLS, RTMP, HTTP Rseudo-Streaming 等；</li>
+<li>低延时直播体验，配合金山云推流sdk，可以达到全程直播稳定的4秒内延时；</li>
+<li>实现快速满屏播放，为用户带来更快捷优质的播放体验；</li>
+<li>版本适配支持iOS 7.0以上版本；</li>
+<li>业内一流的H.265解码；</li>
+<li>小于2M大小的超轻量级直播sdk；</li>
+</ul>
+<h4 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h4><p>KSY MediaPlayer iOS SDK可运行于 iPhone/iPod Touch/iPad，支持 iOS 7.0 及以上版本; 支持 armv7/arm64以及虚拟机运行。</p>
+<h3 id="推流工具-SDK-IOS"><a href="#推流工具-SDK-IOS" class="headerlink" title="推流工具 SDK IOS"></a>推流工具 SDK IOS</h3><h4 id="KSY-Live-iOS-SDK-概述"><a href="#KSY-Live-iOS-SDK-概述" class="headerlink" title="KSY Live iOS SDK 概述"></a>KSY Live iOS SDK 概述</h4><blockquote>
+<p>KSY Live iOS SDK是金山云推出的 iOS 平台上使用的软件开发工具包(SDK), 其中Stremer负责采集和推流。MediaPlayer负责视频播放。</p>
+</blockquote>
+<h4 id="主要功能点"><a href="#主要功能点" class="headerlink" title="主要功能点"></a>主要功能点</h4><h5 id="Stremer推流特点"><a href="#Stremer推流特点" class="headerlink" title="Stremer推流特点"></a>Stremer推流特点</h5><p>音频编码：AAC</p>
+<ul>
+<li>视频编码：H.264 </li>
+<li>推流协议：RTMP</li>
+<li>视频分辨率：1280x720, 960x540,640x480,640x360,352x288</li>
+<li>屏幕朝向： 横屏, 竖屏</li>
+<li>iOS摄像头：前, 后置摄像头（可动态切换）</li>
+<li>音视频目标码率：可设</li>
+<li>根据网络带宽自适应调整视频的码率</li>
+<li>闪光灯：开/关</li>
+<li>Apple Doc 文档支持</li>
+<li>可使用系统原生接口对当前采集设备进行操作</li>
+</ul>
+<h5 id="MediaPlayer播放特点"><a href="#MediaPlayer播放特点" class="headerlink" title="MediaPlayer播放特点"></a>MediaPlayer播放特点</h5><p>与系统播放器MPMoviePlayerController接口一致，可以无缝快速切换至KSYMediaPlayer；</p>
+<ul>
+<li>本地全媒体格式支持, 并对主流的媒体格式(mp4, avi, wmv, flv, mkv, mov, rmvb 等 )进行优化；</li>
+<li>支持广泛的流式视频格式, HLS, RTMP, HTTP Rseudo-Streaming 等；</li>
+<li>低延时直播体验，配合金山云推流sdk，可以达到全程直播稳定的4秒内延时；</li>
+<li>实现快速满屏播放，为用户带来更快捷优质的播放体验；</li>
+<li>版本适配支持iOS 7.0以上版本；</li>
+<li>业内一流的H.265解码；</li>
+<li>小于2M大小的超轻量级直播sdk；</li>
+</ul>
+<h3 id="合作案例-3"><a href="#合作案例-3" class="headerlink" title="合作案例"></a>合作案例</h3><ul>
+<li>今日头条 </li>
+<li>猎豹移动 </li>
+<li>小蚁 </li>
+<li>Nice好赞</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/06/iOS面试题（备份）/" rel="next" title="iOS面试题（备份）">
+                <i class="fa fa-chevron-left"></i> iOS面试题（备份）
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/09/直播解决方案整理/"
+           data-title="直播解决方案整理" data-url="http://yoursite.com/2017/02/09/直播解决方案整理/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7xojj3.com5.z0.glb.qiniucdn.com/image%2Favatar%2F7ead8c33da3d43552445740501595d76.jpg"
+               alt="MaxWellPro" />
+          <p class="site-author-name" itemprop="name">MaxWellPro</p>
+          <p class="site-description motion-element" itemprop="description">一个90后iOS软件攻城狮，热爱coding，并且喜欢数码、外设、键盘等等。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+          
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/JMaxWells/JMaxWells.github.io" target="_blank">
+                  
+                    <i class="fa fa-gitHub"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2379733281" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#直播云解决方案整理"><span class="nav-number">1.</span> <span class="nav-text">直播云解决方案整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TOC"><span class="nav-number">1.1.</span> <span class="nav-text">[TOC]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-又拍云直播"><span class="nav-number">1.2.</span> <span class="nav-text">1.又拍云直播</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IOS-推流-SDK"><span class="nav-number">1.2.1.</span> <span class="nav-text">IOS 推流 SDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统说明"><span class="nav-number">1.2.2.</span> <span class="nav-text">系统说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#功能说明"><span class="nav-number">1.2.3.</span> <span class="nav-text">功能说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安卓推流-SDK"><span class="nav-number">1.2.4.</span> <span class="nav-text">安卓推流 SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#系统说明-1"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">系统说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#功能说明-1"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">功能说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IOS-播放器-SDK"><span class="nav-number">1.2.5.</span> <span class="nav-text">IOS 播放器 SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#系统说明-2"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">系统说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#功能说明-2"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">功能说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安卓播放器-SDK"><span class="nav-number">1.2.6.</span> <span class="nav-text">安卓播放器 SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#系统说明-3"><span class="nav-number">1.2.6.1.</span> <span class="nav-text">系统说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#功能说明-3"><span class="nav-number">1.2.6.2.</span> <span class="nav-text">功能说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产品价格"><span class="nav-number">1.2.7.</span> <span class="nav-text">产品价格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合作案例"><span class="nav-number">1.2.8.</span> <span class="nav-text">合作案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-七牛云直播"><span class="nav-number">1.3.</span> <span class="nav-text">2.七牛云直播</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS-推流端-SDK"><span class="nav-number">1.3.1.</span> <span class="nav-text">iOS 推流端 SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特性"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">特性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS-播放端-SDK"><span class="nav-number">1.3.2.</span> <span class="nav-text">iOS 播放端 SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特性-1"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">特性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#费用"><span class="nav-number">1.3.3.</span> <span class="nav-text">费用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合作案例-1"><span class="nav-number">1.3.4.</span> <span class="nav-text">合作案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-阿里云直播"><span class="nav-number">1.4.</span> <span class="nav-text">3.阿里云直播</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS-播放端-SDK-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">iOS 播放端 SDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特性-2"><span class="nav-number">1.4.2.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS-推流端-SDK-1"><span class="nav-number">1.4.3.</span> <span class="nav-text">iOS 推流端 SDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#功能说明-4"><span class="nav-number">1.4.4.</span> <span class="nav-text">功能说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#费用-1"><span class="nav-number">1.4.5.</span> <span class="nav-text">费用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#直播峰值带宽计费说明："><span class="nav-number">1.4.5.1.</span> <span class="nav-text">直播峰值带宽计费说明：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#直播转码计费说明："><span class="nav-number">1.4.5.2.</span> <span class="nav-text">直播转码计费说明：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合作案例-2"><span class="nav-number">1.4.6.</span> <span class="nav-text">合作案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-腾讯云直播"><span class="nav-number">1.5.</span> <span class="nav-text">4.腾讯云直播</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS-推流端-SDK-2"><span class="nav-number">1.5.1.</span> <span class="nav-text">iOS 推流端 SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础知识"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">基础知识</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特别说明"><span class="nav-number">1.5.2.</span> <span class="nav-text">特别说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS-播放端-SDK-2"><span class="nav-number">1.5.3.</span> <span class="nav-text">iOS 播放端 SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础知识-1"><span class="nav-number">1.5.3.1.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特别说明-1"><span class="nav-number">1.5.3.2.</span> <span class="nav-text">特别说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#价格总览"><span class="nav-number">1.5.3.3.</span> <span class="nav-text">价格总览</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#直播云服务（LVB）"><span class="nav-number">1.5.3.3.1.</span> <span class="nav-text">直播云服务（LVB）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#案例："><span class="nav-number">1.5.4.</span> <span class="nav-text">案例：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-金山云直播"><span class="nav-number">1.6.</span> <span class="nav-text">5.金山云直播</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#产品功能"><span class="nav-number">1.6.0.1.</span> <span class="nav-text">产品功能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#播放器SDK-IOS"><span class="nav-number">1.6.1.</span> <span class="nav-text">播放器SDK IOS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#产品概述"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">产品概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KSYMediaPlayer-SDK-功能说明"><span class="nav-number">1.6.1.2.</span> <span class="nav-text">KSYMediaPlayer SDK 功能说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行环境"><span class="nav-number">1.6.1.3.</span> <span class="nav-text">运行环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推流工具-SDK-IOS"><span class="nav-number">1.6.2.</span> <span class="nav-text">推流工具 SDK IOS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#KSY-Live-iOS-SDK-概述"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">KSY Live iOS SDK 概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主要功能点"><span class="nav-number">1.6.2.2.</span> <span class="nav-text">主要功能点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Stremer推流特点"><span class="nav-number">1.6.2.2.1.</span> <span class="nav-text">Stremer推流特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MediaPlayer播放特点"><span class="nav-number">1.6.2.2.2.</span> <span class="nav-text">MediaPlayer播放特点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合作案例-3"><span class="nav-number">1.6.3.</span> <span class="nav-text">合作案例</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MaxWellPro</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"maxwellpro"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+
+</body>
+</html>
