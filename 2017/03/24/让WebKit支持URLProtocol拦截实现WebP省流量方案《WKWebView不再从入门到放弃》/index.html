@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="iOS," />
+  <meta name="keywords" content="iOS开发,tags,WKWebView," />
 
 
 
@@ -59,19 +59,19 @@
 
 
 
-<meta name="description" content="iOS面试题（备份）1.运行一下代码，控制台会输出什么？
-12345678910111213141516171819202122232425@implementation ViewController- (void)viewDidLoad &amp;#123;    [super viewDidLoad];    [self methodExchange];    [self method1];    [">
+<meta name="description" content="WKWebView的各种好处，有不少开发者都按捺不住骚动的心，开始操刀在项目里将UIWebView替换成WKWebView，然后就出现了《WKWebView从入门到放弃》其中WKWebView不支持NSURLProtocol就让不少开发者望而却步。这样一样，可能会导致原来UIWebView的省流量方案不生效。直到前几天，我看到了大神的这篇文章WKWebView 不支持 NSURLProtocol">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS面试题（备份）">
-<meta property="og:url" content="http://yoursite.com/2016/04/06/iOS面试题（备份）/index.html">
+<meta property="og:title" content="让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》">
+<meta property="og:url" content="http://yoursite.com/2017/03/24/让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》/index.html">
 <meta property="og:site_name" content="MaxWellPro's Hexo Blog">
-<meta property="og:description" content="iOS面试题（备份）1.运行一下代码，控制台会输出什么？
-12345678910111213141516171819202122232425@implementation ViewController- (void)viewDidLoad &amp;#123;    [super viewDidLoad];    [self methodExchange];    [self method1];    [">
-<meta property="og:updated_time" content="2016-04-06T10:29:40.000Z">
+<meta property="og:description" content="WKWebView的各种好处，有不少开发者都按捺不住骚动的心，开始操刀在项目里将UIWebView替换成WKWebView，然后就出现了《WKWebView从入门到放弃》其中WKWebView不支持NSURLProtocol就让不少开发者望而却步。这样一样，可能会导致原来UIWebView的省流量方案不生效。直到前几天，我看到了大神的这篇文章WKWebView 不支持 NSURLProtocol">
+<meta property="og:image" content="https://quncao-app.b0.upaiyun.com/0_index5a57e8b73600f8cf00bf42924a8f0078.jpg">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1859162-861e7ddb7ffd69ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-24T06:49:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS面试题（备份）">
-<meta name="twitter:description" content="iOS面试题（备份）1.运行一下代码，控制台会输出什么？
-12345678910111213141516171819202122232425@implementation ViewController- (void)viewDidLoad &amp;#123;    [super viewDidLoad];    [self methodExchange];    [self method1];    [">
+<meta name="twitter:title" content="让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》">
+<meta name="twitter:description" content="WKWebView的各种好处，有不少开发者都按捺不住骚动的心，开始操刀在项目里将UIWebView替换成WKWebView，然后就出现了《WKWebView从入门到放弃》其中WKWebView不支持NSURLProtocol就让不少开发者望而却步。这样一样，可能会导致原来UIWebView的省流量方案不生效。直到前几天，我看到了大神的这篇文章WKWebView 不支持 NSURLProtocol">
+<meta name="twitter:image" content="https://quncao-app.b0.upaiyun.com/0_index5a57e8b73600f8cf00bf42924a8f0078.jpg">
 
 
 
@@ -89,7 +89,7 @@
   };
 </script>
 
-  <title> iOS面试题（备份） | MaxWellPro's Hexo Blog </title>
+  <title> 让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》 | MaxWellPro's Hexo Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -216,7 +216,7 @@
             
             
               
-                iOS面试题（备份）
+                让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》
               
             
           </h1>
@@ -228,38 +228,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-06T18:26:26+08:00" content="2016-04-06">
-              2016-04-06
+            <time itemprop="dateCreated" datetime="2017-03-24T14:48:06+08:00" content="2017-03-24">
+              2017-03-24
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/06/iOS面试题（备份）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/06/iOS面试题（备份）/" itemprop="commentsCount"></span>
+                <a href="/2017/03/24/让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/24/让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -281,17 +262,31 @@
       
 
       
-        <h1 id="iOS面试题（备份）"><a href="#iOS面试题（备份）" class="headerlink" title="iOS面试题（备份）"></a>iOS面试题（备份）</h1><p>1.运行一下代码，控制台会输出什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">@implementation ViewController</span><br><span class="line"></span><br><span class="line">- (void)viewDidLoad &#123;</span><br><span class="line">    [super viewDidLoad];</span><br><span class="line">    [self methodExchange];</span><br><span class="line">    [self method1];</span><br><span class="line">    [self method2];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)method1 &#123;</span><br><span class="line">    NSLog(@&quot;method1&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)method2 &#123;</span><br><span class="line">      NSLog(@&quot;method2&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)methodExchange &#123;</span><br><span class="line">    Method method1 = class_getInstanceMethod([self class], @selector(method1));</span><br><span class="line">    Method method2 = class_getInstanceMethod([self class], @selector(method2));</span><br><span class="line"></span><br><span class="line">    method_exchangeImplementations(method1, method2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
-<p>2.对methodExchange方法中的代码有没有改进意见？如果有，请说明原因。</p>
-<p>3.如何給NSArray添加一个属性（不能使用继承）。</p>
-<p>4.写出iOS9相对于iOS8增加了哪些新特性（5个以上）？</p>
-<p>5.以下这段代码的作用是？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dispatch_apply(5, globalQ, ^(size_t index) &#123;</span><br><span class="line">    // dosometing</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>6.写出以下控件的高度（默认情况下）<br>Navigation Bar:<br>Status Bar:<br>Toolbar:<br>Keyboards:<br>Switch:</p>
-<p>7.<br>1、在一条街上，有5座房子，喷了5种颜色。<br>2、每个房里住着不同国籍的人<br>3、每个人喝不同的饮料，抽不同品牌的香烟，养不同的宠物</p>
-<p>问题是：谁养鱼？</p>
-<p>提示：<br>1、英国人住红色房子<br>2、瑞典人养狗<br>3、丹麦人喝茶<br>4、绿色房子在白色房子左面<br>5、绿色房子主人喝咖啡<br>6、抽Pall Mall 香烟的人养鸟<br>7、黄色房子主人抽Dunhill香烟<br>8、住在中间房子的人喝牛奶<br>9、 挪威人住第一间房<br>10、抽Blends香烟的人住在养猫的人隔壁<br>11、养马的人住抽Dunhill 香烟的人隔壁<br>12、抽Blue Master的人喝啤酒<br>13、德国人抽Prince香烟<br>14、挪威人住蓝色房子隔壁<br>15、抽Blends香烟的人有一个喝水的邻居</p>
+        <blockquote>
+<p>WKWebView的各种好处，有不少开发者都按捺不住骚动的心，开始操刀在项目里将UIWebView替换成WKWebView，然后就出现了《WKWebView从入门到放弃》其中WKWebView不支持NSURLProtocol就让不少开发者望而却步。这样一样，可能会导致原来UIWebView的省流量方案不生效。直到前几天，我看到了大神的这篇文章<a href="http://www.jianshu.com/p/55f5ac1ab817" target="_blank" rel="external">WKWebView 不支持 NSURLProtocol 吗</a>。大神从底层分析了，WKWebView不走NSURLProtocol的原因，最后得出的结论是WebKit是支持NSURLProtocol的，只是WebKit还不够完成，另外一点是调用了私有API很可能被拒，也只支持iOS8.4+。</p>
+</blockquote>
+<p><img src="https://quncao-app.b0.upaiyun.com/0_index5a57e8b73600f8cf00bf42924a8f0078.jpg" alt=""></p>
+<h2 id="WKWebView的特性："><a href="#WKWebView的特性：" class="headerlink" title="WKWebView的特性："></a>WKWebView的特性：</h2><ul>
+<li>WKWebView的性能想必不用多说了 在性能、稳定性、功能方面有很大提升，直观体现是内存占用变少；</li>
+<li>允许JavaScript的Nitro库加载并使用（UIWebView中限制）；</li>
+<li>支持了更多的HTML5特性；</li>
+<li>高达60fps的滚动刷新率以及内置手势；</li>
+<li>将UIWebViewDelegate与UIWebView重构成了14类与3个协议；</li>
+</ul>
+<h2 id="NSURLProtocol工作原理"><a href="#NSURLProtocol工作原理" class="headerlink" title="NSURLProtocol工作原理"></a>NSURLProtocol工作原理</h2><p>NSURLProtocol可以拦截监听每一个URL Loading System中发出request请求，记住是URL Loading System中那些类发出的请求，也支持AFNetwoking，UIWebView发出的request。如果不是这些类发出的请求，NSURLProtocol就没办法拦截和监听了。</p>
+<h3 id="拦截代码"><a href="#拦截代码" class="headerlink" title="拦截代码"></a>拦截代码</h3><p>调用该代码则表示拦截成功，会将网页中图片地址转化成WebP格式，并由SDWebImageDownloader下载并缓存。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">- (void)startLoading &#123;</span><br><span class="line">    NSMutableURLRequest *mutableReqeust = [[self request] mutableCopy];</span><br><span class="line">    //标示改request已经处理过了，防止无限循环</span><br><span class="line">    [NSURLProtocol setProperty:@YES forKey:URLProtocolHandledKey inRequest:mutableReqeust];</span><br><span class="line">    NSString *URLString = [self.request.URL absoluteString];</span><br><span class="line">    NSURL *imageURL;</span><br><span class="line">    </span><br><span class="line">    // 重定义请求地址</span><br><span class="line">    if ([URLString rangeOfString:@&quot;format&quot;].location == NSNotFound) &#123;</span><br><span class="line">        imageURL = [WKWebImageHelper webImageStringToURL:URLString];</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        self.connection = [NSURLConnection connectionWithRequest:mutableReqeust delegate:self];</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    #warning - 敲黑板 画重点了</span><br><span class="line">    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:imageURL</span><br><span class="line">                                                          options:0</span><br><span class="line">                                                         progress:nil</span><br><span class="line">                                                        completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) &#123;</span><br><span class="line">                                                            // 是否以png结尾</span><br><span class="line">                                                            if ([imageURL.absoluteString.lowercaseString hasSuffix:@&quot;.png&quot;]) &#123;</span><br><span class="line">                                                                data = UIImagePNGRepresentation(image);</span><br><span class="line">                                                            &#125; else &#123;</span><br><span class="line">                                                                data = UIImageJPEGRepresentation(image, 1);</span><br><span class="line">                                                            &#125;</span><br><span class="line">                                                            if (!self.client) &#123;</span><br><span class="line">                                                                return ;</span><br><span class="line">                                                            &#125;</span><br><span class="line">                                                            [self.client URLProtocol:self didLoadData:data];</span><br><span class="line">                                                            [self.client URLProtocolDidFinishLoading:self];</span><br><span class="line">                                                        &#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>具体的代码大家可以去我的github下载。下载地址在↓。</p>
+<h3 id="Demo截图"><a href="#Demo截图" class="headerlink" title="Demo截图"></a>Demo截图</h3><p><img src="http://upload-images.jianshu.io/upload_images/1859162-861e7ddb7ffd69ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Simulator Screen Shot 2017年3月22日 下午5.22.58.png"></p>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><ul>
+<li><a href="https://github.com/JMaxWells/WebKitSupportURLProtocol/tree/master" target="_blank" rel="external">本文Demo:WebKitSupportURLProtocol</a></li>
+<li><a href="https://blog.yeatse.com/2016/10/26/support-nsurlprotocol-in-wkwebview/" target="_blank" rel="external">NSURLProtocol-WebKitSupport</a></li>
+</ul>
+<h2 id="推荐文章"><a href="#推荐文章" class="headerlink" title="推荐文章"></a>推荐文章</h2><ul>
+<li><a href="http://www.jianshu.com/p/8d6f201536e9" target="_blank" rel="external">HybridKit缓存及流量优化方案</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&amp;mid=2653578513&amp;idx=1&amp;sn=961bf5394eecde40a43060550b81b0bb&amp;chksm=84b3b716b3c43e00ee39de8cf12ff3f8d475096ffaa05de9c00ff65df62cd73aa1cff606057d&amp;mpshare=1&amp;scene=1&amp;srcid=0203vWJWfMGMWwf5NZ8N1ibS&amp;key=7986e1e970a89067a86106b2930c5f6fae92da1b552eeb4696133c44e4169fb458d9a94ff0469f97f76e0a87fcfb05a375902d563045184f88550caaca3d47f3ddb0004c0133e68eb0c719bcbe514460&amp;ascene=0&amp;uin=MTM2NTIyOTI0MA==&amp;devicetype=iMac+MacBookPro11,5+OSX+OSX+10.12.3+build(16D32" target="_blank" rel="external">WKWebView 那些坑</a>&amp;version=12010310&amp;nettype=WIFI&amp;fontScale=100&amp;pass_ticket=aq4MxrhuXuqAWgcklzpe0lU/Eo6zKVJheDZdgcMAeJaVUSaI3npVIEglSZC6GJg4)</li>
+<li><a href="http://www.jianshu.com/p/55f5ac1ab817" target="_blank" rel="external">WKWebView 不支持 NSURLProtocol 吗</a></li>
+</ul>
 
       
     </div>
@@ -306,7 +301,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
+            <a href="/tags/iOS开发/" rel="tag">#iOS开发</a>
+          
+            <a href="/tags/tags/" rel="tag">#tags</a>
+          
+            <a href="/tags/WKWebView/" rel="tag">#WKWebView</a>
           
         </div>
       
@@ -315,17 +314,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/05/runtime之method_exchangeImplementations交换IMP指针/" rel="next" title="runtime之method_exchangeImplementations交换IMP指针">
-                <i class="fa fa-chevron-left"></i> runtime之method_exchangeImplementations交换IMP指针
+              <a href="/2017/02/09/HybridKit图片缓存及流量优化方案/" rel="next" title="HybridKit图片缓存及流量优化方案">
+                <i class="fa fa-chevron-left"></i> HybridKit图片缓存及流量优化方案
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/09/直播解决方案整理/" rel="prev" title="直播解决方案整理">
-                直播解决方案整理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -351,8 +346,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/06/iOS面试题（备份）/"
-           data-title="iOS面试题（备份）" data-url="http://yoursite.com/2016/04/06/iOS面试题（备份）/">
+      <div class="ds-thread" data-thread-key="2017/03/24/让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》/"
+           data-title="让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》" data-url="http://yoursite.com/2017/03/24/让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》/">
       </div>
     
   </div>
@@ -472,7 +467,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS面试题（备份）"><span class="nav-number">1.</span> <span class="nav-text">iOS面试题（备份）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#WKWebView的特性："><span class="nav-number">1.</span> <span class="nav-text">WKWebView的特性：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NSURLProtocol工作原理"><span class="nav-number">2.</span> <span class="nav-text">NSURLProtocol工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#拦截代码"><span class="nav-number">2.1.</span> <span class="nav-text">拦截代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Demo截图"><span class="nav-number">2.2.</span> <span class="nav-text">Demo截图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Demo"><span class="nav-number">3.</span> <span class="nav-text">Demo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐文章"><span class="nav-number">4.</span> <span class="nav-text">推荐文章</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

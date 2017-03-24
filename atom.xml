@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-09T08:47:03.000Z</updated>
+  <updated>2017-03-24T06:49:49.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》</title>
+    <link href="http://yoursite.com/2017/03/24/%E8%AE%A9WebKit%E6%94%AF%E6%8C%81URLProtocol%E6%8B%A6%E6%88%AA%E5%AE%9E%E7%8E%B0WebP%E7%9C%81%E6%B5%81%E9%87%8F%E6%96%B9%E6%A1%88%E3%80%8AWKWebView%E4%B8%8D%E5%86%8D%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%E3%80%8B/"/>
+    <id>http://yoursite.com/2017/03/24/让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》/</id>
+    <published>2017-03-24T06:48:06.000Z</published>
+    <updated>2017-03-24T06:49:49.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;WKWebView的各种好处，有不少开发者都按捺不住骚动的心，开始操刀在项目里将UIWebView替换成WKWebView，然后就出现了《WKWebView从入门到放弃》其中WKWebView不支持NSURLProtocol就让不少开发者望而却步。这样一样，可能会导致原来UIWebView的省流量方案不生效。直到前几天，我看到了大神的这篇文章&lt;a href=&quot;http://www.jianshu.com/p/55f5ac1ab817&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WKWebView 不支持 NSURLProtocol 吗&lt;/a&gt;。大神从底层分析了，WKWebView不走NSURLProtocol的原因，最后得出的结论是WebKit是支持NSURLProtocol的，只是WebKit还不够完成，另外一点是调用了私有API很可能被拒，也只支持iOS8.4+。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://quncao-app.b0.upaiyun.com/0_index5a57e8b73600f8cf00bf42924a8f0078.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;WKWebView的特性：&quot;&gt;&lt;a href=&quot;#WKWebView的特性：&quot; class=&quot;headerlink&quot; title=&quot;WKWebView的特性：&quot;&gt;&lt;/a&gt;WKWebView的特性：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;WKWebView的性能想必不用多说了 在性能、稳定性、功能方面有很大提升，直观体现是内存占用变少；&lt;/li&gt;
+&lt;li&gt;允许JavaScript的Nitro库加载并使用（UIWebView中限制）；&lt;/li&gt;
+&lt;li&gt;支持了更多的HTML5特性；&lt;/li&gt;
+&lt;li&gt;高达60fps的滚动刷新率以及内置手势；&lt;/li&gt;
+&lt;li&gt;将UIWebViewDelegate与UIWebView重构成了14类与3个协议；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;NSURLProtocol工作原理&quot;&gt;&lt;a href=&quot;#NSURLProtocol工作原理&quot; class=&quot;headerlink&quot; title=&quot;NSURLProtocol工作原理&quot;&gt;&lt;/a&gt;NSURLProtocol工作原理&lt;/h2&gt;&lt;p&gt;NSURLProtocol可以拦截监听每一个URL Loading System中发出request请求，记住是URL Loading System中那些类发出的请求，也支持AFNetwoking，UIWebView发出的request。如果不是这些类发出的请求，NSURLProtocol就没办法拦截和监听了。&lt;/p&gt;
+&lt;h3 id=&quot;拦截代码&quot;&gt;&lt;a href=&quot;#拦截代码&quot; class=&quot;headerlink&quot; title=&quot;拦截代码&quot;&gt;&lt;/a&gt;拦截代码&lt;/h3&gt;&lt;p&gt;调用该代码则表示拦截成功，会将网页中图片地址转化成WebP格式，并由SDWebImageDownloader下载并缓存。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (void)startLoading &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSMutableURLRequest *mutableReqeust = [[self request] mutableCopy];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //标示改request已经处理过了，防止无限循环&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [NSURLProtocol setProperty:@YES forKey:URLProtocolHandledKey inRequest:mutableReqeust];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSString *URLString = [self.request.URL absoluteString];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSURL *imageURL;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    // 重定义请求地址&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    if ([URLString rangeOfString:@&amp;quot;format&amp;quot;].location == NSNotFound) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        imageURL = [WKWebImageHelper webImageStringToURL:URLString];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        self.connection = [NSURLConnection connectionWithRequest:mutableReqeust delegate:self];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        return;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    #warning - 敲黑板 画重点了&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:imageURL&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                          options:0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                         progress:nil&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                        completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                            // 是否以png结尾&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                            if ([imageURL.absoluteString.lowercaseString hasSuffix:@&amp;quot;.png&amp;quot;]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                                data = UIImagePNGRepresentation(image);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                            &amp;#125; else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                                data = UIImageJPEGRepresentation(image, 1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                            if (!self.client) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                                return ;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                            [self.client URLProtocol:self didLoadData:data];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                            [self.client URLProtocolDidFinishLoading:self];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                                                        &amp;#125;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;具体的代码大家可以去我的github下载。下载地址在↓。&lt;/p&gt;
+&lt;h3 id=&quot;Demo截图&quot;&gt;&lt;a href=&quot;#Demo截图&quot; class=&quot;headerlink&quot; title=&quot;Demo截图&quot;&gt;&lt;/a&gt;Demo截图&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-861e7ddb7ffd69ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Simulator Screen Shot 2017年3月22日 下午5.22.58.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Demo&quot;&gt;&lt;a href=&quot;#Demo&quot; class=&quot;headerlink&quot; title=&quot;Demo&quot;&gt;&lt;/a&gt;Demo&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JMaxWells/WebKitSupportURLProtocol/tree/master&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;本文Demo:WebKitSupportURLProtocol&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.yeatse.com/2016/10/26/support-nsurlprotocol-in-wkwebview/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NSURLProtocol-WebKitSupport&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;推荐文章&quot;&gt;&lt;a href=&quot;#推荐文章&quot; class=&quot;headerlink&quot; title=&quot;推荐文章&quot;&gt;&lt;/a&gt;推荐文章&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/8d6f201536e9&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HybridKit缓存及流量优化方案&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&amp;amp;mid=2653578513&amp;amp;idx=1&amp;amp;sn=961bf5394eecde40a43060550b81b0bb&amp;amp;chksm=84b3b716b3c43e00ee39de8cf12ff3f8d475096ffaa05de9c00ff65df62cd73aa1cff606057d&amp;amp;mpshare=1&amp;amp;scene=1&amp;amp;srcid=0203vWJWfMGMWwf5NZ8N1ibS&amp;amp;key=7986e1e970a89067a86106b2930c5f6fae92da1b552eeb4696133c44e4169fb458d9a94ff0469f97f76e0a87fcfb05a375902d563045184f88550caaca3d47f3ddb0004c0133e68eb0c719bcbe514460&amp;amp;ascene=0&amp;amp;uin=MTM2NTIyOTI0MA==&amp;amp;devicetype=iMac+MacBookPro11,5+OSX+OSX+10.12.3+build(16D32&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WKWebView 那些坑&lt;/a&gt;&amp;amp;version=12010310&amp;amp;nettype=WIFI&amp;amp;fontScale=100&amp;amp;pass_ticket=aq4MxrhuXuqAWgcklzpe0lU/Eo6zKVJheDZdgcMAeJaVUSaI3npVIEglSZC6GJg4)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/55f5ac1ab817&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WKWebView 不支持 NSURLProtocol 吗&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;WKWebView的各种好处，有不少开发者都按捺不住骚动的心，开始操刀在项目里将UIWebView替换成WKWebView，然后就出现了《WKWebView从入门到放弃》其中WKWebView不支持NSURLProtocol就让不少开发者望而却步。
+    
+    </summary>
+    
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
+    
+      <category term="WKWebView" scheme="http://yoursite.com/tags/WKWebView/"/>
+    
+  </entry>
   
   <entry>
     <title>HybridKit图片缓存及流量优化方案</title>
@@ -2170,46 +2220,6 @@ pod update --no-repo-update
       <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
     
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用GithubPages-Hexo搭建免费博客（三）</title>
-    <link href="http://yoursite.com/2016/03/02/%E4%BD%BF%E7%94%A8GithubPages-Hexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89/"/>
-    <id>http://yoursite.com/2016/03/02/使用GithubPages-Hexo搭建免费博客（三）/</id>
-    <published>2016-03-02T15:52:40.000Z</published>
-    <updated>2016-03-11T07:27:25.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;域名绑定&quot;&gt;&lt;a href=&quot;#域名绑定&quot; class=&quot;headerlink&quot; title=&quot;域名绑定&quot;&gt;&lt;/a&gt;域名绑定&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;域名解析&lt;br&gt;域名购买成功后，在解析设置中添加以下解析&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;http://7xr7f9.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-03-03%20%E4%B8%8A%E5%8D%8812.02.04.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;记录类型为：A&lt;br&gt;主机记录分别为“@”，“wwww”。其中设置@，可以用xxx.com进行访问。设置www，可以使用www.xxx.com进行访问。&lt;br&gt;记录值都为 “192.30.252.153”&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;添加CNAME文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;打开自己本地的博客目录，在source文件夹下创建名为CNAME的文本文件。打开，输入自己的域名，格式为“xxx.com”，保存后使用&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;部署到github。&lt;/p&gt;
-&lt;p&gt;至此，便可使用我们自己的域名进行访问了！&lt;/p&gt;
-&lt;h2 id=&quot;图片存储&quot;&gt;&lt;a href=&quot;#图片存储&quot; class=&quot;headerlink&quot; title=&quot;图片存储&quot;&gt;&lt;/a&gt;图片存储&lt;/h2&gt;&lt;p&gt;可以使用&lt;a href=&quot;https://portal.qiniu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;七牛云存储&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Mac上好用的GIF图截屏工具&quot;&gt;&lt;a href=&quot;#Mac上好用的GIF图截屏工具&quot; class=&quot;headerlink&quot; title=&quot;Mac上好用的GIF图截屏工具&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cockos.com/licecap/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mac上好用的GIF图截屏工具&lt;/a&gt;&lt;/h2&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;域名绑定&quot;&gt;&lt;a href=&quot;#域名绑定&quot; class=&quot;headerlink&quot; title=&quot;域名绑定&quot;&gt;&lt;/a&gt;域名绑定&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;域名解析&lt;br&gt;域名购买成功后，在解析设置中添加以下解析&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;htt
-    
-    </summary>
-    
-    
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
-      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   
