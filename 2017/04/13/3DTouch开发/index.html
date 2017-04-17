@@ -1,0 +1,811 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="iOS开发,3DTouch," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MaxWellPro's Hexo Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="3DTouch开发 
+
+3D Touch是一种立体触控技术，被苹果称为新一代多点触控技术，是在Apple Watch上采用的Force Touch，屏幕可感应不同的感压力度触控。3D Touch，苹果iPhone 6s的新功能，看起来类似 PC 上的右键。有Peek Pop 两种新手势。
+2015年9月10日，苹果在新品发布会上宣布了3D-Touch功能。2016年6月13日，苹果开发者大会WWD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3DTouch开发">
+<meta property="og:url" content="http://yoursite.com/2017/04/13/3DTouch开发/index.html">
+<meta property="og:site_name" content="MaxWellPro's Hexo Blog">
+<meta property="og:description" content="3DTouch开发 
+
+3D Touch是一种立体触控技术，被苹果称为新一代多点触控技术，是在Apple Watch上采用的Force Touch，屏幕可感应不同的感压力度触控。3D Touch，苹果iPhone 6s的新功能，看起来类似 PC 上的右键。有Peek Pop 两种新手势。
+2015年9月10日，苹果在新品发布会上宣布了3D-Touch功能。2016年6月13日，苹果开发者大会WWD">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1859162-1b7c1d0cee4a014d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://developer.apple.com/ios/3d-touch/images/quick-actions_2x.jpg">
+<meta property="og:image" content="https://github.com/JMaxWells/3DTouchDemo/blob/master/IMG_0309.jpg?raw=true">
+<meta property="og:image" content="https://developer.apple.com/ios/3d-touch/images/peek-and-pop_2x.jpg">
+<meta property="og:updated_time" content="2017-04-17T06:18:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="3DTouch开发">
+<meta name="twitter:description" content="3DTouch开发 
+
+3D Touch是一种立体触控技术，被苹果称为新一代多点触控技术，是在Apple Watch上采用的Force Touch，屏幕可感应不同的感压力度触控。3D Touch，苹果iPhone 6s的新功能，看起来类似 PC 上的右键。有Peek Pop 两种新手势。
+2015年9月10日，苹果在新品发布会上宣布了3D-Touch功能。2016年6月13日，苹果开发者大会WWD">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1859162-1b7c1d0cee4a014d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6260345940964541000,
+      author: 'MaxWellPro'
+    }
+  };
+</script>
+
+  <title> 3DTouch开发 | MaxWellPro's Hexo Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+    <div class="site-meta-headline">
+      <a>
+        <img class="custom-logo-image" src="http://image.woshipm.com/wp-files/2015/03/4ffce04d92a4d6cb21c1494cdfcd6dc1328.jpg"
+             alt="MaxWellPro's Hexo Blog"/>
+      </a>
+    </div>
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MaxWellPro's Hexo Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">分享一些技术文章和自己所整理的知识。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                3DTouch开发
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-13T15:35:28+08:00" content="2017-04-13">
+              2017-04-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS开发/3DTouch/" itemprop="url" rel="index">
+                    <span itemprop="name">3DTouch</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/04/13/3DTouch开发/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/13/3DTouch开发/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="3DTouch开发"><a href="#3DTouch开发" class="headerlink" title="3DTouch开发"></a>3DTouch开发</h1><p> <img src="http://upload-images.jianshu.io/upload_images/1859162-1b7c1d0cee4a014d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来自百度百科"></p>
+<blockquote>
+<p>3D Touch是一种立体触控技术，被苹果称为新一代<a href="http://baike.baidu.com/item/%E5%A4%9A%E7%82%B9%E8%A7%A6%E6%8E%A7%E6%8A%80%E6%9C%AF" target="_blank" rel="external">多点触控技术</a>，是在<a href="http://baike.baidu.com/item/Apple%20Watch" target="_blank" rel="external">Apple Watch</a>上采用的<a href="http://baike.baidu.com/item/Force%20Touch" target="_blank" rel="external">Force Touch</a>，屏幕可感应不同的感压力度触控。3D Touch，苹果<a href="http://baike.baidu.com/item/iPhone%206s" target="_blank" rel="external">iPhone 6s</a>的新功能，看起来类似 PC 上的右键。有Peek Pop 两种新手势。</p>
+<p>2015年9月10日，苹果在新品发布会上宣布了3D-Touch功能。<br>2016年6月13日，苹果开发者大会<a href="http://baike.baidu.com/item/WWDC" target="_blank" rel="external">WWDC</a>在旧金山召开，会议宣布可以在待机画面用3D Touch操作通知。</p>
+</blockquote>
+<h2 id="产品介绍"><a href="#产品介绍" class="headerlink" title="产品介绍"></a>产品介绍</h2><blockquote>
+<p>用力按一个图标会弹出一层半透明菜单，里面包含了该应用下的一些快捷操作，在邮件列表上用力按也可以快速弹开窗口查看邮件，在邮件列表当中，用力按邮件列表里的一条邮件就会显示完整邮件内容，松手就会关掉，无需左右滑动的打开关闭操作。轻点电话就可以查看最近联系人，按压相机可以快速自拍，按压图片库可以快速浏览大图</p>
+<p>轻按弹出窗口预览邮件内容，增加拇指压力时则可以全屏，在日程安排中轻轻用力按航班信息即可弹出窗口显示航班信息。按住地图图标即可弹出一些快速选项，Instagram中可以直接进入自己的时间流或者友邻动态，在相机中可以通过轻按相机预览拍的照片，而且在iOS9中可以快速通过边缘轻按调出后台。可以说，3D-Touch大幅度提升了手机操作的效率。<br>新iPhone增加了3D-Touch技术，相对于多点触摸在平面二维空间的操作，3D-Touch技术增加了对力度和手指面积的感知，可以通过长按快速预览/查看你想要的短信/图片/超链接等内容，Peek和Pop手势的响应时间可迅捷到10ms和15ms。<br>相机与3D-Touch技术结合，相应的相机中增加拍摄动态图片的功能选项，查看时只需要用一定力道向图片按下去，图片就会动起来。</p>
+<p>可以在待机画面用3D Touch操作通知。</p>
+</blockquote>
+<h2 id="ShortcutItem"><a href="#ShortcutItem" class="headerlink" title="ShortcutItem"></a>ShortcutItem</h2><p><img src="https://developer.apple.com/ios/3d-touch/images/quick-actions_2x.jpg" alt="ShortcutItem 快捷方式"></p>
+<p>初始化ShortcutItem<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">- (void)createItemsWithIcons &#123;</span><br><span class="line">    <span class="comment">// icons with my own images,icon size 35*35</span></span><br><span class="line">    <span class="type">UIApplicationShortcutIcon</span> *icon1 = [<span class="type">UIApplicationShortcutIcon</span> iconWithType:<span class="type">UIApplicationShortcutIconTypeFavorite</span>];</span><br><span class="line">    <span class="type">UIApplicationShortcutIcon</span> *icon2 = [<span class="type">UIApplicationShortcutIcon</span> iconWithType:<span class="type">UIApplicationShortcutIconTypeSearch</span>];</span><br><span class="line">    <span class="type">UIApplicationShortcutIcon</span> *icon3 = [<span class="type">UIApplicationShortcutIcon</span> iconWithType:<span class="type">UIApplicationShortcutIconTypeShare</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// create several (dynamic) shortcut items</span></span><br><span class="line">    <span class="type">UIMutableApplicationShortcutItem</span> *item1 = [[<span class="type">UIMutableApplicationShortcutItem</span> alloc] initWithType:@<span class="string">"com.touch.deep1"</span> localizedTitle:@<span class="string">"喜爱"</span> localizedSubtitle:@<span class="string">"我的收藏"</span> icon:icon1 userInfo:<span class="literal">nil</span>];</span><br><span class="line">    <span class="type">UIMutableApplicationShortcutItem</span> *item2 = [[<span class="type">UIMutableApplicationShortcutItem</span> alloc] initWithType:@<span class="string">"com.touch.deep2"</span> localizedTitle:@<span class="string">"搜索"</span> localizedSubtitle:@<span class="string">"搜索活动"</span> icon:icon2 userInfo:<span class="literal">nil</span>];</span><br><span class="line">    <span class="type">UIMutableApplicationShortcutItem</span> *item3 = [[<span class="type">UIMutableApplicationShortcutItem</span> alloc] initWithType:@<span class="string">"com.touch.deep3"</span> localizedTitle:@<span class="string">"分享"</span> localizedSubtitle:@<span class="string">"分享到朋友圈"</span> icon:icon3 userInfo:<span class="literal">nil</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// add all items to an array</span></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     *  防止不支持设备引起崩溃</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">if</span> (item1 &amp;&amp; item2 &amp;&amp; item3) &#123;</span><br><span class="line">        <span class="type">NSArray</span> *items = @[item1, item2, item3];</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// add the array to our app</span></span><br><span class="line">        [<span class="type">UIApplication</span> sharedApplication].shortcutItems = items;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>ShortcutItem事件</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">- (void)application:(<span class="type">UIApplication</span> *)application performActionForShortcutItem:(<span class="type">UIApplicationShortcutItem</span> *)shortcutItem completionHandler:(void (^)(<span class="type">BOOL</span>))completionHandler &#123;</span><br><span class="line">    <span class="comment">// react to shortcut item selections</span></span><br><span class="line">    <span class="type">NSLog</span>(@<span class="string">"A shortcut item was pressed. It was %@."</span>, shortcutItem.localizedTitle);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// have we launched Deep Link Level 1</span></span><br><span class="line">    <span class="keyword">if</span> ([shortcutItem.type isEqualToString:@<span class="string">"com.touch.deep1"</span>]) &#123;</span><br><span class="line">        <span class="type">NSLog</span>(@<span class="string">"clicked deep1"</span>);</span><br><span class="line">        <span class="type">PreviewViewController</span> *vc = [<span class="type">PreviewViewController</span> new];</span><br><span class="line">        <span class="keyword">self</span>.window.rootViewController = vc;</span><br><span class="line">        [<span class="keyword">self</span>.window makeKeyWindow];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> ([shortcutItem.type isEqualToString:@<span class="string">"com.touch.deep2"</span>]) &#123;</span><br><span class="line">        <span class="type">NSLog</span>(@<span class="string">"clicked deep2"</span>);</span><br><span class="line">        [[<span class="type">LKGlobalNavigationController</span> sharedInstance] pushViewControllerWithUrLPattern:<span class="type">PREVIEW_VIEW_CONTROLLER</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> ([shortcutItem.type isEqualToString:@<span class="string">"com.touch.deep3"</span>]) &#123;</span><br><span class="line">        <span class="type">NSLog</span>(@<span class="string">"clicked deep3"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="UIPreviewActionItem-快速操作"><a href="#UIPreviewActionItem-快速操作" class="headerlink" title="UIPreviewActionItem 快速操作"></a>UIPreviewActionItem 快速操作</h2><p><img src="https://github.com/JMaxWells/3DTouchDemo/blob/master/IMG_0309.jpg?raw=true" alt="UIPreviewActionItem 快速操作"></p>
+<p>UIPreviewActionItem事件</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// setup a list of preview actions</span></span><br><span class="line">- (<span class="type">NSArray</span>&lt;id&lt;<span class="type">UIPreviewActionItem</span>&gt;&gt; *)previewActionItems &#123;</span><br><span class="line">    <span class="type">UIPreviewAction</span> *action1 = [<span class="type">UIPreviewAction</span> actionWithTitle:@<span class="string">"保存"</span> style:<span class="type">UIPreviewActionStyleDefault</span> handler:^(<span class="type">UIPreviewAction</span> * _Nonnull action, <span class="type">UIViewController</span> * _Nonnull previewViewController) &#123;</span><br><span class="line">        <span class="type">NSLog</span>(@<span class="string">"Default Action triggered"</span>);</span><br><span class="line">    &#125;];</span><br><span class="line">    </span><br><span class="line">    <span class="type">UIPreviewAction</span> *action2 = [<span class="type">UIPreviewAction</span> actionWithTitle:@<span class="string">"分享"</span> style:<span class="type">UIPreviewActionStyleDefault</span> handler:^(<span class="type">UIPreviewAction</span> * _Nonnull action, <span class="type">UIViewController</span> * _Nonnull previewViewController) &#123;</span><br><span class="line">        <span class="type">NSLog</span>(@<span class="string">"Default Action triggered"</span>);</span><br><span class="line">    &#125;];</span><br><span class="line">    </span><br><span class="line">    <span class="type">UIPreviewAction</span> *action3 = [<span class="type">UIPreviewAction</span> actionWithTitle:@<span class="string">"删除"</span> style:<span class="type">UIPreviewActionStyleDestructive</span> handler:^(<span class="type">UIPreviewAction</span> * _Nonnull action, <span class="type">UIViewController</span> * _Nonnull previewViewController) &#123;</span><br><span class="line">        <span class="type">NSLog</span>(@<span class="string">"Destructive Action triggered"</span>);</span><br><span class="line">    &#125;];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// add them to an arrary</span></span><br><span class="line">    <span class="type">NSArray</span> *actions = @[action1, action2, action3];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// add all actions to a group</span></span><br><span class="line"><span class="comment">//    UIPreviewActionGroup *group1 = [UIPreviewActionGroup actionGroupWithTitle:@"Action Group" style:UIPreviewActionStyleDefault actions:actions];</span></span><br><span class="line"><span class="comment">//    NSArray *group = @[group1];</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// and return them (return the array of actions instead to see all items ungrouped)</span></span><br><span class="line">    <span class="keyword">return</span> actions;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Peek-And-Pop-预览"><a href="#Peek-And-Pop-预览" class="headerlink" title="Peek And Pop 预览"></a>Peek And Pop 预览</h2><p><img src="https://developer.apple.com/ios/3d-touch/images/peek-and-pop_2x.jpg" alt="Peek And Pop 预览"></p>
+<p>注册UIViewControllerPreviewingDelegate</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="type">UITableViewCell</span> *)tableView:(<span class="type">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="type">NSIndexPath</span> *)indexPath &#123;</span><br><span class="line">    <span class="type">TestTableViewCell</span> *cell = [tableView dequeueReusableCellWithIdentifier:@<span class="string">"TestTableViewCell"</span>];</span><br><span class="line">    <span class="comment">// Enable to use "-sizeThatFits:"</span></span><br><span class="line">    cell.fd_enforceFrameLayout = <span class="type">NO</span>;</span><br><span class="line"></span><br><span class="line">    cell.entity = <span class="keyword">self</span>.titleArray[indexPath.row%<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.traitCollection.forceTouchCapability == <span class="type">UIForceTouchCapabilityAvailable</span>) &#123;</span><br><span class="line">        [<span class="keyword">self</span> registerForPreviewingWithDelegate:<span class="keyword">self</span> sourceView:cell];</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实现UIViewControllerPreviewingDelegate</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># pragma mark - 3D <span class="type">Touch</span> <span class="type">Delegate</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 轻压显示预览页面</span></span><br><span class="line"><span class="comment">// check if we're not already displaying a preview controller</span></span><br><span class="line">- (<span class="type">UIViewController</span> *)previewingContext:(id&lt;<span class="type">UIViewControllerPreviewing</span>&gt;)previewingContext viewControllerForLocation:(<span class="type">CGPoint</span>)location &#123;</span><br><span class="line">    <span class="keyword">if</span> ([<span class="keyword">self</span>.presentedViewController isKindOfClass:[<span class="type">DetailViewController</span> <span class="class"><span class="keyword">class</span>]]) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">DetailViewController</span> *detailView = [[<span class="type">DetailViewController</span> alloc] <span class="keyword">init</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> detailView;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 重压显示详情页面</span></span><br><span class="line"><span class="comment">// alternatively, use the view controller that's being provided here (viewControllerToCommit)</span></span><br><span class="line">- (void)previewingContext:(id&lt;<span class="type">UIViewControllerPreviewing</span>&gt;)previewingContext commitViewController:(<span class="type">UIViewController</span> *)viewControllerToCommit &#123;</span><br><span class="line">    [<span class="keyword">self</span> showViewController:viewControllerToCommit sender:<span class="keyword">self</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://baike.baidu.com/item/3D%20Touch/18605463" target="_blank" rel="external">百度百科</a></p>
+<h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><p><a href="https://github.com/JMaxWells/3DTouchDemo" target="_blank" rel="external">3DTouchDemo</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS开发/" rel="tag">#iOS开发</a>
+          
+            <a href="/tags/3DTouch/" rel="tag">#3DTouch</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/24/让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》/" rel="next" title="让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》">
+                <i class="fa fa-chevron-left"></i> 让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/13/用Workflow实现快速百度搜索/" rel="prev" title="用Workflow实现快速百度搜索">
+                用Workflow实现快速百度搜索 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/13/3DTouch开发/"
+           data-title="3DTouch开发" data-url="http://yoursite.com/2017/04/13/3DTouch开发/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7xojj3.com5.z0.glb.qiniucdn.com/image%2Favatar%2F7ead8c33da3d43552445740501595d76.jpg"
+               alt="MaxWellPro" />
+          <p class="site-author-name" itemprop="name">MaxWellPro</p>
+          <p class="site-description motion-element" itemprop="description">一个90后iOS软件攻城狮，热爱coding，并且喜欢数码、外设、键盘等等。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+          
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/JMaxWells/JMaxWells.github.io" target="_blank">
+                  
+                    <i class="fa fa-gitHub"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2379733281" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#3DTouch开发"><span class="nav-number">1.</span> <span class="nav-text">3DTouch开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#产品介绍"><span class="nav-number">1.1.</span> <span class="nav-text">产品介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ShortcutItem"><span class="nav-number">1.2.</span> <span class="nav-text">ShortcutItem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UIPreviewActionItem-快速操作"><span class="nav-number">1.3.</span> <span class="nav-text">UIPreviewActionItem 快速操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Peek-And-Pop-预览"><span class="nav-number">1.4.</span> <span class="nav-text">Peek And Pop 预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">1.5.</span> <span class="nav-text">参考文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#demo"><span class="nav-number">1.6.</span> <span class="nav-text">demo</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MaxWellPro</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"maxwellpro"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+
+</body>
+</html>

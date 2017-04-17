@@ -72,6 +72,56 @@
   </entry>
   
   <entry>
+    <title>3DTouch开发</title>
+    <link href="http://yoursite.com/2017/04/13/3DTouch%E5%BC%80%E5%8F%91/"/>
+    <id>http://yoursite.com/2017/04/13/3DTouch开发/</id>
+    <published>2017-04-13T07:35:28.000Z</published>
+    <updated>2017-04-17T06:18:10.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;3DTouch开发&quot;&gt;&lt;a href=&quot;#3DTouch开发&quot; class=&quot;headerlink&quot; title=&quot;3DTouch开发&quot;&gt;&lt;/a&gt;3DTouch开发&lt;/h1&gt;&lt;p&gt; &lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-1b7c1d0cee4a014d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;图片来自百度百科&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;3D Touch是一种立体触控技术，被苹果称为新一代&lt;a href=&quot;http://baike.baidu.com/item/%E5%A4%9A%E7%82%B9%E8%A7%A6%E6%8E%A7%E6%8A%80%E6%9C%AF&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多点触控技术&lt;/a&gt;，是在&lt;a href=&quot;http://baike.baidu.com/item/Apple%20Watch&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Apple Watch&lt;/a&gt;上采用的&lt;a href=&quot;http://baike.baidu.com/item/Force%20Touch&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Force Touch&lt;/a&gt;，屏幕可感应不同的感压力度触控。3D Touch，苹果&lt;a href=&quot;http://baike.baidu.com/item/iPhone%206s&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iPhone 6s&lt;/a&gt;的新功能，看起来类似 PC 上的右键。有Peek Pop 两种新手势。&lt;/p&gt;
+&lt;p&gt;2015年9月10日，苹果在新品发布会上宣布了3D-Touch功能。&lt;br&gt;2016年6月13日，苹果开发者大会&lt;a href=&quot;http://baike.baidu.com/item/WWDC&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WWDC&lt;/a&gt;在旧金山召开，会议宣布可以在待机画面用3D Touch操作通知。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;产品介绍&quot;&gt;&lt;a href=&quot;#产品介绍&quot; class=&quot;headerlink&quot; title=&quot;产品介绍&quot;&gt;&lt;/a&gt;产品介绍&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;用力按一个图标会弹出一层半透明菜单，里面包含了该应用下的一些快捷操作，在邮件列表上用力按也可以快速弹开窗口查看邮件，在邮件列表当中，用力按邮件列表里的一条邮件就会显示完整邮件内容，松手就会关掉，无需左右滑动的打开关闭操作。轻点电话就可以查看最近联系人，按压相机可以快速自拍，按压图片库可以快速浏览大图&lt;/p&gt;
+&lt;p&gt;轻按弹出窗口预览邮件内容，增加拇指压力时则可以全屏，在日程安排中轻轻用力按航班信息即可弹出窗口显示航班信息。按住地图图标即可弹出一些快速选项，Instagram中可以直接进入自己的时间流或者友邻动态，在相机中可以通过轻按相机预览拍的照片，而且在iOS9中可以快速通过边缘轻按调出后台。可以说，3D-Touch大幅度提升了手机操作的效率。&lt;br&gt;新iPhone增加了3D-Touch技术，相对于多点触摸在平面二维空间的操作，3D-Touch技术增加了对力度和手指面积的感知，可以通过长按快速预览/查看你想要的短信/图片/超链接等内容，Peek和Pop手势的响应时间可迅捷到10ms和15ms。&lt;br&gt;相机与3D-Touch技术结合，相应的相机中增加拍摄动态图片的功能选项，查看时只需要用一定力道向图片按下去，图片就会动起来。&lt;/p&gt;
+&lt;p&gt;可以在待机画面用3D Touch操作通知。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;ShortcutItem&quot;&gt;&lt;a href=&quot;#ShortcutItem&quot; class=&quot;headerlink&quot; title=&quot;ShortcutItem&quot;&gt;&lt;/a&gt;ShortcutItem&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://developer.apple.com/ios/3d-touch/images/quick-actions_2x.jpg&quot; alt=&quot;ShortcutItem 快捷方式&quot;&gt;&lt;/p&gt;
+&lt;p&gt;初始化ShortcutItem&lt;br&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (void)createItemsWithIcons &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// icons with my own images,icon size 35*35&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;UIApplicationShortcutIcon&lt;/span&gt; *icon1 = [&lt;span class=&quot;type&quot;&gt;UIApplicationShortcutIcon&lt;/span&gt; iconWithType:&lt;span class=&quot;type&quot;&gt;UIApplicationShortcutIconTypeFavorite&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;UIApplicationShortcutIcon&lt;/span&gt; *icon2 = [&lt;span class=&quot;type&quot;&gt;UIApplicationShortcutIcon&lt;/span&gt; iconWithType:&lt;span class=&quot;type&quot;&gt;UIApplicationShortcutIconTypeSearch&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;UIApplicationShortcutIcon&lt;/span&gt; *icon3 = [&lt;span class=&quot;type&quot;&gt;UIApplicationShortcutIcon&lt;/span&gt; iconWithType:&lt;span class=&quot;type&quot;&gt;UIApplicationShortcutIconTypeShare&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// create several (dynamic) shortcut items&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;UIMutableApplicationShortcutItem&lt;/span&gt; *item1 = [[&lt;span class=&quot;type&quot;&gt;UIMutableApplicationShortcutItem&lt;/span&gt; alloc] initWithType:@&lt;span class=&quot;string&quot;&gt;&quot;com.touch.deep1&quot;&lt;/span&gt; localizedTitle:@&lt;span class=&quot;string&quot;&gt;&quot;喜爱&quot;&lt;/span&gt; localizedSubtitle:@&lt;span class=&quot;string&quot;&gt;&quot;我的收藏&quot;&lt;/span&gt; icon:icon1 userInfo:&lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;UIMutableApplicationShortcutItem&lt;/span&gt; *item2 = [[&lt;span class=&quot;type&quot;&gt;UIMutableApplicationShortcutItem&lt;/span&gt; alloc] initWithType:@&lt;span class=&quot;string&quot;&gt;&quot;com.touch.deep2&quot;&lt;/span&gt; localizedTitle:@&lt;span class=&quot;string&quot;&gt;&quot;搜索&quot;&lt;/span&gt; localizedSubtitle:@&lt;span class=&quot;string&quot;&gt;&quot;搜索活动&quot;&lt;/span&gt; icon:icon2 userInfo:&lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;UIMutableApplicationShortcutItem&lt;/span&gt; *item3 = [[&lt;span class=&quot;type&quot;&gt;UIMutableApplicationShortcutItem&lt;/span&gt; alloc] initWithType:@&lt;span class=&quot;string&quot;&gt;&quot;com.touch.deep3&quot;&lt;/span&gt; localizedTitle:@&lt;span class=&quot;string&quot;&gt;&quot;分享&quot;&lt;/span&gt; localizedSubtitle:@&lt;span class=&quot;string&quot;&gt;&quot;分享到朋友圈&quot;&lt;/span&gt; icon:icon3 userInfo:&lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// add all items to an array&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     *  防止不支持设备引起崩溃&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (item1 &amp;amp;&amp;amp; item2 &amp;amp;&amp;amp; item3) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;NSArray&lt;/span&gt; *items = @[item1, item2, item3];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// add the array to our app&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [&lt;span class=&quot;type&quot;&gt;UIApplication&lt;/span&gt; sharedApplication].shortcutItems = items;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;ShortcutItem事件&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (void)application:(&lt;span class=&quot;type&quot;&gt;UIApplication&lt;/span&gt; *)application performActionForShortcutItem:(&lt;span class=&quot;type&quot;&gt;UIApplicationShortcutItem&lt;/span&gt; *)shortcutItem completionHandler:(void (^)(&lt;span class=&quot;type&quot;&gt;BOOL&lt;/span&gt;))completionHandler &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// react to shortcut item selections&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;NSLog&lt;/span&gt;(@&lt;span class=&quot;string&quot;&gt;&quot;A shortcut item was pressed. It was %@.&quot;&lt;/span&gt;, shortcutItem.localizedTitle);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// have we launched Deep Link Level 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([shortcutItem.type isEqualToString:@&lt;span class=&quot;string&quot;&gt;&quot;com.touch.deep1&quot;&lt;/span&gt;]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;NSLog&lt;/span&gt;(@&lt;span class=&quot;string&quot;&gt;&quot;clicked deep1&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;PreviewViewController&lt;/span&gt; *vc = [&lt;span class=&quot;type&quot;&gt;PreviewViewController&lt;/span&gt; new];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.window.rootViewController = vc;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.window makeKeyWindow];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([shortcutItem.type isEqualToString:@&lt;span class=&quot;string&quot;&gt;&quot;com.touch.deep2&quot;&lt;/span&gt;]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;NSLog&lt;/span&gt;(@&lt;span class=&quot;string&quot;&gt;&quot;clicked deep2&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [[&lt;span class=&quot;type&quot;&gt;LKGlobalNavigationController&lt;/span&gt; sharedInstance] pushViewControllerWithUrLPattern:&lt;span class=&quot;type&quot;&gt;PREVIEW_VIEW_CONTROLLER&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([shortcutItem.type isEqualToString:@&lt;span class=&quot;string&quot;&gt;&quot;com.touch.deep3&quot;&lt;/span&gt;]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;NSLog&lt;/span&gt;(@&lt;span class=&quot;string&quot;&gt;&quot;clicked deep3&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;UIPreviewActionItem-快速操作&quot;&gt;&lt;a href=&quot;#UIPreviewActionItem-快速操作&quot; class=&quot;headerlink&quot; title=&quot;UIPreviewActionItem 快速操作&quot;&gt;&lt;/a&gt;UIPreviewActionItem 快速操作&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://github.com/JMaxWells/3DTouchDemo/blob/master/IMG_0309.jpg?raw=true&quot; alt=&quot;UIPreviewActionItem 快速操作&quot;&gt;&lt;/p&gt;
+&lt;p&gt;UIPreviewActionItem事件&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// setup a list of preview actions&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;type&quot;&gt;NSArray&lt;/span&gt;&amp;lt;id&amp;lt;&lt;span class=&quot;type&quot;&gt;UIPreviewActionItem&lt;/span&gt;&amp;gt;&amp;gt; *)previewActionItems &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;UIPreviewAction&lt;/span&gt; *action1 = [&lt;span class=&quot;type&quot;&gt;UIPreviewAction&lt;/span&gt; actionWithTitle:@&lt;span class=&quot;string&quot;&gt;&quot;保存&quot;&lt;/span&gt; style:&lt;span class=&quot;type&quot;&gt;UIPreviewActionStyleDefault&lt;/span&gt; handler:^(&lt;span class=&quot;type&quot;&gt;UIPreviewAction&lt;/span&gt; * _Nonnull action, &lt;span class=&quot;type&quot;&gt;UIViewController&lt;/span&gt; * _Nonnull previewViewController) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;NSLog&lt;/span&gt;(@&lt;span class=&quot;string&quot;&gt;&quot;Default Action triggered&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;UIPreviewAction&lt;/span&gt; *action2 = [&lt;span class=&quot;type&quot;&gt;UIPreviewAction&lt;/span&gt; actionWithTitle:@&lt;span class=&quot;string&quot;&gt;&quot;分享&quot;&lt;/span&gt; style:&lt;span class=&quot;type&quot;&gt;UIPreviewActionStyleDefault&lt;/span&gt; handler:^(&lt;span class=&quot;type&quot;&gt;UIPreviewAction&lt;/span&gt; * _Nonnull action, &lt;span class=&quot;type&quot;&gt;UIViewController&lt;/span&gt; * _Nonnull previewViewController) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;NSLog&lt;/span&gt;(@&lt;span class=&quot;string&quot;&gt;&quot;Default Action triggered&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;UIPreviewAction&lt;/span&gt; *action3 = [&lt;span class=&quot;type&quot;&gt;UIPreviewAction&lt;/span&gt; actionWithTitle:@&lt;span class=&quot;string&quot;&gt;&quot;删除&quot;&lt;/span&gt; style:&lt;span class=&quot;type&quot;&gt;UIPreviewActionStyleDestructive&lt;/span&gt; handler:^(&lt;span class=&quot;type&quot;&gt;UIPreviewAction&lt;/span&gt; * _Nonnull action, &lt;span class=&quot;type&quot;&gt;UIViewController&lt;/span&gt; * _Nonnull previewViewController) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;NSLog&lt;/span&gt;(@&lt;span class=&quot;string&quot;&gt;&quot;Destructive Action triggered&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// add them to an arrary&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;NSArray&lt;/span&gt; *actions = @[action1, action2, action3];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// add all actions to a group&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//    UIPreviewActionGroup *group1 = [UIPreviewActionGroup actionGroupWithTitle:@&quot;Action Group&quot; style:UIPreviewActionStyleDefault actions:actions];&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//    NSArray *group = @[group1];&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// and return them (return the array of actions instead to see all items ungrouped)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; actions;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Peek-And-Pop-预览&quot;&gt;&lt;a href=&quot;#Peek-And-Pop-预览&quot; class=&quot;headerlink&quot; title=&quot;Peek And Pop 预览&quot;&gt;&lt;/a&gt;Peek And Pop 预览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://developer.apple.com/ios/3d-touch/images/peek-and-pop_2x.jpg&quot; alt=&quot;Peek And Pop 预览&quot;&gt;&lt;/p&gt;
+&lt;p&gt;注册UIViewControllerPreviewingDelegate&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;type&quot;&gt;UITableViewCell&lt;/span&gt; *)tableView:(&lt;span class=&quot;type&quot;&gt;UITableView&lt;/span&gt; *)tableView cellForRowAtIndexPath:(&lt;span class=&quot;type&quot;&gt;NSIndexPath&lt;/span&gt; *)indexPath &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;TestTableViewCell&lt;/span&gt; *cell = [tableView dequeueReusableCellWithIdentifier:@&lt;span class=&quot;string&quot;&gt;&quot;TestTableViewCell&quot;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Enable to use &quot;-sizeThatFits:&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    cell.fd_enforceFrameLayout = &lt;span class=&quot;type&quot;&gt;NO&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    cell.entity = &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.titleArray[indexPath.row%&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.traitCollection.forceTouchCapability == &lt;span class=&quot;type&quot;&gt;UIForceTouchCapabilityAvailable&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; registerForPreviewingWithDelegate:&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; sourceView:cell];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; cell;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;实现UIViewControllerPreviewingDelegate&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# pragma mark - 3D &lt;span class=&quot;type&quot;&gt;Touch&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;Delegate&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 轻压显示预览页面&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// check if we&#39;re not already displaying a preview controller&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;type&quot;&gt;UIViewController&lt;/span&gt; *)previewingContext:(id&amp;lt;&lt;span class=&quot;type&quot;&gt;UIViewControllerPreviewing&lt;/span&gt;&amp;gt;)previewingContext viewControllerForLocation:(&lt;span class=&quot;type&quot;&gt;CGPoint&lt;/span&gt;)location &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.presentedViewController isKindOfClass:[&lt;span class=&quot;type&quot;&gt;DetailViewController&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;]]) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;DetailViewController&lt;/span&gt; *detailView = [[&lt;span class=&quot;type&quot;&gt;DetailViewController&lt;/span&gt; alloc] &lt;span class=&quot;keyword&quot;&gt;init&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; detailView;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 重压显示详情页面&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// alternatively, use the view controller that&#39;s being provided here (viewControllerToCommit)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (void)previewingContext:(id&amp;lt;&lt;span class=&quot;type&quot;&gt;UIViewControllerPreviewing&lt;/span&gt;&amp;gt;)previewingContext commitViewController:(&lt;span class=&quot;type&quot;&gt;UIViewController&lt;/span&gt; *)viewControllerToCommit &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; showViewController:viewControllerToCommit sender:&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a&gt;参考文档&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://baike.baidu.com/item/3D%20Touch/18605463&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度百科&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;demo&quot;&gt;&lt;a href=&quot;#demo&quot; class=&quot;headerlink&quot; title=&quot;demo&quot;&gt;&lt;/a&gt;demo&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/JMaxWells/3DTouchDemo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;3DTouchDemo&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;3DTouch开发&quot;&gt;&lt;a href=&quot;#3DTouch开发&quot; class=&quot;headerlink&quot; title=&quot;3DTouch开发&quot;&gt;&lt;/a&gt;3DTouch开发&lt;/h1&gt;&lt;p&gt; &lt;img src=&quot;http://upload-images.jianshu.io
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="3DTouch" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/3DTouch/"/>
+    
+    
+      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="3DTouch" scheme="http://yoursite.com/tags/3DTouch/"/>
+    
+  </entry>
+  
+  <entry>
     <title>让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》</title>
     <link href="http://yoursite.com/2017/03/24/%E8%AE%A9WebKit%E6%94%AF%E6%8C%81URLProtocol%E6%8B%A6%E6%88%AA%E5%AE%9E%E7%8E%B0WebP%E7%9C%81%E6%B5%81%E9%87%8F%E6%96%B9%E6%A1%88%E3%80%8AWKWebView%E4%B8%8D%E5%86%8D%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%E3%80%8B/"/>
     <id>http://yoursite.com/2017/03/24/让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》/</id>
@@ -1641,179 +1691,6 @@
       <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
     
       <category term="越狱插件" scheme="http://yoursite.com/tags/%E8%B6%8A%E7%8B%B1%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览</title>
-    <link href="http://yoursite.com/2016/03/11/iOS9%203DTouch%E3%80%81ShortcutItem%E3%80%81Peek%20And%20Pop%E6%8A%80%E6%9C%AF%E4%B8%80%E8%A7%88/"/>
-    <id>http://yoursite.com/2016/03/11/iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览/</id>
-    <published>2016-03-11T03:15:48.000Z</published>
-    <updated>2016-03-11T07:27:16.000Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot;&gt;&lt;a href=&quot;#iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot; class=&quot;headerlink&quot; title=&quot;iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览&quot;&gt;&lt;/a&gt;iOS9 3DTouch、ShortcutItem、Peek And Pop技术一览&lt;/h1&gt;&lt;h2 id=&quot;3DTouch&quot;&gt;&lt;a href=&quot;#3DTouch&quot; class=&quot;headerlink&quot; title=&quot;3DTouch&quot;&gt;&lt;/a&gt;3DTouch&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://developer.apple.com/ios/3d-touch/images/pressure-sensitivity_2x.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;UITouch类里API的变化&quot;&gt;&lt;a href=&quot;#UITouch类里API的变化&quot; class=&quot;headerlink&quot; title=&quot;UITouch类里API的变化&quot;&gt;&lt;/a&gt;UITouch类里API的变化&lt;/h2&gt;&lt;h3 id=&quot;iOS9中添加的属性&quot;&gt;&lt;a href=&quot;#iOS9中添加的属性&quot; class=&quot;headerlink&quot; title=&quot;iOS9中添加的属性&quot;&gt;&lt;/a&gt;iOS9中添加的属性&lt;/h3&gt;&lt;h6 id=&quot;altitudeAngle&quot;&gt;&lt;a href=&quot;#altitudeAngle&quot; class=&quot;headerlink&quot; title=&quot;altitudeAngle&quot;&gt;&lt;/a&gt;altitudeAngle&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;当笔平行于平面时,该值为0&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;当笔垂直于平面时,该值为Pi / 2&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&quot;estimatedProperties&quot;&gt;&lt;a href=&quot;#estimatedProperties&quot; class=&quot;headerlink&quot; title=&quot;estimatedProperties&quot;&gt;&lt;/a&gt;estimatedProperties&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;当前触摸对象估计的触摸特性&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;返回值是UITouchPropertyies&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&quot;updatedProperties&quot;&gt;&lt;a href=&quot;#updatedProperties&quot; class=&quot;headerlink&quot; title=&quot;updatedProperties&quot;&gt;&lt;/a&gt;updatedProperties&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;当前触摸对象已经更新的触摸特性&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;返回值是UITouchPropertyies&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&quot;estimationUpdateIndex&quot;&gt;&lt;a href=&quot;#estimationUpdateIndex&quot; class=&quot;headerlink&quot; title=&quot;estimationUpdateIndex&quot;&gt;&lt;/a&gt;estimationUpdateIndex&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;当每个触摸对象的触摸特性发生变化时，该值将会单独增加&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;返回值是NSNumber&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;iOS9中添加的方法&quot;&gt;&lt;a href=&quot;#iOS9中添加的方法&quot; class=&quot;headerlink&quot; title=&quot;iOS9中添加的方法&quot;&gt;&lt;/a&gt;iOS9中添加的方法&lt;/h3&gt;&lt;h6 id=&quot;PreciseLocationInView&quot;&gt;&lt;a href=&quot;#PreciseLocationInView&quot; class=&quot;headerlink&quot; title=&quot;- PreciseLocationInView:&quot;&gt;&lt;/a&gt;- PreciseLocationInView:&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;当前触摸对象的坐标&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&quot;PrecisePreviousLocationInView&quot;&gt;&lt;a href=&quot;#PrecisePreviousLocationInView&quot; class=&quot;headerlink&quot; title=&quot;- PrecisePreviousLocationInView:&quot;&gt;&lt;/a&gt;- PrecisePreviousLocationInView:&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;当前触摸对象的前置坐标&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&quot;azimuthAngleInview&quot;&gt;&lt;a href=&quot;#azimuthAngleInview&quot; class=&quot;headerlink&quot; title=&quot;- azimuthAngleInview:&quot;&gt;&lt;/a&gt;- azimuthAngleInview:&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;沿着x轴正向的方位角&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;当与x轴正向方向相同时,该值为0&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;当view参数为nil时，默认为keyWindow&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&quot;azimuthUnitVectorInView&quot;&gt;&lt;a href=&quot;#azimuthUnitVectorInView&quot; class=&quot;headerlink&quot; title=&quot;- azimuthUnitVectorInView:&quot;&gt;&lt;/a&gt;- azimuthUnitVectorInView:&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;当前触摸对象的方向上的单位向量&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;当view参数为nil时，默认为keyWindow&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;UIForceTouchCapability&quot;&gt;&lt;a href=&quot;#UIForceTouchCapability&quot; class=&quot;headerlink&quot; title=&quot;UIForceTouchCapability&quot;&gt;&lt;/a&gt;UIForceTouchCapability&lt;/h3&gt;&lt;h6 id=&quot;UIForceTouchCapabilityUnknown&quot;&gt;&lt;a href=&quot;#UIForceTouchCapabilityUnknown&quot; class=&quot;headerlink&quot; title=&quot;UIForceTouchCapabilityUnknown&quot;&gt;&lt;/a&gt;UIForceTouchCapabilityUnknown&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;不能确定是否支持压力感应&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&quot;UIForceTouchCapabilityUnavailable&quot;&gt;&lt;a href=&quot;#UIForceTouchCapabilityUnavailable&quot; class=&quot;headerlink&quot; title=&quot;UIForceTouchCapabilityUnavailable&quot;&gt;&lt;/a&gt;UIForceTouchCapabilityUnavailable&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;不能支持压力感应&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&quot;UIForceTouchCapabilityAvailable&quot;&gt;&lt;a href=&quot;#UIForceTouchCapabilityAvailable&quot; class=&quot;headerlink&quot; title=&quot;UIForceTouchCapabilityAvailable&quot;&gt;&lt;/a&gt;UIForceTouchCapabilityAvailable&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;可以支持压力感应&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;UITouchType&quot;&gt;&lt;a href=&quot;#UITouchType&quot; class=&quot;headerlink&quot; title=&quot;UITouchType&quot;&gt;&lt;/a&gt;UITouchType&lt;/h3&gt;&lt;h6 id=&quot;UITouchTypeDirect&quot;&gt;&lt;a href=&quot;#UITouchTypeDirect&quot; class=&quot;headerlink&quot; title=&quot;UITouchTypeDirect&quot;&gt;&lt;/a&gt;UITouchTypeDirect&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;垂直的触摸类型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&quot;UITouchTypeIndirect&quot;&gt;&lt;a href=&quot;#UITouchTypeIndirect&quot; class=&quot;headerlink&quot; title=&quot;UITouchTypeIndirect&quot;&gt;&lt;/a&gt;UITouchTypeIndirect&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;非初值的触摸类型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&quot;UITouchTypeStylus&quot;&gt;&lt;a href=&quot;#UITouchTypeStylus&quot; class=&quot;headerlink&quot; title=&quot;UITouchTypeStylus&quot;&gt;&lt;/a&gt;UITouchTypeStylus&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;水平的触摸类型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;UITouchProperties&quot;&gt;&lt;a href=&quot;#UITouchProperties&quot; class=&quot;headerlink&quot; title=&quot;UITouchProperties&quot;&gt;&lt;/a&gt;UITouchProperties&lt;/h3&gt;&lt;h6 id=&quot;UITouchPropertyForce&quot;&gt;&lt;a href=&quot;#UITouchPropertyForce&quot; class=&quot;headerlink&quot; title=&quot;UITouchPropertyForce&quot;&gt;&lt;/a&gt;UITouchPropertyForce&lt;/h6&gt;&lt;h2 id=&quot;ShortcutItem&quot;&gt;&lt;a href=&quot;#ShortcutItem&quot; class=&quot;headerlink&quot; title=&quot;ShortcutItem&quot;&gt;&lt;/a&gt;ShortcutItem&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://developer.apple.com/ios/3d-touch/images/quick-actions_2x.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;静态方式&quot;&gt;&lt;a href=&quot;#静态方式&quot; class=&quot;headerlink&quot; title=&quot;静态方式&quot;&gt;&lt;/a&gt;静态方式&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;打开Info.plist文件&lt;/li&gt;
-&lt;li&gt;在对应UIApplicationShortcutItems关键字下添加item&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;动态方式&quot;&gt;&lt;a href=&quot;#动态方式&quot; class=&quot;headerlink&quot; title=&quot;动态方式&quot;&gt;&lt;/a&gt;动态方式&lt;/h3&gt;&lt;h4 id=&quot;修改当前应用程序的某个shortcutItem&quot;&gt;&lt;a href=&quot;#修改当前应用程序的某个shortcutItem&quot; class=&quot;headerlink&quot; title=&quot;修改当前应用程序的某个shortcutItem&quot;&gt;&lt;/a&gt;修改当前应用程序的某个shortcutItem&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;//获取第0个shortcutItem  
-id oldItem = [existingShortcutItems objectAtIndex: 0];  
-//将旧的shortcutItem改变为可修改类型shortcutItem  
-id mutableItem = [oldItem mutableCopy];  
-//修改shortcutItem的显示标题  
-[mutableItem setLocalizedTitle: @“Click Lewis”];
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;获取当前应用程序的shortcutItems&quot;&gt;&lt;a href=&quot;#获取当前应用程序的shortcutItems&quot; class=&quot;headerlink&quot; title=&quot;获取当前应用程序的shortcutItems&quot;&gt;&lt;/a&gt;获取当前应用程序的shortcutItems&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;//获取当前应用程序对象  
-UIApplication *app = [UIApplication sharedApplication];  
-//获取一个应用程序对象的shortcutItem列表  
-id existingShortcutItems = [app shortcutItems];
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;重置当前应用程序的shortcutItems&quot;&gt;&lt;a href=&quot;#重置当前应用程序的shortcutItems&quot; class=&quot;headerlink&quot; title=&quot;重置当前应用程序的shortcutItems&quot;&gt;&lt;/a&gt;重置当前应用程序的shortcutItems&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;//根据旧的shortcutItems生成可变shortcutItems数组  
-id updatedShortcutItems = [existingShortcutItems mutableCopy];  
-//修改可变shortcutItems数组中对应index下的元素为新的shortcutItem  
-[updatedShortcutItems replaceObjectAtIndex: 0 withObject: mutableItem];  
-//修改应用程序对象的shortcutItems为新的数组  
-[app setShortcutItems: updatedShortcutItems];
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;创建一个新的UIApplicationShortcutItem&quot;&gt;&lt;a href=&quot;#创建一个新的UIApplicationShortcutItem&quot; class=&quot;headerlink&quot; title=&quot;创建一个新的UIApplicationShortcutItem&quot;&gt;&lt;/a&gt;创建一个新的UIApplicationShortcutItem&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;初始化函数&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;-initWithType:localizedTitle:localizedSubtitle:icon:userInfo:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;-initWithType:localizedTitle:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;属性&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;-localizedTitle:NSString&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;-localizedSubtitle:NSString&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;-type:NSString&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;-icon:UIApplicationShortcutIcon&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;-userInfo:NSDictionary&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;只有只读特性，想要进行修改时，需要通过mutableCopy方法转变为NSMutableApplicationShortcutItem&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;创建一个新的Item图标&quot;&gt;&lt;a href=&quot;#创建一个新的Item图标&quot; class=&quot;headerlink&quot; title=&quot;创建一个新的Item图标&quot;&gt;&lt;/a&gt;创建一个新的Item图标&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;初始化函数&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;+iconWithType:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;+iconWithTemplateImageName:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;+iconWithContact:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;当程序启动时&quot;&gt;&lt;a href=&quot;#当程序启动时&quot; class=&quot;headerlink&quot; title=&quot;当程序启动时&quot;&gt;&lt;/a&gt;当程序启动时&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;判断launchOptions字典内的UIApplicationLaunchOptionsShortcutItemKey是否为空&lt;/li&gt;
-&lt;li&gt;当不为空时,application:didFinishLaunchWithOptions方法返回false，否则返回true&lt;/li&gt;
-&lt;li&gt;在application:performActionForShortcutItem:completionHandler方法内处理点击事件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;Peek-and-Pop&quot;&gt;&lt;a href=&quot;#Peek-and-Pop&quot; class=&quot;headerlink&quot; title=&quot;Peek and Pop&quot;&gt;&lt;/a&gt;Peek and Pop&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://developer.apple.com/ios/3d-touch/images/peek-and-pop_2x.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;注册预览功能的代理对象和源视图&quot;&gt;&lt;a href=&quot;#注册预览功能的代理对象和源视图&quot; class=&quot;headerlink&quot; title=&quot;注册预览功能的代理对象和源视图&quot;&gt;&lt;/a&gt;注册预览功能的代理对象和源视图&lt;/h3&gt;&lt;h4 id=&quot;代理对象需要接受UIViewControllerPreviewingDelegate协议&quot;&gt;&lt;a href=&quot;#代理对象需要接受UIViewControllerPreviewingDelegate协议&quot; class=&quot;headerlink&quot; title=&quot;代理对象需要接受UIViewControllerPreviewingDelegate协议&quot;&gt;&lt;/a&gt;代理对象需要接受UIViewControllerPreviewingDelegate协议&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;@interface RootVC&amp;lt;UIViewControllerPreviewingDelegate&amp;gt;  
-{}  
-@end
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;代理对象实现协议内的Peek和Pop方法&quot;&gt;&lt;a href=&quot;#代理对象实现协议内的Peek和Pop方法&quot; class=&quot;headerlink&quot; title=&quot;代理对象实现协议内的Peek和Pop方法&quot;&gt;&lt;/a&gt;代理对象实现协议内的Peek和Pop方法&lt;/h4&gt;&lt;pre&gt;&lt;code&gt; @implementation RootVC  
-    - (UIViewController *)previewingContext:(id&amp;lt;UIViewControllerPreviewing&amp;gt;)context viewControllerForLocation:(CGPoint) point  
-{  
-    UIViewController *childVC = [[UIViewController alloc] init];  
-    childVC.preferredContentSize = CGSizeMake(0.0f,300f);  
-
-    CGRect rect = CGRectMake(10, point.y - 10, self.view.frame.size.width - 20,20);  
-    context.sourceRect = rect;  
-    return childVC;  
-}  
-
-- (void)previewContext:(id&amp;lt;UIViewControllerPreviewing&amp;gt;)context commitViewController:(UIViewController*)vc  
-{  
-    [self showViewController:vc sender:self];  
-}  
-@end
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;注册方法声明在UIViewController类内&quot;&gt;&lt;a href=&quot;#注册方法声明在UIViewController类内&quot; class=&quot;headerlink&quot; title=&quot;注册方法声明在UIViewController类内&quot;&gt;&lt;/a&gt;注册方法声明在UIViewController类内&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;[self registerForPreviewingWithDelegate:self sourceView:self.view];
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; 著作权归作者所有，原文链接:&lt;a href=&quot;http://www.jianshu.com/p/74fe6cbc542b&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/74fe6cbc542b&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot;&gt;&lt;a href=&quot;#iOS9-3DTouch、ShortcutItem、Peek-And-Pop技术一览&quot; class=&quot;headerlink&quot; title=&quot;iOS9 3DT
-    
-    </summary>
-    
-    
-      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
-    
-      <category term="3DTouch" scheme="http://yoursite.com/tags/3DTouch/"/>
     
   </entry>
   
