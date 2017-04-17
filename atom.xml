@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-24T06:49:49.000Z</updated>
+  <updated>2017-04-17T06:14:48.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用Workflow实现快速百度搜索</title>
+    <link href="http://yoursite.com/2017/04/13/%E7%94%A8Workflow%E5%AE%9E%E7%8E%B0%E5%BF%AB%E9%80%9F%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2/"/>
+    <id>http://yoursite.com/2017/04/13/用Workflow实现快速百度搜索/</id>
+    <published>2017-04-13T09:41:28.000Z</published>
+    <updated>2017-04-17T06:14:48.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;用Workflow实现快速百度搜索&quot;&gt;&lt;a href=&quot;#用Workflow实现快速百度搜索&quot; class=&quot;headerlink&quot; title=&quot;用Workflow实现快速百度搜索&quot;&gt;&lt;/a&gt;用Workflow实现快速百度搜索&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;“即便在如此封闭的系统中，它 (Workflow) 也能无情压榨使用者的所有想象力。”－ App Store 某评价摘录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-a990fbd601b4e303?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;strong&gt;&lt;a href=&quot;http://www.appinn.com/workflow-for-ios-one/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Workflow&lt;/a&gt;&lt;/strong&gt; 是一款 iOS 端的付费应用，通过流程化自动处理各种事情，内置 150+ 动作，如开启相机、获取当前 GPS 位置、生成 PDF、打开 URL 链接、新建 EeverNote 笔记等等，只要能巧妙组合，搭配合理，几乎能实现使用者任何的复杂任务流程。&lt;/p&gt;
+&lt;p&gt;今天就跟大家简单来介绍一下快速实现百度搜索，先来看下流程图。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-163854a58ae4482c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;流程图对比&quot;&gt;&lt;/p&gt;
+&lt;p&gt;好了，废话不多说。Let’s do this.&lt;/p&gt;
+&lt;h2 id=&quot;新建Workflow&quot;&gt;&lt;a href=&quot;#新建Workflow&quot; class=&quot;headerlink&quot; title=&quot;新建Workflow&quot;&gt;&lt;/a&gt;新建Workflow&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-cd12d3643e484a43.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;新建Workflow&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这里需要注意选择的是Today Widget才会出现在通知中心中。&lt;/p&gt;
+&lt;h2 id=&quot;选择Action&quot;&gt;&lt;a href=&quot;#选择Action&quot; class=&quot;headerlink&quot; title=&quot;选择Action&quot;&gt;&lt;/a&gt;选择Action&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-554645435a10a14d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;选择Action&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;首先，我们需要获取黏贴板的内容，就把Get ClipBoard按住移动到右边的Workflow中。如下图所示&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-729c8f35f10b3b3d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;IMG_2697.PNG&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;根据黏贴板的内容生成Text&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-abb0ba095dfbcfba.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;根据黏贴板的内容生成Text&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;点击Input后键盘上就弹出了一个工具栏，我们选择ClipBoard，也就意味着Text是从黏贴板中获取的内容&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据Text生成URL&lt;br&gt;百度搜索的地址为&lt;a href=&quot;https://m.baidu.com/from=1000539d/pu=sz%401320_2001/s?word=&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://m.baidu.com/from=1000539d/pu=sz%401320_2001/s?word=&lt;/a&gt;,在这个网址的基础上拼接上Text的内容，就是最后搜索结果的网址了。&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-4172948d554e98ce.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;根据Text生成URL&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在word后面选择小工具栏上的Text，如下图。&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-2617249dfbd202b4.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;拼接Text&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开URLs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-a2e4821880e5eec9.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;IMG_2701.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;最后我们来看下实现效果怎么样。如果选择Normal只能在app里边运行，选择Today Widget就可以在不打开App的情况下直接运行。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-092fb66e18b5ff07.gif?imageMogr2/auto-orient/strip&quot; alt=&quot;在App中运行&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1859162-31d718c8b2d42754.gif?imageMogr2/auto-orient/strip&quot; alt=&quot;在通知中心运行&quot;&gt;&lt;/p&gt;
+&lt;p&gt;———————— 我的底线就这么多了 ————————&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;用Workflow实现快速百度搜索&quot;&gt;&lt;a href=&quot;#用Workflow实现快速百度搜索&quot; class=&quot;headerlink&quot; title=&quot;用Workflow实现快速百度搜索&quot;&gt;&lt;/a&gt;用Workflow实现快速百度搜索&lt;/h1&gt;&lt;blockquote&gt;
+
+    
+    </summary>
+    
+      <category term="效率工具" scheme="http://yoursite.com/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Workflow" scheme="http://yoursite.com/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/Workflow/"/>
+    
+    
+      <category term="效率工具" scheme="http://yoursite.com/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Workflow" scheme="http://yoursite.com/tags/Workflow/"/>
+    
+  </entry>
   
   <entry>
     <title>让WebKit支持URLProtocol拦截实现WebP省流量方案《WKWebView不再从入门到放弃》</title>
@@ -1758,50 +1814,6 @@ id updatedShortcutItems = [existingShortcutItems mutableCopy];
       <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
       <category term="3DTouch" scheme="http://yoursite.com/tags/3DTouch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何获取iOS设备的UDID</title>
-    <link href="http://yoursite.com/2016/03/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96iOS%E8%AE%BE%E5%A4%87%E7%9A%84UDID/"/>
-    <id>http://yoursite.com/2016/03/11/如何获取iOS设备的UDID/</id>
-    <published>2016-03-11T02:20:06.000Z</published>
-    <updated>2016-03-11T07:27:49.000Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;如何获取iOS设备的UDID&quot;&gt;&lt;a href=&quot;#如何获取iOS设备的UDID&quot; class=&quot;headerlink&quot; title=&quot;如何获取iOS设备的UDID&quot;&gt;&lt;/a&gt;如何获取iOS设备的UDID&lt;/h1&gt;&lt;h2 id=&quot;什么是-UDID？&quot;&gt;&lt;a href=&quot;#什么是-UDID？&quot; class=&quot;headerlink&quot; title=&quot;什么是 UDID？&quot;&gt;&lt;/a&gt;什么是 UDID？&lt;/h2&gt;&lt;p&gt; UDID 是由子母和数字组成的 40 个字符串的序号，用来区别每一个唯一的 iOS 设备，包括 iPhones, iPads, 以及 iPod Touches，这些编码看起来是随机的，实际上是跟硬件设备特点相联系的。&lt;/p&gt;
-&lt;p&gt;例如，一个典型的 UDID 类似这样：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;37f2f993bae681636e30e74b04d6b8955ba36f29
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;UDID-和-Ad-Hoc&quot;&gt;&lt;a href=&quot;#UDID-和-Ad-Hoc&quot; class=&quot;headerlink&quot; title=&quot;UDID 和 Ad Hoc&quot;&gt;&lt;/a&gt;UDID 和 Ad Hoc&lt;/h2&gt;&lt;p&gt;如果 iOS 设备要安装以 Ad Hoc 方式打包的 iOS 应用时，必须将该设备的 UDID 加入打包应用时的证书文件（.mobileprovision文件），才可以在该设备上正常安装。&lt;/p&gt;
-&lt;h2 id=&quot;如何获取-iOS-设备-UDID？&quot;&gt;&lt;a href=&quot;#如何获取-iOS-设备-UDID？&quot; class=&quot;headerlink&quot; title=&quot;如何获取 iOS 设备 UDID？&quot;&gt;&lt;/a&gt;如何获取 iOS 设备 UDID？&lt;/h2&gt;&lt;p&gt;UDID 的获得可以由 iTunes 工具来获得，也可以通过 Xcode 来获得，不过无论是 iTunes 还是 Xcode，都会稍显麻烦。&lt;/p&gt;
-&lt;h3 id=&quot;1-蒲公英（★★★★★）&quot;&gt;&lt;a href=&quot;#1-蒲公英（★★★★★）&quot; class=&quot;headerlink&quot; title=&quot;1.蒲公英（★★★★★）&quot;&gt;&lt;/a&gt;1.蒲公英（★★★★★）&lt;/h3&gt;&lt;p&gt;蒲公英提供了一个简单的获取 UDID 的工具。在Safari中打开&lt;a href=&quot;http://www.pgyer.com/udid&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;链接&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;在 iOS 设备上打开上面的地址，即可方便的获取到当前设备的 UDID。&lt;/p&gt;
-&lt;h6 id=&quot;注意：请根据网页的提示，安装蒲公英提供的描述文件。如果手机设置了锁屏密码，则需要根据提示输入锁屏密码。&quot;&gt;&lt;a href=&quot;#注意：请根据网页的提示，安装蒲公英提供的描述文件。如果手机设置了锁屏密码，则需要根据提示输入锁屏密码。&quot; class=&quot;headerlink&quot; title=&quot;注意：请根据网页的提示，安装蒲公英提供的描述文件。如果手机设置了锁屏密码，则需要根据提示输入锁屏密码。&quot;&gt;&lt;/a&gt;注意：请根据网页的提示，安装蒲公英提供的描述文件。如果手机设置了锁屏密码，则需要根据提示输入锁屏密码。&lt;/h6&gt;&lt;h3 id=&quot;2-iTunes（★★★☆☆）&quot;&gt;&lt;a href=&quot;#2-iTunes（★★★☆☆）&quot; class=&quot;headerlink&quot; title=&quot;2.iTunes（★★★☆☆）&quot;&gt;&lt;/a&gt;2.iTunes（★★★☆☆）&lt;/h3&gt;&lt;p&gt;相信iPhone用户的电脑都有iTunes应用，但是由于水土不服iTunes也就很少有人使用。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1.将iPhone设备用数据线链接电脑。&lt;/li&gt;
-&lt;li&gt;2.点击“信任”。&lt;/li&gt;
-&lt;li&gt;3.打开iTunes，点击设备。&lt;/li&gt;
-&lt;li&gt;4.选中“摘要”标签。&lt;/li&gt;
-&lt;li&gt;5.找到序列号，点击序列号就会出现UDID，单击右键Copy。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;3-Xcode（★☆☆☆☆）&quot;&gt;&lt;a href=&quot;#3-Xcode（★☆☆☆☆）&quot; class=&quot;headerlink&quot; title=&quot;3.Xcode（★☆☆☆☆）&quot;&gt;&lt;/a&gt;3.Xcode（★☆☆☆☆）&lt;/h3&gt;&lt;p&gt;Xcode获取UDID有很多限制条件，比如得是OS X（黑苹果另说）同时还得安装将近5G的Xcode。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1.点击菜单栏的“windows”。&lt;/li&gt;
-&lt;li&gt;2.选中“devices”。&lt;/li&gt;
-&lt;li&gt;3.选中你的设备，就能看到“Identifier”, Identifier就是该设备的UDID了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以上三种方法，我最推荐蒲公英获取UDID的方法，简单明了，手机就能操作。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;如何获取iOS设备的UDID&quot;&gt;&lt;a href=&quot;#如何获取iOS设备的UDID&quot; class=&quot;headerlink&quot; title=&quot;如何获取iOS设备的UDID&quot;&gt;&lt;/a&gt;如何获取iOS设备的UDID&lt;/h1&gt;&lt;h2 id=&quot;什么是-UDID？&quot;&gt;&lt;a hre
-    
-    </summary>
-    
-    
-      <category term="iOS开发" scheme="http://yoursite.com/tags/iOS%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="tags" scheme="http://yoursite.com/tags/tags/"/>
     
   </entry>
   
